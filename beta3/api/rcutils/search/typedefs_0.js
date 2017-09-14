@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['rcllogfilter',['RclLogFilter',['../logging__macros_8h.html#a9ee576d7a9ea193c8806a6a6039683f7',1,'logging_macros.h']]],
   ['rcutils_5fallocator_5ft',['rcutils_allocator_t',['../allocator_8h.html#a3e3829ddfe4fa3e0690affaff7954eec',1,'allocator.h']]],
   ['rcutils_5fduration_5fvalue_5ft',['rcutils_duration_value_t',['../time_8h.html#a7fd03e84bd0de8c6e189bf2a21cf3946',1,'time.h']]],
   ['rcutils_5ferror_5fstate_5ft',['rcutils_error_state_t',['../error__handling_8h.html#a54602d3d4b7a5b19ba2be0baeef1c59e',1,'error_handling.h']]],
