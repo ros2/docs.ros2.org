@@ -1,0 +1,7 @@
+<map id="rcl_wait_set_t" name="rcl_wait_set_t">
+<area shape="rect" id="node2" href="$structrcl__subscription__t.html" title="Structure which encapsulates a ROS Subscription. " alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node3" href="$structrcl__service__t.html" title="Structure which encapsulates a ROS Service. " alt="" coords="154,5,250,32"/>
+<area shape="rect" id="node4" href="$structrcl__guard__condition__t.html" title="Handle for a rcl guard condition. " alt="" coords="275,5,420,32"/>
+<area shape="rect" id="node5" href="$structrcl__client__t.html" title="Structure which encapsulates a ROS Client. " alt="" coords="445,5,530,32"/>
+<area shape="rect" id="node6" href="$structrcl__timer__t.html" title="Structure which encapsulates a ROS Timer. " alt="" coords="554,5,637,32"/>
+</map>

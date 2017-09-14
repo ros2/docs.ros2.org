@@ -1,0 +1,18 @@
+<map id="include/rclcpp/intra_process_manager_impl.hpp" name="include/rclcpp/intra_process_manager_impl.hpp">
+<area shape="rect" id="node14" href="$macros_8hpp.html" title="rclcpp/macros.hpp" alt="" coords="729,527,858,553"/>
+<area shape="rect" id="node15" href="$mapped__ring__buffer_8hpp.html" title="rclcpp/mapped_ring\l_buffer.hpp" alt="" coords="361,333,495,375"/>
+<area shape="rect" id="node23" href="$visibility__control_8hpp.html" title="rclcpp/visibility_control.hpp" alt="" coords="1467,527,1645,553"/>
+<area shape="rect" id="node24" href="$publisher_8hpp.html" title="rclcpp/publisher.hpp" alt="" coords="2949,95,3088,121"/>
+<area shape="rect" id="node35" href="$subscription_8hpp.html" title="rclcpp/subscription.hpp" alt="" coords="2329,341,2485,367"/>
+<area shape="rect" id="node19" href="$allocator__common_8hpp.html" title="rclcpp/allocator/allocator\l_common.hpp" alt="" coords="2580,519,2743,561"/>
+<area shape="rect" id="node21" href="$allocator__deleter_8hpp.html" title="rclcpp/allocator/allocator\l_deleter.hpp" alt="" coords="3071,616,3233,657"/>
+<area shape="rect" id="node32" href="$node__base__interface_8hpp.html" title="rclcpp/node_interfaces\l/node_base_interface.hpp" alt="" coords="1372,169,1543,211"/>
+<area shape="rect" id="node44" href="$type__support__decl_8hpp.html" title="rclcpp/type_support\l_decl.hpp" alt="" coords="3788,423,3924,464"/>
+<area shape="rect" id="node34" href="$callback__group_8hpp.html" title="rclcpp/callback_group.hpp" alt="" coords="1296,259,1469,285"/>
+<area shape="rect" id="node50" href="$context_8hpp.html" title="rclcpp/context.hpp" alt="" coords="990,341,1119,367"/>
+<area shape="rect" id="node37" href="$exceptions_8hpp.html" title="rclcpp/exceptions.hpp" alt="" coords="2560,430,2709,457"/>
+<area shape="rect" id="node39" href="$message__memory__strategy_8hpp.html" title="rclcpp/message_memory\l_strategy.hpp" alt="" coords="1840,423,2008,464"/>
+<area shape="rect" id="node40" href="$any__subscription__callback_8hpp.html" title="rclcpp/any_subscription\l_callback.hpp" alt="" coords="3361,423,3519,464"/>
+<area shape="rect" id="node49" href="$expand__topic__or__service__name_8hpp.html" title="rclcpp/expand_topic\l_or_service_name.hpp" alt="" coords="2033,423,2186,464"/>
+<area shape="rect" id="node43" href="$function__traits_8hpp.html" title="rclcpp/function_traits.hpp" alt="" coords="2969,527,3137,553"/>
+</map>

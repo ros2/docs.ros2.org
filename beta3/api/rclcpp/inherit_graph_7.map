@@ -1,0 +1,17 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$classrclcpp_1_1exceptions_1_1RCLBadAlloc.html" title="Created when the ret is RCL_RET_BAD_ALLOC. " alt="" coords="216,5,344,47"/>
+<area shape="rect" id="node4" href="$classrclcpp_1_1exceptions_1_1NameValidationError.html" title="Thrown when a any kind of name (node, namespace, topic, etc.) is invalid. " alt="" coords="205,136,355,177"/>
+<area shape="rect" id="node9" href="$classrclcpp_1_1exceptions_1_1RCLInvalidArgument.html" title="Created when the ret is RCL_RET_INVALID_ARGUMENT. " alt="" coords="205,71,355,112"/>
+<area shape="rect" id="node5" href="$classrclcpp_1_1exceptions_1_1InvalidNamespaceError.html" title="Thrown when a node namespace is invalid. " alt="" coords="431,37,597,79"/>
+<area shape="rect" id="node6" href="$classrclcpp_1_1exceptions_1_1InvalidNodeNameError.html" title="Thrown when a node name is invalid. " alt="" coords="433,103,595,144"/>
+<area shape="rect" id="node7" href="$classrclcpp_1_1exceptions_1_1InvalidServiceNameError.html" title="Thrown when a service name is invalid. " alt="" coords="427,168,601,209"/>
+<area shape="rect" id="node8" href="$classrclcpp_1_1exceptions_1_1InvalidTopicNameError.html" title="Thrown when a topic name is invalid. " alt="" coords="433,233,595,275"/>
+<area shape="rect" id="node10" href="$classrclcpp_1_1exceptions_1_1RCLErrorBase.html" title="rclcpp::exceptions\l::RCLErrorBase" alt="" coords="5,71,133,112"/>
+<area shape="rect" id="node11" href="$classrclcpp_1_1exceptions_1_1RCLError.html" title="Created when the return code does not match one of the other specialized exceptions. " alt="" coords="216,201,344,243"/>
+<area shape="rect" id="node13" href="$classrclcpp_1_1exceptions_1_1EventNotRegisteredError.html" title="Thrown when an unregistered rclcpp::Event is encountered where a registered one was expected..." alt="" coords="192,267,368,308"/>
+<area shape="rect" id="node14" href="$classrclcpp_1_1exceptions_1_1InvalidEventError.html" title="Thrown when an invalid rclcpp::Event object or SharedPtr is encountered. " alt="" coords="215,332,345,373"/>
+<area shape="rect" id="node15" href="$classrclcpp_1_1exceptions_1_1InvalidNodeError.html" title="Thrown when a method is trying to use a node, but it is invalid. " alt="" coords="216,397,344,439"/>
+<area shape="rect" id="node16" href="$classrclcpp_1_1graph__listener_1_1GraphListenerShutdownError.html" title="Thrown when a function is called on a GraphListener that is already shutdown. " alt="" coords="181,463,379,504"/>
+<area shape="rect" id="node17" href="$classrclcpp_1_1graph__listener_1_1NodeAlreadyAddedError.html" title="Thrown when a node has already been added to the GraphListener. " alt="" coords="195,528,365,569"/>
+<area shape="rect" id="node18" href="$classrclcpp_1_1graph__listener_1_1NodeNotFoundError.html" title="Thrown when the given node is not in the GraphListener. " alt="" coords="207,593,353,635"/>
+</map>

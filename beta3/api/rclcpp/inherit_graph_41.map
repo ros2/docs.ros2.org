@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classrclcpp_1_1subscription_1_1SubscriptionBase.html" title="rclcpp::subscription\l::SubscriptionBase" alt="" coords="5,13,140,54"/>
+<area shape="rect" id="node2" href="$classrclcpp_1_1subscription_1_1Subscription.html" title="Subscription implementation, templated on the type of message this subscription receives. " alt="" coords="188,5,367,61"/>
+</map>
