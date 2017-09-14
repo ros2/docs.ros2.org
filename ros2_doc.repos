@@ -1,0 +1,9 @@
+repositories:
+  ros2/ros_core_documentation:
+    type: git
+    url: https://github.com/ros2/ros_core_documentation.git
+    version: master
+  ros2/docs.ros2.org:
+    type: git
+    url: https://github.com/ros2/docs.ros2.org.git
+    version: master
