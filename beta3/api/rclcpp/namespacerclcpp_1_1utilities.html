@@ -82,16 +82,16 @@ Functions</h2></td></tr>
 <tr class="memitem:a3bf013498475f2a7560df94e2e254d52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp_1_1utilities.html#a3bf013498475f2a7560df94e2e254d52">shutdown</a> ()</td></tr>
 <tr class="memdesc:a3bf013498475f2a7560df94e2e254d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the signal handler and rmw that rclcpp is shutting down.  <a href="#a3bf013498475f2a7560df94e2e254d52">More...</a><br /></td></tr>
 <tr class="separator:a3bf013498475f2a7560df94e2e254d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54abd65307131bb92ba3fa1c9c98873a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp_1_1utilities.html#a54abd65307131bb92ba3fa1c9c98873a">on_shutdown</a> (std::function&lt; void(void)&gt; callback)</td></tr>
+<tr class="memitem:a54abd65307131bb92ba3fa1c9c98873a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp_1_1utilities.html#a54abd65307131bb92ba3fa1c9c98873a">on_shutdown</a> (<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/utility/functional/function.html">std::function</a>&lt; void(void)&gt; callback)</td></tr>
 <tr class="memdesc:a54abd65307131bb92ba3fa1c9c98873a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a function to be called when shutdown is called.  <a href="#a54abd65307131bb92ba3fa1c9c98873a">More...</a><br /></td></tr>
 <tr class="separator:a54abd65307131bb92ba3fa1c9c98873a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afabd0b2ddcd2df0477847323fe4f7d7e"><td class="memItemLeft" align="right" valign="top">rcl_guard_condition_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp_1_1utilities.html#afabd0b2ddcd2df0477847323fe4f7d7e">get_sigint_guard_condition</a> (rcl_wait_set_t *waitset)</td></tr>
+<tr class="memitem:afabd0b2ddcd2df0477847323fe4f7d7e"><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcl.tag:http://docs.ros2.org/latest/api/rcl/" href="http://docs.ros2.org/latest/api/rcl/structrcl__guard__condition__t.html">rcl_guard_condition_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp_1_1utilities.html#afabd0b2ddcd2df0477847323fe4f7d7e">get_sigint_guard_condition</a> (<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcl.tag:http://docs.ros2.org/latest/api/rcl/" href="http://docs.ros2.org/latest/api/rcl/structrcl__wait__set__t.html">rcl_wait_set_t</a> *waitset)</td></tr>
 <tr class="memdesc:afabd0b2ddcd2df0477847323fe4f7d7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a handle to the rmw guard condition that manages the signal handler.  <a href="#afabd0b2ddcd2df0477847323fe4f7d7e">More...</a><br /></td></tr>
 <tr class="separator:afabd0b2ddcd2df0477847323fe4f7d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad91660352643dfe54ed4ca6570a83318"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp_1_1utilities.html#ad91660352643dfe54ed4ca6570a83318">release_sigint_guard_condition</a> (rcl_wait_set_t *waitset)</td></tr>
+<tr class="memitem:ad91660352643dfe54ed4ca6570a83318"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp_1_1utilities.html#ad91660352643dfe54ed4ca6570a83318">release_sigint_guard_condition</a> (<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcl.tag:http://docs.ros2.org/latest/api/rcl/" href="http://docs.ros2.org/latest/api/rcl/structrcl__wait__set__t.html">rcl_wait_set_t</a> *waitset)</td></tr>
 <tr class="memdesc:ad91660352643dfe54ed4ca6570a83318"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release the previously allocated guard condition that manages the signal handler.  <a href="#ad91660352643dfe54ed4ca6570a83318">More...</a><br /></td></tr>
 <tr class="separator:ad91660352643dfe54ed4ca6570a83318"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87cc9a8b1182ea7174f6c011a4bb3d4e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp_1_1utilities.html#a87cc9a8b1182ea7174f6c011a4bb3d4e">sleep_for</a> (const std::chrono::nanoseconds &amp;nanoseconds)</td></tr>
+<tr class="memitem:a87cc9a8b1182ea7174f6c011a4bb3d4e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp_1_1utilities.html#a87cc9a8b1182ea7174f6c011a4bb3d4e">sleep_for</a> (const <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/chrono/duration.html">std::chrono::nanoseconds</a> &amp;nanoseconds)</td></tr>
 <tr class="memdesc:a87cc9a8b1182ea7174f6c011a4bb3d4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use the global condition variable to block for the specified amount of time.  <a href="#a87cc9a8b1182ea7174f6c011a4bb3d4e">More...</a><br /></td></tr>
 <tr class="separator:a87cc9a8b1182ea7174f6c011a4bb3d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -181,7 +181,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void rclcpp::utilities::on_shutdown </td>
           <td>(</td>
-          <td class="paramtype">std::function&lt; void(void)&gt;&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/utility/functional/function.html">std::function</a>&lt; void(void)&gt;&#160;</td>
           <td class="paramname"><em>callback</em></td><td>)</td>
           <td></td>
         </tr>
@@ -200,9 +200,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">rcl_guard_condition_t* rclcpp::utilities::get_sigint_guard_condition </td>
+          <td class="memname"><a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcl.tag:http://docs.ros2.org/latest/api/rcl/" href="http://docs.ros2.org/latest/api/rcl/structrcl__guard__condition__t.html">rcl_guard_condition_t</a>* rclcpp::utilities::get_sigint_guard_condition </td>
           <td>(</td>
-          <td class="paramtype">rcl_wait_set_t *&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcl.tag:http://docs.ros2.org/latest/api/rcl/" href="http://docs.ros2.org/latest/api/rcl/structrcl__wait__set__t.html">rcl_wait_set_t</a> *&#160;</td>
           <td class="paramname"><em>waitset</em></td><td>)</td>
           <td></td>
         </tr>
@@ -212,7 +212,7 @@ Functions</h2></td></tr>
 <p>Get a handle to the rmw guard condition that manages the signal handler. </p>
 <p>The first time that this function is called for a given waitset a new guard condition will be created and returned; thereafter the same guard condition will be returned for the same waitset. This mechanism is designed to ensure that the same guard condition is not reused across waitsets (e.g., when using multiple executors in the same process). Will throw an exception if initialization of the guard condition fails. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">waitset</td><td>Pointer to the rcl_wait_set_t that will be using the resulting guard condition. </td></tr>
+    <tr><td class="paramname">waitset</td><td>Pointer to the <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcl.tag:http://docs.ros2.org/latest/api/rcl/" href="http://docs.ros2.org/latest/api/rcl/structrcl__wait__set__t.html">rcl_wait_set_t</a> that will be using the resulting guard condition. </td></tr>
   </table>
   </dd>
 </dl>
@@ -229,7 +229,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void rclcpp::utilities::release_sigint_guard_condition </td>
           <td>(</td>
-          <td class="paramtype">rcl_wait_set_t *&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcl.tag:http://docs.ros2.org/latest/api/rcl/" href="http://docs.ros2.org/latest/api/rcl/structrcl__wait__set__t.html">rcl_wait_set_t</a> *&#160;</td>
           <td class="paramname"><em>waitset</em></td><td>)</td>
           <td></td>
         </tr>
@@ -239,7 +239,7 @@ Functions</h2></td></tr>
 <p>Release the previously allocated guard condition that manages the signal handler. </p>
 <p>If you previously called <a class="el" href="namespacerclcpp_1_1utilities.html#afabd0b2ddcd2df0477847323fe4f7d7e" title="Get a handle to the rmw guard condition that manages the signal handler. ">get_sigint_guard_condition()</a> for a given waitset to get a sigint guard condition, then you should call <a class="el" href="namespacerclcpp_1_1utilities.html#ad91660352643dfe54ed4ca6570a83318" title="Release the previously allocated guard condition that manages the signal handler. ...">release_sigint_guard_condition()</a> when you're done, to free that condition. Will throw an exception if <a class="el" href="namespacerclcpp_1_1utilities.html#afabd0b2ddcd2df0477847323fe4f7d7e" title="Get a handle to the rmw guard condition that manages the signal handler. ">get_sigint_guard_condition()</a> wasn't previously called for the given waitset. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">waitset</td><td>Pointer to the rcl_wait_set_t that was using the resulting guard condition. </td></tr>
+    <tr><td class="paramname">waitset</td><td>Pointer to the <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcl.tag:http://docs.ros2.org/latest/api/rcl/" href="http://docs.ros2.org/latest/api/rcl/structrcl__wait__set__t.html">rcl_wait_set_t</a> that was using the resulting guard condition. </td></tr>
   </table>
   </dd>
 </dl>
@@ -255,7 +255,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool rclcpp::utilities::sleep_for </td>
           <td>(</td>
-          <td class="paramtype">const std::chrono::nanoseconds &amp;&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/chrono/duration.html">std::chrono::nanoseconds</a> &amp;&#160;</td>
           <td class="paramname"><em>nanoseconds</em></td><td>)</td>
           <td></td>
         </tr>
@@ -265,7 +265,7 @@ Functions</h2></td></tr>
 <p>Use the global condition variable to block for the specified amount of time. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">nanoseconds</td><td>A std::chrono::duration representing how long to sleep for. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nanoseconds</td><td>A <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/chrono/duration.html">std::chrono::duration</a> representing how long to sleep for. </td></tr>
   </table>
   </dd>
 </dl>

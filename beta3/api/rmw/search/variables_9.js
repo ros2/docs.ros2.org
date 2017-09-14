@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['publisher_5fgid',['publisher_gid',['../structrmw__message__info__t.html#a4947b935036e90a2b392067eca5fff7c',1,'rmw_message_info_t']]]
+  ['message',['message',['http://docs.ros2.org/latest/api/rcutils/structrcutils__error__state__t.html#a99c91fcc1752f10ced79dfb8b6901a65',1,'rcutils_error_state_t']]]
 ];

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['line',['line',['../classrclcpp_1_1exceptions_1_1RCLErrorBase.html#a7d544b3597cfc9b75fc07f3d184fd85e',1,'rclcpp::exceptions::RCLErrorBase']]]
+  ['get_5fnow',['get_now',['http://docs.ros2.org/latest/api/rcl/structrcl__time__source__t.html#a79c00c9ec8bce0894893b1cd028c78c4',1,'rcl_time_source_t']]],
+  ['guard_5fcondition_5fcount',['guard_condition_count',['http://docs.ros2.org/latest/api/rmw/structrmw__guard__conditions__t.html#a75d523c25b355928bee1a079bf46c983',1,'rmw_guard_conditions_t']]],
+  ['guard_5fconditions',['guard_conditions',['http://docs.ros2.org/latest/api/rcl/structrcl__wait__set__t.html#a5ffd23a51b8fa43d947bcc70253c9dbd',1,'rcl_wait_set_t::guard_conditions()'],['http://docs.ros2.org/latest/api/rmw/structrmw__guard__conditions__t.html#a1b3b392bfee2a4387071cfc75c7783d6',1,'rmw_guard_conditions_t::guard_conditions()'],['http://docs.ros2.org/latest/api/rmw/structrmw__waitset__t.html#abe2ef9c70a38ea06587edfa7efd61db2',1,'rmw_waitset_t::guard_conditions()']]]
 ];

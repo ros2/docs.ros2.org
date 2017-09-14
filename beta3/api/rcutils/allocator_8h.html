@@ -195,7 +195,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Encapsulation of an allocator. </p>
-<p>The default allocator uses std::malloc(), std::free(), std::calloc(), and std::realloc(). It can be obtained using <a class="el" href="allocator_8h.html#acf03104d429d7c11200b33bd8ce892b9" title="Return a properly initialized rcutils_allocator_t with default values. ">rcutils_get_default_allocator()</a>.</p>
+<p>The default allocator uses <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/c/malloc.html">std::malloc()</a>, <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/c/free.html">std::free()</a>, <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/c/calloc.html">std::calloc()</a>, and <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/c/realloc.html">std::realloc()</a>. It can be obtained using <a class="el" href="allocator_8h.html#acf03104d429d7c11200b33bd8ce892b9" title="Return a properly initialized rcutils_allocator_t with default values. ">rcutils_get_default_allocator()</a>.</p>
 <p>The allocator should be trivially copyable. Meaning that the struct should continue to work after being assignment copied into a new struct. Specifically the object pointed to by the state pointer should remain valid until all uses of the allocator have been made. Particular care should be taken when giving an allocator to functions like rcutils_*_init() where it is stored within another object and used later. </p>
 
 </div>
@@ -241,9 +241,9 @@ Functions</h2></td></tr>
 <p>Return a properly initialized <a class="el" href="structrcutils__allocator__t.html" title="Encapsulation of an allocator. ">rcutils_allocator_t</a> with default values. </p>
 <p>This defaults to:</p>
 <ul>
-<li>allocate = wraps std::malloc()</li>
-<li>deallocate = wraps std::free()</li>
-<li>reallocate = wrapps std::realloc()</li>
+<li>allocate = wraps <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/c/malloc.html">std::malloc()</a></li>
+<li>deallocate = wraps <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/c/free.html">std::free()</a></li>
+<li>reallocate = wrapps <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/c/realloc.html">std::realloc()</a></li>
 <li>state = <code>NULL</code></li>
 </ul>
 <hr/>

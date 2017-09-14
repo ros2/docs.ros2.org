@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['used',['used',['../structrclcpp_1_1strategies_1_1message__pool__memory__strategy_1_1MessagePoolMemoryStrategy_1_1PoolMember.html#aabe1065d4987465c0d5000619147dd05',1,'rclcpp::strategies::message_pool_memory_strategy::MessagePoolMemoryStrategy::PoolMember']]]
+  ['qos',['qos',['http://docs.ros2.org/latest/api/rcl/structrcl__client__options__t.html#abcc6a3efe706a52286b5d588aa3c0638',1,'rcl_client_options_t::qos()'],['http://docs.ros2.org/latest/api/rcl/structrcl__publisher__options__t.html#aea9fe9493335beeff2d1bc4988b9cf2b',1,'rcl_publisher_options_t::qos()'],['http://docs.ros2.org/latest/api/rcl/structrcl__service__options__t.html#acdf0e4e6e063100e40e61ab576368cf7',1,'rcl_service_options_t::qos()'],['http://docs.ros2.org/latest/api/rcl/structrcl__subscription__options__t.html#a5197e7f95c85d3d34fc86bbda7db1a66',1,'rcl_subscription_options_t::qos()']]]
 ];

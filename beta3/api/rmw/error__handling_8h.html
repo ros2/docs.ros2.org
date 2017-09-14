@@ -74,42 +74,42 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;stddef.h&gt;</code><br />
-<code>#include &lt;rcutils/error_handling.h&gt;</code><br />
+<code>#include &lt;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/error__handling_8h.html">rcutils/error_handling.h</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="visibility__control_8h_source.html">rmw/visibility_control.h</a>&quot;</code><br />
 </div>
 <p><a href="error__handling_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a461c10a01addd7778396429537dc86fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#a461c10a01addd7778396429537dc86fa">rmw_error_state_copy</a>&#160;&#160;&#160;rcutils_error_state_copy</td></tr>
+<tr class="memitem:a461c10a01addd7778396429537dc86fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#a461c10a01addd7778396429537dc86fa">rmw_error_state_copy</a>&#160;&#160;&#160;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/error__handling_8h.html#a7903e7942723c40d306ef5e3d52f0ada">rcutils_error_state_copy</a></td></tr>
 <tr class="separator:a461c10a01addd7778396429537dc86fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4159c9e3cf2aa284cc3d77e7430fe166"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#a4159c9e3cf2aa284cc3d77e7430fe166">rmw_error_state_fini</a>&#160;&#160;&#160;rcutils_error_state_fini</td></tr>
+<tr class="memitem:a4159c9e3cf2aa284cc3d77e7430fe166"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#a4159c9e3cf2aa284cc3d77e7430fe166">rmw_error_state_fini</a>&#160;&#160;&#160;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/error__handling_8h.html#ae4d8a958361072185ef2f32bd2a9066c">rcutils_error_state_fini</a></td></tr>
 <tr class="separator:a4159c9e3cf2aa284cc3d77e7430fe166"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9d6a92407065486cebc0d6f32aedb1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#ad9d6a92407065486cebc0d6f32aedb1f">RMW_SET_ERROR_MSG</a>(msg)&#160;&#160;&#160;<a class="el" href="error__handling_8h.html#a261369bb637c59655917bdc724a4ea2f">rmw_set_error_state</a>(msg, __FILE__, __LINE__);</td></tr>
 <tr class="memdesc:ad9d6a92407065486cebc0d6f32aedb1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the error message, as well as append the current file and line number.  <a href="#ad9d6a92407065486cebc0d6f32aedb1f">More...</a><br /></td></tr>
 <tr class="separator:ad9d6a92407065486cebc0d6f32aedb1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8316ca1df0a40b9595a7de49e7a59353"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#a8316ca1df0a40b9595a7de49e7a59353">RMW_SET_ERROR_MSG_ALLOC</a>(msg,  allocator)&#160;&#160;&#160;rcutils_set_error_state(msg, __FILE__, __LINE__, allocator);</td></tr>
+<tr class="memitem:a8316ca1df0a40b9595a7de49e7a59353"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#a8316ca1df0a40b9595a7de49e7a59353">RMW_SET_ERROR_MSG_ALLOC</a>(msg,  allocator)&#160;&#160;&#160;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/error__handling_8h.html#af0e08e148e0d8ad75729d6c1a9c691c3">rcutils_set_error_state</a>(msg, __FILE__, __LINE__, allocator);</td></tr>
 <tr class="separator:a8316ca1df0a40b9595a7de49e7a59353"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcc49eadec3e8b32460c14fb0c625f8c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#abcc49eadec3e8b32460c14fb0c625f8c">rmw_error_is_set</a>&#160;&#160;&#160;rcutils_error_is_set</td></tr>
+<tr class="memitem:abcc49eadec3e8b32460c14fb0c625f8c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#abcc49eadec3e8b32460c14fb0c625f8c">rmw_error_is_set</a>&#160;&#160;&#160;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/error__handling_8h.html#a4ed6412398b42e134723e47f33eb09ca">rcutils_error_is_set</a></td></tr>
 <tr class="separator:abcc49eadec3e8b32460c14fb0c625f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90756edfef0b36a54b2810a2885a1d9f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#a90756edfef0b36a54b2810a2885a1d9f">rmw_get_error_state</a>&#160;&#160;&#160;rcutils_get_error_state</td></tr>
+<tr class="memitem:a90756edfef0b36a54b2810a2885a1d9f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#a90756edfef0b36a54b2810a2885a1d9f">rmw_get_error_state</a>&#160;&#160;&#160;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/error__handling_8h.html#a4b87fcfb5ab42d3f77de0df9321583fa">rcutils_get_error_state</a></td></tr>
 <tr class="separator:a90756edfef0b36a54b2810a2885a1d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53c64bb6f2a65ebc10b307dee2a8e32e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#a53c64bb6f2a65ebc10b307dee2a8e32e">rmw_get_error_string</a>&#160;&#160;&#160;rcutils_get_error_string</td></tr>
+<tr class="memitem:a53c64bb6f2a65ebc10b307dee2a8e32e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#a53c64bb6f2a65ebc10b307dee2a8e32e">rmw_get_error_string</a>&#160;&#160;&#160;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/error__handling_8h.html#a167525f559a32b0cd81a005d5257c6a3">rcutils_get_error_string</a></td></tr>
 <tr class="separator:a53c64bb6f2a65ebc10b307dee2a8e32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39d258c5208ca65d9661e72b22f858a8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#a39d258c5208ca65d9661e72b22f858a8">rmw_get_error_string_safe</a>&#160;&#160;&#160;rcutils_get_error_string_safe</td></tr>
+<tr class="memitem:a39d258c5208ca65d9661e72b22f858a8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#a39d258c5208ca65d9661e72b22f858a8">rmw_get_error_string_safe</a>&#160;&#160;&#160;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/error__handling_8h.html#af4e67504a2d0d6724f16d4b39cc1c22b">rcutils_get_error_string_safe</a></td></tr>
 <tr class="separator:a39d258c5208ca65d9661e72b22f858a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fec620c962d82700564249e342e37ef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#a1fec620c962d82700564249e342e37ef">rmw_reset_error</a>&#160;&#160;&#160;rcutils_reset_error</td></tr>
+<tr class="memitem:a1fec620c962d82700564249e342e37ef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#a1fec620c962d82700564249e342e37ef">rmw_reset_error</a>&#160;&#160;&#160;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/error__handling_8h.html#afc6e9f045828b75413aefe2e7c277f7e">rcutils_reset_error</a></td></tr>
 <tr class="separator:a1fec620c962d82700564249e342e37ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a576505c79d81940c1cef26f91ca9ca17"><td class="memItemLeft" align="right" valign="top">typedef rcutils_error_state_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#a576505c79d81940c1cef26f91ca9ca17">rmw_error_state_t</a></td></tr>
+<tr class="memitem:a576505c79d81940c1cef26f91ca9ca17"><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/structrcutils__error__state__t.html">rcutils_error_state_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#a576505c79d81940c1cef26f91ca9ca17">rmw_error_state_t</a></td></tr>
 <tr class="separator:a576505c79d81940c1cef26f91ca9ca17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a261369bb637c59655917bdc724a4ea2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error__handling_8h.html#a261369bb637c59655917bdc724a4ea2f">rmw_set_error_state</a> (const char *error_msg, const char *file, size_t line_number)</td></tr>
-<tr class="memdesc:a261369bb637c59655917bdc724a4ea2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the error state, implicitly uses rcutils_get_default_allocator().  <a href="#a261369bb637c59655917bdc724a4ea2f">More...</a><br /></td></tr>
+<tr class="memdesc:a261369bb637c59655917bdc724a4ea2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the error state, implicitly uses <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/allocator_8h.html#acf03104d429d7c11200b33bd8ce892b9">rcutils_get_default_allocator()</a>.  <a href="#a261369bb637c59655917bdc724a4ea2f">More...</a><br /></td></tr>
 <tr class="separator:a261369bb637c59655917bdc724a4ea2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -120,7 +120,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define rmw_error_state_copy&#160;&#160;&#160;rcutils_error_state_copy</td>
+          <td class="memname">#define rmw_error_state_copy&#160;&#160;&#160;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/error__handling_8h.html#a7903e7942723c40d306ef5e3d52f0ada">rcutils_error_state_copy</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -134,7 +134,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define rmw_error_state_fini&#160;&#160;&#160;rcutils_error_state_fini</td>
+          <td class="memname">#define rmw_error_state_fini&#160;&#160;&#160;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/error__handling_8h.html#ae4d8a958361072185ef2f32bd2a9066c">rcutils_error_state_fini</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -158,7 +158,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set the error message, as well as append the current file and line number. </p>
-<dl class="section see"><dt>See also</dt><dd>RCUTILS_SET_ERROR_MSG </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/error__handling_8h.html#a40d76269e8249de6788129bd01d8eab4">RCUTILS_SET_ERROR_MSG</a> </dd></dl>
 
 </div>
 </div>
@@ -183,7 +183,7 @@ Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;rcutils_set_error_state(msg, __FILE__, __LINE__, allocator);</td>
+          <td></td><td>&#160;&#160;&#160;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/error__handling_8h.html#af0e08e148e0d8ad75729d6c1a9c691c3">rcutils_set_error_state</a>(msg, __FILE__, __LINE__, allocator);</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -197,7 +197,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define rmw_error_is_set&#160;&#160;&#160;rcutils_error_is_set</td>
+          <td class="memname">#define rmw_error_is_set&#160;&#160;&#160;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/error__handling_8h.html#a4ed6412398b42e134723e47f33eb09ca">rcutils_error_is_set</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -211,7 +211,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define rmw_get_error_state&#160;&#160;&#160;rcutils_get_error_state</td>
+          <td class="memname">#define rmw_get_error_state&#160;&#160;&#160;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/error__handling_8h.html#a4b87fcfb5ab42d3f77de0df9321583fa">rcutils_get_error_state</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -225,7 +225,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define rmw_get_error_string&#160;&#160;&#160;rcutils_get_error_string</td>
+          <td class="memname">#define rmw_get_error_string&#160;&#160;&#160;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/error__handling_8h.html#a167525f559a32b0cd81a005d5257c6a3">rcutils_get_error_string</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -239,7 +239,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define rmw_get_error_string_safe&#160;&#160;&#160;rcutils_get_error_string_safe</td>
+          <td class="memname">#define rmw_get_error_string_safe&#160;&#160;&#160;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/error__handling_8h.html#af4e67504a2d0d6724f16d4b39cc1c22b">rcutils_get_error_string_safe</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -253,7 +253,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define rmw_reset_error&#160;&#160;&#160;rcutils_reset_error</td>
+          <td class="memname">#define rmw_reset_error&#160;&#160;&#160;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/error__handling_8h.html#afc6e9f045828b75413aefe2e7c277f7e">rcutils_reset_error</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -268,7 +268,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef rcutils_error_state_t <a class="el" href="error__handling_8h.html#a576505c79d81940c1cef26f91ca9ca17">rmw_error_state_t</a></td>
+          <td class="memname">typedef <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/structrcutils__error__state__t.html">rcutils_error_state_t</a> <a class="el" href="error__handling_8h.html#a576505c79d81940c1cef26f91ca9ca17">rmw_error_state_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -308,10 +308,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set the error state, implicitly uses rcutils_get_default_allocator(). </p>
-<dl class="section see"><dt>See also</dt><dd>rcutils_get_default_allocator() </dd>
+<p>Set the error state, implicitly uses <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/allocator_8h.html#acf03104d429d7c11200b33bd8ce892b9">rcutils_get_default_allocator()</a>. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/allocator_8h.html#acf03104d429d7c11200b33bd8ce892b9">rcutils_get_default_allocator()</a> </dd>
 <dd>
-rcutils_set_error_state() </dd></dl>
+<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcutils.tag:http://docs.ros2.org/latest/api/rcutils/" href="http://docs.ros2.org/latest/api/rcutils/error__handling_8h.html#af0e08e148e0d8ad75729d6c1a9c691c3">rcutils_set_error_state()</a> </dd></dl>
 
 </div>
 </div>

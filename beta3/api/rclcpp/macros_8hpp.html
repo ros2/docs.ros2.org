@@ -97,7 +97,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a150f4aee662ba3cf3257f2b9310dc301"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macros_8hpp.html#a150f4aee662ba3cf3257f2b9310dc301">RCLCPP_WEAK_PTR_DEFINITIONS</a>(...)&#160;&#160;&#160;<a class="el" href="macros_8hpp.html#ab4088e27ee18722b5a3b056bfc4fcce3">__RCLCPP_WEAK_PTR_ALIAS</a>(__VA_ARGS__)</td></tr>
 <tr class="memdesc:a150f4aee662ba3cf3257f2b9310dc301"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines aliases and static functions for using the Class with weak_ptrs.  <a href="#a150f4aee662ba3cf3257f2b9310dc301">More...</a><br /></td></tr>
 <tr class="separator:a150f4aee662ba3cf3257f2b9310dc301"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3104ba8b9f139139f855bb001091a8c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macros_8hpp.html#ad3104ba8b9f139139f855bb001091a8c">__RCLCPP_UNIQUE_PTR_ALIAS</a>(...)&#160;&#160;&#160;using UniquePtr = std::unique_ptr&lt;__VA_ARGS__&gt;;</td></tr>
+<tr class="memitem:ad3104ba8b9f139139f855bb001091a8c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macros_8hpp.html#ad3104ba8b9f139139f855bb001091a8c">__RCLCPP_UNIQUE_PTR_ALIAS</a>(...)&#160;&#160;&#160;using UniquePtr = <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">std::unique_ptr</a>&lt;__VA_ARGS__&gt;;</td></tr>
 <tr class="separator:ad3104ba8b9f139139f855bb001091a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72e5f97814faddba1a3919eaeab40718"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macros_8hpp.html#a72e5f97814faddba1a3919eaeab40718">__RCLCPP_MAKE_UNIQUE_DEFINITION</a>(...)</td></tr>
 <tr class="separator:a72e5f97814faddba1a3919eaeab40718"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -108,7 +108,7 @@ Macros</h2></td></tr>
 <tr class="separator:abaf6b89d68d61ccc8295f30c6e82bfaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e5661370a885f08c53c44d78bf2da02"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macros_8hpp.html#a8e5661370a885f08c53c44d78bf2da02">RCLCPP_DO_STRING_JOIN</a>(arg1,  arg2)&#160;&#160;&#160;arg1 ## arg2</td></tr>
 <tr class="separator:a8e5661370a885f08c53c44d78bf2da02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80f7735a0b8563b3e344057476599b91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macros_8hpp.html#a80f7735a0b8563b3e344057476599b91">RCLCPP_INFO</a>(Args)&#160;&#160;&#160;std::cout &lt;&lt; Args &lt;&lt; std::endl;</td></tr>
+<tr class="memitem:a80f7735a0b8563b3e344057476599b91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macros_8hpp.html#a80f7735a0b8563b3e344057476599b91">RCLCPP_INFO</a>(Args)&#160;&#160;&#160;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a> &lt;&lt; Args &lt;&lt; <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>;</td></tr>
 <tr class="separator:a80f7735a0b8563b3e344057476599b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -212,7 +212,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">using</span> SharedPtr = std::shared_ptr&lt;__VA_ARGS__&gt;; \</div><div class="line">  using ConstSharedPtr = std::shared_ptr&lt;const __VA_ARGS__&gt;;</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">using</span> SharedPtr = <a class="codeRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/shared_ptr.html">std::shared_ptr&lt;__VA_ARGS__&gt;</a>; \</div><div class="line">  using ConstSharedPtr = <a class="codeRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/shared_ptr.html">std::shared_ptr&lt;const __VA_ARGS__&gt;</a>;</div><div class="ttc" id="shared_ptr_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/memory/shared_ptr.html">std::shared_ptr</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac6100ecf30618979271e924ae00faafe"></a>
@@ -230,7 +231,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> ... Args&gt; \</div><div class="line">  static std::shared_ptr&lt;__VA_ARGS__&gt; \</div><div class="line">  make_shared(Args &amp;&amp; ... args) \</div><div class="line">  { \</div><div class="line">    return std::make_shared&lt;__VA_ARGS__&gt;(std::forward&lt;Args&gt;(args) ...); \</div><div class="line">  }</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> ... Args&gt; \</div><div class="line">  static <a class="codeRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/shared_ptr.html">std::shared_ptr&lt;__VA_ARGS__&gt; \</a></div><div class="line"><a class="codeRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/shared_ptr.html">  make_shared</a>(Args &amp;&amp; ... args) \</div><div class="line">  { \</div><div class="line">    return std::make_shared&lt;__VA_ARGS__&gt;(std::forward&lt;Args&gt;(args) ...); \</div><div class="line">  }</div><div class="ttc" id="shared_ptr_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/memory/shared_ptr.html">std::shared_ptr</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a81544d33068b1423ffd418254614cc1b"></a>
@@ -269,7 +271,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">using</span> WeakPtr = std::weak_ptr&lt;__VA_ARGS__&gt;; \</div><div class="line">  using ConstWeakPtr = std::weak_ptr&lt;const __VA_ARGS__&gt;;</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">using</span> WeakPtr = <a class="codeRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/weak_ptr.html">std::weak_ptr&lt;__VA_ARGS__&gt;</a>; \</div><div class="line">  using ConstWeakPtr = <a class="codeRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/weak_ptr.html">std::weak_ptr&lt;const __VA_ARGS__&gt;</a>;</div><div class="ttc" id="weak_ptr_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/memory/weak_ptr.html">std::weak_ptr</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a150f4aee662ba3cf3257f2b9310dc301"></a>
@@ -303,7 +306,7 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>...</em></td><td>)</td>
-          <td>&#160;&#160;&#160;using UniquePtr = std::unique_ptr&lt;__VA_ARGS__&gt;;</td>
+          <td>&#160;&#160;&#160;using UniquePtr = <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">std::unique_ptr</a>&lt;__VA_ARGS__&gt;;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -325,7 +328,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> ... Args&gt; \</div><div class="line">  static std::unique_ptr&lt;__VA_ARGS__&gt; \</div><div class="line">  make_unique(Args &amp;&amp; ... args) \</div><div class="line">  { \</div><div class="line">    return std::unique_ptr&lt;__VA_ARGS__&gt;(<span class="keyword">new</span> __VA_ARGS__(std::forward&lt;Args&gt;(args) ...)); \</div><div class="line">  }</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> ... Args&gt; \</div><div class="line">  static <a class="codeRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">std::unique_ptr&lt;__VA_ARGS__&gt; \</a></div><div class="line"><a class="codeRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">  make_unique</a>(Args &amp;&amp; ... args) \</div><div class="line">  { \</div><div class="line">    return <a class="codeRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">std::unique_ptr&lt;__VA_ARGS__&gt;</a>(<span class="keyword">new</span> __VA_ARGS__(std::forward&lt;Args&gt;(args) ...)); \</div><div class="line">  }</div><div class="ttc" id="unique_ptr_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">std::unique_ptr</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a74b2138ad12edbfb75edd98b73c37895"></a>
@@ -416,7 +420,7 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">Args</td><td>)</td>
-          <td>&#160;&#160;&#160;std::cout &lt;&lt; Args &lt;&lt; std::endl;</td>
+          <td>&#160;&#160;&#160;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a> &lt;&lt; Args &lt;&lt; <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>;</td>
         </tr>
       </table>
 </div><div class="memdoc">

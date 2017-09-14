@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['file',['file',['../classrclcpp_1_1exceptions_1_1RCLErrorBase.html#a2531db0261a39abfedb838223b784bf7',1,'rclcpp::exceptions::RCLErrorBase']]],
-  ['formatted_5fmessage',['formatted_message',['../classrclcpp_1_1exceptions_1_1RCLErrorBase.html#a45cf80939589d78d3e51912f6d65fdd4',1,'rclcpp::exceptions::RCLErrorBase']]]
+  ['enforce_5fsecurity',['enforce_security',['http://docs.ros2.org/latest/api/rmw/structrmw__node__security__options__t.html#a0ffdd56e568102757fa3263ff77d289c',1,'rmw_node_security_options_t']]],
+  ['error_5fmsg',['error_msg',['../classrclcpp_1_1exceptions_1_1NameValidationError.html#a3e67313d245dfb008c1e09cfac739a03',1,'rclcpp::exceptions::NameValidationError']]]
 ];

@@ -7,5 +7,6 @@ var searchData=
   ['_5f_5frclcpp_5fshared_5fptr_5falias',['__RCLCPP_SHARED_PTR_ALIAS',['../macros_8hpp.html#aa28e069950bf0d5d5376437476308211',1,'macros.hpp']]],
   ['_5f_5frclcpp_5funique_5fptr_5falias',['__RCLCPP_UNIQUE_PTR_ALIAS',['../macros_8hpp.html#ad3104ba8b9f139139f855bb001091a8c',1,'macros.hpp']]],
   ['_5f_5frclcpp_5fweak_5fptr_5falias',['__RCLCPP_WEAK_PTR_ALIAS',['../macros_8hpp.html#ab4088e27ee18722b5a3b056bfc4fcce3',1,'macros.hpp']]],
+  ['_5fexit',['_Exit',['http://en.cppreference.com/w/cpp/utility/program/_Exit.html',1,'std']]],
   ['_5fto_5fjson_5fdict_5fentry',['_to_json_dict_entry',['../namespacerclcpp_1_1parameter.html#afa43d3008b18e3a963c4cdf7ca769d2b',1,'rclcpp::parameter']]]
 ];

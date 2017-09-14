@@ -84,10 +84,10 @@ $(function() {
 <code>#include &quot;<a class="el" href="rate_8hpp_source.html">rclcpp/rate.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="utilities_8hpp_source.html">rclcpp/utilities.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="visibility__control_8hpp_source.html">rclcpp/visibility_control.hpp</a>&quot;</code><br />
-<code>#include &quot;rcl/error_handling.h&quot;</code><br />
-<code>#include &quot;rcl/timer.h&quot;</code><br />
-<code>#include &quot;rmw/error_handling.h&quot;</code><br />
-<code>#include &quot;rmw/rmw.h&quot;</code><br />
+<code>#include &quot;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcl.tag:http://docs.ros2.org/latest/api/rcl/" href="http://docs.ros2.org/latest/api/rcl/error__handling_8h.html">rcl/error_handling.h</a>&quot;</code><br />
+<code>#include &quot;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rcl.tag:http://docs.ros2.org/latest/api/rcl/" href="http://docs.ros2.org/latest/api/rcl/timer_8h.html">rcl/timer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rmw.tag:http://docs.ros2.org/latest/api/rmw/" href="http://docs.ros2.org/latest/api/rmw/error__handling_8h.html">rmw/error_handling.h</a>&quot;</code><br />
+<code>#include &quot;<a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/rmw.tag:http://docs.ros2.org/latest/api/rmw/" href="http://docs.ros2.org/latest/api/rmw/rmw_8h.html">rmw/rmw.h</a>&quot;</code><br />
 </div>
 <p><a href="timer_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -108,12 +108,12 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a60154b38acde38c02730186f4c3d7e1e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp_1_1timer.html#a60154b38acde38c02730186f4c3d7e1e">rclcpp::timer::VoidCallbackType</a> = std::function&lt; void()&gt;</td></tr>
+<tr class="memitem:a60154b38acde38c02730186f4c3d7e1e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp_1_1timer.html#a60154b38acde38c02730186f4c3d7e1e">rclcpp::timer::VoidCallbackType</a> = <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/utility/functional/function.html">std::function</a>&lt; void()&gt;</td></tr>
 <tr class="separator:a60154b38acde38c02730186f4c3d7e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0df97acbb8cae2285aa158612db0964"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp_1_1timer.html#af0df97acbb8cae2285aa158612db0964">rclcpp::timer::TimerCallbackType</a> = std::function&lt; void(TimerBase &amp;)&gt;</td></tr>
+<tr class="memitem:af0df97acbb8cae2285aa158612db0964"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp_1_1timer.html#af0df97acbb8cae2285aa158612db0964">rclcpp::timer::TimerCallbackType</a> = <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/utility/functional/function.html">std::function</a>&lt; void(TimerBase &amp;)&gt;</td></tr>
 <tr class="separator:af0df97acbb8cae2285aa158612db0964"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a669efd73299d53391a65dee9643965e0"><td class="memTemplParams" colspan="2">template&lt;typename CallbackType &gt; </td></tr>
-<tr class="memitem:a669efd73299d53391a65dee9643965e0"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerclcpp_1_1timer.html#a669efd73299d53391a65dee9643965e0">rclcpp::timer::WallTimer</a> = GenericTimer&lt; CallbackType, std::chrono::steady_clock &gt;</td></tr>
+<tr class="memitem:a669efd73299d53391a65dee9643965e0"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerclcpp_1_1timer.html#a669efd73299d53391a65dee9643965e0">rclcpp::timer::WallTimer</a> = GenericTimer&lt; CallbackType, <a class="elRef" doxygen="/home/dhood/ros2_beta3/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/chrono/steady_clock.html">std::chrono::steady_clock</a> &gt;</td></tr>
 <tr class="separator:a669efd73299d53391a65dee9643965e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
