@@ -1,0 +1,6 @@
+<map id="rclcpp::exceptions::NameValidationError" name="rclcpp::exceptions::NameValidationError">
+<area shape="rect" id="node3" href="$classrclcpp_1_1exceptions_1_1InvalidNamespaceError.html" title="Thrown when a node namespace is invalid. " alt="" coords="376,5,543,47"/>
+<area shape="rect" id="node4" href="$classrclcpp_1_1exceptions_1_1InvalidNodeNameError.html" title="Thrown when a node name is invalid. " alt="" coords="378,71,541,112"/>
+<area shape="rect" id="node5" href="$classrclcpp_1_1exceptions_1_1InvalidServiceNameError.html" title="Thrown when a service name is invalid. " alt="" coords="372,136,547,177"/>
+<area shape="rect" id="node6" href="$classrclcpp_1_1exceptions_1_1InvalidTopicNameError.html" title="Thrown when a topic name is invalid. " alt="" coords="378,201,541,243"/>
+</map>

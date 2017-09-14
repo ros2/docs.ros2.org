@@ -1,0 +1,3 @@
+<map id="rclcpp::exceptions::InvalidTopicNameError" name="rclcpp::exceptions::InvalidTopicNameError">
+<area shape="rect" id="node2" href="$classrclcpp_1_1exceptions_1_1NameValidationError.html" title="Thrown when a any kind of name (node, namespace, topic, etc.) is invalid. " alt="" coords="11,80,162,121"/>
+</map>

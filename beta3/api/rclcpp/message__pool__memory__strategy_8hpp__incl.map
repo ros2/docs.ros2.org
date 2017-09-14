@@ -1,0 +1,7 @@
+<map id="include/rclcpp/strategies/message_pool_memory_strategy.hpp" name="include/rclcpp/strategies/message_pool_memory_strategy.hpp">
+<area shape="rect" id="node3" href="$macros_8hpp.html" title="rclcpp/macros.hpp" alt="" coords="30,191,159,218"/>
+<area shape="rect" id="node5" href="$message__memory__strategy_8hpp.html" title="rclcpp/message_memory\l_strategy.hpp" alt="" coords="218,95,386,136"/>
+<area shape="rect" id="node10" href="$visibility__control_8hpp.html" title="rclcpp/visibility_control.hpp" alt="" coords="621,191,800,218"/>
+<area shape="rect" id="node7" href="$allocator__common_8hpp.html" title="rclcpp/allocator/allocator\l_common.hpp" alt="" coords="246,184,409,225"/>
+<area shape="rect" id="node9" href="$allocator__deleter_8hpp.html" title="rclcpp/allocator/allocator\l_deleter.hpp" alt="" coords="258,273,421,315"/>
+</map>
