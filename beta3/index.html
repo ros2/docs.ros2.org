@@ -14,6 +14,8 @@
 
   
   
+  
+  
 
   
 
@@ -33,6 +35,9 @@
   
   <link rel="icon" type="image/png" href="/favicon.png" />
   
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="ros_core beta3 documentation" href="#"/>
         <link rel="next" title="Core Stack Developer Overview" href="developer_overview.html"/>
  
@@ -44,6 +49,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -84,7 +90,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="developer_overview.html">Core Stack Developer Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="glossary.html">Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="developer_overview.html#build-system">Build System</a><ul>
@@ -133,8 +142,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="#">ros_core</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">ros_core</a>
+        
       </nav>
 
 
@@ -143,23 +154,42 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="#">Docs</a> &raquo;</li>
-      
-    <li>ROS 2 Overview</li>
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>ROS 2 Overview</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="https://github.com/ros2/ros_core_documentation/blob/master/source/index.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+            
+              <a href="https://github.com/ros2/ros_core_documentation/blob/master/source/index.rst" class="fa fa-github"> Edit on GitHub</a>
+            
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -210,12 +240,15 @@
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="developer_overview.html" class="btn btn-neutral float-right" title="Core Stack Developer Overview" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="developer_overview.html" class="btn btn-neutral float-right" title="Core Stack Developer Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>
@@ -250,7 +283,8 @@
             VERSION:'beta3',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

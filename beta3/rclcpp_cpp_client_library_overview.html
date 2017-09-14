@@ -14,6 +14,8 @@
 
   
   
+  
+  
 
   
 
@@ -33,6 +35,9 @@
   
   <link rel="icon" type="image/png" href="/favicon.png" />
   
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="ros_core beta3 documentation" href="index.html"/>
  
 
@@ -43,6 +48,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,7 +89,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="developer_overview.html">Core Stack Developer Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="glossary.html">Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="developer_overview.html#build-system">Build System</a><ul>
@@ -132,8 +141,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">ros_core</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ros_core</a>
+        
       </nav>
 
 
@@ -142,23 +153,42 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li><code class="docutils literal"><span class="pre">rclcpp</span></code>: CPP Client Library Overview</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li><code class="docutils literal"><span class="pre">rclcpp</span></code>: CPP Client Library Overview</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="https://github.com/ros2/ros_core_documentation/blob/master/source/rclcpp_cpp_client_library_overview.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+            
+              <a href="https://github.com/ros2/ros_core_documentation/blob/master/source/rclcpp_cpp_client_library_overview.rst" class="fa fa-github"> Edit on GitHub</a>
+            
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -186,7 +216,7 @@
 </div>
 <div class="admonition danger">
 <p class="first admonition-title">Danger</p>
-<p class="last">This document is under construction and should not be used as a reference. Some things that are implemented are not documented here and other things documented here are the &#8220;desired&#8221; state but are not implemented in the actual code yet.</p>
+<p class="last">This document is under construction and should not be used as a reference. Some things that are implemented are not documented here and other things documented here are the “desired” state but are not implemented in the actual code yet.</p>
 </div>
 <div class="section" id="initialization-and-shutdown">
 <span id="init-and-shutdown"></span><h2><a class="toc-backref" href="#id2">Initialization and Shutdown</a><a class="headerlink" href="#initialization-and-shutdown" title="Permalink to this headline">¶</a></h2>
@@ -253,7 +283,7 @@ It also destroys any global resources created when the initialization function w
 <h2><a class="toc-backref" href="#id5">Nodes</a><a class="headerlink" href="#nodes" title="Permalink to this headline">¶</a></h2>
 <p>The main entry point to the <a class="reference internal" href="glossary.html#term-rclcpp"><span class="xref std std-term">rclcpp</span></a> API is the <code class="xref cpp cpp-class docutils literal"><span class="pre">rclcpp::Node</span></code> class.
 The <code class="xref cpp cpp-class docutils literal"><span class="pre">rclcpp::Node</span></code> class represents a single element in the ROS graph.
-Node&#8217;s can have publishers and subscribers on topics, provide or call services, have parameters, and many other things.</p>
+Node’s can have publishers and subscribers on topics, provide or call services, have parameters, and many other things.</p>
 <p>Creating a node is done by calling the constructor of the <code class="xref cpp cpp-class docutils literal"><span class="pre">rclcpp::Node</span></code> class and providing a name for the node (after calling <code class="xref cpp cpp-func docutils literal"><span class="pre">rclcpp::init()</span></code>):</p>
 <div class="highlight-c"><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
 
@@ -427,6 +457,9 @@ Conversely, when the <code class="xref cpp cpp-class docutils literal"><span cla
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -460,7 +493,8 @@ Conversely, when the <code class="xref cpp cpp-class docutils literal"><span cla
             VERSION:'beta3',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

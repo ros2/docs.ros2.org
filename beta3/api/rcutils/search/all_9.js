@@ -50,7 +50,7 @@ var searchData=
   ['rcutils_5flogging_5fget_5foutput_5fhandler',['rcutils_logging_get_output_handler',['../logging_8h.html#a9b804461dd4f36e7d6f4cc299f151324',1,'logging.h']]],
   ['rcutils_5flogging_5fget_5fseverity_5fthreshold',['rcutils_logging_get_severity_threshold',['../logging_8h.html#afa1c6472f75ac11a3d7bc945a7a95ec8',1,'logging.h']]],
   ['rcutils_5flogging_5finitialize',['rcutils_logging_initialize',['../logging_8h.html#adc0596b90b09d75cd8d548250e73b723',1,'logging.h']]],
-  ['rcutils_5flogging_5foutput_5fhandler_5ft',['rcutils_logging_output_handler_t',['../logging_8h.html#a880efb2e4454333e1b4b274f32749790',1,'logging.h']]],
+  ['rcutils_5flogging_5foutput_5fhandler_5ft',['rcutils_logging_output_handler_t',['../logging_8h.html#abd5fe919e69b8836a89f11b3642319c2',1,'logging.h']]],
   ['rcutils_5flogging_5fset_5foutput_5fhandler',['rcutils_logging_set_output_handler',['../logging_8h.html#aa13e74b0ec8bb89b3dd310a27b20abfc',1,'logging.h']]],
   ['rcutils_5flogging_5fset_5fseverity_5fthreshold',['rcutils_logging_set_severity_threshold',['../logging_8h.html#a816c93b2b50e67e73f35c9cddd823ab5',1,'logging.h']]],
   ['rcutils_5fms_5fto_5fns',['RCUTILS_MS_TO_NS',['../time_8h.html#a428e1debfc4394e50ba59f1aaa2a5a03',1,'time.h']]],
