@@ -1,4 +1,4 @@
-release_name := beta3
+release_name := ardent
 
 default: $(release_name) api/rcutils api/rmw api api/rcl api/rclcpp
 
