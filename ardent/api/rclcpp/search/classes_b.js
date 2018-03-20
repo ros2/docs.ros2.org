@@ -8,7 +8,7 @@ var searchData=
   ['list',['list',['http://en.cppreference.com/w/cpp/container/list.html',1,'std']]],
   ['locale',['locale',['http://en.cppreference.com/w/cpp/locale/locale.html',1,'std']]],
   ['lock_5fguard',['lock_guard',['http://en.cppreference.com/w/cpp/thread/lock_guard.html',1,'std']]],
-  ['logger',['Logger',['../classrclcpp_1_1Logger.html',1,'rclcpp']]],
+  ['logger',['Logger',['../classrclcpp_1_1_logger.html',1,'rclcpp']]],
   ['logic_5ferror',['logic_error',['http://en.cppreference.com/w/cpp/error/logic_error.html',1,'std']]],
   ['logical_5fand',['logical_and',['http://en.cppreference.com/w/cpp/utility/functional/logical_and.html',1,'std']]],
   ['logical_5fnot',['logical_not',['http://en.cppreference.com/w/cpp/utility/functional/logical_not.html',1,'std']]],

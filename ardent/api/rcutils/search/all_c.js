@@ -31,7 +31,6 @@ var searchData=
   ['log1p',['log1p',['http://en.cppreference.com/w/cpp/numeric/math/log1p.html',1,'std']]],
   ['logb',['logb',['http://en.cppreference.com/w/cpp/numeric/math/logb.html',1,'std']]],
   ['logging_2eh',['logging.h',['../logging_8h.html',1,'']]],
-  ['logging_5fmacros_2eh',['logging_macros.h',['../logging__macros_8h.html',1,'']]],
   ['logic_5ferror',['logic_error',['http://en.cppreference.com/w/cpp/error/logic_error.html',1,'std::logic_error'],['http://en.cppreference.com/w/cpp/error/logic_error.html',1,'std::logic_error::logic_error()']]],
   ['logical_5fand',['logical_and',['http://en.cppreference.com/w/cpp/utility/functional/logical_and.html',1,'std']]],
   ['logical_5fnot',['logical_not',['http://en.cppreference.com/w/cpp/utility/functional/logical_not.html',1,'std']]],
