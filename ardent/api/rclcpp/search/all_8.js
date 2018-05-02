@@ -17,7 +17,7 @@ var searchData=
   ['hex',['hex',['http://en.cppreference.com/w/cpp/io/manip/hex.html',1,'std']]],
   ['hexfloat',['hexfloat',['http://en.cppreference.com/w/cpp/io/manip/fixed.html',1,'std']]],
   ['high_5fresolution_5fclock',['high_resolution_clock',['http://en.cppreference.com/w/cpp/chrono/high_resolution_clock.html',1,'std::chrono']]],
-  ['history',['history',['http://docs.ros2.org/latest/api/rmw/structrmw__qos__profile__t.html#a1a14ac48de26eeb3e734b5b84f255dca',1,'rmw_qos_profile_t']]],
+  ['history',['history',['http://docs.ros2.org/ardent/api/rmw/structrmw__qos__profile__t.html#a1a14ac48de26eeb3e734b5b84f255dca',1,'rmw_qos_profile_t']]],
   ['hours',['hours',['http://en.cppreference.com/w/cpp/chrono/duration.html',1,'std::chrono::hours'],['http://en.cppreference.com/w/cpp/chrono/duration/duration.html',1,'std::chrono::hours::hours()']]],
   ['hypot',['hypot',['http://en.cppreference.com/w/cpp/numeric/math/hypot.html',1,'std']]]
 ];
