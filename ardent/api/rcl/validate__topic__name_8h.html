@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">rcl
-   &#160;<span id="projectnumber">0.4.0</span>
+   &#160;<span id="projectnumber">master</span>
    </div>
    <div id="projectbrief">C API providing common ROS client library functionality.</div>
   </td>
@@ -304,7 +304,7 @@ Functions</h2></td></tr>
 </ul>
 <p>Some checks, like the check for illegal repeated forward slashes, are not checked in this function because they would need to be checked again after expansion anyways. The purpose of this subset of checks is to try to catch issues with content that will be expanded in some way by <a class="el" href="expand__topic__name_8h.html#afd76d3899685bd234563afa467b885f2" title="Expand a given topic name into a fully-qualified topic name. ">rcl_expand_topic_name()</a>, like <code>~</code> or substitutions inside of <code>{}</code>, or with other issues that would obviously prevent expansion, like RCL_TOPIC_NAME_INVALID_IS_EMPTY_STRING.</p>
 <p>This function does not check that the substitutions are known substitutions, only that the contents of the <code>{}</code> follow the rules outline in the document which was linked to above.</p>
-<p>Stricter validation can be done with <a class="elRef" doxygen="/private/tmp/ardent_docs/doxygen_tag_files/rmw.tag:http://docs.ros2.org/ardent/api/rmw/" href="http://docs.ros2.org/ardent/api/rmw/validate__full__topic__name_8h.html#a5bf7cd29da7f1c6c28bff9e24fa8328d">rmw_validate_full_topic_name()</a> after using <a class="el" href="expand__topic__name_8h.html#afd76d3899685bd234563afa467b885f2" title="Expand a given topic name into a fully-qualified topic name. ">rcl_expand_topic_name()</a>.</p>
+<p>Stricter validation can be done with <a class="elRef" doxygen="/Users/deanna/ros2_ardent_docs/doxygen_tag_files/rmw.tag:http://docs.ros2.org/latest/api/rmw/" href="http://docs.ros2.org/latest/api/rmw/validate__full__topic__name_8h.html#a5bf7cd29da7f1c6c28bff9e24fa8328d">rmw_validate_full_topic_name()</a> after using <a class="el" href="expand__topic__name_8h.html#afd76d3899685bd234563afa467b885f2" title="Expand a given topic name into a fully-qualified topic name. ">rcl_expand_topic_name()</a>.</p>
 <p>Additionally, if the invalid_index argument is not NULL, then it will be assigned the index in the topic_name string where the violation occurs. The invalid_index is not set if the validation passes.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

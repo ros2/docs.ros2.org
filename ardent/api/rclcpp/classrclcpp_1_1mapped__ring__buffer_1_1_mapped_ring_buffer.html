@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">rclcpp
-   &#160;<span id="projectnumber">0.4.0</span>
+   &#160;<span id="projectnumber">master</span>
    </div>
    <div id="projectbrief">C++ ROS Client Library API</div>
   </td>
@@ -99,12 +99,12 @@ Public Types</h2></td></tr>
 <tr class="separator:ae10db6b24f0fe51e5cf28d739b49097c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21b6b98ba3a3046b3a39dff98bab7d97"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrclcpp_1_1mapped__ring__buffer_1_1_mapped_ring_buffer.html#a21b6b98ba3a3046b3a39dff98bab7d97">ElemDeleter</a> = <a class="el" href="namespacerclcpp_1_1allocator.html#a885f50f2cbbab914f65ef687a0edd61b">allocator::Deleter</a>&lt; <a class="el" href="classrclcpp_1_1mapped__ring__buffer_1_1_mapped_ring_buffer.html#ae10db6b24f0fe51e5cf28d739b49097c">ElemAlloc</a>, T &gt;</td></tr>
 <tr class="separator:a21b6b98ba3a3046b3a39dff98bab7d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada14be27bb3a40e30bdeb12a01c6abdb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrclcpp_1_1mapped__ring__buffer_1_1_mapped_ring_buffer.html#ada14be27bb3a40e30bdeb12a01c6abdb">ElemUniquePtr</a> = <a class="elRef" doxygen="/private/tmp/ardent_docs/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">std::unique_ptr</a>&lt; T, <a class="el" href="classrclcpp_1_1mapped__ring__buffer_1_1_mapped_ring_buffer.html#a21b6b98ba3a3046b3a39dff98bab7d97">ElemDeleter</a> &gt;</td></tr>
+<tr class="memitem:ada14be27bb3a40e30bdeb12a01c6abdb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrclcpp_1_1mapped__ring__buffer_1_1_mapped_ring_buffer.html#ada14be27bb3a40e30bdeb12a01c6abdb">ElemUniquePtr</a> = <a class="elRef" doxygen="/Users/deanna/ros2_ardent_docs/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">std::unique_ptr</a>&lt; T, <a class="el" href="classrclcpp_1_1mapped__ring__buffer_1_1_mapped_ring_buffer.html#a21b6b98ba3a3046b3a39dff98bab7d97">ElemDeleter</a> &gt;</td></tr>
 <tr class="separator:ada14be27bb3a40e30bdeb12a01c6abdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2736f1b2c51b6f0acbd8d2b9e39e9037"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrclcpp_1_1mapped__ring__buffer_1_1_mapped_ring_buffer.html#a2736f1b2c51b6f0acbd8d2b9e39e9037">MappedRingBuffer</a> (size_t size, <a class="elRef" doxygen="/private/tmp/ardent_docs/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/shared_ptr.html">std::shared_ptr</a>&lt; Alloc &gt; allocator=nullptr)</td></tr>
+<tr class="memitem:a2736f1b2c51b6f0acbd8d2b9e39e9037"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrclcpp_1_1mapped__ring__buffer_1_1_mapped_ring_buffer.html#a2736f1b2c51b6f0acbd8d2b9e39e9037">MappedRingBuffer</a> (size_t size, <a class="elRef" doxygen="/Users/deanna/ros2_ardent_docs/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/shared_ptr.html">std::shared_ptr</a>&lt; Alloc &gt; allocator=nullptr)</td></tr>
 <tr class="memdesc:a2736f1b2c51b6f0acbd8d2b9e39e9037"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a2736f1b2c51b6f0acbd8d2b9e39e9037">More...</a><br /></td></tr>
 <tr class="separator:a2736f1b2c51b6f0acbd8d2b9e39e9037"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49d85597642e946e8aa8d339eac6089c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrclcpp_1_1mapped__ring__buffer_1_1_mapped_ring_buffer.html#a49d85597642e946e8aa8d339eac6089c">~MappedRingBuffer</a> ()</td></tr>
@@ -192,7 +192,7 @@ template&lt;typename T , typename Alloc  = std::allocator&lt;void&gt;&gt; </div>
 template&lt;typename T , typename Alloc  = std::allocator&lt;void&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classrclcpp_1_1mapped__ring__buffer_1_1_mapped_ring_buffer.html">rclcpp::mapped_ring_buffer::MappedRingBuffer</a>&lt; T, Alloc &gt;::<a class="el" href="classrclcpp_1_1mapped__ring__buffer_1_1_mapped_ring_buffer.html#ada14be27bb3a40e30bdeb12a01c6abdb">ElemUniquePtr</a> =  <a class="elRef" doxygen="/private/tmp/ardent_docs/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">std::unique_ptr</a>&lt;T, <a class="el" href="classrclcpp_1_1mapped__ring__buffer_1_1_mapped_ring_buffer.html#a21b6b98ba3a3046b3a39dff98bab7d97">ElemDeleter</a>&gt;</td>
+          <td class="memname">using <a class="el" href="classrclcpp_1_1mapped__ring__buffer_1_1_mapped_ring_buffer.html">rclcpp::mapped_ring_buffer::MappedRingBuffer</a>&lt; T, Alloc &gt;::<a class="el" href="classrclcpp_1_1mapped__ring__buffer_1_1_mapped_ring_buffer.html#ada14be27bb3a40e30bdeb12a01c6abdb">ElemUniquePtr</a> =  <a class="elRef" doxygen="/Users/deanna/ros2_ardent_docs/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">std::unique_ptr</a>&lt;T, <a class="el" href="classrclcpp_1_1mapped__ring__buffer_1_1_mapped_ring_buffer.html#a21b6b98ba3a3046b3a39dff98bab7d97">ElemDeleter</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -220,7 +220,7 @@ template&lt;typename T , typename Alloc  = std::allocator&lt;void&gt;&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="elRef" doxygen="/private/tmp/ardent_docs/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/shared_ptr.html">std::shared_ptr</a>&lt; Alloc &gt;&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="/Users/deanna/ros2_ardent_docs/doxygen_tag_files/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/shared_ptr.html">std::shared_ptr</a>&lt; Alloc &gt;&#160;</td>
           <td class="paramname"><em>allocator</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
@@ -545,7 +545,7 @@ template&lt;typename T , typename Alloc  = std::allocator&lt;void&gt;&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/private/tmp/ardent_docs/src/ros2/rclcpp/rclcpp/include/rclcpp/<a class="el" href="mapped__ring__buffer_8hpp_source.html">mapped_ring_buffer.hpp</a></li>
+<li>rclcpp/<a class="el" href="mapped__ring__buffer_8hpp_source.html">mapped_ring_buffer.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

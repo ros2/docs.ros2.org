@@ -34,7 +34,7 @@ var menudata={children:[
 {text:"File Members",url:"globals.html",children:[
 {text:"All",url:"globals.html",children:[
 {text:"g",url:"globals.html#index_g"},
-{text:"r",url:"globals.html#index_r"}]},
+{text:"r",url:"globals_r.html#index_r"}]},
 {text:"Functions",url:"globals_func.html",children:[
 {text:"r",url:"globals_func.html#index_r"}]},
 {text:"Variables",url:"globals_vars.html"},
