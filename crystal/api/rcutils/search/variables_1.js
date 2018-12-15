@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['buffer',['buffer',['../structrcutils__char__array__t.html#a2dcc96390b629a44f856318e40bfd757',1,'rcutils_char_array_t::buffer()'],['../structrcutils__uint8__array__t.html#a4b6b74f35050ea44a860f7f6dabfb0a2',1,'rcutils_uint8_array_t::buffer()']]],
-  ['buffer_5fcapacity',['buffer_capacity',['../structrcutils__char__array__t.html#a7a2fd9bc7b78f9cf44e2127bae29d096',1,'rcutils_char_array_t::buffer_capacity()'],['../structrcutils__uint8__array__t.html#a6b49c9a0b62cc889017424f62a38bab8',1,'rcutils_uint8_array_t::buffer_capacity()']]],
-  ['buffer_5flength',['buffer_length',['../structrcutils__char__array__t.html#a589820c057e28f59768e51fe98691542',1,'rcutils_char_array_t::buffer_length()'],['../structrcutils__uint8__array__t.html#a6624cb9bca26efb087b1da9807d06e38',1,'rcutils_uint8_array_t::buffer_length()']]]
+  ['allocate',['allocate',['../structrcutils__allocator__t.html#a0a7609fd28eb9991693062a73a0db530',1,'rcutils_allocator_t']]],
+  ['allocator',['allocator',['../structrcutils__char__array__t.html#a339304cead6b2ff45706d8c70a342877',1,'rcutils_char_array_t::allocator()'],['../structrcutils__string__array__t.html#ab7aebd6e4f8e9de67a61628bad0d6287',1,'rcutils_string_array_t::allocator()'],['../structrcutils__uint8__array__t.html#afb61be7aac99105651e19378cb2077cb',1,'rcutils_uint8_array_t::allocator()']]]
 ];

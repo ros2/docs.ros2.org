@@ -1,0 +1,5 @@
+<map id="rclcpp::TimerBase" name="rclcpp::TimerBase">
+<area shape="rect" id="node2" href="$classrclcpp_1_1GenericTimer.html" title="rclcpp::GenericTimer\l\&lt; FunctorT \&gt;" alt="" coords="247,49,390,91"/>
+<area shape="rect" id="node4" href="$classrclcpp_1_1GenericTimer.html" title="Generic timer. Periodically executes a user&#45;specified callback. " alt="" coords="181,115,456,244"/>
+<area shape="rect" id="node3" href="$classrclcpp_1_1WallTimer.html" title="rclcpp::WallTimer\&lt;\l FunctorT, std::enable\l_if\&lt; rclcpp::function\l_traits::same_arguments\l\&lt; FunctorT, VoidCallbackType\l \&gt;::value\|\|rclcpp::function\l_traits::same_arguments\&lt; FunctorT,\l TimerCallbackType \&gt;::value \&gt;::type * \&gt;" alt="" coords="504,5,760,135"/>
+</map>

@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="rclcpp::message_memory\l_strategy::MessageMemoryStrategy\l\< MessageT, Alloc \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrclcpp_1_1message__memory__strategy_1_1MessageMemoryStrategy.html",tooltip="Default allocation strategy for messages received by subscriptions. "];
-}

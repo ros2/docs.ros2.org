@@ -1,0 +1,4 @@
+<map id="rclcpp::exceptions::RCLBadAlloc" name="rclcpp::exceptions::RCLBadAlloc">
+<area shape="rect" id="node2" href="$classrclcpp_1_1exceptions_1_1RCLErrorBase.html" title="rclcpp::exceptions\l::RCLErrorBase" alt="" coords="5,5,133,47"/>
+<area shape="rect" id="node3" href="/home/steven/osrf/crystal-release/ros2_doc_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/new/bad_alloc.html" title="std::bad_alloc" alt="" coords="158,13,261,39"/>
+</map>

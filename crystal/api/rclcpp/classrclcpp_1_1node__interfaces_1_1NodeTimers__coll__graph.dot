@@ -1,8 +1,0 @@
-digraph "rclcpp::node_interfaces::NodeTimers"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node2 [label="rclcpp::node_interfaces\l::NodeTimers",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="rclcpp::node_interfaces\l::NodeTimersInterface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrclcpp_1_1node__interfaces_1_1NodeTimersInterface.html",tooltip="Pure virtual interface class for the NodeTimers part of the Node API. "];
-}

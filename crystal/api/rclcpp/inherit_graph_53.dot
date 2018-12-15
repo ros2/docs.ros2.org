@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="rclcpp::strategies\l::message_pool_memory\l_strategy::MessagePoolMemory\lStrategy\< MessageT, Size,\l \>::PoolMember",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structrclcpp_1_1strategies_1_1message__pool__memory__strategy_1_1MessagePoolMemoryStrategy_1_1PoolMember.html"];
-}

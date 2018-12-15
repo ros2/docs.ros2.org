@@ -1,0 +1,17 @@
+<map id="include/rmw/serialized_message.h" name="include/rmw/serialized_message.h">
+<area shape="rect" id="node2" href="$types_8h.html" title="include/rmw/types.h" alt="" coords="745,95,884,121"/>
+<area shape="rect" id="node3" href="$allocators_8h.html" title="include/rmw/allocators.h" alt="" coords="5,177,168,203"/>
+<area shape="rect" id="node5" href="$convert__rcutils__ret__to__rmw__ret_8h.html" title="include/rmw/convert\l_rcutils_ret_to_rmw_ret.h" alt="" coords="193,169,362,211"/>
+<area shape="rect" id="node6" href="$get__node__info__and__types_8h.html" title="include/rmw/get_node\l_info_and_types.h" alt="" coords="284,259,433,300"/>
+<area shape="rect" id="node7" href="$get__service__names__and__types_8h.html" title="include/rmw/get_service\l_names_and_types.h" alt="" coords="457,259,620,300"/>
+<area shape="rect" id="node8" href="$get__topic__names__and__types_8h.html" title="include/rmw/get_topic\l_names_and_types.h" alt="" coords="644,259,793,300"/>
+<area shape="rect" id="node9" href="$names__and__types_8h.html" title="include/rmw/names_and\l_types.h" alt="" coords="488,169,651,211"/>
+<area shape="rect" id="node10" href="$node__security__options_8h.html" title="include/rmw/node_security\l_options.h" alt="" coords="726,169,903,211"/>
+<area shape="rect" id="node11" href="$qos__profiles_8h.html" title="include/rmw/qos_profiles.h" alt="" coords="927,177,1105,203"/>
+<area shape="rect" id="node12" href="$rmw_8h.html" title="include/rmw/rmw.h" alt="" coords="1013,266,1145,293"/>
+<area shape="rect" id="node13" href="$sanity__checks_8h.html" title="include/rmw/sanity\l_checks.h" alt="" coords="1180,169,1311,211"/>
+<area shape="rect" id="node14" href="$validate__full__topic__name_8h.html" title="include/rmw/validate\l_full_topic_name.h" alt="" coords="1335,169,1476,211"/>
+<area shape="rect" id="node15" href="$validate__namespace_8h.html" title="include/rmw/validate\l_namespace.h" alt="" coords="1388,259,1529,300"/>
+<area shape="rect" id="node16" href="$validate__node__name_8h.html" title="include/rmw/validate\l_node_name.h" alt="" coords="1551,169,1692,211"/>
+<area shape="rect" id="node4" href="$macros_8hpp.html" title="include/rmw/impl/cpp\l/macros.hpp" alt="" coords="14,259,159,300"/>
+</map>

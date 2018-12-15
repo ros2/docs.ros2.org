@@ -1,0 +1,3 @@
+<map id="rclcpp::GenericTimer&lt; FunctorT, std::enable_if&lt; rclcpp::function_traits::same_arguments&lt; FunctorT, VoidCallbackType &gt;::value||rclcpp::function_traits::same_arguments&lt; FunctorT, TimerCallbackType &gt;::value &gt;::type * &gt;" name="rclcpp::GenericTimer&lt; FunctorT, std::enable_if&lt; rclcpp::function_traits::same_arguments&lt; FunctorT, VoidCallbackType &gt;::value||rclcpp::function_traits::same_arguments&lt; FunctorT, TimerCallbackType &gt;::value &gt;::type * &gt;">
+<area shape="rect" id="node2" href="$classrclcpp_1_1TimerBase.html" title="rclcpp::TimerBase" alt="" coords="79,5,207,32"/>
+</map>

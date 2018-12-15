@@ -1,0 +1,5 @@
+<map id="rcl_jump_callback_info_t" name="rcl_jump_callback_info_t">
+<area shape="rect" id="node2" href="$structrcl__time__jump__t.html" title="Struct to describe a jump in time. " alt="" coords="5,109,120,136"/>
+<area shape="rect" id="node3" href="$structrcl__duration__t.html" title="A duration of time, measured in nanoseconds and its source. " alt="" coords="99,5,199,32"/>
+<area shape="rect" id="node4" href="$structrcl__jump__threshold__t.html" title="Describe the prerequisites for calling a time jump callback. " alt="" coords="145,109,287,136"/>
+</map>

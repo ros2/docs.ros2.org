@@ -1,0 +1,4 @@
+<map id="rclcpp::GenericTimer&lt; FunctorT, std::enable_if&lt; rclcpp::function_traits::same_arguments&lt; FunctorT, VoidCallbackType &gt;::value||rclcpp::function_traits::same_arguments&lt; FunctorT, TimerCallbackType &gt;::value &gt;::type * &gt;" name="rclcpp::GenericTimer&lt; FunctorT, std::enable_if&lt; rclcpp::function_traits::same_arguments&lt; FunctorT, VoidCallbackType &gt;::value||rclcpp::function_traits::same_arguments&lt; FunctorT, TimerCallbackType &gt;::value &gt;::type * &gt;">
+<area shape="rect" id="node2" href="$classrclcpp_1_1TimerBase.html" title="rclcpp::TimerBase" alt="" coords="9,109,137,136"/>
+<area shape="rect" id="node3" href="/home/steven/osrf/crystal-release/ros2_doc_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title="std::shared_ptr\&lt; rcl\l_timer_t \&gt;" alt="" coords="5,5,140,47"/>
+</map>

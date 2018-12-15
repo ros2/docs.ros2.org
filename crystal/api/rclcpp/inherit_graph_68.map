@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="/home/steven/osrf/crystal-release/ros2_doc_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/types/is_same.html" title="std::is_same\&lt; function\l_traits\&lt; FunctorAT \&gt;::\larguments, function_traits\l\&lt; FunctorBT \&gt;::arguments \&gt;" alt="" coords="5,5,193,76"/>
+<area shape="rect" id="node2" href="$structrclcpp_1_1function__traits_1_1same__arguments.html" title="rclcpp::function_traits\l::same_arguments\&lt; FunctorAT,\l FunctorBT \&gt;" alt="" coords="241,13,448,69"/>
+</map>

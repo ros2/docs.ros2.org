@@ -1,0 +1,24 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="/home/steven/osrf/crystal-release/ros2_doc_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/new/bad_alloc.html" title="std::bad_alloc" alt="" coords="27,13,130,39"/>
+<area shape="rect" id="node2" href="$classrclcpp_1_1exceptions_1_1RCLBadAlloc.html" title="Created when the ret is RCL_RET_BAD_ALLOC. " alt="" coords="245,5,373,47"/>
+<area shape="rect" id="node3" href="/home/steven/osrf/crystal-release/ros2_doc_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/error/invalid_argument.html" title="std::invalid_argument" alt="" coords="5,141,152,167"/>
+<area shape="rect" id="node4" href="$classrclcpp_1_1exceptions_1_1NameValidationError.html" title="Thrown when a any kind of name (node, namespace, topic, etc.) is invalid. " alt="" coords="234,136,385,177"/>
+<area shape="rect" id="node9" href="$classrclcpp_1_1exceptions_1_1RCLInvalidArgument.html" title="Created when the ret is RCL_RET_INVALID_ARGUMENT. " alt="" coords="234,71,385,112"/>
+<area shape="rect" id="node5" href="$classrclcpp_1_1exceptions_1_1InvalidNamespaceError.html" title="Thrown when a node namespace is invalid. " alt="" coords="471,37,637,79"/>
+<area shape="rect" id="node6" href="$classrclcpp_1_1exceptions_1_1InvalidNodeNameError.html" title="Thrown when a node name is invalid. " alt="" coords="473,103,635,144"/>
+<area shape="rect" id="node7" href="$classrclcpp_1_1exceptions_1_1InvalidServiceNameError.html" title="Thrown when a service name is invalid. " alt="" coords="467,168,641,209"/>
+<area shape="rect" id="node8" href="$classrclcpp_1_1exceptions_1_1InvalidTopicNameError.html" title="Thrown when a topic name is invalid. " alt="" coords="473,233,635,275"/>
+<area shape="rect" id="node10" href="$classrclcpp_1_1exceptions_1_1RCLErrorBase.html" title="rclcpp::exceptions\l::RCLErrorBase" alt="" coords="15,71,143,112"/>
+<area shape="rect" id="node11" href="$classrclcpp_1_1exceptions_1_1RCLError.html" title="Created when the return code does not match one of the other specialized exceptions. " alt="" coords="245,201,373,243"/>
+<area shape="rect" id="node12" href="/home/steven/osrf/crystal-release/ros2_doc_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/error/runtime_error.html" title="std::runtime_error" alt="" coords="17,507,141,534"/>
+<area shape="rect" id="node13" href="$classrclcpp_1_1ContextAlreadyInitialized.html" title="Thrown when init is called on an already initialized context. " alt="" coords="204,383,415,410"/>
+<area shape="rect" id="node14" href="$classrclcpp_1_1exceptions_1_1EventNotRegisteredError.html" title="Thrown when an unregistered rclcpp::Event is encountered where a registered one was expected..." alt="" coords="221,435,397,476"/>
+<area shape="rect" id="node15" href="$classrclcpp_1_1exceptions_1_1InvalidEventError.html" title="Thrown when an invalid rclcpp::Event object or SharedPtr is encountered. " alt="" coords="244,500,375,541"/>
+<area shape="rect" id="node16" href="$classrclcpp_1_1exceptions_1_1InvalidNodeError.html" title="Thrown when a method is trying to use a node, but it is invalid. " alt="" coords="245,565,373,607"/>
+<area shape="rect" id="node17" href="$classrclcpp_1_1exceptions_1_1InvalidParametersException.html" title="Thrown if passed parameters are inconsistent or invalid. " alt="" coords="213,631,406,672"/>
+<area shape="rect" id="node18" href="$classrclcpp_1_1exceptions_1_1InvalidParameterValueException.html" title="Throwing if passed parameter value is invalid. " alt="" coords="200,696,419,737"/>
+<area shape="rect" id="node19" href="$classrclcpp_1_1graph__listener_1_1GraphListenerShutdownError.html" title="Thrown when a function is called on a GraphListener that is already shutdown. " alt="" coords="211,761,408,803"/>
+<area shape="rect" id="node20" href="$classrclcpp_1_1graph__listener_1_1NodeAlreadyAddedError.html" title="Thrown when a node has already been added to the GraphListener. " alt="" coords="224,827,395,868"/>
+<area shape="rect" id="node21" href="$classrclcpp_1_1graph__listener_1_1NodeNotFoundError.html" title="Thrown when the given node is not in the GraphListener. " alt="" coords="236,267,383,308"/>
+<area shape="rect" id="node22" href="$classrclcpp_1_1ParameterTypeException.html" title="Indicate the parameter type does not match the expected type. " alt="" coords="203,333,415,359"/>
+</map>

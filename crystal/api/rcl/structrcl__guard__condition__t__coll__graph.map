@@ -1,0 +1,4 @@
+<map id="rcl_guard_condition_t" name="rcl_guard_condition_t">
+<area shape="rect" id="node2" href="$structrcl__context__t.html" title="Encapsulates the non&#45;global state of an init/shutdown cycle. " alt="" coords="29,95,127,121"/>
+<area shape="rect" id="node3" href="$structrcl__arguments__t.html" title="Hold output of parsing command line arguments. " alt="" coords="21,5,135,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="rclcpp::ServiceBase" name="rclcpp::ServiceBase">
+<area shape="rect" id="node2" href="/home/steven/osrf/crystal-release/ros2_doc_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title="std::shared_ptr\&lt; rcl\l_node_t \&gt;" alt="" coords="5,5,140,47"/>
+<area shape="rect" id="node3" href="/home/steven/osrf/crystal-release/ros2_doc_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title="std::shared_ptr\&lt; rcl\l_service_t \&gt;" alt="" coords="164,5,299,47"/>
+</map>
