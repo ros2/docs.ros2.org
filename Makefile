@@ -1,4 +1,4 @@
-release_name := ardent
+release_name := crystal
 
 default: $(release_name) api/rcutils api/rmw api api/rcl api/rclcpp
 
