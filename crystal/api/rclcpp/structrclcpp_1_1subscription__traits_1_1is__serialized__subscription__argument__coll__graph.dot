@@ -1,0 +1,8 @@
+digraph "rclcpp::subscription_traits::is_serialized_subscription_argument&lt; T &gt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node3 [label="rclcpp::subscription\l_traits::is_serialized\l_subscription_argument\< T \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="std::false_type",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/home/developer/workspaces/docs_crystal/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/types/integral_constant.html"];
+}
