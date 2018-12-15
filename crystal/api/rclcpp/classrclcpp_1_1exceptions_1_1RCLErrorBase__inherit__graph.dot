@@ -1,0 +1,13 @@
+digraph "rclcpp::exceptions::RCLErrorBase"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="rclcpp::exceptions\l::RCLErrorBase",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="rclcpp::exceptions\l::RCLBadAlloc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrclcpp_1_1exceptions_1_1RCLBadAlloc.html",tooltip="Created when the ret is RCL_RET_BAD_ALLOC. "];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rclcpp::exceptions\l::RCLError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrclcpp_1_1exceptions_1_1RCLError.html",tooltip="Created when the return code does not match one of the other specialized exceptions. "];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rclcpp::exceptions\l::RCLInvalidArgument",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrclcpp_1_1exceptions_1_1RCLInvalidArgument.html",tooltip="Created when the ret is RCL_RET_INVALID_ARGUMENT. "];
+}

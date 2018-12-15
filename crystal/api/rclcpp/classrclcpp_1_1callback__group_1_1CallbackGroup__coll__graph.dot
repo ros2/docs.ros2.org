@@ -1,0 +1,19 @@
+digraph "rclcpp::callback_group::CallbackGroup"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rclcpp::callback_group\l::CallbackGroup",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" timer_ptrs_" ,fontname="Helvetica"];
+  Node2 [label="std::vector\< rclcpp\l::TimerBase::WeakPtr \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/home/developer/workspaces/docs_crystal/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/container/vector.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" subscription_ptrs_" ,fontname="Helvetica"];
+  Node3 [label="std::vector\< rclcpp\l::SubscriptionBase::\lWeakPtr \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/home/developer/workspaces/docs_crystal/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/container/vector.html"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mutex_" ,fontname="Helvetica"];
+  Node4 [label="std::mutex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/home/developer/workspaces/docs_crystal/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/thread/mutex.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" waitable_ptrs_" ,fontname="Helvetica"];
+  Node5 [label="std::vector\< rclcpp\l::Waitable::WeakPtr \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/home/developer/workspaces/docs_crystal/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/container/vector.html"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" client_ptrs_" ,fontname="Helvetica"];
+  Node6 [label="std::vector\< rclcpp\l::ClientBase::WeakPtr \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/home/developer/workspaces/docs_crystal/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/container/vector.html"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" service_ptrs_" ,fontname="Helvetica"];
+  Node7 [label="std::vector\< rclcpp\l::ServiceBase::WeakPtr \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/home/developer/workspaces/docs_crystal/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/container/vector.html"];
+}
