@@ -61,3 +61,10 @@ src/ros2/rclcpp/rclcpp/doc_output/html doxygen_tag_files/rclcpp.tag: src/ros2/rc
 	rm -r doc_output || true
 	rm doxygen_tag_files/rclcpp.tag || true
 	cd src/ros2/rclcpp/rclcpp && doxygen Doxyfile
+
+cpp-doxygen-web.tag.xml:
+	test -d doxygen_tag_files || mkdir doxygen_tag_files
+	wget 'http://upload.cppreference.com/mwiki/images/f/f8/cppreference-doxygen-web.tag.xml' \
+		-O doxygen_tag_files/cppreference-doxygen-web.tag.xml
+
+setup: cpp-doxygen-web.tag.xml
