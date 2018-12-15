@@ -1,7 +1,8 @@
 ## Generating static docs for a ros2 release
 
-  - Download the Makefile to the base of a ros2 workspace.
-  - Update the release name in the makefile.
+  - Build up to rclcpp in a clean ros2 workspace.
+  - Download the Makefile to the base of that workspace or apply `-f PATH/TO/Makefile` to all `make` invocations below.
+  - Update the release name in the Makefile.
   - Import the documentation repos into the workspace with `vcs import src < ros2_doc.repos`
   - Update ros2/ros_core_documentation as appropriate; install dependencies mentioned in its readme and Doxygen.
     - Specifically you'll want to update the release name, see: https://github.com/ros2/ros_core_documentation/pull/7
