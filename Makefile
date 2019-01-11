@@ -1,4 +1,4 @@
-release_name := ardent
+release_name := crystal
 
 default: $(release_name) api/rcutils api/rmw api api/rcl api/rclcpp
 
@@ -43,21 +43,44 @@ src/ros2/ros_core_documentation/build/html: src/ros2/ros_core_documentation/Make
 	cd src/ros2/ros_core_documentation && make html
 
 src/ros2/rcutils/doc_output/html doxygen_tag_files/rcutils.tag: src/ros2/rcutils/Doxyfile
+	. install/setup.sh && \
+		cd src/ros2/rcutils && \
+		git clean -dfx && \
+		cmake . && make
 	rm -r $@ || true
 	rm doxygen_tag_files/rcutils.tag || true
 	cd src/ros2/rcutils && doxygen Doxyfile
 
 src/ros2/rmw/rmw/doc_output/html doxygen_tag_files/rmw.tag: src/ros2/rmw/rmw/Doxyfile doxygen_tag_files/rcutils.tag
-	rm -r doc_output || true
+	. install/setup.sh && \
+		cd src/ros2/rmw/rmw && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
 	rm doxygen_tag_files/rmw.tag || true
 	cd src/ros2/rmw/rmw && doxygen Doxyfile
 
 src/ros2/rcl/rcl/doc_output/html doxygen_tag_files/rcl.tag: src/ros2/rcl/rcl/Doxyfile doxygen_tag_files/rcutils.tag doxygen_tag_files/rmw.tag
-	rm -r doc_output || true
+	. install/setup.sh && \
+		cd src/ros2/rcl/rcl && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
 	rm doxygen_tag_files/rcl.tag || true
 	cd src/ros2/rcl/rcl && doxygen Doxyfile
 
 src/ros2/rclcpp/rclcpp/doc_output/html doxygen_tag_files/rclcpp.tag: src/ros2/rclcpp/rclcpp/Doxyfile doxygen_tag_files/rcl.tag doxygen_tag_files/rmw.tag doxygen_tag_files/rcutils.tag
-	rm -r doc_output || true
+	. install/setup.sh && \
+		cd src/ros2/rclcpp/rclcpp && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
 	rm doxygen_tag_files/rclcpp.tag || true
 	cd src/ros2/rclcpp/rclcpp && doxygen Doxyfile
+
+cpp-doxygen-web.tag.xml:
+	test -d doxygen_tag_files || mkdir doxygen_tag_files
+	wget 'http://upload.cppreference.com/mwiki/images/f/f8/cppreference-doxygen-web.tag.xml' \
+		-O doxygen_tag_files/cppreference-doxygen-web.tag.xml
+
+setup: cpp-doxygen-web.tag.xml
