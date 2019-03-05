@@ -1,6 +1,7 @@
 ## Generating static docs for a ros2 release
 
-  - Build up to rclcpp in a clean ros2 workspace.
+  - Build up to `rclcpp_action` and `rclpy` in a clean ros2 workspace.
+    - e.g. `colcon build --packages-up-to rclcpp_action rclpy`
   - Download the Makefile to the base of that workspace or apply `-f PATH/TO/Makefile` to all `make` invocations below.
   - Update the release name in the Makefile.
   - Import the documentation repos into the workspace with `vcs import src < ros2_doc.repos`
