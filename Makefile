@@ -1,6 +1,6 @@
 release_name := crystal
 
-default: $(release_name) api/rcutils api/rmw api api/rcl api/rcl_action api/rclcpp api/rclcpp_action api/rclpy
+default: setup $(release_name) api/rcutils api/rmw api api/rcl api/rcl_action api/rclcpp api/rclcpp_action api/rclpy
 
 install: default
 	rm -r src/ros2/docs.ros2.org/$(release_name) || true
