@@ -12,7 +12,7 @@ clean:
 	rm -r $(release_name) api || true
 
 purge:
-	rm -r src/ros2/**/doc_output src/ros2/ros_core_documentation/build || true
+	rm -r src/ros2/**/doc_output src/ros2/ros_core_documentation/build src/ros2/rclpy/rclpy/docs/build || true
 
 $(release_name): src/ros2/ros_core_documentation/build/html
 	rm -r $@ || true
