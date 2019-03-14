@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['g_5frcutils_5flog_5fseverity_5fnames',['g_rcutils_log_severity_names',['../logging_8h.html#a4dc76921dc284bb35d62800f38bf8328',1,'logging.h']]],
-  ['g_5frcutils_5flogging_5fdefault_5flogger_5flevel',['g_rcutils_logging_default_logger_level',['../logging_8h.html#a98d15e6f56fc761bba69075d35928c1c',1,'logging.h']]],
-  ['g_5frcutils_5flogging_5finitialized',['g_rcutils_logging_initialized',['../logging_8h.html#aef9d9eccb18f6f17db080c52fced2609',1,'logging.h']]],
-  ['g_5frcutils_5flogging_5foutput_5fhandler',['g_rcutils_logging_output_handler',['../logging_8h.html#a66ac4c8310458038687d62b801fc908c',1,'logging.h']]]
+  ['impl',['impl',['../structrcutils__array__list__t.html#acd92dfaa6890e3fc1fc4fec2ee695333',1,'rcutils_array_list_t::impl()'],['../structrcutils__hash__map__t.html#a282eb9321f5683c0291bb36006dd1618',1,'rcutils_hash_map_t::impl()'],['../structrcutils__string__map__t.html#a15d25f8ae331f85f87333be6900d7874',1,'rcutils_string_map_t::impl()']]]
 ];
