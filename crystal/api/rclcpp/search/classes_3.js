@@ -12,8 +12,7 @@ var searchData=
   ['discrete_5fdistribution',['discrete_distribution',['http://en.cppreference.com/w/cpp/numeric/random/discrete_distribution.html',1,'std']]],
   ['divides',['divides',['http://en.cppreference.com/w/cpp/utility/functional/divides.html',1,'std']]],
   ['domain_5ferror',['domain_error',['http://en.cppreference.com/w/cpp/error/domain_error.html',1,'std']]],
-  ['duration',['duration',['http://en.cppreference.com/w/cpp/chrono/duration.html',1,'std::chrono']]],
-  ['duration',['Duration',['../classrclcpp_1_1Duration.html',1,'rclcpp']]],
+  ['duration',['duration',['http://en.cppreference.com/w/cpp/chrono/duration.html',1,'std::chrono::duration'],['../classrclcpp_1_1Duration.html',1,'rclcpp::Duration']]],
   ['duration_5fvalues',['duration_values',['http://en.cppreference.com/w/cpp/chrono/duration_values.html',1,'std::chrono']]],
   ['dynarray',['dynarray',['http://en.cppreference.com/w/cpp/container/dynarray.html',1,'std']]]
 ];

@@ -6,6 +6,5 @@ var searchData=
   ['key_5fvalue_2ehpp',['key_value.hpp',['http://docs.ros2.org/crystal/api/rmw/key__value_8hpp.html',1,'']]],
   ['kill_5fdependency',['kill_dependency',['http://en.cppreference.com/w/cpp/atomic/kill_dependency.html',1,'std']]],
   ['kilo',['kilo',['http://en.cppreference.com/w/cpp/numeric/ratio/ratio.html',1,'std']]],
-  ['knuth_5fb',['knuth_b',['http://en.cppreference.com/w/cpp/numeric/random/shuffle_order_engine/shuffle_order_engine.html',1,'std::knuth_b']]],
-  ['knuth_5fb',['knuth_b',['http://en.cppreference.com/w/cpp/numeric/random/shuffle_order_engine.html',1,'std']]]
+  ['knuth_5fb',['knuth_b',['http://en.cppreference.com/w/cpp/numeric/random/shuffle_order_engine.html',1,'std::knuth_b'],['http://en.cppreference.com/w/cpp/numeric/random/shuffle_order_engine/shuffle_order_engine.html',1,'std::knuth_b::knuth_b()']]]
 ];

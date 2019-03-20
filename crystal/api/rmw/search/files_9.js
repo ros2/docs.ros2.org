@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['macros_2eh',['macros.h',['../macros_8h.html',1,'(Global Namespace)'],['http://docs.ros2.org/crystal/api/rcutils/macros_8h.html',1,'(Global Namespace)']]],
-  ['macros_2ehpp',['macros.hpp',['../macros_8hpp.html',1,'']]]
+  ['logging_2eh',['logging.h',['http://docs.ros2.org/crystal/api/rcutils/logging_8h.html',1,'']]],
+  ['logging_5fmacros_2eh',['logging_macros.h',['http://docs.ros2.org/crystal/api/rcutils/logging__macros_8h.html',1,'']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['buffer',['buffer',['http://docs.ros2.org/crystal/api/rcutils/structrcutils__char__array__t.html#a2dcc96390b629a44f856318e40bfd757',1,'rcutils_char_array_t::buffer()'],['http://docs.ros2.org/crystal/api/rcutils/structrcutils__uint8__array__t.html#a4b6b74f35050ea44a860f7f6dabfb0a2',1,'rcutils_uint8_array_t::buffer()']]],
-  ['buffer_5fcapacity',['buffer_capacity',['http://docs.ros2.org/crystal/api/rcutils/structrcutils__char__array__t.html#a7a2fd9bc7b78f9cf44e2127bae29d096',1,'rcutils_char_array_t::buffer_capacity()'],['http://docs.ros2.org/crystal/api/rcutils/structrcutils__uint8__array__t.html#a6b49c9a0b62cc889017424f62a38bab8',1,'rcutils_uint8_array_t::buffer_capacity()']]],
-  ['buffer_5flength',['buffer_length',['http://docs.ros2.org/crystal/api/rcutils/structrcutils__char__array__t.html#a589820c057e28f59768e51fe98691542',1,'rcutils_char_array_t::buffer_length()'],['http://docs.ros2.org/crystal/api/rcutils/structrcutils__uint8__array__t.html#a6624cb9bca26efb087b1da9807d06e38',1,'rcutils_uint8_array_t::buffer_length()']]]
+  ['client_5fcount',['client_count',['../structrmw__clients__t.html#a7f216be5dc11d7076643b42e7b5fdc21',1,'rmw_clients_t']]],
+  ['clients',['clients',['../structrmw__clients__t.html#af6c4b9de7889201b53a50cb829c91583',1,'rmw_clients_t']]],
+  ['context',['context',['../structrmw__node__t.html#a6617f996263ef65ec5a8d43c2ef10824',1,'rmw_node_t::context()'],['../structrmw__guard__condition__t.html#ab5846cc6626f30e0f346ce254d7977a9',1,'rmw_guard_condition_t::context()']]]
 ];

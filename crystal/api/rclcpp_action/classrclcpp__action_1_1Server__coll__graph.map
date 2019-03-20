@@ -1,0 +1,5 @@
+<map id="rclcpp_action::Server&lt; ActionT &gt;" name="rclcpp_action::Server&lt; ActionT &gt;">
+<area shape="rect" id="node2" href="$classrclcpp__action_1_1ServerBase.html" title="rclcpp_action::ServerBase" alt="" coords="5,95,180,121"/>
+<area shape="rect" id="node3" href="/home/jacob/ws/crystal_ws/doxygen_tag_files/rclcpp.tag$classrclcpp_1_1Waitable.html" title="rclcpp::Waitable" alt="" coords="35,5,151,32"/>
+<area shape="rect" id="node4" href="/home/jacob/ws/crystal_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/enable_shared_from_this.html" title="std::enable_shared\l_from_this\&lt; Server\&lt;\l ActionT \&gt; \&gt;" alt="" coords="205,80,346,136"/>
+</map>

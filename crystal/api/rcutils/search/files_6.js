@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['logging_2eh',['logging.h',['../logging_8h.html',1,'']]],
-  ['logging_5fmacros_2eh',['logging_macros.h',['../logging__macros_8h.html',1,'']]]
+  ['isalnum_5fno_5flocale_2eh',['isalnum_no_locale.h',['../isalnum__no__locale_8h.html',1,'']]]
 ];

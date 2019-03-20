@@ -1,0 +1,273 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Quality of Service &#8212; rclpy 0.6.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Utilities" href="utilities.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-rclpy.qos">
+<span id="quality-of-service"></span><h1>Quality of Service<a class="headerlink" href="#module-rclpy.qos" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="rclpy.qos.QoSDurabilityPolicy">
+<em class="property">class </em><code class="descclassname">rclpy.qos.</code><code class="descname">QoSDurabilityPolicy</code><a class="headerlink" href="#rclpy.qos.QoSDurabilityPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enum for QoS Durability settings.</p>
+<p>This enum matches the one defined in rmw/types.h</p>
+<dl class="attribute">
+<dt id="rclpy.qos.QoSDurabilityPolicy.RMW_QOS_POLICY_DURABILITY_SYSTEM_DEFAULT">
+<code class="descname">RMW_QOS_POLICY_DURABILITY_SYSTEM_DEFAULT</code><em class="property"> = 0</em><a class="headerlink" href="#rclpy.qos.QoSDurabilityPolicy.RMW_QOS_POLICY_DURABILITY_SYSTEM_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="rclpy.qos.QoSDurabilityPolicy.RMW_QOS_POLICY_DURABILITY_TRANSIENT_LOCAL">
+<code class="descname">RMW_QOS_POLICY_DURABILITY_TRANSIENT_LOCAL</code><em class="property"> = 1</em><a class="headerlink" href="#rclpy.qos.QoSDurabilityPolicy.RMW_QOS_POLICY_DURABILITY_TRANSIENT_LOCAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="rclpy.qos.QoSDurabilityPolicy.RMW_QOS_POLICY_DURABILITY_VOLATILE">
+<code class="descname">RMW_QOS_POLICY_DURABILITY_VOLATILE</code><em class="property"> = 2</em><a class="headerlink" href="#rclpy.qos.QoSDurabilityPolicy.RMW_QOS_POLICY_DURABILITY_VOLATILE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="rclpy.qos.QoSHistoryPolicy">
+<em class="property">class </em><code class="descclassname">rclpy.qos.</code><code class="descname">QoSHistoryPolicy</code><a class="headerlink" href="#rclpy.qos.QoSHistoryPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enum for QoS History settings.</p>
+<p>This enum matches the one defined in rmw/types.h</p>
+<dl class="attribute">
+<dt id="rclpy.qos.QoSHistoryPolicy.RMW_QOS_POLICY_HISTORY_KEEP_ALL">
+<code class="descname">RMW_QOS_POLICY_HISTORY_KEEP_ALL</code><em class="property"> = 2</em><a class="headerlink" href="#rclpy.qos.QoSHistoryPolicy.RMW_QOS_POLICY_HISTORY_KEEP_ALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="rclpy.qos.QoSHistoryPolicy.RMW_QOS_POLICY_HISTORY_KEEP_LAST">
+<code class="descname">RMW_QOS_POLICY_HISTORY_KEEP_LAST</code><em class="property"> = 1</em><a class="headerlink" href="#rclpy.qos.QoSHistoryPolicy.RMW_QOS_POLICY_HISTORY_KEEP_LAST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="rclpy.qos.QoSHistoryPolicy.RMW_QOS_POLICY_HISTORY_SYSTEM_DEFAULT">
+<code class="descname">RMW_QOS_POLICY_HISTORY_SYSTEM_DEFAULT</code><em class="property"> = 0</em><a class="headerlink" href="#rclpy.qos.QoSHistoryPolicy.RMW_QOS_POLICY_HISTORY_SYSTEM_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="rclpy.qos.QoSProfile">
+<em class="property">class </em><code class="descclassname">rclpy.qos.</code><code class="descname">QoSProfile</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.qos.QoSProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define Quality of Service policies.</p>
+<dl class="attribute">
+<dt id="rclpy.qos.QoSProfile.avoid_ros_namespace_conventions">
+<code class="descname">avoid_ros_namespace_conventions</code><a class="headerlink" href="#rclpy.qos.QoSProfile.avoid_ros_namespace_conventions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get field ‘avoid_ros_namespace_conventions’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">avoid_ros_namespace_conventions attribute</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="rclpy.qos.QoSProfile.depth">
+<code class="descname">depth</code><a class="headerlink" href="#rclpy.qos.QoSProfile.depth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get field ‘depth’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">depth attribute</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="rclpy.qos.QoSProfile.durability">
+<code class="descname">durability</code><a class="headerlink" href="#rclpy.qos.QoSProfile.durability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get field ‘durability’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">durability attribute</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#rclpy.qos.QoSDurabilityPolicy" title="rclpy.qos.QoSDurabilityPolicy">QoSDurabilityPolicy</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="rclpy.qos.QoSProfile.get_c_qos_profile">
+<code class="descname">get_c_qos_profile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.qos.QoSProfile.get_c_qos_profile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="rclpy.qos.QoSProfile.history">
+<code class="descname">history</code><a class="headerlink" href="#rclpy.qos.QoSProfile.history" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get field ‘history’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">history attribute</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#rclpy.qos.QoSHistoryPolicy" title="rclpy.qos.QoSHistoryPolicy">QoSHistoryPolicy</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="rclpy.qos.QoSProfile.reliability">
+<code class="descname">reliability</code><a class="headerlink" href="#rclpy.qos.QoSProfile.reliability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get field ‘reliability’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">reliability attribute</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#rclpy.qos.QoSReliabilityPolicy" title="rclpy.qos.QoSReliabilityPolicy">QoSReliabilityPolicy</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="rclpy.qos.QoSReliabilityPolicy">
+<em class="property">class </em><code class="descclassname">rclpy.qos.</code><code class="descname">QoSReliabilityPolicy</code><a class="headerlink" href="#rclpy.qos.QoSReliabilityPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enum for QoS Reliability settings.</p>
+<p>This enum matches the one defined in rmw/types.h</p>
+<dl class="attribute">
+<dt id="rclpy.qos.QoSReliabilityPolicy.RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT">
+<code class="descname">RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT</code><em class="property"> = 2</em><a class="headerlink" href="#rclpy.qos.QoSReliabilityPolicy.RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="rclpy.qos.QoSReliabilityPolicy.RMW_QOS_POLICY_RELIABILITY_RELIABLE">
+<code class="descname">RMW_QOS_POLICY_RELIABILITY_RELIABLE</code><em class="property"> = 1</em><a class="headerlink" href="#rclpy.qos.QoSReliabilityPolicy.RMW_QOS_POLICY_RELIABILITY_RELIABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="rclpy.qos.QoSReliabilityPolicy.RMW_QOS_POLICY_RELIABILITY_SYSTEM_DEFAULT">
+<code class="descname">RMW_QOS_POLICY_RELIABILITY_SYSTEM_DEFAULT</code><em class="property"> = 0</em><a class="headerlink" href="#rclpy.qos.QoSReliabilityPolicy.RMW_QOS_POLICY_RELIABILITY_SYSTEM_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">rclpy</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="init_shutdown.html">Initialization, Shutdown, and Spinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics.html">Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.html">Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timers.html">Timer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parameters.html">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="context.html">Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="execution_and_callbacks.html">Execution and Callbacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Quality of Service</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../api.html">API</a><ul>
+      <li>Previous: <a href="utilities.html" title="previous chapter">Utilities</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016-2019, Open Source Robotics Foundation, Inc..
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/api/qos.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
