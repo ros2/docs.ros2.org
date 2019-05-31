@@ -1,0 +1,9 @@
+<map id="rclcpp::Publisher&lt; MessageT, Alloc &gt;" name="rclcpp::Publisher&lt; MessageT, Alloc &gt;">
+<area shape="rect" id="node2" href="$classrclcpp_1_1PublisherBase.html" title="rclcpp::PublisherBase" alt="" coords="469,168,618,195"/>
+<area shape="rect" id="node3" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/weak_ptr.html" title="std::weak_ptr\&lt; rclcpp\l::intra_process_manager\l::IntraProcessManager \&gt;" alt="" coords="53,5,219,61"/>
+<area shape="rect" id="node4" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title="std::shared_ptr\&lt; rcl\l_node_t \&gt;" alt="" coords="69,86,203,127"/>
+<area shape="rect" id="node5" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$structrcl__publisher__t.html" title="rcl_publisher_t" alt="" coords="83,165,189,192"/>
+<area shape="rect" id="node6" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/container/vector.html" title="std::vector\&lt; std::shared\l_ptr\&lt; rclcpp::QOSEventHandlerBase \&gt; \&gt;" alt="" coords="5,217,267,258"/>
+<area shape="rect" id="node7" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rmw.tag$structrmw__gid__t.html" title="rmw_gid_t" alt="" coords="95,295,177,321"/>
+<area shape="rect" id="node8" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title="std::shared_ptr\&lt; Message\lAlloc \&gt;" alt="" coords="456,219,631,261"/>
+</map>

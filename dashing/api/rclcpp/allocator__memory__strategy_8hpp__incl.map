@@ -1,0 +1,37 @@
+<map id="include/rclcpp/strategies/allocator_memory_strategy.hpp" name="include/rclcpp/strategies/allocator_memory_strategy.hpp">
+<area shape="rect" id="node4" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$allocator_8h.html" title="rcl/allocator.h" alt="" coords="94,698,194,725"/>
+<area shape="rect" id="node5" href="$allocator__common_8hpp.html" title="rclcpp/allocator/allocator\l_common.hpp" alt="" coords="605,601,768,643"/>
+<area shape="rect" id="node7" href="$memory__strategy_8hpp.html" title="rclcpp/memory_strategy.hpp" alt="" coords="1500,95,1687,121"/>
+<area shape="rect" id="node23" href="$visibility__control_8hpp.html" title="rclcpp/visibility_control.hpp" alt="" coords="2896,698,3075,725"/>
+<area shape="rect" id="node24" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcutils.tag$logging__macros_8h.html" title="rcutils/logging_macros.h" alt="" coords="4853,609,5016,635"/>
+<area shape="rect" id="node31" href="$node_8hpp.html" title="rclcpp/node.hpp" alt="" coords="3048,95,3163,121"/>
+<area shape="rect" id="node50" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rmw.tag$types_8h.html" title="rcutils/types.h" alt="" coords="5775,95,5879,121"/>
+<area shape="rect" id="node6" href="$allocator__deleter_8hpp.html" title="rclcpp/allocator/allocator\l_deleter.hpp" alt="" coords="656,691,819,732"/>
+<area shape="rect" id="node9" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$wait_8h.html" title="rcl/wait.h" alt="" coords="2933,519,3008,546"/>
+<area shape="rect" id="node10" href="$any__executable_8hpp.html" title="rclcpp/any_executable.hpp" alt="" coords="2806,177,2983,203"/>
+<area shape="rect" id="node20" href="$macros_8hpp.html" title="rclcpp/macros.hpp" alt="" coords="4310,698,4439,725"/>
+<area shape="rect" id="node26" href="$waitable_8hpp.html" title="rclcpp/waitable.hpp" alt="" coords="3137,430,3271,457"/>
+<area shape="rect" id="node27" href="$node__base__interface_8hpp.html" title="rclcpp/node_interfaces\l/node_base_interface.hpp" alt="" coords="2509,259,2680,300"/>
+<area shape="rect" id="node11" href="$callback__group_8hpp.html" title="rclcpp/callback_group.hpp" alt="" coords="3499,348,3672,375"/>
+<area shape="rect" id="node15" href="$client_8hpp.html" title="rclcpp/client.hpp" alt="" coords="4616,430,4733,457"/>
+<area shape="rect" id="node25" href="$publisher_8hpp.html" title="rclcpp/publisher.hpp" alt="" coords="3589,519,3728,546"/>
+<area shape="rect" id="node19" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$error__handling_8h.html" title="rcl/error_handling.h" alt="" coords="4626,609,4758,635"/>
+<area shape="rect" id="node21" href="$node__graph__interface_8hpp.html" title="rclcpp/node_interfaces\l/node_graph_interface.hpp" alt="" coords="4361,512,4535,553"/>
+<area shape="rect" id="node22" href="$event_8hpp.html" title="rclcpp/event.hpp" alt="" coords="4279,609,4398,635"/>
+<area shape="rect" id="node28" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$node_8h.html" title="rcl/node.h" alt="" coords="797,348,875,375"/>
+<area shape="rect" id="node29" href="$context_8hpp.html" title="rclcpp/context.hpp" alt="" coords="2726,348,2855,375"/>
+<area shape="rect" id="node36" href="$clock_8hpp.html" title="rclcpp/clock.hpp" alt="" coords="4767,348,4884,375"/>
+<area shape="rect" id="node37" href="$logger_8hpp.html" title="rclcpp/logger.hpp" alt="" coords="898,266,1019,293"/>
+<area shape="rect" id="node38" href="$message__memory__strategy_8hpp.html" title="rclcpp/message_memory\l_strategy.hpp" alt="" coords="853,512,1021,553"/>
+<area shape="rect" id="node39" href="$node__clock__interface_8hpp.html" title="rclcpp/node_interfaces\l/node_clock_interface.hpp" alt="" coords="4374,259,4549,300"/>
+<area shape="rect" id="node40" href="$node__logging__interface_8hpp.html" title="rclcpp/node_interfaces\l/node_logging_interface.hpp" alt="" coords="996,169,1180,211"/>
+<area shape="rect" id="node41" href="$node__parameters__interface_8hpp.html" title="rclcpp/node_interfaces\l/node_parameters_interface.hpp" alt="" coords="2024,423,2232,464"/>
+<area shape="rect" id="node42" href="$parameter_8hpp.html" title="rclcpp/parameter.hpp" alt="" coords="1653,519,1797,546"/>
+<area shape="rect" id="node43" href="$node__services__interface_8hpp.html" title="rclcpp/node_interfaces\l/node_services_interface.hpp" alt="" coords="4107,259,4299,300"/>
+<area shape="rect" id="node44" href="$node__time__source__interface_8hpp.html" title="rclcpp/node_interfaces\l/node_time_source_interface.hpp" alt="" coords="4573,259,4787,300"/>
+<area shape="rect" id="node45" href="$node__timers__interface_8hpp.html" title="rclcpp/node_interfaces\l/node_timers_interface.hpp" alt="" coords="3701,259,3880,300"/>
+<area shape="rect" id="node46" href="$node__topics__interface_8hpp.html" title="rclcpp/node_interfaces\l/node_topics_interface.hpp" alt="" coords="3549,423,3728,464"/>
+<area shape="rect" id="node47" href="$node__waitables__interface_8hpp.html" title="rclcpp/node_interfaces\l/node_waitables_interface.hpp" alt="" coords="3277,259,3475,300"/>
+<area shape="rect" id="node48" href="$node__options_8hpp.html" title="rclcpp/node_options.hpp" alt="" coords="2027,177,2189,203"/>
+<area shape="rect" id="node49" href="$publisher__options_8hpp.html" title="rclcpp/publisher_options.hpp" alt="" coords="1777,266,1964,293"/>
+</map>

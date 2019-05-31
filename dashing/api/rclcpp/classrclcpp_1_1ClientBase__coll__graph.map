@@ -1,0 +1,5 @@
+<map id="rclcpp::ClientBase" name="rclcpp::ClientBase">
+<area shape="rect" id="node2" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title="std::shared_ptr\&lt; rcl\l_node_t \&gt;" alt="" coords="16,5,151,47"/>
+<area shape="rect" id="node3" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title="std::shared_ptr\&lt; rclcpp\l::Context \&gt;" alt="" coords="5,71,161,112"/>
+<area shape="rect" id="node4" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title="std::shared_ptr\&lt; rcl\l_client_t \&gt;" alt="" coords="16,136,151,177"/>
+</map>

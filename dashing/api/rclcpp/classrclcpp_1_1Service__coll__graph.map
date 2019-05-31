@@ -1,0 +1,5 @@
+<map id="rclcpp::Service&lt; ServiceT &gt;" name="rclcpp::Service&lt; ServiceT &gt;">
+<area shape="rect" id="node2" href="$classrclcpp_1_1ServiceBase.html" title="rclcpp::ServiceBase" alt="" coords="82,109,221,136"/>
+<area shape="rect" id="node3" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title="std::shared_ptr\&lt; rcl\l_node_t \&gt;" alt="" coords="5,5,140,47"/>
+<area shape="rect" id="node4" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title="std::shared_ptr\&lt; rcl\l_service_t \&gt;" alt="" coords="164,5,299,47"/>
+</map>

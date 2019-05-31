@@ -1,0 +1,8 @@
+<map id="rclcpp_action::ServerGoalHandle&lt; ActionT &gt;" name="rclcpp_action::ServerGoalHandle&lt; ActionT &gt;">
+<area shape="rect" id="node2" href="$classrclcpp__action_1_1ServerGoalHandleBase.html" title="rclcpp_action::ServerGoal\lHandleBase" alt="" coords="43,5,215,47"/>
+<area shape="rect" id="node3" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title="std::shared_ptr\&lt; const\l typename ActionT::Goal \&gt;" alt="" coords="39,71,218,112"/>
+<area shape="rect" id="node4" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/container/array.html" title="std::array" alt="" coords="90,137,167,163"/>
+<area shape="rect" id="node5" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title="std::function\&lt; void\l(std::shared_ptr\&lt; typename\l ActionT::Impl::FeedbackMessage \&gt;)\&gt;" alt="" coords="5,187,252,243"/>
+<area shape="rect" id="node6" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title="std::function\&lt; void\l(const std::array &amp;,\l std::shared_ptr\&lt; void \&gt;)\&gt;" alt="" coords="42,267,215,323"/>
+<area shape="rect" id="node7" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title="std::function\&lt; void\l(const std::array &amp;)\&gt;" alt="" coords="57,348,200,389"/>
+</map>
