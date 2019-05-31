@@ -1,0 +1,3 @@
+<map id="rclcpp::subscription_traits::is_serialized_subscription_argument&lt; std::shared_ptr&lt; rcl_serialized_message_t &gt; &gt;" name="rclcpp::subscription_traits::is_serialized_subscription_argument&lt; std::shared_ptr&lt; rcl_serialized_message_t &gt; &gt;">
+<area shape="rect" id="node2" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/types/integral_constant.html" title="std::true_type" alt="" coords="59,5,161,32"/>
+</map>

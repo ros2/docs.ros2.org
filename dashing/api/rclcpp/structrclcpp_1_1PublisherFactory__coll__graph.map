@@ -1,0 +1,3 @@
+<map id="rclcpp::PublisherFactory" name="rclcpp::PublisherFactory">
+<area shape="rect" id="node2" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title="std::function\&lt; rclcpp\l::PublisherBase::SharedPtr\l(rclcpp::node_interfaces\l::NodeBaseInterface *node\l_base, const std::string &amp;topic\l_name, const rcl_publisher_options\l_t &amp;publisher_options)\&gt;" alt="" coords="5,5,232,120"/>
+</map>

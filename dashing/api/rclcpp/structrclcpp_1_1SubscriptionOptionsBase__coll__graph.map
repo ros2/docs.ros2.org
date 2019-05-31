@@ -1,0 +1,5 @@
+<map id="rclcpp::SubscriptionOptionsBase" name="rclcpp::SubscriptionOptionsBase">
+<area shape="rect" id="node2" href="$structrclcpp_1_1SubscriptionEventCallbacks.html" title="Contains callbacks for non&#45;message events that a Subscription can receive from the middleware..." alt="" coords="383,39,553,80"/>
+<area shape="rect" id="node3" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title="std::function\&lt; void\l(QOSDeadlineRequestedInfo &amp;)\&gt;" alt="" coords="5,5,221,47"/>
+<area shape="rect" id="node4" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title="std::function\&lt; void\l(QOSLivelinessChangedInfo &amp;)\&gt;" alt="" coords="7,71,219,112"/>
+</map>

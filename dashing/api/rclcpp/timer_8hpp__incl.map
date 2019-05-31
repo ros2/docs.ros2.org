@@ -1,0 +1,34 @@
+<map id="include/rclcpp/timer.hpp" name="include/rclcpp/timer.hpp">
+<area shape="rect" id="node9" href="$clock_8hpp.html" title="rclcpp/clock.hpp" alt="" coords="197,155,315,181"/>
+<area shape="rect" id="node10" href="$macros_8hpp.html" title="rclcpp/macros.hpp" alt="" coords="822,311,951,338"/>
+<area shape="rect" id="node13" href="$visibility__control_8hpp.html" title="rclcpp/visibility_control.hpp" alt="" coords="339,393,517,420"/>
+<area shape="rect" id="node20" href="$context_8hpp.html" title="rclcpp/context.hpp" alt="" coords="1598,229,1727,256"/>
+<area shape="rect" id="node35" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$timer_8h.html" title="rcl/timer.h" alt="" coords="1861,393,1941,420"/>
+<area shape="rect" id="node37" href="$function__traits_8hpp.html" title="rclcpp/function_traits.hpp" alt="" coords="491,229,659,256"/>
+<area shape="rect" id="node39" href="$rate_8hpp.html" title="rclcpp/rate.hpp" alt="" coords="993,80,1101,107"/>
+<area shape="rect" id="node40" href="$utilities_8hpp.html" title="rclcpp/utilities.hpp" alt="" coords="1227,155,1354,181"/>
+<area shape="rect" id="node42" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$error__handling_8h.html" title="rcl/error_handling.h" alt="" coords="2595,80,2727,107"/>
+<area shape="rect" id="node43" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rmw.tag$error__handling_8h.html" title="rmw/error_handling.h" alt="" coords="2751,80,2894,107"/>
+<area shape="rect" id="node44" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rmw.tag$rmw_8h.html" title="rmw/rmw.h" alt="" coords="3191,229,3278,256"/>
+<area shape="rect" id="node11" href="$time_8hpp.html" title="rclcpp/time.hpp" alt="" coords="149,229,259,256"/>
+<area shape="rect" id="node14" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$time_8h.html" title="rcl/time.h" alt="" coords="1514,543,1590,569"/>
+<area shape="rect" id="node19" href="$duration_8hpp.html" title="rclcpp/duration.hpp" alt="" coords="1027,311,1159,338"/>
+<area shape="rect" id="node15" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$allocator_8h.html" title="rcl/allocator.h" alt="" coords="1705,692,1805,719"/>
+<area shape="rect" id="node16" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$macros_8h.html" title="rcl/macros.h" alt="" coords="2595,692,2690,719"/>
+<area shape="rect" id="node17" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$types_8h.html" title="rcl/types.h" alt="" coords="1992,692,2075,719"/>
+<area shape="rect" id="node18" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$visibility__control_8h.html" title="rcl/visibility_control.h" alt="" coords="2961,692,3105,719"/>
+<area shape="rect" id="node28" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$context_8h.html" title="rcl/context.h" alt="" coords="2218,543,2313,569"/>
+<area shape="rect" id="node31" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$guard__condition_8h.html" title="rcl/guard_condition.h" alt="" coords="2185,468,2327,495"/>
+<area shape="rect" id="node32" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$wait_8h.html" title="rcl/wait.h" alt="" coords="2595,311,2669,338"/>
+<area shape="rect" id="node36" href="$init__options_8hpp.html" title="rclcpp/init_options.hpp" alt="" coords="1235,311,1387,338"/>
+<area shape="rect" id="node29" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$arguments_8h.html" title="rcl/arguments.h" alt="" coords="2147,617,2259,644"/>
+<area shape="rect" id="node30" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$init__options_8h.html" title="rcl/init_options.h" alt="" coords="2536,617,2653,644"/>
+<area shape="rect" id="node33" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$client_8h.html" title="rcl/client.h" alt="" coords="3048,617,3131,644"/>
+<area shape="rect" id="node34" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$service_8h.html" title="rcl/service.h" alt="" coords="2931,617,3024,644"/>
+<area shape="rect" id="node45" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rcl.tag$init_8h.html" title="rmw/init.h" alt="" coords="2651,468,2730,495"/>
+<area shape="rect" id="node46" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rmw.tag$init_8h.html" title="rmw/init.h" alt="" coords="3307,468,3386,495"/>
+<area shape="rect" id="node47" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rmw.tag$macros_8h.html" title="rmw/macros.h" alt="" coords="3537,543,3642,569"/>
+<area shape="rect" id="node48" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rmw.tag$visibility__control_8h.html" title="rmw/visibility_control.h" alt="" coords="3357,543,3512,569"/>
+<area shape="rect" id="node49" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rmw.tag$qos__profiles_8h.html" title="rmw/qos_profiles.h" alt="" coords="3117,311,3249,338"/>
+<area shape="rect" id="node50" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/rmw.tag$types_8h.html" title="rmw/types.h" alt="" coords="3239,393,3334,420"/>
+</map>

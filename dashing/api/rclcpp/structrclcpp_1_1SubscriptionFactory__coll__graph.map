@@ -1,0 +1,4 @@
+<map id="rclcpp::SubscriptionFactory" name="rclcpp::SubscriptionFactory">
+<area shape="rect" id="node2" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title="std::function\&lt; void\l(rclcpp::intra_process\l_manager::IntraProcessManager\l::SharedPtr ipm, rclcpp::Subscription\lBase::SharedPtr subscription, const\l rcl_subscription_options_t &amp;subscription_options)\&gt;" alt="" coords="5,5,327,105"/>
+<area shape="rect" id="node3" href="/home/jacob/ws/gendocs_ws/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title="std::function\&lt; rclcpp\l::SubscriptionBase::SharedPtr\l(rclcpp::node_interfaces::\lNodeBaseInterface *node_base,\l const std::string &amp;topic_name,\l const rcl_subscription_options\l_t &amp;subscription_options)\&gt;" alt="" coords="61,130,271,245"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="rclcpp::PublisherBase" name="rclcpp::PublisherBase">
+<area shape="rect" id="node2" href="$classrclcpp_1_1Publisher.html" title="rclcpp::Publisher\&lt;\l rcl_interfaces::msg\l::ParameterEvent \&gt;" alt="" coords="203,5,340,61"/>
+<area shape="rect" id="node3" href="$classrclcpp_1_1Publisher.html" title="A publisher publishes messages of any type to a topic. " alt="" coords="203,86,339,127"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$structrclcpp_1_1subscription__traits_1_1extract__message__type.html" title="rclcpp::subscription\l_traits::extract_message\l_type\&lt; rclcpp::function\l_traits::function_traits\l\&lt; CallbackT \&gt;::template argument\l_type\&lt; 0 \&gt; \&gt;" alt="" coords="5,5,227,105"/>
+<area shape="rect" id="node2" href="$structrclcpp_1_1subscription__traits_1_1has__message__type.html" title="rclcpp::subscription\l_traits::has_message\l_type\&lt; CallbackT, typename,\l typename, typename \&gt;" alt="" coords="275,20,469,91"/>
+</map>

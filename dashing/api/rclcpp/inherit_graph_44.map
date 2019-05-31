@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classrclcpp_1_1node__interfaces_1_1NodeWaitablesInterface.html" title="Pure virtual interface class for the NodeWaitables part of the Node API. " alt="" coords="5,5,176,47"/>
+<area shape="rect" id="node2" href="$classrclcpp_1_1node__interfaces_1_1NodeWaitables.html" title="Implementation of the NodeWaitables part of the Node API. " alt="" coords="224,5,381,47"/>
+</map>
