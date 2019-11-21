@@ -1,0 +1,15 @@
+digraph "include/rcutils" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_d44c64559bbebec7f509842c48db8b23 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="include" fontname="Helvetica", fontsize="10", URL="dir_d44c64559bbebec7f509842c48db8b23.html"]
+  subgraph clusterdir_6627b286d46f7ece855f6fbde3556e48 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_6627b286d46f7ece855f6fbde3556e48.html"];
+    dir_6627b286d46f7ece855f6fbde3556e48 [shape=plaintext label="rcutils"];
+    dir_61de7eb0fc8c65637acd8c3ebbd1e36d [shape=box label="stdatomic_helper" color="red" fillcolor="white" style="filled" URL="dir_61de7eb0fc8c65637acd8c3ebbd1e36d.html"];
+    dir_2609ecd7b3f2bf812418d4e9da9a63ab [shape=box label="types" color="black" fillcolor="white" style="filled" URL="dir_2609ecd7b3f2bf812418d4e9da9a63ab.html"];
+  }
+  }
+  dir_6627b286d46f7ece855f6fbde3556e48->dir_2609ecd7b3f2bf812418d4e9da9a63ab [headlabel="10", labeldistance=1.5 headhref="dir_000001_000005.html"];
+}

@@ -1,0 +1,12 @@
+digraph "rclcpp::exceptions::RCLInvalidArgument"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node3 [label="rclcpp::exceptions\l::RCLInvalidArgument",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rclcpp::exceptions\l::RCLErrorBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrclcpp_1_1exceptions_1_1RCLErrorBase.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" formatted_message\nmessage\nfile" ,fontname="Helvetica"];
+  Node5 [label="std::string",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/string/basic_string.html"];
+  Node6 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="std::invalid_argument",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/error/invalid_argument.html"];
+}

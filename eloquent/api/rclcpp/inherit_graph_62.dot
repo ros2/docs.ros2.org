@@ -1,0 +1,11 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="rclcpp::QoSInitialization",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structrclcpp_1_1QoSInitialization.html",tooltip="QoS initialization values, cannot be created directly, use KeepAll or KeepLast instead. "];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="rclcpp::KeepAll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structrclcpp_1_1KeepAll.html",tooltip="Use to initialize the QoS with the keep_all history setting. "];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rclcpp::KeepLast",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structrclcpp_1_1KeepLast.html",tooltip="Use to initialize the QoS with the keep_last history setting and the given depth. ..."];
+}

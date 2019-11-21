@@ -1,0 +1,8 @@
+digraph "rclcpp::experimental::buffers::IntraProcessBuffer&lt; MessageT, Alloc, MessageDeleter &gt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node3 [label="rclcpp::experimental\l::buffers::IntraProcessBuffer\l\< MessageT, Alloc, MessageDeleter \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rclcpp::experimental\l::buffers::IntraProcessBufferBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrclcpp_1_1experimental_1_1buffers_1_1IntraProcessBufferBase.html"];
+}

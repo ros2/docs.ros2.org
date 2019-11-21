@@ -1,0 +1,9 @@
+digraph "include/rclcpp/detail" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_01cab12f5a6af7cf2b1939f91562c565 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="rclcpp" fontname="Helvetica", fontsize="10", URL="dir_01cab12f5a6af7cf2b1939f91562c565.html"]
+  dir_f7d667971b59739e47703bcbaf5923b6 [shape=box, label="detail", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_f7d667971b59739e47703bcbaf5923b6.html"];
+  }
+}

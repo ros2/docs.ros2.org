@@ -1,0 +1,11 @@
+digraph "include/rclcpp/experimental/buffers" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_fc41ba6da3deec988a444ab03750e972 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="experimental" fontname="Helvetica", fontsize="10", URL="dir_fc41ba6da3deec988a444ab03750e972.html"]
+  dir_f51463d144e320e022bb29c443c08191 [shape=box, label="buffers", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_f51463d144e320e022bb29c443c08191.html"];
+  }
+  dir_d1b78a3017cb27e7e0198d55b8a06bb4 [shape=box label="allocator" URL="dir_d1b78a3017cb27e7e0198d55b8a06bb4.html"];
+  dir_f51463d144e320e022bb29c443c08191->dir_d1b78a3017cb27e7e0198d55b8a06bb4 [headlabel="2", labeldistance=1.5 headhref="dir_000007_000002.html"];
+}

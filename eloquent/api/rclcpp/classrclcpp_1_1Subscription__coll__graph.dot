@@ -1,0 +1,21 @@
+digraph "rclcpp::Subscription&lt; CallbackMessageT, AllocatorT, MessageMemoryStrategyT &gt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3 [label="rclcpp::Subscription\l\< CallbackMessageT, Allocator\lT, MessageMemoryStrategyT \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rclcpp::SubscriptionBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrclcpp_1_1SubscriptionBase.html"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="std::enable_shared\l_from_this\< SubscriptionBase \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/enable_shared_from_this.html"];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" node_handle_" ,fontname="Helvetica"];
+  Node6 [label="std::shared_ptr\< rcl\l_node_t \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html"];
+  Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" intra_process_subscription\l_handle_\nsubscription_handle_" ,fontname="Helvetica"];
+  Node7 [label="std::shared_ptr\< rcl\l_subscription_t \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html"];
+  Node8 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" weak_ipm_" ,fontname="Helvetica"];
+  Node8 [label="std::weak_ptr\< rclcpp\l::experimental::IntraProcess\lManager \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/weak_ptr.html"];
+  Node9 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" node_base_" ,fontname="Helvetica"];
+  Node9 [label="rclcpp::node_interfaces\l::NodeBaseInterface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrclcpp_1_1node__interfaces_1_1NodeBaseInterface.html",tooltip="Pure virtual interface class for the NodeBase part of the Node API. "];
+  Node10 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" event_handlers_" ,fontname="Helvetica"];
+  Node10 [label="std::vector\< std::shared\l_ptr\< rclcpp::QOSEventHandlerBase \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/container/vector.html"];
+}

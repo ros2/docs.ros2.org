@@ -1,0 +1,48 @@
+digraph "include/rclcpp/detail/rmw_implementation_specific_publisher_payload.hpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="include/rclcpp/detail\l/rmw_implementation_specific\l_publisher_payload.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="rcl/publisher.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/rcl.tag$publisher_8h.html"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rcl/macros.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/rcl.tag$macros_8h.html"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rcl/node.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/rcl.tag$node_8h.html"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rcl/allocator.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/rcl.tag$allocator_8h.html"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="rcl/arguments.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/rcl.tag$arguments_8h.html"];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="rcl/types.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/rcl.tag$types_8h.html"];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="rcl/visibility_control.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/rcl.tag$visibility__control_8h.html"];
+  Node3 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="rcl/context.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/rcl.tag$context_8h.html"];
+  Node8 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="rcl/init_options.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/rcl.tag$init__options_8h.html"];
+  Node9 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="rcl/node_options.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/rcl.tag$node__options_8h.html"];
+  Node10 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="rclcpp/detail/rmw_implementation\l_specific_payload.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$rmw__implementation__specific__payload_8hpp.html"];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="rclcpp/visibility_control.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$visibility__control_8hpp.html"];
+  Node0 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

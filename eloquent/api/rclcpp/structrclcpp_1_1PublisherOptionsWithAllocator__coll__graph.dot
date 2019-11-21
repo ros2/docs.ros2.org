@@ -1,0 +1,21 @@
+digraph "rclcpp::PublisherOptionsWithAllocator&lt; Allocator &gt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="rclcpp::PublisherOptions\lWithAllocator\< Allocator \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rclcpp::PublisherOptionsBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structrclcpp_1_1PublisherOptionsBase.html",tooltip="Non-templated part of PublisherOptionsWithAllocator<Allocator>. "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" event_callbacks" ,fontname="Helvetica"];
+  Node4 [label="rclcpp::PublisherEventCallbacks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structrclcpp_1_1PublisherEventCallbacks.html",tooltip="Contains callbacks for various types of events a Publisher can receive from the middleware. "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" liveliness_callback" ,fontname="Helvetica"];
+  Node5 [label="std::function\< void\l(QOSLivelinessLostInfo &)\>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html"];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" deadline_callback" ,fontname="Helvetica"];
+  Node6 [label="std::function\< void\l(QOSDeadlineOfferedInfo &)\>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html"];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" callback_group" ,fontname="Helvetica"];
+  Node7 [label="std::shared_ptr\< rclcpp\l::callback_group::CallbackGroup \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html"];
+  Node8 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rmw_implementation\l_payload" ,fontname="Helvetica"];
+  Node8 [label="std::shared_ptr\< rclcpp\l::detail::RMWImplementationSpecific\lPublisherPayload \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html"];
+  Node9 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" allocator" ,fontname="Helvetica"];
+  Node9 [label="std::shared_ptr\< Allocator \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html"];
+}
