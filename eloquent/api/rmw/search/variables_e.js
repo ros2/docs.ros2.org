@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['reallocate',['reallocate',['http://docs.ros2.org/eloquent/api/rcutils/structrcutils__allocator__t.html#a86fd98797490e58b6b7c1e95f93bea67',1,'rcutils_allocator_t']]],
+  ['reliability',['reliability',['../structrmw__qos__profile__t.html#a3b2953829e35b233012a0ab87ee98097',1,'rmw_qos_profile_t']]],
+  ['rmw_5fqos_5fdurability_5fpolicy_5ft',['rmw_qos_durability_policy_t',['../types_8h.html#a01f07aee45f177ec6c76b7278b3f4c62',1,'types.h']]],
+  ['rmw_5fqos_5fhistory_5fpolicy_5ft',['rmw_qos_history_policy_t',['../types_8h.html#a1cca2b226fc7d2cf9fe2aab7a297c32f',1,'types.h']]],
+  ['rmw_5fqos_5fliveliness_5fpolicy_5ft',['rmw_qos_liveliness_policy_t',['../types_8h.html#af3859cbddf559520be9b9903e2070e5c',1,'types.h']]],
+  ['rmw_5fqos_5fpolicy_5fdurability_5fsystem_5fdefault',['RMW_QOS_POLICY_DURABILITY_SYSTEM_DEFAULT',['../types_8h.html#a7d4ad9f79667b1ce24529ad329ae7b39',1,'types.h']]],
+  ['rmw_5fqos_5fpolicy_5fdurability_5ftransient_5flocal',['RMW_QOS_POLICY_DURABILITY_TRANSIENT_LOCAL',['../types_8h.html#a1539e017bebb73a126858211fcaff94d',1,'types.h']]],
+  ['rmw_5fqos_5fpolicy_5fdurability_5fvolatile',['RMW_QOS_POLICY_DURABILITY_VOLATILE',['../types_8h.html#a1dcdaf8a458d44b6eee4116edd18b86f',1,'types.h']]],
+  ['rmw_5fqos_5fpolicy_5fhistory_5fkeep_5fall',['RMW_QOS_POLICY_HISTORY_KEEP_ALL',['../types_8h.html#a12b58fb5572ca06e35e483342063a605',1,'types.h']]],
+  ['rmw_5fqos_5fpolicy_5fhistory_5fkeep_5flast',['RMW_QOS_POLICY_HISTORY_KEEP_LAST',['../types_8h.html#a20dcc470f4e60bf1af5b8c66259bff05',1,'types.h']]],
+  ['rmw_5fqos_5fpolicy_5fhistory_5fsystem_5fdefault',['RMW_QOS_POLICY_HISTORY_SYSTEM_DEFAULT',['../types_8h.html#a87e9b7ebf3140b263dceb7bab9bb7474',1,'types.h']]],
+  ['rmw_5fqos_5fpolicy_5fliveliness_5fautomatic',['RMW_QOS_POLICY_LIVELINESS_AUTOMATIC',['../types_8h.html#aee155ea4bd0638d02b79a2f0a8b1bd1b',1,'types.h']]],
+  ['rmw_5fqos_5fpolicy_5fliveliness_5fmanual_5fby_5fnode',['RMW_QOS_POLICY_LIVELINESS_MANUAL_BY_NODE',['../types_8h.html#a87cfb927b4faefa510452eac7b6ae61a',1,'types.h']]],
+  ['rmw_5fqos_5fpolicy_5fliveliness_5fmanual_5fby_5ftopic',['RMW_QOS_POLICY_LIVELINESS_MANUAL_BY_TOPIC',['../types_8h.html#a3bd4e95b9a0d13bf269363efb1a1bd54',1,'types.h']]],
+  ['rmw_5fqos_5fpolicy_5fliveliness_5fsystem_5fdefault',['RMW_QOS_POLICY_LIVELINESS_SYSTEM_DEFAULT',['../types_8h.html#a06f5b0c75030154a0e277e08208f28e1',1,'types.h']]],
+  ['rmw_5fqos_5fpolicy_5freliability_5fbest_5feffort',['RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT',['../types_8h.html#ab2ef2b5eb24928db4e7df719dcf5c061',1,'types.h']]],
+  ['rmw_5fqos_5fpolicy_5freliability_5freliable',['RMW_QOS_POLICY_RELIABILITY_RELIABLE',['../types_8h.html#a45f69a3c497f5d4ec590d912d4ef42ad',1,'types.h']]],
+  ['rmw_5fqos_5fpolicy_5freliability_5fsystem_5fdefault',['RMW_QOS_POLICY_RELIABILITY_SYSTEM_DEFAULT',['../types_8h.html#a1644d73372a34e3139f4283ac58524a6',1,'types.h']]],
+  ['rmw_5fqos_5freliability_5fpolicy_5ft',['rmw_qos_reliability_policy_t',['../types_8h.html#a4a1531ffa8d52c51804123f8ad4b17b3',1,'types.h']]],
+  ['rmw_5fsecurity_5fenforcement_5fenforce',['RMW_SECURITY_ENFORCEMENT_ENFORCE',['../types_8h.html#ae23e7e8e4ebf38c56aebc9b94ce3df52',1,'types.h']]],
+  ['rmw_5fsecurity_5fenforcement_5fpermissive',['RMW_SECURITY_ENFORCEMENT_PERMISSIVE',['../types_8h.html#a731a13c28f2e7ed0feb7d031e8b3d48c',1,'types.h']]],
+  ['rmw_5fsecurity_5fenforcement_5fpolicy_5ft',['rmw_security_enforcement_policy_t',['../types_8h.html#adaa8dc42501a0f5209aaf6abdde5818a',1,'types.h']]],
+  ['rmw_5fspecific_5fpublisher_5fpayload',['rmw_specific_publisher_payload',['../structrmw__publisher__options__t.html#ab9d194b7183f83771c2a9f9473fd87fd',1,'rmw_publisher_options_t']]],
+  ['rmw_5fspecific_5fsubscription_5fpayload',['rmw_specific_subscription_payload',['../structrmw__subscription__options__t.html#a345a2622b3e74b0f4039f032f258fc90',1,'rmw_subscription_options_t']]]
+];

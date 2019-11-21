@@ -1,0 +1,12 @@
+digraph "include/rmw/names_and_types.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node28 [label="include/rmw/names_and\l_types.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node28 -> Node29 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="include/rmw/get_node\l_info_and_types.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$get__node__info__and__types_8h.html"];
+  Node28 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 [label="include/rmw/get_service\l_names_and_types.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$get__service__names__and__types_8h.html"];
+  Node28 -> Node31 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node31 [label="include/rmw/get_topic\l_names_and_types.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$get__topic__names__and__types_8h.html"];
+}

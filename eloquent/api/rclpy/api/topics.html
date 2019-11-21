@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Topics &#8212; rclpy 0.6.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Services" href="services.html" />
+    <link rel="prev" title="Node" href="node.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="topics">
+<h1>Topics<a class="headerlink" href="#topics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-rclpy.publisher">
+<span id="publisher"></span><h2>Publisher<a class="headerlink" href="#module-rclpy.publisher" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="rclpy.publisher.Publisher">
+<em class="property">class </em><code class="sig-prename descclassname">rclpy.publisher.</code><code class="sig-name descname">Publisher</code><span class="sig-paren">(</span><em class="sig-param">publisher_handle</em>, <em class="sig-param">msg_type</em>, <em class="sig-param">topic</em>, <em class="sig-param">qos_profile</em>, <em class="sig-param">event_callbacks</em>, <em class="sig-param">callback_group</em><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.publisher.Publisher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a container for a ROS publisher.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Users should not create a publisher with this constuctor, instead they should
+call <a class="reference internal" href="node.html#rclpy.node.Node.create_publisher" title="rclpy.node.Node.create_publisher"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Node.create_publisher()</span></code></a>.</p>
+</div>
+<p>A publisher is used as a primary means of communication in a ROS system by publishing
+messages on a ROS topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>publisher_handle</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Handle</span></code>) – Capsule pointing to the underlying <code class="docutils literal notranslate"><span class="pre">rcl_publisher_t</span></code> object.</p></li>
+<li><p><strong>msg_type</strong> (<em>~MsgType</em>) – The type of ROS messages the publisher will publish.</p></li>
+<li><p><strong>topic</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – The name of the topic the publisher will publish to.</p></li>
+<li><p><strong>qos_profile</strong> (<a class="reference internal" href="qos.html#rclpy.qos.QoSProfile" title="rclpy.qos.QoSProfile"><code class="xref py py-class docutils literal notranslate"><span class="pre">QoSProfile</span></code></a>) – The quality of service profile to apply to the publisher.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="rclpy.publisher.Publisher.assert_liveliness">
+<code class="sig-name descname">assert_liveliness</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.publisher.Publisher.assert_liveliness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manually assert that this Publisher is alive.</p>
+<p>If the QoS Liveliness policy is set to RMW_QOS_POLICY_LIVELINESS_MANUAL_BY_TOPIC, the
+application must call this at least as often as <code class="docutils literal notranslate"><span class="pre">QoSProfile.liveliness_lease_duration</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="rclpy.publisher.Publisher.destroy">
+<code class="sig-name descname">destroy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.publisher.Publisher.destroy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="rclpy.publisher.Publisher.get_subscription_count">
+<code class="sig-name descname">get_subscription_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.publisher.Publisher.get_subscription_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the amount of subscribers that this publisher has.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="rclpy.publisher.Publisher.handle">
+<em class="property">property </em><code class="sig-name descname">handle</code><a class="headerlink" href="#rclpy.publisher.Publisher.handle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="rclpy.publisher.Publisher.publish">
+<code class="sig-name descname">publish</code><span class="sig-paren">(</span><em class="sig-param">msg</em><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.publisher.Publisher.publish" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send a message to the topic for the publisher.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>msg</strong> (<em>~MsgType</em>) – The ROS message to publish.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>TypeError if the type of the passed message isn’t an instance
+of the provided type when the publisher was constructed.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-rclpy.subscription">
+<span id="subscription"></span><h2>Subscription<a class="headerlink" href="#module-rclpy.subscription" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="rclpy.subscription.Subscription">
+<em class="property">class </em><code class="sig-prename descclassname">rclpy.subscription.</code><code class="sig-name descname">Subscription</code><span class="sig-paren">(</span><em class="sig-param">subscription_handle</em>, <em class="sig-param">msg_type</em>, <em class="sig-param">topic</em>, <em class="sig-param">callback</em>, <em class="sig-param">callback_group</em>, <em class="sig-param">qos_profile</em>, <em class="sig-param">raw</em>, <em class="sig-param">event_callbacks</em><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.subscription.Subscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a container for a ROS subscription.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Users should not create a subscription with this constuctor, instead they
+should call <a class="reference internal" href="node.html#rclpy.node.Node.create_subscription" title="rclpy.node.Node.create_subscription"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Node.create_subscription()</span></code></a>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>subscription_handle</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Handle</span></code>) – <code class="xref py py-class docutils literal notranslate"><span class="pre">Handle</span></code> wrapping the underlying <code class="docutils literal notranslate"><span class="pre">rcl_subscription_t</span></code>
+object.</p></li>
+<li><p><strong>msg_type</strong> (<em>~MsgType</em>) – The type of ROS messages the subscription will subscribe to.</p></li>
+<li><p><strong>topic</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – The name of the topic the subscription will subscribe to.</p></li>
+<li><p><strong>callback</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>) – A user-defined callback function that is called when a message is
+received by the subscription.</p></li>
+<li><p><strong>callback_group</strong> (<a class="reference internal" href="execution_and_callbacks.html#rclpy.callback_groups.CallbackGroup" title="rclpy.callback_groups.CallbackGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">CallbackGroup</span></code></a>) – The callback group for the subscription. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, then the
+nodes default callback group is used.</p></li>
+<li><p><strong>qos_profile</strong> (<a class="reference internal" href="qos.html#rclpy.qos.QoSProfile" title="rclpy.qos.QoSProfile"><code class="xref py py-class docutils literal notranslate"><span class="pre">QoSProfile</span></code></a>) – The quality of service profile to apply to the subscription.</p></li>
+<li><p><strong>raw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, then received messages will be stored in raw binary
+representation.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="rclpy.subscription.Subscription.destroy">
+<code class="sig-name descname">destroy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.subscription.Subscription.destroy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="rclpy.subscription.Subscription.handle">
+<em class="property">property </em><code class="sig-name descname">handle</code><a class="headerlink" href="#rclpy.subscription.Subscription.handle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">rclpy</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="init_shutdown.html">Initialization, Shutdown, and Spinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">Node</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Topics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-rclpy.publisher">Publisher</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-rclpy.subscription">Subscription</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="services.html">Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timers.html">Timer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parameters.html">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="context.html">Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="execution_and_callbacks.html">Execution and Callbacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qos.html">Quality of Service</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../api.html">API</a><ul>
+      <li>Previous: <a href="node.html" title="previous chapter">Node</a></li>
+      <li>Next: <a href="services.html" title="next chapter">Services</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016-2019, Open Source Robotics Foundation, Inc..
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/api/topics.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

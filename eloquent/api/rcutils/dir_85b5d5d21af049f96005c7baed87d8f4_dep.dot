@@ -1,0 +1,9 @@
+digraph "include/rcutils/stdatomic_helper/win32" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_61de7eb0fc8c65637acd8c3ebbd1e36d {
+    graph [ bgcolor="#ddddee", pencolor="black", label="stdatomic_helper" fontname="Helvetica", fontsize="10", URL="dir_61de7eb0fc8c65637acd8c3ebbd1e36d.html"]
+  dir_85b5d5d21af049f96005c7baed87d8f4 [shape=box, label="win32", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_85b5d5d21af049f96005c7baed87d8f4.html"];
+  }
+}

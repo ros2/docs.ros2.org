@@ -1,0 +1,16 @@
+digraph "rclcpp::experimental::SubscriptionIntraProcessBase"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node3 [label="rclcpp::experimental\l::SubscriptionIntraProcessBase",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rclcpp::Waitable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrclcpp_1_1Waitable.html"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" reentrant_mutex_" ,fontname="Helvetica"];
+  Node5 [label="std::recursive_mutex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/thread/recursive_mutex.html"];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gc_" ,fontname="Helvetica"];
+  Node6 [label="rcl_guard_condition_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/rcl.tag$structrcl__guard__condition__t.html"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" context" ,fontname="Helvetica"];
+  Node7 [label="rcl_context_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/rcl.tag$structrcl__context__t.html"];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" global_arguments" ,fontname="Helvetica"];
+  Node8 [label="rcl_arguments_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="/tmp/tmp.Txb212H7Lz/doxygen_tag_files/rcl.tag$structrcl__arguments__t.html"];
+}
