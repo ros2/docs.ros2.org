@@ -1,6 +1,6 @@
 release_name := crystal
 
-default: setup $(release_name) api/rcutils api/rmw api api/rcl api/rcl_action api/rclcpp api/rclcpp_action api/rclpy
+default: setup $(release_name) api/rcutils api/rmw api api/rcl api/rcl_action api/rcl_lifecycle api/rclcpp api/rclcpp_action api/rclcpp_lifecycle api/rclpy
 
 install: default
 	rm -r src/ros2/docs.ros2.org/$(release_name) || true
@@ -38,12 +38,22 @@ api/rcl_action: src/ros2/rcl/rcl_action/doc_output/html
 	test -d api || mkdir api
 	cp -r $< $@
 
+api/rcl_lifecycle: src/ros2/rcl/rcl_lifecycle/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
 api/rclcpp: src/ros2/rclcpp/rclcpp/doc_output/html
 	rm -r $@ || true
 	test -d api || mkdir api
 	cp -r $< $@
 
 api/rclcpp_action: src/ros2/rclcpp/rclcpp_action/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/rclcpp_lifecycle: src/ros2/rclcpp/rclcpp_lifecycle/doc_output/html
 	rm -r $@ || true
 	test -d api || mkdir api
 	cp -r $< $@
@@ -93,6 +103,15 @@ src/ros2/rcl/rcl_action/doc_output/html doxygen_tag_files/rcl_action.tag: src/ro
 	rm doxygen_tag_files/rcl_action.tag || true
 	cd src/ros2/rcl/rcl_action && doxygen Doxyfile
 
+src/ros2/rcl/rcl_lifecycle/doc_output/html doxygen_tag_files/rcl_lifecycle.tag: src/ros2/rcl/rcl_lifecycle/Doxyfile doxygen_tag_files/rcutils.tag doxygen_tag_files/rmw.tag doxygen_tag_files/rcl.tag
+	. install/setup.sh && \
+		cd src/ros2/rcl/rcl_lifecycle && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/rcl_lifecycle.tag || true
+	cd src/ros2/rcl/rcl_lifecycle && doxygen Doxyfile
+
 src/ros2/rclcpp/rclcpp/doc_output/html doxygen_tag_files/rclcpp.tag: src/ros2/rclcpp/rclcpp/Doxyfile doxygen_tag_files/rcl.tag doxygen_tag_files/rmw.tag doxygen_tag_files/rcutils.tag
 	. install/setup.sh && \
 		cd src/ros2/rclcpp/rclcpp && \
@@ -110,6 +129,15 @@ src/ros2/rclcpp/rclcpp_action/doc_output/html doxygen_tag_files/rclcpp_action.ta
 	rm -r $@ || true
 	rm doxygen_tag_files/rclcpp_action.tag || true
 	cd src/ros2/rclcpp/rclcpp_action && doxygen Doxyfile
+
+src/ros2/rclcpp/rclcpp_lifecycle/doc_output/html doxygen_tag_files/rclcpp_lifecycle.tag: src/ros2/rclcpp/rclcpp_lifecycle/Doxyfile doxygen_tag_files/rclcpp.tag doxygen_tag_files/rcl.tag doxygen_tag_files/rmw.tag doxygen_tag_files/rcutils.tag
+	. install/setup.sh && \
+		cd src/ros2/rclcpp/rclcpp_lifecycle && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/rclcpp_lifecycle.tag || true
+	cd src/ros2/rclcpp/rclcpp_lifecycle && doxygen Doxyfile
 
 src/ros2/rclpy/rclpy/docs/build/html:
 	rm -r $@ || true
