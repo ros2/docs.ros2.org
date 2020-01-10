@@ -16,7 +16,7 @@ cd ${WSDIR}
 mkdir src
 wget -O ros2.repos https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos
 vcs import src < ros2.repos
-colcon build --packages-up-to rclcpp_action rclpy
+colcon build --packages-up-to rclcpp_action rclcpp_lifecycle rclpy
 wget https://raw.githubusercontent.com/ros2/docs.ros2.org/doc_gen/Makefile
 wget https://raw.githubusercontent.com/ros2/docs.ros2.org/doc_gen/ros2_doc.repos
 vcs import src < ros2_doc.repos
