@@ -14,7 +14,7 @@ esac
 WSDIR=$(mktemp -d)
 cd ${WSDIR}
 mkdir src
-wget -O ros2.repos https://raw.githubusercontent.com/ros2/ros2/${RELEASE_NAME}/ros2.repos
+wget -O ros2.repos https://raw.githubusercontent.com/ros2/ros2/release-${RELEASE_NAME}/ros2.repos
 vcs import src < ros2.repos
 colcon build --packages-up-to rclcpp_action rclpy
 wget https://raw.githubusercontent.com/ros2/docs.ros2.org/doc_gen/Makefile
