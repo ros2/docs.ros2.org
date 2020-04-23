@@ -9,6 +9,7 @@ default: setup $(release_name) \
 	api/rcl_lifecycle \
 	api/rclcpp \
 	api/rclcpp_action \
+	api/rclcpp_components \
 	api/rclcpp_lifecycle \
 	api/rclpy
 	api/rmw \
@@ -65,6 +66,11 @@ api/rclcpp: src/ros2/rclcpp/rclcpp/doc_output/html
 	cp -r $< $@
 
 api/rclcpp_action: src/ros2/rclcpp/rclcpp_action/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/rclcpp_components: src/ros2/rclcpp/rclcpp_components/doc_output/html
 	rm -r $@ || true
 	test -d api || mkdir api
 	cp -r $< $@
@@ -154,6 +160,15 @@ src/ros2/rclcpp/rclcpp_action/doc_output/html doxygen_tag_files/rclcpp_action.ta
 	rm -r $@ || true
 	rm doxygen_tag_files/rclcpp_action.tag || true
 	cd src/ros2/rclcpp/rclcpp_action && doxygen Doxyfile
+
+src/ros2/rclcpp/rclcpp_components/doc_output/html doxygen_tag_files/rclcpp_components.tag: src/ros2/rclcpp/rclcpp_components/Doxyfile doxygen_tag_files/rclcpp.tag doxygen_tag_files/rcl.tag doxygen_tag_files/rmw.tag doxygen_tag_files/rcutils.tag
+	. install/setup.sh && \
+		cd src/ros2/rclcpp/rclcpp_components && \
+		git clean -dfx && \
+		cmake . && make -j 8
+	rm -r $@ || true
+	rm doxygen_tag_files/rclcpp_components.tag || true
+	cd src/ros2/rclcpp/rclcpp_components && doxygen Doxyfile
 
 src/ros2/rclcpp/rclcpp_lifecycle/doc_output/html doxygen_tag_files/rclcpp_lifecycle.tag: src/ros2/rclcpp/rclcpp_lifecycle/Doxyfile doxygen_tag_files/rclcpp.tag doxygen_tag_files/rcl.tag doxygen_tag_files/rmw.tag doxygen_tag_files/rcutils.tag  doxygen_tag_files/rcpputils.tag
 	. install/setup.sh && \
