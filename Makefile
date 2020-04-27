@@ -12,6 +12,13 @@ default: setup $(release_name) \
 	api/rclcpp_lifecycle \
 	api/rclpy
 	api/rmw \
+	api/tf2 \
+	api/tf2_bullet \
+	api/tf2_eigen \
+	api/tf2_geometry_msgs \
+	api/tf2_kdl \
+	api/tf2_ros \
+	api/tf2_tools
 
 install: default
 	rm -r src/ros2/docs.ros2.org/$(release_name) || true
@@ -75,6 +82,41 @@ api/rclcpp_lifecycle: src/ros2/rclcpp/rclcpp_lifecycle/doc_output/html
 	cp -r $< $@
 
 api/rclpy: src/ros2/rclpy/rclpy/docs/build/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/tf2: src/ros2/geometry2/tf2/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/tf2_bullet: src/ros2/geometry2/tf2_bullet/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/tf2_eigen: src/ros2/geometry2/tf2_eigen/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/tf2_geometry_msgs: src/ros2/geometry2/tf2_geometry_msgs/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/tf2_kdl: src/ros2/geometry2/tf2_kdl/docs/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/tf2_ros: src/ros2/geometry2/tf2_ros/docs/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/tf2_tools: src/ros2/geometry2/tf2/doc_output/html
 	rm -r $@ || true
 	test -d api || mkdir api
 	cp -r $< $@
@@ -170,6 +212,69 @@ src/ros2/rclpy/rclpy/docs/build/html:
 	    cd src/ros2/rclpy/rclpy/docs && \
 		git clean -dfx && \
 		make html
+
+src/ros2/geometry2/tf2/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/geometry2/tf2/ && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/tf2.tag || true
+	cd src/ros2/geometry2/tf2 && doxygen Doxyfile
+
+src/ros2/geometry2/tf2_bullet/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/geometry2/tf2_bullet/ && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/tf2_bullet.tag || true
+	cd src/ros2/geometry2/tf2_bullet && doxygen Doxyfile
+
+src/ros2/geometry2/tf2_eigen/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/geometry2/tf2_eigen/ && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/tf2_eigen.tag || true
+	cd src/ros2/geometry2/tf2_eigen && doxygen Doxyfile
+
+src/ros2/geometry2/tf2_geometry_msgs/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/geometry2/tf2_geometry_msgs/ && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/tf2_geometry_msgs.tag || true
+	cd src/ros2/geometry2/tf2_geometry_msgs && doxygen Doxyfile
+
+src/ros2/geometry2/tf2_kdl/docs/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/geometry2/tf2_kdl && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/tf2_kdl.tag || true
+	cd src/ros2/geometry2/tf2_kdl/docs && doxygen Doxyfile
+
+src/ros2/geometry2/tf2_ros/docs/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/geometry2/tf2_ros && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/tf2_ros.tag || true
+	cd src/ros2/geometry2/tf2_ros/docs && doxygen Doxyfile
+
+src/ros2/geometry2/tf2_tools/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/geometry2/tf2_tools/ && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/tf2_tools.tag || true
+	cd src/ros2/geometry2/tf2_tools && doxygen Doxyfile
 
 cpp-doxygen-web.tag.xml:
 	test -d doxygen_tag_files || mkdir doxygen_tag_files
