@@ -7,15 +7,25 @@ default: setup $(release_name) \
 	api/rcl \
 	api/rcl_action \
 	api/rcl_lifecycle \
+	api/rcl_yaml_param_parser \
 	api/rclcpp \
 	api/rclcpp_action \
+	api/rclcpp_components \
 	api/rclcpp_lifecycle \
-	api/rclpy
+	api/rclpy \
+	api/rosidl_runtime_c \
+	api/rosidl_runtime_cpp \
 	api/rmw \
 	api/rmw_fastrtps_cpp \
 	api/rmw_fastrtps_dynamic_cpp \
-	api/rmw_fastrtps_shared_cpp
-
+	api/rmw_fastrtps_shared_cpp \
+	api/tf2 \
+	api/tf2_bullet \
+	api/tf2_eigen \
+	api/tf2_geometry_msgs \
+	api/tf2_kdl \
+	api/tf2_ros \
+	api/tf2_tools
 
 install: default
 	rm -r src/ros2/docs.ros2.org/$(release_name) || true
@@ -63,6 +73,11 @@ api/rcl_lifecycle: src/ros2/rcl/rcl_lifecycle/doc_output/html
 	test -d api || mkdir api
 	cp -r $< $@
 
+api/rcl_yaml_param_parser: src/ros2/rcl/rcl_yaml_param_parser/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
 api/rclcpp: src/ros2/rclcpp/rclcpp/doc_output/html
 	rm -r $@ || true
 	test -d api || mkdir api
@@ -73,12 +88,27 @@ api/rclcpp_action: src/ros2/rclcpp/rclcpp_action/doc_output/html
 	test -d api || mkdir api
 	cp -r $< $@
 
+api/rclcpp_components: src/ros2/rclcpp/rclcpp_components/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
 api/rclcpp_lifecycle: src/ros2/rclcpp/rclcpp_lifecycle/doc_output/html
 	rm -r $@ || true
 	test -d api || mkdir api
 	cp -r $< $@
 
 api/rclpy: src/ros2/rclpy/rclpy/docs/build/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/rosidl_runtime_c: src/ros2/rosidl/rosidl_runtime_c/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/rosidl_runtime_cpp: src/ros2/rosidl/rosidl_runtime_cpp/doc_output/html
 	rm -r $@ || true
 	test -d api || mkdir api
 	cp -r $< $@
@@ -94,6 +124,41 @@ api/rmw_fastrtps_dynamic_cpp: src/ros2/rmw_fastrtps/rmw_fastrtps_dynamic_cpp/doc
 	cp -r $< $@
 
 api/rmw_fastrtps_shared_cpp: src/ros2/rmw_fastrtps/rmw_fastrtps_shared_cpp/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/tf2: src/ros2/geometry2/tf2/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/tf2_bullet: src/ros2/geometry2/tf2_bullet/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/tf2_eigen: src/ros2/geometry2/tf2_eigen/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/tf2_geometry_msgs: src/ros2/geometry2/tf2_geometry_msgs/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/tf2_kdl: src/ros2/geometry2/tf2_kdl/docs/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/tf2_ros: src/ros2/geometry2/tf2_ros/docs/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/tf2_tools: src/ros2/geometry2/tf2_tools/doc_output/html
 	rm -r $@ || true
 	test -d api || mkdir api
 	cp -r $< $@
@@ -156,6 +221,15 @@ src/ros2/rcl/rcl_lifecycle/doc_output/html doxygen_tag_files/rcl_lifecycle.tag: 
 	rm doxygen_tag_files/rcl_lifecycle.tag || true
 	cd src/ros2/rcl/rcl_lifecycle && doxygen Doxyfile
 
+src/ros2/rcl/rcl_yaml_param_parser/doc_output/html doxygen_tag_files/rcl_lifecycle.tag: src/ros2/rcl/rcl_yaml_param_parser/Doxyfile doxygen_tag_files/rcutils.tag doxygen_tag_files/rmw.tag doxygen_tag_files/rcl.tag
+	. install/setup.sh && \
+		cd src/ros2/rcl/rcl_yaml_param_parser && \
+		git clean -dfx && \
+		cmake . && make -j 8
+	rm -r $@ || true
+	rm doxygen_tag_files/rcl_yaml_param_parser.tag || true
+	cd src/ros2/rcl/rcl_yaml_param_parser && doxygen Doxyfile
+
 src/ros2/rclcpp/rclcpp/doc_output/html doxygen_tag_files/rclcpp.tag: src/ros2/rclcpp/rclcpp/Doxyfile doxygen_tag_files/rcl.tag doxygen_tag_files/rcpputils.tag doxygen_tag_files/rmw.tag doxygen_tag_files/rcutils.tag
 	. install/setup.sh && \
 		cd src/ros2/rclcpp/rclcpp && \
@@ -173,6 +247,15 @@ src/ros2/rclcpp/rclcpp_action/doc_output/html doxygen_tag_files/rclcpp_action.ta
 	rm -r $@ || true
 	rm doxygen_tag_files/rclcpp_action.tag || true
 	cd src/ros2/rclcpp/rclcpp_action && doxygen Doxyfile
+
+src/ros2/rclcpp/rclcpp_components/doc_output/html doxygen_tag_files/rclcpp_components.tag: src/ros2/rclcpp/rclcpp_components/Doxyfile doxygen_tag_files/rclcpp.tag doxygen_tag_files/rcl.tag doxygen_tag_files/rmw.tag doxygen_tag_files/rcutils.tag
+	. install/setup.sh && \
+		cd src/ros2/rclcpp/rclcpp_components && \
+		git clean -dfx && \
+		cmake . && make -j 8
+	rm -r $@ || true
+	rm doxygen_tag_files/rclcpp_components.tag || true
+	cd src/ros2/rclcpp/rclcpp_components && doxygen Doxyfile
 
 src/ros2/rclcpp/rclcpp_lifecycle/doc_output/html doxygen_tag_files/rclcpp_lifecycle.tag: src/ros2/rclcpp/rclcpp_lifecycle/Doxyfile doxygen_tag_files/rclcpp.tag doxygen_tag_files/rcl.tag doxygen_tag_files/rmw.tag doxygen_tag_files/rcutils.tag  doxygen_tag_files/rcpputils.tag
 	. install/setup.sh && \
@@ -216,6 +299,87 @@ src/ros2/rmw_fastrtps/rmw_fastrtps_shared_cpp/doc_output/html:
 	rm -r $@ || true
 	rm doxygen_tag_files/rmw_fastrtps_shared_cpp.tag || true
 	cd src/ros2/rmw_fastrtps/rmw_fastrtps_shared_cpp && doxygen Doxyfile
+
+src/ros2/rosidl/rosidl_runtime_c/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/rosidl/rosidl_runtime_c && \
+		git clean -dfx && \
+		cmake . && make -j 8
+	rm -r $@ || true
+	rm doxygen_tag_files/rosidl_runtime_c.tag || true
+	cd src/ros2/rosidl/rosidl_runtime_c && doxygen Doxyfile
+
+src/ros2/rosidl/rosidl_runtime_cpp/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/rosidl/rosidl_runtime_cpp && \
+		git clean -dfx && \
+		cmake . && make -j 8
+	rm -r $@ || true
+	rm doxygen_tag_files/rosidl_runtime_cpp.tag || true
+	cd src/ros2/rosidl/rosidl_runtime_cpp && doxygen Doxyfile
+
+src/ros2/geometry2/tf2/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/geometry2/tf2/ && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/tf2.tag || true
+	cd src/ros2/geometry2/tf2 && doxygen Doxyfile
+
+src/ros2/geometry2/tf2_bullet/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/geometry2/tf2_bullet/ && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/tf2_bullet.tag || true
+	cd src/ros2/geometry2/tf2_bullet && doxygen Doxyfile
+
+src/ros2/geometry2/tf2_eigen/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/geometry2/tf2_eigen/ && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/tf2_eigen.tag || true
+	cd src/ros2/geometry2/tf2_eigen && doxygen Doxyfile
+
+src/ros2/geometry2/tf2_geometry_msgs/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/geometry2/tf2_geometry_msgs/ && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/tf2_geometry_msgs.tag || true
+	cd src/ros2/geometry2/tf2_geometry_msgs && doxygen Doxyfile
+
+src/ros2/geometry2/tf2_kdl/docs/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/geometry2/tf2_kdl && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/tf2_kdl.tag || true
+	cd src/ros2/geometry2/tf2_kdl/docs && doxygen Doxyfile
+
+src/ros2/geometry2/tf2_ros/docs/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/geometry2/tf2_ros && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/tf2_ros.tag || true
+	cd src/ros2/geometry2/tf2_ros/docs && doxygen Doxyfile
+
+src/ros2/geometry2/tf2_tools/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/geometry2/tf2_tools/ && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/tf2_tools.tag || true
+	cd src/ros2/geometry2/tf2_tools && doxygen Doxyfile
 
 cpp-doxygen-web.tag.xml:
 	test -d doxygen_tag_files || mkdir doxygen_tag_files
