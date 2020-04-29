@@ -12,7 +12,7 @@ default: setup $(release_name) \
 	api/rclcpp_lifecycle \
 	api/rclpy \
 	api/rosidl_runtime_c \
-  api/rosidl_runtime_cpp \
+	api/rosidl_runtime_cpp \
 	api/rmw \
 
 install: default
