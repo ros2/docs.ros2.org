@@ -2,6 +2,7 @@ release_name := crystal
 
 default: setup $(release_name) \
 	api \
+	api/class_loader \
 	api/rcutils \
 	api/rcpputils \
 	api/rcl \
@@ -41,6 +42,11 @@ purge:
 
 $(release_name): src/ros2/ros_core_documentation/build/html
 	rm -r $@ || true
+	cp -r $< $@
+
+api/class_loader: src/ros/class_loader/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
 	cp -r $< $@
 
 api/rcutils: src/ros2/rcutils/doc_output/html
@@ -166,6 +172,15 @@ api/tf2_tools: src/ros2/geometry2/tf2_tools/doc_output/html
 src/ros2/ros_core_documentation/build/html: src/ros2/ros_core_documentation/Makefile
 	rm -r $@ || true
 	cd src/ros2/ros_core_documentation && make html
+
+src/ros/class_loader/doc_output/html doxygen_tag_files/class_loader.tag: src/ros/class_loader/Doxyfile
+	. install/setup.sh && \
+		cd src/ros/class_loader && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/class_loader.tag || true
+	cd src/ros/class_loader && doxygen Doxyfile
 
 src/ros2/rcutils/doc_output/html doxygen_tag_files/rcutils.tag: src/ros2/rcutils/Doxyfile
 	. install/setup.sh && \
