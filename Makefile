@@ -16,6 +16,9 @@ default: setup $(release_name) \
 	api/rosidl_runtime_c \
 	api/rosidl_runtime_cpp \
 	api/rmw \
+	api/rmw_fastrtps_cpp \
+	api/rmw_fastrtps_dynamic_cpp \
+	api/rmw_fastrtps_shared_cpp \
 	api/tf2 \
 	api/tf2_bullet \
 	api/tf2_eigen \
@@ -106,6 +109,21 @@ api/rosidl_runtime_c: src/ros2/rosidl/rosidl_runtime_c/doc_output/html
 	cp -r $< $@
 
 api/rosidl_runtime_cpp: src/ros2/rosidl/rosidl_runtime_cpp/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/rmw_fastrtps_cpp: src/ros2/rmw_fastrtps/rmw_fastrtps_cpp/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/rmw_fastrtps_dynamic_cpp: src/ros2/rmw_fastrtps/rmw_fastrtps_dynamic_cpp/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/rmw_fastrtps_shared_cpp: src/ros2/rmw_fastrtps/rmw_fastrtps_shared_cpp/doc_output/html
 	rm -r $@ || true
 	test -d api || mkdir api
 	cp -r $< $@
@@ -254,6 +272,33 @@ src/ros2/rclpy/rclpy/docs/build/html:
 	    cd src/ros2/rclpy/rclpy/docs && \
 		git clean -dfx && \
 		make html
+
+src/ros2/rmw_fastrtps/rmw_fastrtps_cpp/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/rmw_fastrtps/rmw_fastrtps_cpp && \
+		git clean -dfx && \
+		cmake . && make -j 8
+	rm -r $@ || true
+	rm doxygen_tag_files/rmw_fastrtps_cpp.tag || true
+	cd src/ros2/rmw_fastrtps/rmw_fastrtps_cpp && doxygen Doxyfile
+
+src/ros2/rmw_fastrtps/rmw_fastrtps_dynamic_cpp/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/rmw_fastrtps/rmw_fastrtps_dynamic_cpp && \
+		git clean -dfx && \
+		cmake . && make -j 8
+	rm -r $@ || true
+	rm doxygen_tag_files/rmw_fastrtps_dynamic_cpp.tag || true
+	cd src/ros2/rmw_fastrtps/rmw_fastrtps_dynamic_cpp && doxygen Doxyfile
+
+src/ros2/rmw_fastrtps/rmw_fastrtps_shared_cpp/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/rmw_fastrtps/rmw_fastrtps_shared_cpp && \
+		git clean -dfx && \
+		cmake . && make -j 8
+	rm -r $@ || true
+	rm doxygen_tag_files/rmw_fastrtps_shared_cpp.tag || true
+	cd src/ros2/rmw_fastrtps/rmw_fastrtps_shared_cpp && doxygen Doxyfile
 
 src/ros2/rosidl/rosidl_runtime_c/doc_output/html:
 	. install/setup.sh && \
