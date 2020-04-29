@@ -140,7 +140,7 @@ api/tf2_ros: src/ros2/geometry2/tf2_ros/docs/doc_output/html
 	test -d api || mkdir api
 	cp -r $< $@
 
-api/tf2_tools: src/ros2/geometry2/tf2/doc_output/html
+api/tf2_tools: src/ros2/geometry2/tf2_tools/doc_output/html
 	rm -r $@ || true
 	test -d api || mkdir api
 	cp -r $< $@
