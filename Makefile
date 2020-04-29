@@ -12,7 +12,9 @@ default: setup $(release_name) \
 	api/rclcpp_action \
 	api/rclcpp_components \
 	api/rclcpp_lifecycle \
-	api/rclpy
+	api/rclpy \
+	api/rosidl_runtime_c \
+	api/rosidl_runtime_cpp \
 	api/rmw \
 
 install: default
@@ -87,6 +89,16 @@ api/rclcpp_lifecycle: src/ros2/rclcpp/rclcpp_lifecycle/doc_output/html
 	cp -r $< $@
 
 api/rclpy: src/ros2/rclpy/rclpy/docs/build/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/rosidl_runtime_c: src/ros2/rosidl/rosidl_runtime_c/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/rosidl_runtime_cpp: src/ros2/rosidl/rosidl_runtime_cpp/doc_output/html
 	rm -r $@ || true
 	test -d api || mkdir api
 	cp -r $< $@
@@ -200,6 +212,24 @@ src/ros2/rclpy/rclpy/docs/build/html:
 	    cd src/ros2/rclpy/rclpy/docs && \
 		git clean -dfx && \
 		make html
+
+src/ros2/rosidl/rosidl_runtime_c/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/rosidl/rosidl_runtime_c && \
+		git clean -dfx && \
+		cmake . && make -j 8
+	rm -r $@ || true
+	rm doxygen_tag_files/rosidl_runtime_c.tag || true
+	cd src/ros2/rosidl/rosidl_runtime_c && doxygen Doxyfile
+
+src/ros2/rosidl/rosidl_runtime_cpp/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/rosidl/rosidl_runtime_cpp && \
+		git clean -dfx && \
+		cmake . && make -j 8
+	rm -r $@ || true
+	rm doxygen_tag_files/rosidl_runtime_cpp.tag || true
+	cd src/ros2/rosidl/rosidl_runtime_cpp && doxygen Doxyfile
 
 cpp-doxygen-web.tag.xml:
 	test -d doxygen_tag_files || mkdir doxygen_tag_files
