@@ -7,6 +7,7 @@ default: setup $(release_name) \
 	api/rcl \
 	api/rcl_action \
 	api/rcl_lifecycle \
+	api/rcl_yaml_param_parser \
 	api/rclcpp \
 	api/rclcpp_action \
 	api/rclcpp_components \
@@ -56,6 +57,11 @@ api/rcl_action: src/ros2/rcl/rcl_action/doc_output/html
 	cp -r $< $@
 
 api/rcl_lifecycle: src/ros2/rcl/rcl_lifecycle/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/rcl_yaml_param_parser: src/ros2/rcl/rcl_yaml_param_parser/doc_output/html
 	rm -r $@ || true
 	test -d api || mkdir api
 	cp -r $< $@
@@ -142,6 +148,15 @@ src/ros2/rcl/rcl_lifecycle/doc_output/html doxygen_tag_files/rcl_lifecycle.tag: 
 	rm -r $@ || true
 	rm doxygen_tag_files/rcl_lifecycle.tag || true
 	cd src/ros2/rcl/rcl_lifecycle && doxygen Doxyfile
+
+src/ros2/rcl/rcl_yaml_param_parser/doc_output/html doxygen_tag_files/rcl_lifecycle.tag: src/ros2/rcl/rcl_yaml_param_parser/Doxyfile doxygen_tag_files/rcutils.tag doxygen_tag_files/rmw.tag doxygen_tag_files/rcl.tag
+	. install/setup.sh && \
+		cd src/ros2/rcl/rcl_yaml_param_parser && \
+		git clean -dfx && \
+		cmake . && make -j 8
+	rm -r $@ || true
+	rm doxygen_tag_files/rcl_yaml_param_parser.tag || true
+	cd src/ros2/rcl/rcl_yaml_param_parser && doxygen Doxyfile
 
 src/ros2/rclcpp/rclcpp/doc_output/html doxygen_tag_files/rclcpp.tag: src/ros2/rclcpp/rclcpp/Doxyfile doxygen_tag_files/rcl.tag doxygen_tag_files/rcpputils.tag doxygen_tag_files/rmw.tag doxygen_tag_files/rcutils.tag
 	. install/setup.sh && \
