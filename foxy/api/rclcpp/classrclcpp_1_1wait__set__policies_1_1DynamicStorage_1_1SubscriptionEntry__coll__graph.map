@@ -1,0 +1,5 @@
+<map id="rclcpp::wait_set_policies::DynamicStorage::SubscriptionEntry" name="rclcpp::wait_set_policies::DynamicStorage::SubscriptionEntry">
+<area shape="rect" id="node1" title=" " alt="" coords="65,109,325,151"/>
+<area shape="rect" id="node2" href="$classrclcpp_1_1SubscriptionWaitSetMask.html" title="Options used to determine what parts of a subscription get added to or removed from a wait set." alt="" coords="5,5,184,47"/>
+<area shape="rect" id="node3" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title=" " alt="" coords="208,5,381,47"/>
+</map>

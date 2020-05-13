@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtf2_1_1TimeCacheInterface.html" title=" " alt="" coords="5,31,184,57"/>
+<area shape="rect" id="node2" href="$classtf2_1_1StaticCache.html" title=" " alt="" coords="232,5,357,32"/>
+<area shape="rect" id="node3" href="$classtf2_1_1TimeCache.html" title="A class to keep a sorted linked list in time This builds and maintains a list of timestamped data...." alt="" coords="235,56,355,83"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="rclcpp::strategies::message_pool_memory_strategy::MessagePoolMemoryStrategy&lt; MessageT, Size, &gt;" name="rclcpp::strategies::message_pool_memory_strategy::MessagePoolMemoryStrategy&lt; MessageT, Size, &gt;">
+<area shape="rect" id="node1" title="Completely static memory allocation strategy for messages." alt="" coords="755,156,985,227"/>
+<area shape="rect" id="node2" href="$classrclcpp_1_1message__memory__strategy_1_1MessageMemoryStrategy.html" title=" " alt="" coords="409,86,667,142"/>
+<area shape="rect" id="node3" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title=" " alt="" coords="20,5,212,47"/>
+<area shape="rect" id="node4" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title=" " alt="" coords="5,71,227,98"/>
+<area shape="rect" id="node5" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title=" " alt="" coords="17,124,215,165"/>
+<area shape="rect" id="node6" href="/home/ahcorde/build_doc/doxygen_tag_files/rcutils.tag$structrcutils__allocator__t.html" title=" " alt="" coords="47,190,185,217"/>
+<area shape="rect" id="node7" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/container/array.html" title=" " alt="" coords="425,166,651,251"/>
+</map>

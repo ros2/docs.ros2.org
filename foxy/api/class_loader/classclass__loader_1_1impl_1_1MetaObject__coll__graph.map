@@ -1,0 +1,5 @@
+<map id="class_loader::impl::MetaObject&lt; C, B &gt;" name="class_loader::impl::MetaObject&lt; C, B &gt;">
+<area shape="rect" id="node1" title="The actual factory. @parm C The derived class (the actual plugin) @parm B The base class interface fo..." alt="" coords="24,184,185,225"/>
+<area shape="rect" id="node2" href="$classclass__loader_1_1impl_1_1AbstractMetaObject.html" title="Abstract base class for factories where polymorphic type variable indicates base class for plugin int..." alt="" coords="5,95,204,136"/>
+<area shape="rect" id="node3" href="$classclass__loader_1_1impl_1_1AbstractMetaObjectBase.html" title="A base class for MetaObjects that excludes a polymorphic type parameter. Subclasses are class templat..." alt="" coords="9,5,200,47"/>
+</map>

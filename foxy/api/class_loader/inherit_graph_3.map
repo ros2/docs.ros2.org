@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/error/runtime_error.html" title=" " alt="" coords="5,111,144,138"/>
+<area shape="rect" id="node2" href="$classclass__loader_1_1ClassLoaderException.html" title=" " alt="" coords="192,104,383,145"/>
+<area shape="rect" id="node3" href="$classclass__loader_1_1CreateClassException.html" title="An exception class thrown when class_loader is unable to create a plugin." alt="" coords="440,5,629,47"/>
+<area shape="rect" id="node4" href="$classclass__loader_1_1LibraryLoadException.html" title="An exception class thrown when class_loader is unable to load a runtime library." alt="" coords="441,71,628,112"/>
+<area shape="rect" id="node5" href="$classclass__loader_1_1LibraryUnloadException.html" title="An exception class thrown when class_loader is unable to unload a runtime library." alt="" coords="433,136,636,177"/>
+<area shape="rect" id="node6" href="$classclass__loader_1_1NoClassLoaderExistsException.html" title="An exception class thrown when a multilibrary class loader does not have a ClassLoader bound to it." alt="" coords="431,201,639,243"/>
+</map>

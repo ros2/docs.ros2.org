@@ -1,0 +1,5 @@
+<map id="rclcpp::Subscription&lt; CallbackMessageT, AllocatorT, MessageMemoryStrategyT &gt;" name="rclcpp::Subscription&lt; CallbackMessageT, AllocatorT, MessageMemoryStrategyT &gt;">
+<area shape="rect" id="node1" title="Subscription implementation, templated on the type of message this subscription receives." alt="" coords="8,169,236,225"/>
+<area shape="rect" id="node2" href="$classrclcpp_1_1SubscriptionBase.html" title=" " alt="" coords="31,95,213,121"/>
+<area shape="rect" id="node3" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/enable_shared_from_this.html" title=" " alt="" coords="5,5,239,47"/>
+</map>

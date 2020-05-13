@@ -1,0 +1,5 @@
+<map id="rclcpp::SubscriptionBase" name="rclcpp::SubscriptionBase">
+<area shape="rect" id="node1" title=" " alt="" coords="31,95,213,121"/>
+<area shape="rect" id="node3" href="$classrclcpp_1_1Subscription.html" title="Subscription implementation, templated on the type of message this subscription receives." alt="" coords="8,169,236,225"/>
+<area shape="rect" id="node2" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/enable_shared_from_this.html" title=" " alt="" coords="5,5,239,47"/>
+</map>

@@ -1,0 +1,133 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ROS 2 Overview &#8212; ros_core eloquent documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Core Stack Developer Overview" href="developer_overview.html" />
+ 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="developer_overview.html" title="Core Stack Developer Overview"
+             accesskey="N">next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">ros_core eloquent documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ros-2-overview">
+<h1>ROS 2 Overview<a class="headerlink" href="#ros-2-overview" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developer_overview.html">Core Stack Developer Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="developer_overview.html#build-system">Build System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="developer_overview.html#the-ament-package-package">The <code class="docutils literal notranslate"><span class="pre">ament_package</span></code> Package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="developer_overview.html#the-ament-cmake-repository">The <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="developer_overview.html#the-ament-lint-repository">The <code class="docutils literal notranslate"><span class="pre">ament_lint</span></code> Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="developer_overview.html#build-tools">Build tools</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="developer_overview.html#internal-ros-interfaces">Internal ROS Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="developer_overview.html#internal-api-architecture-overview">Internal API Architecture Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="developer_overview.html#type-specific-interfaces">Type Specific Interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="developer_overview.html#static-type-support">Static Type Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="developer_overview.html#static-type-support-with-dds">Static Type Support with DDS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="developer_overview.html#dynamic-type-support">Dynamic Type Support</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="developer_overview.html#the-rcl-repository">The <code class="docutils literal notranslate"><span class="pre">rcl</span></code> Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="developer_overview.html#the-rmw-repository">The <code class="docutils literal notranslate"><span class="pre">rmw</span></code> Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="developer_overview.html#the-rosidl-repository">The <code class="docutils literal notranslate"><span class="pre">rosidl</span></code> Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="developer_overview.html#the-rcutils-repository">The <code class="docutils literal notranslate"><span class="pre">rcutils</span></code> Repository</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="developer_overview.html#ros-middleware-implementations">ROS Middleware Implementations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="developer_overview.html#common-packages-for-dds-middleware-packages">Common Packages for DDS Middleware Packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="developer_overview.html#structure-of-ros-middleware-implementations">Structure of ROS Middleware Implementations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="developer_overview.html#ros-client-interfaces-client-libraries">ROS Client Interfaces (Client Libraries)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="developer_overview.html#the-rclcpp-package">The <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> Package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="developer_overview.html#the-rclpy-package">The <code class="docutils literal notranslate"><span class="pre">rclpy</span></code> Package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Next topic</h4>
+  <p class="topless"><a href="developer_overview.html"
+                        title="next chapter">Core Stack Developer Overview</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="developer_overview.html" title="Core Stack Developer Overview"
+             >next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">ros_core eloquent documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014, Open Source Robotics Foundation, Inc.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+<map id="rclcpp::exceptions::NameValidationError" name="rclcpp::exceptions::NameValidationError">
+<area shape="rect" id="node1" title="Thrown when a any kind of name (node, namespace, topic, etc.) is invalid." alt="" coords="79,124,245,165"/>
+<area shape="rect" id="node2" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/error/invalid_argument.html" title=" " alt="" coords="5,5,169,32"/>
+<area shape="rect" id="node3" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/string/basic_string.html" title=" " alt="" coords="193,5,280,32"/>
+</map>

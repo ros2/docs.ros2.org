@@ -1,0 +1,4 @@
+<map id="rclcpp::PublisherFactory" name="rclcpp::PublisherFactory">
+<area shape="rect" id="node1" title="Factory with functions used to create a MessageT specific PublisherT." alt="" coords="5,95,183,121"/>
+<area shape="rect" id="node2" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title=" " alt="" coords="43,5,145,32"/>
+</map>

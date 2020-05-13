@@ -1,0 +1,6 @@
+<map id="rmw_message_info_sequence_t" name="rmw_message_info_sequence_t">
+<area shape="rect" id="node1" title="Structure to hold a sequence of message infos." alt="" coords="59,184,289,211"/>
+<area shape="rect" id="node2" href="$structrmw__message__info__t.html" title="Information describing an rmw message." alt="" coords="5,95,167,121"/>
+<area shape="rect" id="node3" href="$structrmw__gid__t.html" title="ROS graph ID of the topic." alt="" coords="41,5,131,32"/>
+<area shape="rect" id="node4" href="/home/ahcorde/build_doc/doxygen_tag_files/rcutils.tag$structrcutils__allocator__t.html" title=" " alt="" coords="191,95,330,121"/>
+</map>

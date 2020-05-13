@@ -1,0 +1,4 @@
+<map id="rclcpp_lifecycle::LifecyclePublisherInterface" name="rclcpp_lifecycle::LifecyclePublisherInterface">
+<area shape="rect" id="node1" title="base class with only" alt="" coords="20,5,209,47"/>
+<area shape="rect" id="node2" href="$classrclcpp__lifecycle_1_1LifecyclePublisher.html" title="brief child class of rclcpp Publisher class." alt="" coords="5,95,224,136"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="rclcpp_action::ServerGoalHandle&lt; ActionT &gt;" name="rclcpp_action::ServerGoalHandle&lt; ActionT &gt;">
+<area shape="rect" id="node1" title="Class to interact with goals on a server." alt="" coords="453,163,641,204"/>
+<area shape="rect" id="node2" href="$classrclcpp__action_1_1ServerGoalHandleBase.html" title=" " alt="" coords="47,5,235,47"/>
+<area shape="rect" id="node3" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title=" " alt="" coords="42,71,239,112"/>
+<area shape="rect" id="node4" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/container/array.html" title=" " alt="" coords="99,137,183,163"/>
+<area shape="rect" id="node5" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title=" " alt="" coords="5,187,276,243"/>
+<area shape="rect" id="node6" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title=" " alt="" coords="42,267,239,323"/>
+<area shape="rect" id="node7" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title=" " alt="" coords="61,348,220,389"/>
+</map>

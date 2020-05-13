@@ -1,0 +1,11 @@
+<map id="rclcpp::SubscriptionOptionsBase" name="rclcpp::SubscriptionOptionsBase">
+<area shape="rect" id="node1" title="Non&#45;template base class for subscription options." alt="" coords="929,119,1160,146"/>
+<area shape="rect" id="node2" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title=" " alt="" coords="472,31,736,87"/>
+<area shape="rect" id="node3" href="$structrclcpp_1_1SubscriptionEventCallbacks.html" title="Contains callbacks for non&#45;message events that a Subscription can receive from the middleware." alt="" coords="511,112,697,153"/>
+<area shape="rect" id="node4" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title=" " alt="" coords="5,5,243,47"/>
+<area shape="rect" id="node5" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title=" " alt="" coords="11,71,237,127"/>
+<area shape="rect" id="node6" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title=" " alt="" coords="8,152,240,193"/>
+<area shape="rect" id="node7" href="$structrclcpp_1_1SubscriptionOptionsBase_1_1TopicStatisticsOptions.html" title=" " alt="" coords="501,211,707,252"/>
+<area shape="rect" id="node8" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/chrono/duration.html" title=" " alt="" coords="32,218,216,245"/>
+<area shape="rect" id="node9" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/string/basic_string.html" title=" " alt="" coords="81,269,167,295"/>
+</map>

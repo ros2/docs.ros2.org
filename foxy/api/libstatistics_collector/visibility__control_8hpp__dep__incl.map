@@ -1,0 +1,11 @@
+<map id="include/libstatistics_collector/visibility_control.hpp" name="include/libstatistics_collector/visibility_control.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="208,5,356,61"/>
+<area shape="rect" id="node2" href="$collector_8hpp.html" title=" " alt="" coords="184,317,332,373"/>
+<area shape="rect" id="node6" href="$metric__details__interface_8hpp.html" title=" " alt="" coords="33,109,245,165"/>
+<area shape="rect" id="node7" href="$generate__statistics__message_8hpp.html" title=" " alt="" coords="136,213,380,269"/>
+<area shape="rect" id="node8" href="$types_8hpp.html" title=" " alt="" coords="318,109,517,165"/>
+<area shape="rect" id="node9" href="$moving__average_8hpp.html" title=" " alt="" coords="455,213,684,269"/>
+<area shape="rect" id="node3" href="$topic__statistics__collector_8hpp.html" title=" " alt="" coords="164,421,351,492"/>
+<area shape="rect" id="node4" href="$received__message__age_8hpp.html" title=" " alt="" coords="35,540,246,611"/>
+<area shape="rect" id="node5" href="$received__message__period_8hpp.html" title=" " alt="" coords="270,540,480,611"/>
+</map>

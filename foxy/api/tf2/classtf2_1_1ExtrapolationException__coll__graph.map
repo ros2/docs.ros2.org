@@ -1,0 +1,5 @@
+<map id="tf2::ExtrapolationException" name="tf2::ExtrapolationException">
+<area shape="rect" id="node1" title="An exception class to notify that the requested value would have required extrapolation beyond curren..." alt="" coords="5,155,204,181"/>
+<area shape="rect" id="node2" href="$classtf2_1_1TransformException.html" title="A base class for all tf2 exceptions This inherits from ros::exception which inherits from std::runtim..." alt="" coords="15,80,194,107"/>
+<area shape="rect" id="node3" href="/home/ahcorde/build_doc/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/error/runtime_error.html" title=" " alt="" coords="35,5,174,32"/>
+</map>
