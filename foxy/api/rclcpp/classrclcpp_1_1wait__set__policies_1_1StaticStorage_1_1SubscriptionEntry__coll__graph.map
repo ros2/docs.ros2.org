@@ -1,0 +1,5 @@
+<map id="rclcpp::wait_set_policies::StaticStorage&lt; NumberOfSubscriptions, NumberOfGuardCondtions, NumberOfTimers, NumberOfClients, NumberOfServices, NumberOfWaitables &gt;::SubscriptionEntry" name="rclcpp::wait_set_policies::StaticStorage&lt; NumberOfSubscriptions, NumberOfGuardCondtions, NumberOfTimers, NumberOfClients, NumberOfServices, NumberOfWaitables &gt;::SubscriptionEntry">
+<area shape="rect" id="node1" title=" " alt="" coords="5,109,413,195"/>
+<area shape="rect" id="node2" href="$classrclcpp_1_1SubscriptionWaitSetMask.html" title="Options used to determine what parts of a subscription get added to or removed from a wait set." alt="" coords="20,5,199,47"/>
+<area shape="rect" id="node3" href="/tmp/tmp.7irCm9IFI6/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title=" " alt="" coords="223,5,396,47"/>
+</map>

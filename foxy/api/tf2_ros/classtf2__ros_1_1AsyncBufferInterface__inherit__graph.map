@@ -1,0 +1,4 @@
+<map id="tf2_ros::AsyncBufferInterface" name="tf2_ros::AsyncBufferInterface">
+<area shape="rect" id="node1" title="Abstract interface for asynchronous operations on a tf2::BufferCoreInterface. Implementations include..." alt="" coords="5,5,217,32"/>
+<area shape="rect" id="node2" href="$classtf2__ros_1_1Buffer.html" title="Standard implementation of the tf2_ros::BufferInterface abstract data type." alt="" coords="54,80,169,107"/>
+</map>

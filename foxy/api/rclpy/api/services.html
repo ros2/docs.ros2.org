@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Services &#8212; rclpy 0.6.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Actions" href="actions.html" />
+    <link rel="prev" title="Topics" href="topics.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="services">
+<h1>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-rclpy.client">
+<span id="client"></span><h2>Client<a class="headerlink" href="#module-rclpy.client" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="rclpy.client.Client">
+<em class="property">class </em><code class="sig-prename descclassname">rclpy.client.</code><code class="sig-name descname">Client</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">context</span></em>, <em class="sig-param"><span class="n">client_handle</span></em>, <em class="sig-param"><span class="n">srv_type</span></em>, <em class="sig-param"><span class="n">srv_name</span></em>, <em class="sig-param"><span class="n">qos_profile</span></em>, <em class="sig-param"><span class="n">callback_group</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.client.Client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a container for a ROS service client.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Users should not create a service client with this constuctor, instead they
+should call <a class="reference internal" href="node.html#rclpy.node.Node.create_client" title="rclpy.node.Node.create_client"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Node.create_client()</span></code></a>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>context</strong> (<a class="reference internal" href="context.html#rclpy.context.Context" title="rclpy.context.Context"><code class="xref py py-class docutils literal notranslate"><span class="pre">Context</span></code></a>) – The context associated with the service client.</p></li>
+<li><p><strong>client_handle</strong> – <code class="xref py py-class docutils literal notranslate"><span class="pre">Handle</span></code> wrapping the underlying <code class="docutils literal notranslate"><span class="pre">rcl_client_t</span></code> object.</p></li>
+<li><p><strong>srv_type</strong> (<em>~SrvType</em>) – The service type.</p></li>
+<li><p><strong>srv_name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – The name of the service.</p></li>
+<li><p><strong>qos_profile</strong> (<a class="reference internal" href="qos.html#rclpy.qos.QoSProfile" title="rclpy.qos.QoSProfile"><code class="xref py py-class docutils literal notranslate"><span class="pre">QoSProfile</span></code></a>) – The quality of service profile to apply the service client.</p></li>
+<li><p><strong>callback_group</strong> (<a class="reference internal" href="execution_and_callbacks.html#rclpy.callback_groups.CallbackGroup" title="rclpy.callback_groups.CallbackGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">CallbackGroup</span></code></a>) – The callback group for the service client. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, then the
+nodes default callback group is used.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="rclpy.client.Client.call">
+<code class="sig-name descname">call</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.client.Client.call" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make a service request and wait for the result.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not call this method in a callback or a deadlock may occur.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>~SrvTypeRequest</em>) – The service request.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>~SrvTypeResponse</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The service response.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>TypeError if the type of the passed request isn’t an instance
+of the Request type of the provided service when the client was
+constructed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rclpy.client.Client.call_async">
+<code class="sig-name descname">call_async</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.client.Client.call_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make a service request and asyncronously get the result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>~SrvTypeRequest</em>) – The service request.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Future</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A future that completes when the request does.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>TypeError if the type of the passed request isn’t an instance
+of the Request type of the provided service when the client was
+constructed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rclpy.client.Client.destroy">
+<code class="sig-name descname">destroy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.client.Client.destroy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="rclpy.client.Client.handle">
+<em class="property">property </em><code class="sig-name descname">handle</code><a class="headerlink" href="#rclpy.client.Client.handle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="rclpy.client.Client.remove_pending_request">
+<code class="sig-name descname">remove_pending_request</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">future</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.client.Client.remove_pending_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a future from the list of pending requests.</p>
+<p>This prevents a future from receiving a response and executing its done callbacks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>future</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Future</span></code>) – A future returned from <a class="reference internal" href="#rclpy.client.Client.call_async" title="rclpy.client.Client.call_async"><code class="xref py py-meth docutils literal notranslate"><span class="pre">call_async()</span></code></a></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rclpy.client.Client.service_is_ready">
+<code class="sig-name descname">service_is_ready</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.client.Client.service_is_ready" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if there is a service server ready.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if a server is ready, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rclpy.client.Client.wait_for_service">
+<code class="sig-name descname">wait_for_service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timeout_sec</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.client.Client.wait_for_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait for a service server to become ready.</p>
+<p>Returns as soon as a server becomes ready or if the timeout expires.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>timeout_sec</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Seconds to wait. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, then wait forever.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if server became ready while waiting or <code class="docutils literal notranslate"><span class="pre">False</span></code> on a timeout.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-rclpy.service">
+<span id="service"></span><h2>Service<a class="headerlink" href="#module-rclpy.service" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="rclpy.service.Service">
+<em class="property">class </em><code class="sig-prename descclassname">rclpy.service.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">service_handle</span></em>, <em class="sig-param"><span class="n">srv_type</span></em>, <em class="sig-param"><span class="n">srv_name</span></em>, <em class="sig-param"><span class="n">callback</span></em>, <em class="sig-param"><span class="n">callback_group</span></em>, <em class="sig-param"><span class="n">qos_profile</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.service.Service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a container for a ROS service server.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Users should not create a service server with this constuctor, instead they
+should call <a class="reference internal" href="node.html#rclpy.node.Node.create_service" title="rclpy.node.Node.create_service"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Node.create_service()</span></code></a>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>context</strong> – The context associated with the service server.</p></li>
+<li><p><strong>service_handle</strong> – Capsule pointing to the underlying <code class="docutils literal notranslate"><span class="pre">rcl_service_t</span></code> object.</p></li>
+<li><p><strong>srv_type</strong> (<em>~SrvType</em>) – The service type.</p></li>
+<li><p><strong>srv_name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – The name of the service.</p></li>
+<li><p><strong>callback_group</strong> (<a class="reference internal" href="execution_and_callbacks.html#rclpy.callback_groups.CallbackGroup" title="rclpy.callback_groups.CallbackGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">CallbackGroup</span></code></a>) – The callback group for the service server. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, then the
+nodes default callback group is used.</p></li>
+<li><p><strong>qos_profile</strong> (<a class="reference internal" href="qos.html#rclpy.qos.QoSProfile" title="rclpy.qos.QoSProfile"><code class="xref py py-class docutils literal notranslate"><span class="pre">QoSProfile</span></code></a>) – The quality of service profile to apply the service server.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="rclpy.service.Service.destroy">
+<code class="sig-name descname">destroy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.service.Service.destroy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="rclpy.service.Service.handle">
+<em class="property">property </em><code class="sig-name descname">handle</code><a class="headerlink" href="#rclpy.service.Service.handle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="rclpy.service.Service.send_response">
+<code class="sig-name descname">send_response</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">response</span></em>, <em class="sig-param"><span class="n">header</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.service.Service.send_response" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send a service response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>response</strong> (<em>~SrvTypeResponse</em>) – The service response.</p></li>
+<li><p><strong>header</strong> – Capsule pointing to the service header from the original request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>TypeError if the type of the passed response isn’t an instance
+of the Response type of the provided service when the service was
+constructed.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">rclpy</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="init_shutdown.html">Initialization, Shutdown, and Spinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html">Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics.html">Topics</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-rclpy.client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-rclpy.service">Service</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timers.html">Timer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parameters.html">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="context.html">Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="execution_and_callbacks.html">Execution and Callbacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qos.html">Quality of Service</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../api.html">API</a><ul>
+      <li>Previous: <a href="topics.html" title="previous chapter">Topics</a></li>
+      <li>Next: <a href="actions.html" title="next chapter">Actions</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016-2019, Open Source Robotics Foundation, Inc..
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/api/services.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

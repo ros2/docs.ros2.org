@@ -1,0 +1,13 @@
+<map id="include/tf2/LinearMath/Scalar.h" name="include/tf2/LinearMath/Scalar.h">
+<area shape="rect" id="node1" title=" " alt="" coords="232,5,400,47"/>
+<area shape="rect" id="node2" href="$Vector3_8h.html" title=" " alt="" coords="136,95,304,136"/>
+<area shape="rect" id="node11" href="$QuadWord_8h.html" title=" " alt="" coords="328,95,496,136"/>
+<area shape="rect" id="node3" href="$Matrix3x3_8h.html" title=" " alt="" coords="232,273,400,315"/>
+<area shape="rect" id="node7" href="$Quaternion_8h.html" title=" " alt="" coords="295,184,463,225"/>
+<area shape="rect" id="node8" href="$transform__storage_8h.html" title=" " alt="" coords="44,273,202,315"/>
+<area shape="rect" id="node4" href="$Transform_8h.html" title=" " alt="" coords="232,363,400,404"/>
+<area shape="rect" id="node5" href="$buffer__core_8h.html" title=" " alt="" coords="85,452,220,493"/>
+<area shape="rect" id="node6" href="$utils_8h.html" title=" " alt="" coords="441,459,576,486"/>
+<area shape="rect" id="node10" href="$impl_2utils_8h.html" title=" " alt="" coords="424,370,592,397"/>
+<area shape="rect" id="node9" href="$time__cache_8h.html" title=" " alt="" coords="25,370,208,397"/>
+</map>

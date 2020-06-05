@@ -1,0 +1,8 @@
+<map id="rclcpp::exceptions::NameValidationError" name="rclcpp::exceptions::NameValidationError">
+<area shape="rect" id="node1" title="Thrown when a any kind of name (node, namespace, topic, etc.) is invalid." alt="" coords="217,104,384,145"/>
+<area shape="rect" id="node3" href="$classrclcpp_1_1exceptions_1_1InvalidNamespaceError.html" title="Thrown when a node namespace is invalid." alt="" coords="437,5,619,47"/>
+<area shape="rect" id="node4" href="$classrclcpp_1_1exceptions_1_1InvalidNodeNameError.html" title="Thrown when a node name is invalid." alt="" coords="439,71,617,112"/>
+<area shape="rect" id="node5" href="$classrclcpp_1_1exceptions_1_1InvalidServiceNameError.html" title="Thrown when a service name is invalid." alt="" coords="432,136,624,177"/>
+<area shape="rect" id="node6" href="$classrclcpp_1_1exceptions_1_1InvalidTopicNameError.html" title="Thrown when a topic name is invalid." alt="" coords="439,201,617,243"/>
+<area shape="rect" id="node2" href="/tmp/tmp.7irCm9IFI6/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/error/invalid_argument.html" title=" " alt="" coords="5,111,169,138"/>
+</map>
