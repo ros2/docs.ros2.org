@@ -1,0 +1,4 @@
+<map id="rclcpp::SubscriptionFactory" name="rclcpp::SubscriptionFactory">
+<area shape="rect" id="node1" title="Factory containing a function used to create a Subscription&lt;MessageT&gt;." alt="" coords="5,95,203,121"/>
+<area shape="rect" id="node2" href="/tmp/tmp.7irCm9IFI6/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title=" " alt="" coords="53,5,155,32"/>
+</map>

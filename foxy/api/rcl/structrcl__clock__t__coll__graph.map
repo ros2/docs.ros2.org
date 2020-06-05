@@ -1,0 +1,8 @@
+<map id="rcl_clock_t" name="rcl_clock_t">
+<area shape="rect" id="node1" title="Encapsulation of a time source." alt="" coords="199,288,290,315"/>
+<area shape="rect" id="node2" href="$structrcl__jump__callback__info__t.html" title="Struct to describe an added callback." alt="" coords="60,199,243,225"/>
+<area shape="rect" id="node3" href="$structrcl__time__jump__t.html" title="Struct to describe a jump in time." alt="" coords="5,109,132,136"/>
+<area shape="rect" id="node4" href="$structrcl__duration__t.html" title="A duration of time, measured in nanoseconds and its source." alt="" coords="96,5,207,32"/>
+<area shape="rect" id="node5" href="$structrcl__jump__threshold__t.html" title="Describe the prerequisites for calling a time jump callback." alt="" coords="156,109,315,136"/>
+<area shape="rect" id="node6" href="/tmp/tmp.7irCm9IFI6/doxygen_tag_files/rcutils.tag$structrcutils__allocator__t.html" title=" " alt="" coords="267,199,406,225"/>
+</map>

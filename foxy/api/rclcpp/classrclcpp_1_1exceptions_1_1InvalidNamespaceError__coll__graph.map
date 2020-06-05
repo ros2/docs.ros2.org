@@ -1,0 +1,6 @@
+<map id="rclcpp::exceptions::InvalidNamespaceError" name="rclcpp::exceptions::InvalidNamespaceError">
+<area shape="rect" id="node1" title="Thrown when a node namespace is invalid." alt="" coords="71,215,253,256"/>
+<area shape="rect" id="node2" href="$classrclcpp_1_1exceptions_1_1NameValidationError.html" title="Thrown when a any kind of name (node, namespace, topic, etc.) is invalid." alt="" coords="79,124,245,165"/>
+<area shape="rect" id="node3" href="/tmp/tmp.7irCm9IFI6/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/error/invalid_argument.html" title=" " alt="" coords="5,5,169,32"/>
+<area shape="rect" id="node4" href="/tmp/tmp.7irCm9IFI6/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/string/basic_string.html" title=" " alt="" coords="193,5,280,32"/>
+</map>

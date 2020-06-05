@@ -1,0 +1,6 @@
+<map id="rclcpp::SubscriptionEventCallbacks" name="rclcpp::SubscriptionEventCallbacks">
+<area shape="rect" id="node1" title="Contains callbacks for non&#45;message events that a Subscription can receive from the middleware." alt="" coords="472,79,659,120"/>
+<area shape="rect" id="node2" href="/tmp/tmp.7irCm9IFI6/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title=" " alt="" coords="5,5,243,47"/>
+<area shape="rect" id="node3" href="/tmp/tmp.7irCm9IFI6/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title=" " alt="" coords="11,71,237,127"/>
+<area shape="rect" id="node4" href="/tmp/tmp.7irCm9IFI6/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title=" " alt="" coords="8,152,240,193"/>
+</map>
