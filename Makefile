@@ -1,8 +1,10 @@
 release_name := crystal
 
 default: setup $(release_name) \
-	api \
+	api/ament_index_cpp \
+	api/ament_index_python \
 	api/class_loader \
+	api/libstatistics_collector \
 	api/rcutils \
 	api/rcpputils \
 	api/rcl \
@@ -17,6 +19,7 @@ default: setup $(release_name) \
 	api/rosidl_runtime_c \
 	api/rosidl_runtime_cpp \
 	api/rmw \
+	api/rmw_dds_common \
 	api/rmw_fastrtps_cpp \
 	api/rmw_fastrtps_dynamic_cpp \
 	api/rmw_fastrtps_shared_cpp \
@@ -44,7 +47,22 @@ $(release_name): src/ros2/ros_core_documentation/build/html
 	rm -r $@ || true
 	cp -r $< $@
 
+api/ament_index_cpp: src/ament/ament_index/ament_index_cpp/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/ament_index_python: src/ament/ament_index/ament_index_python/docs/build/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
 api/class_loader: src/ros/class_loader/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/libstatistics_collector: src/ros-tooling/libstatistics_collector/doc_output/html
 	rm -r $@ || true
 	test -d api || mkdir api
 	cp -r $< $@
@@ -60,6 +78,11 @@ api/rcpputils: src/ros2/rcpputils/doc_output/html
 	cp -r $< $@
 
 api/rmw: src/ros2/rmw/rmw/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/rmw_dds_common: src/ros2/rmw_dds_common/rmw_dds_common/doc_output/html
 	rm -r $@ || true
 	test -d api || mkdir api
 	cp -r $< $@
@@ -173,6 +196,22 @@ src/ros2/ros_core_documentation/build/html: src/ros2/ros_core_documentation/Make
 	rm -r $@ || true
 	cd src/ros2/ros_core_documentation && make html
 
+src/ament/ament_index/ament_index_cpp/doc_output/html doxygen_tag_files/ament_index_cpp.tag: src/ament/ament_index/ament_index_cpp/Doxyfile
+	. install/setup.sh && \
+		cd src/ament/ament_index/ament_index_cpp && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/ament_index_cpp.tag || true
+	cd  src/ament/ament_index/ament_index_cpp/ && doxygen Doxyfile
+
+src/ament/ament_index/ament_index_python/docs/build/html doxygen_tag_files/ament_index_python.tag: src/ros2/rcutils/Doxyfile
+	rm -r $@ || true
+	cd src/ament/ament_index/ament_index_python/docs/ && \
+	 \
+		git clean -dfx && \
+		make html
+
 src/ros/class_loader/doc_output/html doxygen_tag_files/class_loader.tag: src/ros/class_loader/Doxyfile
 	. install/setup.sh && \
 		cd src/ros/class_loader && \
@@ -181,6 +220,15 @@ src/ros/class_loader/doc_output/html doxygen_tag_files/class_loader.tag: src/ros
 	rm -r $@ || true
 	rm doxygen_tag_files/class_loader.tag || true
 	cd src/ros/class_loader && doxygen Doxyfile
+
+src/ros-tooling/libstatistics_collector/doc_output/html doxygen_tag_files/libstatistics_collector.tag: src/ros-tooling/libstatistics_collector/Doxyfile
+	. install/setup.sh && \
+		cd src/ros-tooling/libstatistics_collector && \
+		git clean -dfx && \
+	  cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/libstatistics_collector.tag || true
+	cd  src/ros-tooling/libstatistics_collector && doxygen Doxyfile
 
 src/ros2/rcutils/doc_output/html doxygen_tag_files/rcutils.tag: src/ros2/rcutils/Doxyfile
 	. install/setup.sh && \
@@ -208,6 +256,15 @@ src/ros2/rmw/rmw/doc_output/html doxygen_tag_files/rmw.tag: src/ros2/rmw/rmw/Dox
 	rm -r $@ || true
 	rm doxygen_tag_files/rmw.tag || true
 	cd src/ros2/rmw/rmw && doxygen Doxyfile
+
+src/ros2/rmw_dds_common/rmw_dds_common/doc_output/html doxygen_tag_files/rmw_dds_common.tag:
+	. install/setup.sh && \
+		cd src/ros2/rmw_dds_common/rmw_dds_common && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/rmw_dds_common.tag || true
+	cd src/ros2/rmw_dds_common/rmw_dds_common && doxygen Doxyfile
 
 src/ros2/rcl/rcl/doc_output/html doxygen_tag_files/rcl.tag: src/ros2/rcl/rcl/Doxyfile doxygen_tag_files/rcutils.tag doxygen_tag_files/rcpputils.tag doxygen_tag_files/rmw.tag
 	. install/setup.sh && \
