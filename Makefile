@@ -4,6 +4,7 @@ default: setup $(release_name) \
 	api/ament_index_cpp \
 	api/ament_index_python \
 	api/class_loader \
+	api/console_bridge \
 	api/libstatistics_collector \
 	api/rcutils \
 	api/rcpputils \
@@ -58,6 +59,11 @@ api/ament_index_python: src/ament/ament_index/ament_index_python/docs/build/html
 	cp -r $< $@
 
 api/class_loader: src/ros/class_loader/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/console_bridge: src/ros/console_bridge/doc_output/html
 	rm -r $@ || true
 	test -d api || mkdir api
 	cp -r $< $@
@@ -220,6 +226,15 @@ src/ros/class_loader/doc_output/html doxygen_tag_files/class_loader.tag: src/ros
 	rm -r $@ || true
 	rm doxygen_tag_files/class_loader.tag || true
 	cd src/ros/class_loader && doxygen Doxyfile
+
+src/ros/console_bridge/doc_output/html doxygen_tag_files/console_bridge.tag: src/ros/console_bridge/Doxyfile
+	. install/setup.sh && \
+		cd src/ros/console_bridge && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/console_bridge.tag || true
+	cd src/ros/console_bridge && doxygen Doxyfile
 
 src/ros-tooling/libstatistics_collector/doc_output/html doxygen_tag_files/libstatistics_collector.tag: src/ros-tooling/libstatistics_collector/Doxyfile
 	. install/setup.sh && \
