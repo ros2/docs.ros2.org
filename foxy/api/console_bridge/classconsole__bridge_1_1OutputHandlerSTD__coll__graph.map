@@ -1,0 +1,4 @@
+<map id="console_bridge::OutputHandlerSTD" name="console_bridge::OutputHandlerSTD">
+<area shape="rect" id="node1" title="Default implementation of OutputHandler. This sends the information to the console." alt="" coords="5,80,255,107"/>
+<area shape="rect" id="node2" href="$classconsole__bridge_1_1OutputHandler.html" title="Generic class to handle output from a piece of code." alt="" coords="19,5,241,32"/>
+</map>
