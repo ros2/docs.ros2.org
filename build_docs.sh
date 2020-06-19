@@ -16,7 +16,7 @@ cd ${WSDIR}
 mkdir src
 wget -O ros2.repos https://raw.githubusercontent.com/ros2/ros2/${RELEASE_NAME}-release/ros2.repos
 vcs import src < ros2.repos
-colcon build --packages-up-to class_loader geometry2 rclcpp_action rclcpp_components rclcpp_lifecycle rclpy ament_index_cpp ament_index_python libstatistics_collector
+colcon build --packages-up-to class_loader geometry2 rcl_logging_spdlog rclcpp_action rclcpp_components rclcpp_lifecycle rclpy ament_index_cpp ament_index_python libstatistics_collector
 wget https://raw.githubusercontent.com/ros2/docs.ros2.org/doc_gen/Makefile
 wget https://raw.githubusercontent.com/ros2/docs.ros2.org/doc_gen/ros2_doc.repos
 vcs import src < ros2_doc.repos
