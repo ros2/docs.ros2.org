@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>action/FollowJointTrajectory Documentation</title>
+    <link type="text/css" rel="stylesheet" href="../../msg-styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1 class="msg-title"><a href="../index-msg.html">control_msgs</a>/action/FollowJointTrajectory Action</h1>
+      <div class="msg">
+        <h2>File: <span class="filename">control_msgs/action/FollowJointTrajectory.action</span></h2>
+        <h2>Raw Message Definition</h2>
+        <div class="raw-msg">
+          <a style="color:blue"># The joint trajectory to follow</a><br>
+          trajectory_msgs/JointTrajectory trajectory<br>
+          <br>
+          <a style="color:blue"># Tolerances for the trajectory.  If the measured joint values fall</a><br>
+          <a style="color:blue"># outside the tolerances the trajectory goal is aborted.  Any</a><br>
+          <a style="color:blue"># tolerances that are not specified (by being omitted or set to 0) are</a><br>
+          <a style="color:blue"># set to the defaults for the action server (often taken from the</a><br>
+          <a style="color:blue"># parameter server).</a><br>
+          <br>
+          <a style="color:blue"># Tolerances applied to the joints as the trajectory is executed.  If</a><br>
+          <a style="color:blue"># violated, the goal aborts with error_code set to</a><br>
+          <a style="color:blue"># PATH_TOLERANCE_VIOLATED.</a><br>
+          JointTolerance[] path_tolerance<br>
+          <br>
+          <a style="color:blue"># To report success, the joints must be within goal_tolerance of the</a><br>
+          <a style="color:blue"># final trajectory value.  The goal must be achieved by time the</a><br>
+          <a style="color:blue"># trajectory ends plus goal_time_tolerance.  (goal_time_tolerance</a><br>
+          <a style="color:blue"># allows some leeway in time, so that the trajectory goal can still</a><br>
+          <a style="color:blue"># succeed even if the joints reach the goal some time after the</a><br>
+          <a style="color:blue"># precise end time of the trajectory).</a><br>
+          <a style="color:blue">#</a><br>
+          <a style="color:blue"># If the joints are not within goal_tolerance after &quot;trajectory finish</a><br>
+          <a style="color:blue"># time&quot; + goal_time_tolerance, the goal aborts with error_code set to</a><br>
+          <a style="color:blue"># GOAL_TOLERANCE_VIOLATED</a><br>
+          JointTolerance[] goal_tolerance<br>
+          builtin_interfaces/Duration goal_time_tolerance<br>
+          <br>
+          ---<br>
+          int32 error_code<br>
+          int32 SUCCESSFUL = 0<br>
+          int32 INVALID_GOAL = -1<br>
+          int32 INVALID_JOINTS = -2<br>
+          int32 OLD_HEADER_TIMESTAMP = -3<br>
+          int32 PATH_TOLERANCE_VIOLATED = -4<br>
+          int32 GOAL_TOLERANCE_VIOLATED = -5<br>
+          <br>
+          <a style="color:blue"># Human readable description of the error code. Contains complementary</a><br>
+          <a style="color:blue"># information that is especially useful when execution fails, for instance:</a><br>
+          <a style="color:blue"># - INVALID_GOAL: The reason for the invalid goal (e.g., the requested</a><br>
+          <a style="color:blue">#   trajectory is in the past).</a><br>
+          <a style="color:blue"># - INVALID_JOINTS: The mismatch between the expected controller joints</a><br>
+          <a style="color:blue">#   and those provided in the goal.</a><br>
+          <a style="color:blue"># - PATH_TOLERANCE_VIOLATED and GOAL_TOLERANCE_VIOLATED: Which joint</a><br>
+          <a style="color:blue">#   violated which tolerance, and by how much.</a><br>
+          string error_string<br>
+          <br>
+          ---<br>
+          std_msgs/Header header<br>
+          string[] joint_names<br>
+          trajectory_msgs/JointTrajectoryPoint desired<br>
+          trajectory_msgs/JointTrajectoryPoint actual<br>
+          trajectory_msgs/JointTrajectoryPoint error<br>
+        </div>
+        <h2>Compact Message Definition</h2>
+        <div class="compact_definition-msg">
+          <a href="../../trajectory_msgs/msg/JointTrajectory.html"> trajectory_msgs/msg/JointTrajectory</a> trajectory<br>
+          <a href="../../control_msgs/msg/JointTolerance.html"> control_msgs/msg/JointTolerance[]</a> path_tolerance<br>
+          <a href="../../control_msgs/msg/JointTolerance.html"> control_msgs/msg/JointTolerance[]</a> goal_tolerance<br>
+          <a href="../../builtin_interfaces/msg/Duration.html"> builtin_interfaces/msg/Duration</a> goal_time_tolerance<br>
+          <hr/>
+          <a href="../../std_msgs/msg/Header.html"> std_msgs/msg/Header</a> header<br>
+          string[] joint_names<br>
+          <a href="../../trajectory_msgs/msg/JointTrajectoryPoint.html"> trajectory_msgs/msg/JointTrajectoryPoint</a> desired<br>
+          <a href="../../trajectory_msgs/msg/JointTrajectoryPoint.html"> trajectory_msgs/msg/JointTrajectoryPoint</a> actual<br>
+          <a href="../../trajectory_msgs/msg/JointTrajectoryPoint.html"> trajectory_msgs/msg/JointTrajectoryPoint</a> error<br>
+          <hr/>
+          int32 SUCCESSFUL=0<br>
+          int32 INVALID_GOAL=-1<br>
+          int32 INVALID_JOINTS=-2<br>
+          int32 OLD_HEADER_TIMESTAMP=-3<br>
+          int32 PATH_TOLERANCE_VIOLATED=-4<br>
+          int32 GOAL_TOLERANCE_VIOLATED=-5<br>
+          int32 error_code<br>
+          string error_string<br>
+        </div>
+      </div>
+      <p class="footer">autogenerated on Jun 23 2020 08:12:48</p>
+    </div>
+  </body>
+</html>

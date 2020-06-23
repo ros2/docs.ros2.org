@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>msg/Transition Documentation</title>
+    <link type="text/css" rel="stylesheet" href="../../msg-styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1 class="msg-title"><a href="../index-msg.html">lifecycle_msgs</a>/msg/Transition Message</h1>
+      <div class="msg">
+        <h2>File: <span class="filename">lifecycle_msgs/msg/Transition.msg</span></h2>
+        <h2>Raw Message Definition</h2>
+        <div class="raw-msg">
+          <a style="color:blue"># Default values for transitions</a><br>
+          <a style="color:blue"># as described on</a><br>
+          <a style="color:blue"># http://design.ros2.org/articles/node_lifecycle.html</a><br>
+          <br>
+          <a style="color:blue"># Externally available transitions.</a><br>
+          <a style="color:blue"># When a node is in one of these primary states,</a><br>
+          <a style="color:blue"># these transitions can be invoked.</a><br>
+          uint8 TRANSITION_CREATE = 0<br>
+          uint8 TRANSITION_CONFIGURE = 1<br>
+          uint8 TRANSITION_CLEANUP = 2<br>
+          uint8 TRANSITION_ACTIVATE = 3<br>
+          uint8 TRANSITION_DEACTIVATE = 4<br>
+          uint8 TRANSITION_UNCONFIGURED_SHUTDOWN  = 5<br>
+          uint8 TRANSITION_INACTIVE_SHUTDOWN = 6<br>
+          uint8 TRANSITION_ACTIVE_SHUTDOWN = 7<br>
+          uint8 TRANSITION_DESTROY = 8<br>
+          <br>
+          <a style="color:blue"># These transitions are not publically</a><br>
+          <a style="color:blue"># available and cannot be invoked by a user.</a><br>
+          <a style="color:blue"># The following transitions are implicitly</a><br>
+          <a style="color:blue"># invoked based on the callback feedback</a><br>
+          <a style="color:blue"># of the intermediate transition states.</a><br>
+          uint8 TRANSITION_ON_CONFIGURE_SUCCESS = 10<br>
+          uint8 TRANSITION_ON_CONFIGURE_FAILURE = 11<br>
+          uint8 TRANSITION_ON_CONFIGURE_ERROR = 12<br>
+          <br>
+          uint8 TRANSITION_ON_CLEANUP_SUCCESS = 20<br>
+          uint8 TRANSITION_ON_CLEANUP_FAILURE = 21<br>
+          uint8 TRANSITION_ON_CLEANUP_ERROR = 22<br>
+          <br>
+          uint8 TRANSITION_ON_ACTIVATE_SUCCESS = 30<br>
+          uint8 TRANSITION_ON_ACTIVATE_FAILURE = 31<br>
+          uint8 TRANSITION_ON_ACTIVATE_ERROR = 32<br>
+          <br>
+          uint8 TRANSITION_ON_DEACTIVATE_SUCCESS = 40<br>
+          uint8 TRANSITION_ON_DEACTIVATE_FAILURE = 41<br>
+          uint8 TRANSITION_ON_DEACTIVATE_ERROR = 42<br>
+          <br>
+          uint8 TRANSITION_ON_SHUTDOWN_SUCCESS = 50<br>
+          uint8 TRANSITION_ON_SHUTDOWN_FAILURE = 51<br>
+          uint8 TRANSITION_ON_SHUTDOWN_ERROR = 52<br>
+          <br>
+          uint8 TRANSITION_ON_ERROR_SUCCESS = 60<br>
+          uint8 TRANSITION_ON_ERROR_FAILURE = 61<br>
+          uint8 TRANSITION_ON_ERROR_ERROR = 62<br>
+          <br>
+          <a style="color:blue"># These return values ought to be set</a><br>
+          <a style="color:blue"># as a return value for each callback.</a><br>
+          <a style="color:blue"># Depending on which return value,</a><br>
+          <a style="color:blue"># the transition will be executed correctly</a><br>
+          <a style="color:blue"># or fallback/error callbacks will be triggered.</a><br>
+          uint8 TRANSITION_CALLBACK_SUCCESS = 97<br>
+          uint8 TRANSITION_CALLBACK_FAILURE = 98<br>
+          uint8 TRANSITION_CALLBACK_ERROR = 99<br>
+          <br>
+          uint8 id<br>
+          string label<br>
+        </div>
+        <h2>Compact Message Definition</h2>
+        <div class="compact_definition-msg">
+          uint8 TRANSITION_CREATE=0<br>
+          uint8 TRANSITION_CONFIGURE=1<br>
+          uint8 TRANSITION_CLEANUP=2<br>
+          uint8 TRANSITION_ACTIVATE=3<br>
+          uint8 TRANSITION_DEACTIVATE=4<br>
+          uint8 TRANSITION_UNCONFIGURED_SHUTDOWN=5<br>
+          uint8 TRANSITION_INACTIVE_SHUTDOWN=6<br>
+          uint8 TRANSITION_ACTIVE_SHUTDOWN=7<br>
+          uint8 TRANSITION_DESTROY=8<br>
+          uint8 TRANSITION_ON_CONFIGURE_SUCCESS=10<br>
+          uint8 TRANSITION_ON_CONFIGURE_FAILURE=11<br>
+          uint8 TRANSITION_ON_CONFIGURE_ERROR=12<br>
+          uint8 TRANSITION_ON_CLEANUP_SUCCESS=20<br>
+          uint8 TRANSITION_ON_CLEANUP_FAILURE=21<br>
+          uint8 TRANSITION_ON_CLEANUP_ERROR=22<br>
+          uint8 TRANSITION_ON_ACTIVATE_SUCCESS=30<br>
+          uint8 TRANSITION_ON_ACTIVATE_FAILURE=31<br>
+          uint8 TRANSITION_ON_ACTIVATE_ERROR=32<br>
+          uint8 TRANSITION_ON_DEACTIVATE_SUCCESS=40<br>
+          uint8 TRANSITION_ON_DEACTIVATE_FAILURE=41<br>
+          uint8 TRANSITION_ON_DEACTIVATE_ERROR=42<br>
+          uint8 TRANSITION_ON_SHUTDOWN_SUCCESS=50<br>
+          uint8 TRANSITION_ON_SHUTDOWN_FAILURE=51<br>
+          uint8 TRANSITION_ON_SHUTDOWN_ERROR=52<br>
+          uint8 TRANSITION_ON_ERROR_SUCCESS=60<br>
+          uint8 TRANSITION_ON_ERROR_FAILURE=61<br>
+          uint8 TRANSITION_ON_ERROR_ERROR=62<br>
+          uint8 TRANSITION_CALLBACK_SUCCESS=97<br>
+          uint8 TRANSITION_CALLBACK_FAILURE=98<br>
+          uint8 TRANSITION_CALLBACK_ERROR=99<br>
+          uint8 id<br>
+          string label<br>
+        </div>
+      </div>
+      <p class="footer">autogenerated on Jun 23 2020 08:12:48</p>
+    </div>
+  </body>
+</html>

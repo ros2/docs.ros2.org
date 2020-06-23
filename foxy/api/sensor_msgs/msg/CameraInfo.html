@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>msg/CameraInfo Documentation</title>
+    <link type="text/css" rel="stylesheet" href="../../msg-styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1 class="msg-title"><a href="../index-msg.html">sensor_msgs</a>/msg/CameraInfo Message</h1>
+      <div class="msg">
+        <h2>File: <span class="filename">sensor_msgs/msg/CameraInfo.msg</span></h2>
+        <h2>Raw Message Definition</h2>
+        <div class="raw-msg">
+          <a style="color:blue"># This message defines meta information for a camera. It should be in a</a><br>
+          <a style="color:blue"># camera namespace on topic &quot;camera_info&quot; and accompanied by up to five</a><br>
+          <a style="color:blue"># image topics named:</a><br>
+          <a style="color:blue">#</a><br>
+          <a style="color:blue">#   image_raw - raw data from the camera driver, possibly Bayer encoded</a><br>
+          <a style="color:blue">#   image            - monochrome, distorted</a><br>
+          <a style="color:blue">#   image_color      - color, distorted</a><br>
+          <a style="color:blue">#   image_rect       - monochrome, rectified</a><br>
+          <a style="color:blue">#   image_rect_color - color, rectified</a><br>
+          <a style="color:blue">#</a><br>
+          <a style="color:blue"># The image_pipeline contains packages (image_proc, stereo_image_proc)</a><br>
+          <a style="color:blue"># for producing the four processed image topics from image_raw and</a><br>
+          <a style="color:blue"># camera_info. The meaning of the camera parameters are described in</a><br>
+          <a style="color:blue"># detail at http://www.ros.org/wiki/image_pipeline/CameraInfo.</a><br>
+          <a style="color:blue">#</a><br>
+          <a style="color:blue"># The image_geometry package provides a user-friendly interface to</a><br>
+          <a style="color:blue"># common operations using this meta information. If you want to, e.g.,</a><br>
+          <a style="color:blue"># project a 3d point into image coordinates, we strongly recommend</a><br>
+          <a style="color:blue"># using image_geometry.</a><br>
+          <a style="color:blue">#</a><br>
+          <a style="color:blue"># If the camera is uncalibrated, the matrices D, K, R, P should be left</a><br>
+          <a style="color:blue"># zeroed out. In particular, clients may assume that K[0] == 0.0</a><br>
+          <a style="color:blue"># indicates an uncalibrated camera.</a><br>
+          <br>
+          <a style="color:blue">#</a><br>
+          <a style="color:blue">#                     Image acquisition info                          </a><br>
+          <a style="color:blue">#</a><br>
+          <br>
+          <a style="color:blue"># Time of image acquisition, camera coordinate frame ID</a><br>
+          <a style="color:blue">#std_msgs/Header header # Header timestamp should be acquisition time of image</a><br>
+          <a style="color:blue">#                             # Header frame_id should be optical frame of camera</a><br>
+          <a style="color:blue">#                             # origin of frame should be optical center of camera</a><br>
+          <a style="color:blue">#                             # +x should point to the right in the image</a><br>
+          <a style="color:blue">#                             # +y should point down in the image</a><br>
+          <a style="color:blue">#                             # +z should point into the plane of the image</a><br>
+          <br>
+          <br>
+          <a style="color:blue">#</a><br>
+          <a style="color:blue">#                      Calibration Parameters                         </a><br>
+          <a style="color:blue">#</a><br>
+          <a style="color:blue"># These are fixed during camera calibration. Their values will be the </a><br>
+          <a style="color:blue"># same in all messages until the camera is recalibrated. Note that    </a><br>
+          <a style="color:blue"># self-calibrating systems may &quot;recalibrate&quot; frequently.              </a><br>
+          <a style="color:blue">#                                                                     </a><br>
+          <a style="color:blue"># The internal parameters can be used to warp a raw (distorted) image </a><br>
+          <a style="color:blue"># to:                                                                 </a><br>
+          <a style="color:blue">#   1. An undistorted image (requires D and K)                        </a><br>
+          <a style="color:blue">#   2. A rectified image (requires D, K, R)                           </a><br>
+          <a style="color:blue"># The projection matrix P projects 3D points into the rectified image.</a><br>
+          <a style="color:blue">#</a><br>
+          <br>
+          <a style="color:blue"># The image dimensions with which the camera was calibrated.</a><br>
+          <a style="color:blue"># Normally this will be the full camera resolution in pixels.</a><br>
+          uint32 height<br>
+          uint32 width<br>
+          <br>
+          <a style="color:blue"># The distortion model used. Supported models are listed in</a><br>
+          <a style="color:blue"># sensor_msgs/distortion_models.hpp. For most cameras, &quot;plumb_bob&quot; - a</a><br>
+          <a style="color:blue"># simple model of radial and tangential distortion - is sufficent.</a><br>
+          string distortion_model<br>
+          <br>
+          <a style="color:blue"># The distortion parameters, size depending on the distortion model.</a><br>
+          <a style="color:blue"># For &quot;plumb_bob&quot;, the 5 parameters are: (k1, k2, t1, t2, k3).</a><br>
+          float64[] d<br>
+          <br>
+          <a style="color:blue"># Intrinsic camera matrix for the raw (distorted) images.</a><br>
+          <a style="color:blue">#     [fx  0 cx]</a><br>
+          <a style="color:blue"># K = [ 0 fy cy]</a><br>
+          <a style="color:blue">#     [ 0  0  1]</a><br>
+          <a style="color:blue"># Projects 3D points in the camera coordinate frame to 2D pixel</a><br>
+          <a style="color:blue"># coordinates using the focal lengths (fx, fy) and principal point</a><br>
+          <a style="color:blue"># (cx, cy).</a><br>
+          <a style="color:blue">#float64[9]  k # 3x3 row-major matrix</a><br>
+          <br>
+          <a style="color:blue"># Rectification matrix (stereo cameras only)</a><br>
+          <a style="color:blue"># A rotation matrix aligning the camera coordinate system to the ideal</a><br>
+          <a style="color:blue"># stereo image plane so that epipolar lines in both stereo images are</a><br>
+          <a style="color:blue"># parallel.</a><br>
+          <a style="color:blue">#float64[9]  r # 3x3 row-major matrix</a><br>
+          <br>
+          <a style="color:blue"># Projection/camera matrix</a><br>
+          <a style="color:blue">#     [fx&#x27;  0  cx&#x27; Tx]</a><br>
+          <a style="color:blue"># P = [ 0  fy&#x27; cy&#x27; Ty]</a><br>
+          <a style="color:blue">#     [ 0   0   1   0]</a><br>
+          <a style="color:blue"># By convention, this matrix specifies the intrinsic (camera) matrix</a><br>
+          <a style="color:blue">#  of the processed (rectified) image. That is, the left 3x3 portion</a><br>
+          <a style="color:blue">#  is the normal camera intrinsic matrix for the rectified image.</a><br>
+          <a style="color:blue"># It projects 3D points in the camera coordinate frame to 2D pixel</a><br>
+          <a style="color:blue">#  coordinates using the focal lengths (fx&#x27;, fy&#x27;) and principal point</a><br>
+          <a style="color:blue">#  (cx&#x27;, cy&#x27;) - these may differ from the values in K.</a><br>
+          <a style="color:blue"># For monocular cameras, Tx = Ty = 0. Normally, monocular cameras will</a><br>
+          <a style="color:blue">#  also have R = the identity and P[1:3,1:3] = K.</a><br>
+          <a style="color:blue"># For a stereo pair, the fourth column [Tx Ty 0]&#x27; is related to the</a><br>
+          <a style="color:blue">#  position of the optical center of the second camera in the first</a><br>
+          <a style="color:blue">#  camera&#x27;s frame. We assume Tz = 0 so both cameras are in the same</a><br>
+          <a style="color:blue">#  stereo image plane. The first camera always has Tx = Ty = 0. For</a><br>
+          <a style="color:blue">#  the right (second) camera of a horizontal stereo pair, Ty = 0 and</a><br>
+          <a style="color:blue">#  Tx = -fx&#x27; * B, where B is the baseline between the cameras.</a><br>
+          <a style="color:blue"># Given a 3D point [X Y Z]&#x27;, the projection (x, y) of the point onto</a><br>
+          <a style="color:blue">#  the rectified image is given by:</a><br>
+          <a style="color:blue">#  [u v w]&#x27; = P * [X Y Z 1]&#x27;</a><br>
+          <a style="color:blue">#         x = u / w</a><br>
+          <a style="color:blue">#         y = v / w</a><br>
+          <a style="color:blue">#  This holds for both images of a stereo pair.</a><br>
+          <a style="color:blue">#float64[12] p # 3x4 row-major matrix</a><br>
+          <br>
+          <br>
+          <a style="color:blue">#</a><br>
+          <a style="color:blue">#                      Operational Parameters                         </a><br>
+          <a style="color:blue">#</a><br>
+          <a style="color:blue"># These define the image region actually captured by the camera       </a><br>
+          <a style="color:blue"># driver. Although they affect the geometry of the output image, they </a><br>
+          <a style="color:blue"># may be changed freely without recalibrating the camera.             </a><br>
+          <a style="color:blue">#</a><br>
+          <br>
+          <a style="color:blue"># Binning refers here to any camera setting which combines rectangular</a><br>
+          <a style="color:blue">#  neighborhoods of pixels into larger &quot;super-pixels.&quot; It reduces the</a><br>
+          <a style="color:blue">#  resolution of the output image to</a><br>
+          <a style="color:blue">#  (width / binning_x) x (height / binning_y).</a><br>
+          <a style="color:blue"># The default values binning_x = binning_y = 0 is considered the same</a><br>
+          <a style="color:blue">#  as binning_x = binning_y = 1 (no subsampling).</a><br>
+          uint32 binning_x<br>
+          uint32 binning_y<br>
+          <br>
+          <a style="color:blue"># Region of interest (subwindow of full camera resolution), given in</a><br>
+          <a style="color:blue">#  full resolution (unbinned) image coordinates. A particular ROI</a><br>
+          <a style="color:blue">#  always denotes the same window of pixels on the camera sensor,</a><br>
+          <a style="color:blue">#  regardless of binning settings.</a><br>
+          <a style="color:blue"># The default setting of roi (all values 0) is considered the same as</a><br>
+          <a style="color:blue">#  full resolution (roi.width = width, roi.height = height).</a><br>
+          RegionOfInterest roi<br>
+        </div>
+        <h2>Compact Message Definition</h2>
+        <div class="compact_definition-msg">
+          <a href="../../std_msgs/msg/Header.html"> std_msgs/msg/Header</a> header<br>
+          uint32 height<br>
+          uint32 width<br>
+          string distortion_model<br>
+          double[] d<br>
+          double[9] k<br>
+          double[9] r<br>
+          double[12] p<br>
+          uint32 binning_x<br>
+          uint32 binning_y<br>
+          <a href="../../sensor_msgs/msg/RegionOfInterest.html"> sensor_msgs/msg/RegionOfInterest</a> roi<br>
+        </div>
+      </div>
+      <p class="footer">autogenerated on Jun 23 2020 08:12:48</p>
+    </div>
+  </body>
+</html>
