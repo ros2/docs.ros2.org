@@ -16,7 +16,22 @@ cd ${WSDIR}
 mkdir src
 wget -O ros2.repos https://raw.githubusercontent.com/ros2/ros2/${RELEASE_NAME}-release/ros2.repos
 vcs import src < ros2.repos
-colcon build --packages-up-to class_loader geometry2 rclcpp_action rclcpp_components rclcpp_lifecycle rclpy ament_index_cpp ament_index_python libstatistics_collector
+git clone https://github.com/ros2/ros2_generate_interface_docs src/ros2_generate_interface_docs
+colcon build --packages-up-to ament_index_cpp \
+                              ament_index_python \
+                              class_loader \
+                              geometry2 \
+                              libstatistics_collector \
+                              rclcpp_action \
+                              rclcpp_components \
+                              rclcpp_lifecycle \
+                              rclpy \
+                              ros2_generate_interface_docs \
+                              turtlesim
+colcon build --packages-select-regex \
+                              [a-z_]*_msgs \
+                              [a-z]*_srvs \
+                              [a-z_]*_interfaces
 wget https://raw.githubusercontent.com/ros2/docs.ros2.org/doc_gen/Makefile
 wget https://raw.githubusercontent.com/ros2/docs.ros2.org/doc_gen/ros2_doc.repos
 vcs import src < ros2_doc.repos
@@ -31,6 +46,11 @@ sed -i "s/\(^TAGFILES.*docs\.ros2\.org\/\)latest/\1${RELEASE_NAME}/g" $(find src
 
 # Build the docs
 make install
+
+# Build interfaces docs
+. install/setup.sh
+ros2 run ros2_generate_interface_docs ros2_generate_interface_docs --outputdir ${WSDIR}/api
+cp -r ${WSDIR}/api/html/* ${WSDIR}/src/ros2/docs.ros2.org/${RELEASE_NAME}/api
 
 echo "Documentation has been generated and copied into '${WSDIR}/src/ros2/docs.ros2.org'."
 echo ""
