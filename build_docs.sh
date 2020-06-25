@@ -25,20 +25,15 @@ package_names=(
   rclcpp_components
   rclcpp_lifecycle
   rclpy
-  rosidl_runtime_c
-  rosidl_runtime_cpp
   rmw
-  rmw_dds_common
   rmw_fastrtps_cpp
   rmw_fastrtps_dynamic_cpp
   rmw_fastrtps_shared_cpp
   tf2
-  tf2_bullet
   tf2_eigen
   tf2_geometry_msgs
   tf2_kdl
   tf2_ros
-  tf2_tools
 )
 # if [[ "eloquent" == "${RELEASE_NAME}" || "foxy" == "${RELEASE_NAME}" ]]; then
   # Packages since Eloquent
@@ -47,7 +42,14 @@ package_names=(
 # fi
 if [[ "foxy" == "${RELEASE_NAME}" ]]; then
   # Packages since Foxy
-  package_names+=(libstatistics_collector)
+  package_names+=(
+    libstatistics_collector
+    rmw_dds_common
+    rosidl_runtime_c
+    rosidl_runtime_cpp
+    tf2_bullet
+    tf2_tools
+  )
 fi
 
 # Setup and build workspace
