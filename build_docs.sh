@@ -10,13 +10,53 @@ case $yn in
   * ) echo "Please answer yes or no."; exit;;
 esac
 
+# Determine package list based on ROS distro
+package_names=(
+  ament_index_cpp
+  ament_index_python
+  class_loader
+  rcutils
+  rcl
+  rcl_action
+  rcl_lifecycle
+  rcl_yaml_param_parser
+  rclcpp
+  rclcpp_action
+  rclcpp_components
+  rclcpp_lifecycle
+  rclpy
+  rosidl_runtime_c
+  rosidl_runtime_cpp
+  rmw
+  rmw_dds_common
+  rmw_fastrtps_cpp
+  rmw_fastrtps_dynamic_cpp
+  rmw_fastrtps_shared_cpp
+  tf2
+  tf2_bullet
+  tf2_eigen
+  tf2_geometry_msgs
+  tf2_kdl
+  tf2_ros
+  tf2_tools
+)
+# if [[ "eloquent" == "${RELEASE_NAME}" || "foxy" == "${RELEASE_NAME}" ]]; then
+  # Packages since Eloquent
+  # TODO(jacobperron): Add rcl_logging_spdlog after https://github.com/ros2/rcl_logging/pull/42 is backported and released
+  # package_names+=(rcl_logging_spdlog)
+# fi
+if [[ "foxy" == "${RELEASE_NAME}" ]]; then
+  # Packages since Foxy
+  package_names+=(libstatistics_collector)
+fi
+
 # Setup and build workspace
 WSDIR=$(mktemp -d)
 cd ${WSDIR}
 mkdir src
 wget -O ros2.repos https://raw.githubusercontent.com/ros2/ros2/${RELEASE_NAME}-release/ros2.repos
 vcs import src < ros2.repos
-colcon build --packages-up-to class_loader geometry2 rcl_logging_spdlog rclcpp_action rclcpp_components rclcpp_lifecycle rclpy ament_index_cpp ament_index_python libstatistics_collector
+colcon build --packages-up-to ${package_names[@]}
 wget https://raw.githubusercontent.com/ros2/docs.ros2.org/doc_gen/Makefile
 wget https://raw.githubusercontent.com/ros2/docs.ros2.org/doc_gen/ros2_doc.repos
 vcs import src < ros2_doc.repos
@@ -29,8 +69,13 @@ sed -i "s/#\s*GENERATE_TAGFILE/GENERATE_TAGFILE/g" $(find src -name Doxyfile)
 # Change the ROS 2 TAGFILES links so that they reference docs.ros2.org/<release name> instead of latest
 sed -i "s/\(^TAGFILES.*docs\.ros2\.org\/\)latest/\1${RELEASE_NAME}/g" $(find src -name Doxyfile)
 
+# Append "api/" to package names for use in Makefile
+for i in "${!package_names[@]}"; do
+  package_names[$i]="api/${package_names[$i]}"
+done
+
 # Build the docs
-make install
+make install release_name=${RELEASE_NAME} package_names=${package_names[@]}
 
 echo "Documentation has been generated and copied into '${WSDIR}/src/ros2/docs.ros2.org'."
 echo ""

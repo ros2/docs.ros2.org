@@ -1,42 +1,9 @@
-release_name := crystal
-
-default: setup $(release_name) \
-	api/ament_index_cpp \
-	api/ament_index_python \
-	api/class_loader \
-	api/libstatistics_collector \
-	api/rcutils \
-	api/rcpputils \
-	api/rcl \
-	api/rcl_action \
-	api/rcl_lifecycle \
-	api/rcl_logging_spdlog \
-	api/rcl_yaml_param_parser \
-	api/rclcpp \
-	api/rclcpp_action \
-	api/rclcpp_components \
-	api/rclcpp_lifecycle \
-	api/rclpy \
-	api/rosidl_runtime_c \
-	api/rosidl_runtime_cpp \
-	api/rmw \
-	api/rmw_dds_common \
-	api/rmw_fastrtps_cpp \
-	api/rmw_fastrtps_dynamic_cpp \
-	api/rmw_fastrtps_shared_cpp \
-	api/tf2 \
-	api/tf2_bullet \
-	api/tf2_eigen \
-	api/tf2_geometry_msgs \
-	api/tf2_kdl \
-	api/tf2_ros \
-	api/tf2_tools
+default: setup $(release_name) $(package_names)
 
 install: default
 	rm -r src/ros2/docs.ros2.org/$(release_name) || true
 	cp -r $(release_name) src/ros2/docs.ros2.org/$(release_name)
 	cp -r api src/ros2/docs.ros2.org/$(release_name)/api
-
 
 clean:
 	rm -r $(release_name) api || true
