@@ -19,6 +19,8 @@ default: setup $(release_name) \
 	api/rclpy \
 	api/rosidl_runtime_c \
 	api/rosidl_runtime_cpp \
+	api/rosidl_typesupport_c \
+	api/rosidl_typesupport_cpp \
 	api/rmw \
 	api/rmw_dds_common \
 	api/rmw_fastrtps_cpp \
@@ -144,6 +146,16 @@ api/rosidl_runtime_c: src/ros2/rosidl/rosidl_runtime_c/doc_output/html
 	cp -r $< $@
 
 api/rosidl_runtime_cpp: src/ros2/rosidl/rosidl_runtime_cpp/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/rosidl_typesupport_c: src/ros2/rosidl_typesupport/rosidl_typesupport_c/doc_output/html
+	rm -r $@ || true
+	test -d api || mkdir api
+	cp -r $< $@
+
+api/rosidl_typesupport_cpp: src/ros2/rosidl_typesupport/rosidl_typesupport_cpp/doc_output/html
 	rm -r $@ || true
 	test -d api || mkdir api
 	cp -r $< $@
@@ -404,6 +416,24 @@ src/ros2/rosidl/rosidl_runtime_cpp/doc_output/html:
 	rm -r $@ || true
 	rm doxygen_tag_files/rosidl_runtime_cpp.tag || true
 	cd src/ros2/rosidl/rosidl_runtime_cpp && doxygen Doxyfile
+
+src/ros2/rosidl_typesupport/rosidl_typesupport_c/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/rosidl_typesupport/rosidl_typesupport_c && \
+		git clean -dfx && \
+		cmake . && make -j 8
+	rm -r $@ || true
+	rm doxygen_tag_files/rosidl_typesupport_c.tag || true
+	cd src/ros2/rosidl_typesupport/rosidl_typesupport_c && doxygen Doxyfile
+
+src/ros2/rosidl_typesupport/rosidl_typesupport_cpp/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/rosidl_typesupport/rosidl_typesupport_cpp && \
+		git clean -dfx && \
+		cmake . && make -j 8
+	rm -r $@ || true
+	rm doxygen_tag_files/rosidl_typesupport_cpp.tag || true
+	cd src/ros2/rosidl_typesupport/rosidl_typesupport_cpp && doxygen Doxyfile
 
 src/ros2/geometry2/tf2/doc_output/html:
 	. install/setup.sh && \
