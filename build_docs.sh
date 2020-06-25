@@ -12,9 +12,6 @@ esac
 
 # Determine package list based on ROS distro
 package_names=(
-  ament_index_cpp
-  ament_index_python
-  class_loader
   rcutils
   rcl
   rcl_action
@@ -43,7 +40,11 @@ package_names=(
 if [[ "foxy" == "${RELEASE_NAME}" ]]; then
   # Packages since Foxy
   package_names+=(
+    ament_index_cpp
+    ament_index_python
+    class_loader
     libstatistics_collector
+    rcpputils
     rmw_dds_common
     rosidl_runtime_c
     rosidl_runtime_cpp
@@ -62,9 +63,6 @@ colcon build --packages-up-to ${package_names[@]}
 wget https://raw.githubusercontent.com/ros2/docs.ros2.org/doc_gen/Makefile
 wget https://raw.githubusercontent.com/ros2/docs.ros2.org/doc_gen/ros2_doc.repos
 vcs import src < ros2_doc.repos
-
-# Update release name in Makefile
-sed -i "s/release_name :=.*$/release_name := ${RELEASE_NAME}/" Makefile
 
 # Uncomment Doxyfile lines for generating tag files
 sed -i "s/#\s*GENERATE_TAGFILE/GENERATE_TAGFILE/g" $(find src -name Doxyfile)
