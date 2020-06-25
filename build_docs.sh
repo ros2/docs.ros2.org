@@ -22,6 +22,7 @@ colcon build --packages-up-to ament_index_cpp \
                               class_loader \
                               geometry2 \
                               libstatistics_collector \
+                              rcl_logging_spdlog \
                               rclcpp_action \
                               rclcpp_components \
                               rclcpp_lifecycle \
