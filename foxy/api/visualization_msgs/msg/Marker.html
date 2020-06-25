@@ -12,11 +12,11 @@
         <h2>File: <span class="filename">visualization_msgs/msg/Marker.msg</span></h2>
         <h2>Raw Message Definition</h2>
         <div class="raw-msg">
-          <a style="color:blue"># See:</a><br>
-          <a style="color:blue">#  - http://www.ros.org/wiki/rviz/DisplayTypes/Marker</a><br>
-          <a style="color:blue">#  - http://www.ros.org/wiki/rviz/Tutorials/Markers%3A%20Basic%20Shapes</a><br>
-          <a style="color:blue">#</a><br>
-          <a style="color:blue"># for more information on using this message with rviz.</a><br>
+          <div class="comment-text"># See:</div><br>
+          <div class="comment-text">#  - http://www.ros.org/wiki/rviz/DisplayTypes/Marker</div><br>
+          <div class="comment-text">#  - http://www.ros.org/wiki/rviz/Tutorials/Markers%3A%20Basic%20Shapes</div><br>
+          <div class="comment-text">#</div><br>
+          <div class="comment-text"># for more information on using this message with rviz.</div><br>
           <br>
           uint8 ARROW=0<br>
           uint8 CUBE=1<br>
@@ -36,44 +36,44 @@
           uint8 DELETE=2<br>
           uint8 DELETEALL=3<br>
           <br>
-          <a style="color:blue"># Header for timestamp and frame id.</a><br>
+          <div class="comment-text"># Header for timestamp and frame id.</div><br>
           std_msgs/Header header<br>
-          <a style="color:blue"># Namespace in which to place the object.</a><br>
-          <a style="color:blue"># Used in conjunction with id to create a unique name for the object.</a><br>
+          <div class="comment-text"># Namespace in which to place the object.</div><br>
+          <div class="comment-text"># Used in conjunction with id to create a unique name for the object.</div><br>
           string ns<br>
-          <a style="color:blue"># Object ID used in conjunction with the namespace for manipulating and deleting the object later.</a><br>
+          <div class="comment-text"># Object ID used in conjunction with the namespace for manipulating and deleting the object later.</div><br>
           int32 id<br>
-          <a style="color:blue"># Type of object.</a><br>
+          <div class="comment-text"># Type of object.</div><br>
           int32 type<br>
-          <a style="color:blue"># Action to take; one of:</a><br>
-          <a style="color:blue">#  - 0 add/modify an object</a><br>
-          <a style="color:blue">#  - 1 (deprecated)</a><br>
-          <a style="color:blue">#  - 2 deletes an object</a><br>
-          <a style="color:blue">#  - 3 deletes all objects</a><br>
+          <div class="comment-text"># Action to take; one of:</div><br>
+          <div class="comment-text">#  - 0 add/modify an object</div><br>
+          <div class="comment-text">#  - 1 (deprecated)</div><br>
+          <div class="comment-text">#  - 2 deletes an object</div><br>
+          <div class="comment-text">#  - 3 deletes all objects</div><br>
           int32 action<br>
-          <a style="color:blue"># Pose of the object with respect the frame_id specified in the header.</a><br>
+          <div class="comment-text"># Pose of the object with respect the frame_id specified in the header.</div><br>
           geometry_msgs/Pose pose<br>
-          <a style="color:blue"># Scale of the object; 1,1,1 means default (usually 1 meter square).</a><br>
+          <div class="comment-text"># Scale of the object; 1,1,1 means default (usually 1 meter square).</div><br>
           geometry_msgs/Vector3 scale<br>
-          <a style="color:blue"># Color of the object; in the range: [0.0-1.0]</a><br>
+          <div class="comment-text"># Color of the object; in the range: [0.0-1.0]</div><br>
           std_msgs/ColorRGBA color<br>
-          <a style="color:blue"># How long the object should last before being automatically deleted.</a><br>
-          <a style="color:blue"># 0 indicates forever.</a><br>
+          <div class="comment-text"># How long the object should last before being automatically deleted.</div><br>
+          <div class="comment-text"># 0 indicates forever.</div><br>
           builtin_interfaces/Duration lifetime<br>
-          <a style="color:blue"># If this marker should be frame-locked, i.e. retransformed into its frame every timestep.</a><br>
+          <div class="comment-text"># If this marker should be frame-locked, i.e. retransformed into its frame every timestep.</div><br>
           bool frame_locked<br>
           <br>
-          <a style="color:blue"># Only used if the type specified has some use for them (eg. POINTS, LINE_STRIP, etc.)</a><br>
+          <div class="comment-text"># Only used if the type specified has some use for them (eg. POINTS, LINE_STRIP, etc.)</div><br>
           geometry_msgs/Point[] points<br>
-          <a style="color:blue"># Only used if the type specified has some use for them (eg. POINTS, LINE_STRIP, etc.)</a><br>
-          <a style="color:blue"># The number of colors provided must either be 0 or equal to the number of points provided.</a><br>
-          <a style="color:blue"># NOTE: alpha is not yet used</a><br>
+          <div class="comment-text"># Only used if the type specified has some use for them (eg. POINTS, LINE_STRIP, etc.)</div><br>
+          <div class="comment-text"># The number of colors provided must either be 0 or equal to the number of points provided.</div><br>
+          <div class="comment-text"># NOTE: alpha is not yet used</div><br>
           std_msgs/ColorRGBA[] colors<br>
           <br>
-          <a style="color:blue"># Only used for text markers</a><br>
+          <div class="comment-text"># Only used for text markers</div><br>
           string text<br>
           <br>
-          <a style="color:blue"># Only used for MESH_RESOURCE markers.</a><br>
+          <div class="comment-text"># Only used for MESH_RESOURCE markers.</div><br>
           string mesh_resource<br>
           bool mesh_use_embedded_materials<br>
         </div>
@@ -112,7 +112,7 @@
           boolean mesh_use_embedded_materials<br>
         </div>
       </div>
-      <p class="footer">autogenerated on Jun 23 2020 08:12:48</p>
+      <p class="footer">autogenerated on Jun 25 2020 09:25:45</p>
     </div>
   </body>
 </html>

@@ -12,30 +12,30 @@
         <h2>File: <span class="filename">control_msgs/action/FollowJointTrajectory.action</span></h2>
         <h2>Raw Message Definition</h2>
         <div class="raw-msg">
-          <a style="color:blue"># The joint trajectory to follow</a><br>
+          <div class="comment-text"># The joint trajectory to follow</div><br>
           trajectory_msgs/JointTrajectory trajectory<br>
           <br>
-          <a style="color:blue"># Tolerances for the trajectory.  If the measured joint values fall</a><br>
-          <a style="color:blue"># outside the tolerances the trajectory goal is aborted.  Any</a><br>
-          <a style="color:blue"># tolerances that are not specified (by being omitted or set to 0) are</a><br>
-          <a style="color:blue"># set to the defaults for the action server (often taken from the</a><br>
-          <a style="color:blue"># parameter server).</a><br>
+          <div class="comment-text"># Tolerances for the trajectory.  If the measured joint values fall</div><br>
+          <div class="comment-text"># outside the tolerances the trajectory goal is aborted.  Any</div><br>
+          <div class="comment-text"># tolerances that are not specified (by being omitted or set to 0) are</div><br>
+          <div class="comment-text"># set to the defaults for the action server (often taken from the</div><br>
+          <div class="comment-text"># parameter server).</div><br>
           <br>
-          <a style="color:blue"># Tolerances applied to the joints as the trajectory is executed.  If</a><br>
-          <a style="color:blue"># violated, the goal aborts with error_code set to</a><br>
-          <a style="color:blue"># PATH_TOLERANCE_VIOLATED.</a><br>
+          <div class="comment-text"># Tolerances applied to the joints as the trajectory is executed.  If</div><br>
+          <div class="comment-text"># violated, the goal aborts with error_code set to</div><br>
+          <div class="comment-text"># PATH_TOLERANCE_VIOLATED.</div><br>
           JointTolerance[] path_tolerance<br>
           <br>
-          <a style="color:blue"># To report success, the joints must be within goal_tolerance of the</a><br>
-          <a style="color:blue"># final trajectory value.  The goal must be achieved by time the</a><br>
-          <a style="color:blue"># trajectory ends plus goal_time_tolerance.  (goal_time_tolerance</a><br>
-          <a style="color:blue"># allows some leeway in time, so that the trajectory goal can still</a><br>
-          <a style="color:blue"># succeed even if the joints reach the goal some time after the</a><br>
-          <a style="color:blue"># precise end time of the trajectory).</a><br>
-          <a style="color:blue">#</a><br>
-          <a style="color:blue"># If the joints are not within goal_tolerance after &quot;trajectory finish</a><br>
-          <a style="color:blue"># time&quot; + goal_time_tolerance, the goal aborts with error_code set to</a><br>
-          <a style="color:blue"># GOAL_TOLERANCE_VIOLATED</a><br>
+          <div class="comment-text"># To report success, the joints must be within goal_tolerance of the</div><br>
+          <div class="comment-text"># final trajectory value.  The goal must be achieved by time the</div><br>
+          <div class="comment-text"># trajectory ends plus goal_time_tolerance.  (goal_time_tolerance</div><br>
+          <div class="comment-text"># allows some leeway in time, so that the trajectory goal can still</div><br>
+          <div class="comment-text"># succeed even if the joints reach the goal some time after the</div><br>
+          <div class="comment-text"># precise end time of the trajectory).</div><br>
+          <div class="comment-text">#</div><br>
+          <div class="comment-text"># If the joints are not within goal_tolerance after &quot;trajectory finish</div><br>
+          <div class="comment-text"># time&quot; + goal_time_tolerance, the goal aborts with error_code set to</div><br>
+          <div class="comment-text"># GOAL_TOLERANCE_VIOLATED</div><br>
           JointTolerance[] goal_tolerance<br>
           builtin_interfaces/Duration goal_time_tolerance<br>
           <br>
@@ -48,14 +48,14 @@
           int32 PATH_TOLERANCE_VIOLATED = -4<br>
           int32 GOAL_TOLERANCE_VIOLATED = -5<br>
           <br>
-          <a style="color:blue"># Human readable description of the error code. Contains complementary</a><br>
-          <a style="color:blue"># information that is especially useful when execution fails, for instance:</a><br>
-          <a style="color:blue"># - INVALID_GOAL: The reason for the invalid goal (e.g., the requested</a><br>
-          <a style="color:blue">#   trajectory is in the past).</a><br>
-          <a style="color:blue"># - INVALID_JOINTS: The mismatch between the expected controller joints</a><br>
-          <a style="color:blue">#   and those provided in the goal.</a><br>
-          <a style="color:blue"># - PATH_TOLERANCE_VIOLATED and GOAL_TOLERANCE_VIOLATED: Which joint</a><br>
-          <a style="color:blue">#   violated which tolerance, and by how much.</a><br>
+          <div class="comment-text"># Human readable description of the error code. Contains complementary</div><br>
+          <div class="comment-text"># information that is especially useful when execution fails, for instance:</div><br>
+          <div class="comment-text"># - INVALID_GOAL: The reason for the invalid goal (e.g., the requested</div><br>
+          <div class="comment-text">#   trajectory is in the past).</div><br>
+          <div class="comment-text"># - INVALID_JOINTS: The mismatch between the expected controller joints</div><br>
+          <div class="comment-text">#   and those provided in the goal.</div><br>
+          <div class="comment-text"># - PATH_TOLERANCE_VIOLATED and GOAL_TOLERANCE_VIOLATED: Which joint</div><br>
+          <div class="comment-text">#   violated which tolerance, and by how much.</div><br>
           string error_string<br>
           <br>
           ---<br>
@@ -88,7 +88,7 @@
           string error_string<br>
         </div>
       </div>
-      <p class="footer">autogenerated on Jun 23 2020 08:12:48</p>
+      <p class="footer">autogenerated on Jun 25 2020 09:25:45</p>
     </div>
   </body>
 </html>

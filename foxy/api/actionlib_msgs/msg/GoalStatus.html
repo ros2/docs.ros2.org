@@ -14,26 +14,26 @@
         <div class="raw-msg">
           GoalID goal_id<br>
           uint8 status<br>
-          <a style="color:blue">#uint8 PENDING         = 0   # The goal has yet to be processed by the action server.</a><br>
-          <a style="color:blue">#uint8 ACTIVE          = 1   # The goal is currently being processed by the action server.</a><br>
-          <a style="color:blue">#uint8 PREEMPTED       = 2   # The goal received a cancel request after it started executing</a><br>
-          <a style="color:blue">#                            #   and has since completed its execution (Terminal State).</a><br>
-          <a style="color:blue">#uint8 SUCCEEDED       = 3   # The goal was achieved successfully by the action server</a><br>
-          <a style="color:blue">#                            #   (Terminal State).</a><br>
-          <a style="color:blue">#uint8 ABORTED         = 4   # The goal was aborted during execution by the action server due</a><br>
-          <a style="color:blue">#                            #    to some failure (Terminal State).</a><br>
-          <a style="color:blue">#uint8 REJECTED        = 5   # The goal was rejected by the action server without being processed,</a><br>
-          <a style="color:blue">#                            #    because the goal was unattainable or invalid (Terminal State).</a><br>
-          <a style="color:blue">#uint8 PREEMPTING      = 6   # The goal received a cancel request after it started executing</a><br>
-          <a style="color:blue">#                            #    and has not yet completed execution.</a><br>
-          <a style="color:blue">#uint8 RECALLING       = 7   # The goal received a cancel request before it started executing, but</a><br>
-          <a style="color:blue">#                            #    the action server has not yet confirmed that the goal is canceled.</a><br>
-          <a style="color:blue">#uint8 RECALLED        = 8   # The goal received a cancel request before it started executing</a><br>
-          <a style="color:blue">#                            #    and was successfully cancelled (Terminal State).</a><br>
-          <a style="color:blue">#uint8 LOST            = 9   # An action client can determine that a goal is LOST. This should not</a><br>
-          <a style="color:blue">#                            #    be sent over the wire by an action server.</a><br>
+          <div class="comment-text">#uint8 PENDING         = 0   # The goal has yet to be processed by the action server.</div><br>
+          <div class="comment-text">#uint8 ACTIVE          = 1   # The goal is currently being processed by the action server.</div><br>
+          <div class="comment-text">#uint8 PREEMPTED       = 2   # The goal received a cancel request after it started executing</div><br>
+          <div class="comment-text">#                            #   and has since completed its execution (Terminal State).</div><br>
+          <div class="comment-text">#uint8 SUCCEEDED       = 3   # The goal was achieved successfully by the action server</div><br>
+          <div class="comment-text">#                            #   (Terminal State).</div><br>
+          <div class="comment-text">#uint8 ABORTED         = 4   # The goal was aborted during execution by the action server due</div><br>
+          <div class="comment-text">#                            #    to some failure (Terminal State).</div><br>
+          <div class="comment-text">#uint8 REJECTED        = 5   # The goal was rejected by the action server without being processed,</div><br>
+          <div class="comment-text">#                            #    because the goal was unattainable or invalid (Terminal State).</div><br>
+          <div class="comment-text">#uint8 PREEMPTING      = 6   # The goal received a cancel request after it started executing</div><br>
+          <div class="comment-text">#                            #    and has not yet completed execution.</div><br>
+          <div class="comment-text">#uint8 RECALLING       = 7   # The goal received a cancel request before it started executing, but</div><br>
+          <div class="comment-text">#                            #    the action server has not yet confirmed that the goal is canceled.</div><br>
+          <div class="comment-text">#uint8 RECALLED        = 8   # The goal received a cancel request before it started executing</div><br>
+          <div class="comment-text">#                            #    and was successfully cancelled (Terminal State).</div><br>
+          <div class="comment-text">#uint8 LOST            = 9   # An action client can determine that a goal is LOST. This should not</div><br>
+          <div class="comment-text">#                            #    be sent over the wire by an action server.</div><br>
           <br>
-          <a style="color:blue"># Allow for the user to associate a string with GoalStatus for debugging.</a><br>
+          <div class="comment-text"># Allow for the user to associate a string with GoalStatus for debugging.</div><br>
           string text<br>
         </div>
         <h2>Compact Message Definition</h2>
@@ -53,7 +53,7 @@
           string text<br>
         </div>
       </div>
-      <p class="footer">autogenerated on Jun 23 2020 08:12:48</p>
+      <p class="footer">autogenerated on Jun 25 2020 09:25:45</p>
     </div>
   </body>
 </html>

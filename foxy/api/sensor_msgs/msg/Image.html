@@ -12,32 +12,32 @@
         <h2>File: <span class="filename">sensor_msgs/msg/Image.msg</span></h2>
         <h2>Raw Message Definition</h2>
         <div class="raw-msg">
-          <a style="color:blue"># This message contains an uncompressed image</a><br>
-          <a style="color:blue"># (0, 0) is at top-left corner of image</a><br>
+          <div class="comment-text"># This message contains an uncompressed image</div><br>
+          <div class="comment-text"># (0, 0) is at top-left corner of image</div><br>
           <br>
-          <a style="color:blue">#std_msgs/Header header # Header timestamp should be acquisition time of image</a><br>
-          <a style="color:blue">#                             # Header frame_id should be optical frame of camera</a><br>
-          <a style="color:blue">#                             # origin of frame should be optical center of cameara</a><br>
-          <a style="color:blue">#                             # +x should point to the right in the image</a><br>
-          <a style="color:blue">#                             # +y should point down in the image</a><br>
-          <a style="color:blue">#                             # +z should point into to plane of the image</a><br>
-          <a style="color:blue">#                             # If the frame_id here and the frame_id of the CameraInfo</a><br>
-          <a style="color:blue">#                             # message associated with the image conflict</a><br>
-          <a style="color:blue">#                             # the behavior is undefined</a><br>
+          <div class="comment-text">#std_msgs/Header header # Header timestamp should be acquisition time of image</div><br>
+          <div class="comment-text">#                             # Header frame_id should be optical frame of camera</div><br>
+          <div class="comment-text">#                             # origin of frame should be optical center of cameara</div><br>
+          <div class="comment-text">#                             # +x should point to the right in the image</div><br>
+          <div class="comment-text">#                             # +y should point down in the image</div><br>
+          <div class="comment-text">#                             # +z should point into to plane of the image</div><br>
+          <div class="comment-text">#                             # If the frame_id here and the frame_id of the CameraInfo</div><br>
+          <div class="comment-text">#                             # message associated with the image conflict</div><br>
+          <div class="comment-text">#                             # the behavior is undefined</div><br>
           <br>
-          <a style="color:blue">#uint32 height                # image height, that is, number of rows</a><br>
-          <a style="color:blue">#uint32 width                 # image width, that is, number of columns</a><br>
+          <div class="comment-text">#uint32 height                # image height, that is, number of rows</div><br>
+          <div class="comment-text">#uint32 width                 # image width, that is, number of columns</div><br>
           <br>
-          <a style="color:blue"># The legal values for encoding are in file src/image_encodings.cpp</a><br>
-          <a style="color:blue"># If you want to standardize a new string format, join</a><br>
-          <a style="color:blue"># ros-users@lists.ros.org and send an email proposing a new encoding.</a><br>
+          <div class="comment-text"># The legal values for encoding are in file src/image_encodings.cpp</div><br>
+          <div class="comment-text"># If you want to standardize a new string format, join</div><br>
+          <div class="comment-text"># ros-users@lists.ros.org and send an email proposing a new encoding.</div><br>
           <br>
-          <a style="color:blue">#string encoding       # Encoding of pixels -- channel meaning, ordering, size</a><br>
-          <a style="color:blue">#                      # taken from the list of strings in include/sensor_msgs/image_encodings.hpp</a><br>
+          <div class="comment-text">#string encoding       # Encoding of pixels -- channel meaning, ordering, size</div><br>
+          <div class="comment-text">#                      # taken from the list of strings in include/sensor_msgs/image_encodings.hpp</div><br>
           <br>
-          <a style="color:blue">#uint8 is_bigendian    # is this data bigendian?</a><br>
-          <a style="color:blue">#uint32 step           # Full row length in bytes</a><br>
-          <a style="color:blue">#uint8[] data          # actual matrix data, size is (step * rows)</a><br>
+          <div class="comment-text">#uint8 is_bigendian    # is this data bigendian?</div><br>
+          <div class="comment-text">#uint32 step           # Full row length in bytes</div><br>
+          <div class="comment-text">#uint8[] data          # actual matrix data, size is (step * rows)</div><br>
         </div>
         <h2>Compact Message Definition</h2>
         <div class="compact_definition-msg">
@@ -50,7 +50,7 @@
           uint8[] data<br>
         </div>
       </div>
-      <p class="footer">autogenerated on Jun 23 2020 08:12:48</p>
+      <p class="footer">autogenerated on Jun 25 2020 09:25:45</p>
     </div>
   </body>
 </html>

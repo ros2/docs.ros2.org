@@ -12,40 +12,40 @@
         <h2>File: <span class="filename">action_msgs/srv/CancelGoal.msg</span></h2>
         <h2>Raw Message Definition</h2>
         <div class="raw-msg">
-          <a style="color:blue"># Cancel one or more goals with the following policy:</a><br>
-          <a style="color:blue">#</a><br>
-          <a style="color:blue"># - If the goal ID is zero and timestamp is zero, cancel all goals.</a><br>
-          <a style="color:blue"># - If the goal ID is zero and timestamp is not zero, cancel all goals accepted</a><br>
-          <a style="color:blue">#   at or before the timestamp.</a><br>
-          <a style="color:blue"># - If the goal ID is not zero and timestamp is zero, cancel the goal with the</a><br>
-          <a style="color:blue">#   given ID regardless of the time it was accepted.</a><br>
-          <a style="color:blue"># - If the goal ID is not zero and timestamp is not zero, cancel the goal with</a><br>
-          <a style="color:blue">#   the given ID and all goals accepted at or before the timestamp.</a><br>
+          <div class="comment-text"># Cancel one or more goals with the following policy:</div><br>
+          <div class="comment-text">#</div><br>
+          <div class="comment-text"># - If the goal ID is zero and timestamp is zero, cancel all goals.</div><br>
+          <div class="comment-text"># - If the goal ID is zero and timestamp is not zero, cancel all goals accepted</div><br>
+          <div class="comment-text">#   at or before the timestamp.</div><br>
+          <div class="comment-text"># - If the goal ID is not zero and timestamp is zero, cancel the goal with the</div><br>
+          <div class="comment-text">#   given ID regardless of the time it was accepted.</div><br>
+          <div class="comment-text"># - If the goal ID is not zero and timestamp is not zero, cancel the goal with</div><br>
+          <div class="comment-text">#   the given ID and all goals accepted at or before the timestamp.</div><br>
           <br>
-          <a style="color:blue"># Goal info containing an ID and timestamp</a><br>
+          <div class="comment-text"># Goal info containing an ID and timestamp</div><br>
           GoalInfo goal_info<br>
           ---<br>
-          <a style="color:blue"># Return codes</a><br>
-          <a style="color:blue"># Indicates the request was accepted without any errors.</a><br>
-          <a style="color:blue"># One or more goals have transitioned to the CANCELING state.</a><br>
-          <a style="color:blue"># The goals_canceling list is not empty.</a><br>
+          <div class="comment-text"># Return codes</div><br>
+          <div class="comment-text"># Indicates the request was accepted without any errors.</div><br>
+          <div class="comment-text"># One or more goals have transitioned to the CANCELING state.</div><br>
+          <div class="comment-text"># The goals_canceling list is not empty.</div><br>
           int8 ERROR_NONE=0<br>
-          <a style="color:blue"># Indicates the request was rejected.</a><br>
-          <a style="color:blue"># No goals have transitioned to the CANCELING state.</a><br>
-          <a style="color:blue"># The goals_canceling list is empty.</a><br>
+          <div class="comment-text"># Indicates the request was rejected.</div><br>
+          <div class="comment-text"># No goals have transitioned to the CANCELING state.</div><br>
+          <div class="comment-text"># The goals_canceling list is empty.</div><br>
           int8 ERROR_REJECTED=1<br>
-          <a style="color:blue"># Indicates the requested goal ID does not exist.</a><br>
-          <a style="color:blue"># No goals have transitioned to the CANCELING state.</a><br>
-          <a style="color:blue"># The goals_canceling list is empty.</a><br>
+          <div class="comment-text"># Indicates the requested goal ID does not exist.</div><br>
+          <div class="comment-text"># No goals have transitioned to the CANCELING state.</div><br>
+          <div class="comment-text"># The goals_canceling list is empty.</div><br>
           int8 ERROR_UNKNOWN_GOAL_ID=2<br>
-          <a style="color:blue"># Indicates the goal is not cancelable because it is already in a terminal state.</a><br>
-          <a style="color:blue"># No goals have transitioned to the CANCELING state.</a><br>
-          <a style="color:blue"># The goals_canceling list is empty.</a><br>
+          <div class="comment-text"># Indicates the goal is not cancelable because it is already in a terminal state.</div><br>
+          <div class="comment-text"># No goals have transitioned to the CANCELING state.</div><br>
+          <div class="comment-text"># The goals_canceling list is empty.</div><br>
           int8 ERROR_GOAL_TERMINATED=3<br>
           <br>
-          <a style="color:blue"># Return code</a><br>
+          <div class="comment-text"># Return code</div><br>
           int8 return_code<br>
-          <a style="color:blue"># Goals that accepted the cancel request</a><br>
+          <div class="comment-text"># Goals that accepted the cancel request</div><br>
           GoalInfo[] goals_canceling<br>
         </div>
         <h2>Compact Message Definition</h2>
@@ -60,7 +60,7 @@
           <a href="../../action_msgs/msg/GoalInfo.html"> action_msgs/msg/GoalInfo</a> goal_info<br>
         </div>
       </div>
-      <p class="footer">autogenerated on Jun 23 2020 08:12:48</p>
+      <p class="footer">autogenerated on Jun 25 2020 09:25:45</p>
     </div>
   </body>
 </html>

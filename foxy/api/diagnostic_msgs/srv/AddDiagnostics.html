@@ -12,32 +12,32 @@
         <h2>File: <span class="filename">diagnostic_msgs/srv/AddDiagnostics.msg</span></h2>
         <h2>Raw Message Definition</h2>
         <div class="raw-msg">
-          <a style="color:blue"># This service is used as part of the process for loading analyzers at runtime,</a><br>
-          <a style="color:blue"># and should be used by a loader script or program, not as a standalone service.</a><br>
-          <a style="color:blue"># Information about dynamic addition of analyzers can be found at</a><br>
-          <a style="color:blue"># http://wiki.ros.org/diagnostics/Tutorials/Adding%20Analyzers%20at%20Runtime</a><br>
+          <div class="comment-text"># This service is used as part of the process for loading analyzers at runtime,</div><br>
+          <div class="comment-text"># and should be used by a loader script or program, not as a standalone service.</div><br>
+          <div class="comment-text"># Information about dynamic addition of analyzers can be found at</div><br>
+          <div class="comment-text"># http://wiki.ros.org/diagnostics/Tutorials/Adding%20Analyzers%20at%20Runtime</div><br>
           <br>
-          <a style="color:blue"># The load_namespace parameter defines the namespace where parameters for the</a><br>
-          <a style="color:blue"># initialization of analyzers in the diagnostic aggregator have been loaded. The</a><br>
-          <a style="color:blue"># value should be a global name (i.e. /my/name/space), not a relative</a><br>
-          <a style="color:blue"># (my/name/space) or private (~my/name/space) name. Analyzers will not be added</a><br>
-          <a style="color:blue"># if a non-global name is used. The call will also fail if the namespace</a><br>
-          <a style="color:blue"># contains parameters that follow a namespace structure that does not conform to</a><br>
-          <a style="color:blue"># that expected by the analyzer definitions. See</a><br>
-          <a style="color:blue"># http://wiki.ros.org/diagnostics/Tutorials/Configuring%20Diagnostic%20Aggregators</a><br>
-          <a style="color:blue"># and http://wiki.ros.org/diagnostics/Tutorials/Using%20the%20GenericAnalyzer</a><br>
-          <a style="color:blue"># for examples of the structure of yaml files which are expected to have been</a><br>
-          <a style="color:blue"># loaded into the namespace.</a><br>
+          <div class="comment-text"># The load_namespace parameter defines the namespace where parameters for the</div><br>
+          <div class="comment-text"># initialization of analyzers in the diagnostic aggregator have been loaded. The</div><br>
+          <div class="comment-text"># value should be a global name (i.e. /my/name/space), not a relative</div><br>
+          <div class="comment-text"># (my/name/space) or private (~my/name/space) name. Analyzers will not be added</div><br>
+          <div class="comment-text"># if a non-global name is used. The call will also fail if the namespace</div><br>
+          <div class="comment-text"># contains parameters that follow a namespace structure that does not conform to</div><br>
+          <div class="comment-text"># that expected by the analyzer definitions. See</div><br>
+          <div class="comment-text"># http://wiki.ros.org/diagnostics/Tutorials/Configuring%20Diagnostic%20Aggregators</div><br>
+          <div class="comment-text"># and http://wiki.ros.org/diagnostics/Tutorials/Using%20the%20GenericAnalyzer</div><br>
+          <div class="comment-text"># for examples of the structure of yaml files which are expected to have been</div><br>
+          <div class="comment-text"># loaded into the namespace.</div><br>
           string load_namespace<br>
           ---<br>
           <br>
-          <a style="color:blue"># True if diagnostic aggregator was updated with new diagnostics, False</a><br>
-          <a style="color:blue"># otherwise. A false return value means that either there is a bond in the</a><br>
-          <a style="color:blue"># aggregator which already used the requested namespace, or the initialization</a><br>
-          <a style="color:blue"># of analyzers failed.</a><br>
+          <div class="comment-text"># True if diagnostic aggregator was updated with new diagnostics, False</div><br>
+          <div class="comment-text"># otherwise. A false return value means that either there is a bond in the</div><br>
+          <div class="comment-text"># aggregator which already used the requested namespace, or the initialization</div><br>
+          <div class="comment-text"># of analyzers failed.</div><br>
           bool success<br>
           <br>
-          <a style="color:blue"># Message with additional information about the success or failure</a><br>
+          <div class="comment-text"># Message with additional information about the success or failure</div><br>
           string message<br>
         </div>
         <h2>Compact Message Definition</h2>
@@ -48,7 +48,7 @@
           string load_namespace<br>
         </div>
       </div>
-      <p class="footer">autogenerated on Jun 23 2020 08:12:48</p>
+      <p class="footer">autogenerated on Jun 25 2020 09:25:45</p>
     </div>
   </body>
 </html>

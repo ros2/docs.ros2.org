@@ -12,36 +12,36 @@
         <h2>File: <span class="filename">sensor_msgs/msg/LaserScan.msg</span></h2>
         <h2>Raw Message Definition</h2>
         <div class="raw-msg">
-          <a style="color:blue"># Single scan from a planar laser range-finder</a><br>
-          <a style="color:blue">#</a><br>
-          <a style="color:blue"># If you have another ranging device with different behavior (e.g. a sonar</a><br>
-          <a style="color:blue"># array), please find or create a different message, since applications</a><br>
-          <a style="color:blue"># will make fairly laser-specific assumptions about this data</a><br>
+          <div class="comment-text"># Single scan from a planar laser range-finder</div><br>
+          <div class="comment-text">#</div><br>
+          <div class="comment-text"># If you have another ranging device with different behavior (e.g. a sonar</div><br>
+          <div class="comment-text"># array), please find or create a different message, since applications</div><br>
+          <div class="comment-text"># will make fairly laser-specific assumptions about this data</div><br>
           <br>
-          <a style="color:blue">#std_msgs/Header header # timestamp in the header is the acquisition time of</a><br>
-          <a style="color:blue">#                             # the first ray in the scan.</a><br>
-          <a style="color:blue">#                             </a><br>
-          <a style="color:blue">#                             # in frame frame_id, angles are measured around</a><br>
-          <a style="color:blue">#                             # the positive Z axis (counterclockwise, if Z is up)</a><br>
-          <a style="color:blue">#                             # with zero angle being forward along the x axis</a><br>
+          <div class="comment-text">#std_msgs/Header header # timestamp in the header is the acquisition time of</div><br>
+          <div class="comment-text">#                             # the first ray in the scan.</div><br>
+          <div class="comment-text">#                             </div><br>
+          <div class="comment-text">#                             # in frame frame_id, angles are measured around</div><br>
+          <div class="comment-text">#                             # the positive Z axis (counterclockwise, if Z is up)</div><br>
+          <div class="comment-text">#                             # with zero angle being forward along the x axis</div><br>
           <br>
-          <a style="color:blue">#float32 angle_min            # start angle of the scan [rad]</a><br>
-          <a style="color:blue">#float32 angle_max            # end angle of the scan [rad]</a><br>
-          <a style="color:blue">#float32 angle_increment      # angular distance between measurements [rad]</a><br>
+          <div class="comment-text">#float32 angle_min            # start angle of the scan [rad]</div><br>
+          <div class="comment-text">#float32 angle_max            # end angle of the scan [rad]</div><br>
+          <div class="comment-text">#float32 angle_increment      # angular distance between measurements [rad]</div><br>
           <br>
-          <a style="color:blue">#float32 time_increment       # time between measurements [seconds] - if your scanner</a><br>
-          <a style="color:blue">#                             # is moving, this will be used in interpolating position</a><br>
-          <a style="color:blue">#                             # of 3d points</a><br>
-          <a style="color:blue">#float32 scan_time            # time between scans [seconds]</a><br>
+          <div class="comment-text">#float32 time_increment       # time between measurements [seconds] - if your scanner</div><br>
+          <div class="comment-text">#                             # is moving, this will be used in interpolating position</div><br>
+          <div class="comment-text">#                             # of 3d points</div><br>
+          <div class="comment-text">#float32 scan_time            # time between scans [seconds]</div><br>
           <br>
-          <a style="color:blue">#float32 range_min            # minimum range value [m]</a><br>
-          <a style="color:blue">#float32 range_max            # maximum range value [m]</a><br>
+          <div class="comment-text">#float32 range_min            # minimum range value [m]</div><br>
+          <div class="comment-text">#float32 range_max            # maximum range value [m]</div><br>
           <br>
-          <a style="color:blue">#float32[] ranges             # range data [m]</a><br>
-          <a style="color:blue">#                             # (Note: values &lt; range_min or &gt; range_max should be discarded)</a><br>
-          <a style="color:blue">#float32[] intensities        # intensity data [device-specific units].  If your</a><br>
-          <a style="color:blue">#                             # device does not provide intensities, please leave</a><br>
-          <a style="color:blue">#                             # the array empty.</a><br>
+          <div class="comment-text">#float32[] ranges             # range data [m]</div><br>
+          <div class="comment-text">#                             # (Note: values &lt; range_min or &gt; range_max should be discarded)</div><br>
+          <div class="comment-text">#float32[] intensities        # intensity data [device-specific units].  If your</div><br>
+          <div class="comment-text">#                             # device does not provide intensities, please leave</div><br>
+          <div class="comment-text">#                             # the array empty.</div><br>
         </div>
         <h2>Compact Message Definition</h2>
         <div class="compact_definition-msg">
@@ -57,7 +57,7 @@
           float[] intensities<br>
         </div>
       </div>
-      <p class="footer">autogenerated on Jun 23 2020 08:12:48</p>
+      <p class="footer">autogenerated on Jun 25 2020 09:25:45</p>
     </div>
   </body>
 </html>
