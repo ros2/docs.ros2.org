@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [ doc_gen ]
+  pull_request:
+    branches: [ doc_gen ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-18.04
+            rosdistro: dashing
+          - os: ubuntu-18.04
+            rosdistro: eloquent
+          - os: ubuntu-20.04
+            rosdistro: foxy
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ros-tooling/setup-ros@0.0.23
+      with:
+        required-ros-distributions: ${{ matrix.rosdistro }}
+    - name: Install dependencies
+      run: |
+        sudo apt update -qq
+        sudo apt install -y curl doxygen python3-sphinx python3-pip
+        sudo pip3 install sphinx-rtd-theme sphinx_autodoc_typehints
+    - name: Build code and docs
+      run: ${GITHUB_WORKSPACE}/build_docs.sh -y -r ${{ matrix.rosdistro }}
