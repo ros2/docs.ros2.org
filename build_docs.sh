@@ -2,14 +2,14 @@
 set -e
 
 # Default options
-opt_release_name=${ROS_DISTRO:-foxy}
+opt_rosdistro=${ROS_DISTRO:-foxy}
 opt_interactive=0
 unset opt_repos
 
 print_usage() {
   echo "usage: $0 [-r DISTRO] [-e URL] [-y] [-h] [package [package ...]]"
   echo ""
-  echo "  -r DISTRO  Set the name of the ROS distribution (default: ${opt_release_name})"
+  echo "  -r DISTRO  Set the name of the ROS distribution (default: ${opt_rosdistro})"
   echo "             This also determines the version of repositories unless the '-e' option is given."
   echo "  -e URL     Location of a ROS 2 repos file to use instead of a release repos file."
   echo "  -y         Run the script in non-interactive mode"
@@ -23,7 +23,7 @@ script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 while getopts "r:e:yh" opt; do
   case "${opt}" in
     r)
-      opt_release_name=${OPTARG}
+      opt_rosdistro=${OPTARG}
       ;;
     e)
       opt_repos=${OPTARG}
@@ -44,7 +44,7 @@ done
 shift $((OPTIND-1))
 
 if [ -z ${opt_repos+x} ]; then
-  repos_file_url=https://raw.githubusercontent.com/ros2/ros2/${opt_release_name}-release/ros2.repos
+  repos_file_url=https://raw.githubusercontent.com/ros2/ros2/${opt_rosdistro}-release/ros2.repos
 else
   repos_file_url=${opt_repos}
 fi
@@ -65,7 +65,7 @@ else
     rmw
   )
   # Append additional default packages for Foxy
-  if [[ "foxy" == "${opt_release_name}" ]]; then
+  if [[ "foxy" == "${opt_rosdistro}" ]]; then
     package_names+=(
       ament_index_cpp
       ament_index_python
@@ -98,7 +98,7 @@ fi
 
 if [ 0 -eq ${opt_interactive} ]; then
   echo "Building docs with the following configuration:"
-  echo "    Release name: ${opt_release_name}"
+  echo "    Release name: ${opt_rosdistro}"
   echo "    Repos file: ${repos_file_url}"
   echo "    Packages: ${package_names}"
   echo ""
@@ -118,7 +118,7 @@ mkdir src
 curl -o ros2.repos ${repos_file_url}
 vcs import src < ros2.repos
 rosdep update
-rosdep install --rosdistro ${opt_release_name} --from-paths src -iry
+rosdep install --rosdistro ${opt_rosdistro} --from-paths src -iry
 colcon build --packages-up-to ${package_names}
 
 # Clone documentation-specific repos
@@ -127,7 +127,7 @@ vcs import src < ${script_dir}/ros2_doc.repos
 # Uncomment Doxyfile lines for generating tag files
 sed -i "s/#\s*GENERATE_TAGFILE/GENERATE_TAGFILE/g" $(find src -name Doxyfile)
 # Change the ROS 2 TAGFILES links so that they reference docs.ros2.org/<release name> instead of latest
-sed -i "s/\(^TAGFILES.*docs\.ros2\.org\/\)latest/\1${opt_release_name}/g" $(find src -name Doxyfile)
+sed -i "s/\(^TAGFILES.*docs\.ros2\.org\/\)latest/\1${opt_rosdistro}/g" $(find src -name Doxyfile)
 
 # Sort packages topologically so that Doxygen tags are available for packages later in order
 sorted_packages=$(colcon list --names-only -t --packages-select ${package_names})
@@ -136,7 +136,7 @@ sorted_packages=$(colcon list --names-only -t --packages-select ${package_names}
 cp ${script_dir}/Makefile .
 
 # Build the docs
-make install release_name=${opt_release_name} package_names=${sorted_packages}
+make install release_name=${opt_rosdistro} package_names=${sorted_packages}
 
 echo "Documentation has been generated and copied into '${workspace_dir}/src/ros2/docs.ros2.org'."
 echo ""
