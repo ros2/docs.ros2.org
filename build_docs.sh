@@ -63,9 +63,6 @@ else
     rclcpp_components
     rclpy
     rmw
-    rmw_fastrtps_cpp
-    rmw_fastrtps_dynamic_cpp
-    rmw_fastrtps_shared_cpp
   )
   # Append additional default packages for Foxy
   if [[ "foxy" == "${opt_release_name}" ]]; then
@@ -80,6 +77,9 @@ else
       rclcpp_lifecycle
       rcpputils
       rmw_dds_common
+      rmw_fastrtps_cpp
+      rmw_fastrtps_dynamic_cpp
+      rmw_fastrtps_shared_cpp
       rosidl_runtime_c
       rosidl_runtime_cpp
       tf2
