@@ -69,11 +69,6 @@ sed -i "s/#\s*GENERATE_TAGFILE/GENERATE_TAGFILE/g" $(find src -name Doxyfile)
 # Change the ROS 2 TAGFILES links so that they reference docs.ros2.org/<release name> instead of latest
 sed -i "s/\(^TAGFILES.*docs\.ros2\.org\/\)latest/\1${RELEASE_NAME}/g" $(find src -name Doxyfile)
 
-# Append "api/" to package names for use in Makefile
-for i in "${!package_names[@]}"; do
-  package_names[$i]="api/${package_names[$i]}"
-done
-
 # Build the docs
 make install release_name=${RELEASE_NAME} package_names=${package_names[@]}
 

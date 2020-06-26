@@ -1,12 +1,14 @@
+api_directory_name ?= api
+
 default: setup $(release_name) $(package_names)
 
 install: default
 	rm -r src/ros2/docs.ros2.org/$(release_name) || true
 	cp -r $(release_name) src/ros2/docs.ros2.org/$(release_name)
-	cp -r api src/ros2/docs.ros2.org/$(release_name)/api
+	cp -r $(api_directory_name) src/ros2/docs.ros2.org/$(release_name)/$(api_directory_name)
 
 clean:
-	rm -r $(release_name) api || true
+	rm -r $(release_name) $(api_directory_name) || true
 
 purge:
 	rm -r src/ros2/**/doc_output src/ros2/ros_core_documentation/build src/ros2/rclpy/rclpy/docs/build || true
@@ -15,155 +17,125 @@ $(release_name): src/ros2/ros_core_documentation/build/html
 	rm -r $@ || true
 	cp -r $< $@
 
-api/ament_index_cpp: src/ament/ament_index/ament_index_cpp/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+ament_index_cpp: src/ament/ament_index/ament_index_cpp/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/ament_index_python: src/ament/ament_index/ament_index_python/docs/build/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+ament_index_python: src/ament/ament_index/ament_index_python/docs/build/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/class_loader: src/ros/class_loader/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+class_loader: src/ros/class_loader/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/libstatistics_collector: src/ros-tooling/libstatistics_collector/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+libstatistics_collector: src/ros-tooling/libstatistics_collector/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/rcutils: src/ros2/rcutils/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+rcutils: src/ros2/rcutils/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/rcpputils: src/ros2/rcpputils/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+rcpputils: src/ros2/rcpputils/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/rmw: src/ros2/rmw/rmw/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+rmw: src/ros2/rmw/rmw/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/rmw_dds_common: src/ros2/rmw_dds_common/rmw_dds_common/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+rmw_dds_common: src/ros2/rmw_dds_common/rmw_dds_common/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/rcl: src/ros2/rcl/rcl/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+rcl: src/ros2/rcl/rcl/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/rcl_action: src/ros2/rcl/rcl_action/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+rcl_action: src/ros2/rcl/rcl_action/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/rcl_lifecycle: src/ros2/rcl/rcl_lifecycle/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+rcl_lifecycle: src/ros2/rcl/rcl_lifecycle/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/rcl_logging_spdlog: src/ros2/rcl_logging/rcl_logging_spdlog/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+rcl_logging_spdlog: src/ros2/rcl_logging/rcl_logging_spdlog/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/rcl_yaml_param_parser: src/ros2/rcl/rcl_yaml_param_parser/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+rcl_yaml_param_parser: src/ros2/rcl/rcl_yaml_param_parser/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/rclcpp: src/ros2/rclcpp/rclcpp/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+rclcpp: src/ros2/rclcpp/rclcpp/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/rclcpp_action: src/ros2/rclcpp/rclcpp_action/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+rclcpp_action: src/ros2/rclcpp/rclcpp_action/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/rclcpp_components: src/ros2/rclcpp/rclcpp_components/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+rclcpp_components: src/ros2/rclcpp/rclcpp_components/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/rclcpp_lifecycle: src/ros2/rclcpp/rclcpp_lifecycle/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+rclcpp_lifecycle: src/ros2/rclcpp/rclcpp_lifecycle/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/rclpy: src/ros2/rclpy/rclpy/docs/build/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+rclpy: src/ros2/rclpy/rclpy/docs/build/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/rosidl_runtime_c: src/ros2/rosidl/rosidl_runtime_c/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+rosidl_runtime_c: src/ros2/rosidl/rosidl_runtime_c/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/rosidl_runtime_cpp: src/ros2/rosidl/rosidl_runtime_cpp/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+rosidl_runtime_cpp: src/ros2/rosidl/rosidl_runtime_cpp/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/rmw_fastrtps_cpp: src/ros2/rmw_fastrtps/rmw_fastrtps_cpp/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+rmw_fastrtps_cpp: src/ros2/rmw_fastrtps/rmw_fastrtps_cpp/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/rmw_fastrtps_dynamic_cpp: src/ros2/rmw_fastrtps/rmw_fastrtps_dynamic_cpp/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+rmw_fastrtps_dynamic_cpp: src/ros2/rmw_fastrtps/rmw_fastrtps_dynamic_cpp/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/rmw_fastrtps_shared_cpp: src/ros2/rmw_fastrtps/rmw_fastrtps_shared_cpp/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+rmw_fastrtps_shared_cpp: src/ros2/rmw_fastrtps/rmw_fastrtps_shared_cpp/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/tf2: src/ros2/geometry2/tf2/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+tf2: src/ros2/geometry2/tf2/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/tf2_bullet: src/ros2/geometry2/tf2_bullet/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+tf2_bullet: src/ros2/geometry2/tf2_bullet/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/tf2_eigen: src/ros2/geometry2/tf2_eigen/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+tf2_eigen: src/ros2/geometry2/tf2_eigen/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/tf2_geometry_msgs: src/ros2/geometry2/tf2_geometry_msgs/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+tf2_geometry_msgs: src/ros2/geometry2/tf2_geometry_msgs/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/tf2_kdl: src/ros2/geometry2/tf2_kdl/docs/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+tf2_kdl: src/ros2/geometry2/tf2_kdl/docs/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/tf2_ros: src/ros2/geometry2/tf2_ros/docs/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+tf2_ros: src/ros2/geometry2/tf2_ros/docs/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
-api/tf2_tools: src/ros2/geometry2/tf2_tools/doc_output/html
-	rm -r $@ || true
-	test -d api || mkdir api
-	cp -r $< $@
+tf2_tools: src/ros2/geometry2/tf2_tools/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
 
 src/ros2/ros_core_documentation/build/html: src/ros2/ros_core_documentation/Makefile
 	rm -r $@ || true
@@ -440,4 +412,6 @@ cpp-doxygen-web.tag.xml:
 	wget 'http://upload.cppreference.com/mwiki/images/f/f8/cppreference-doxygen-web.tag.xml' \
 		-O doxygen_tag_files/cppreference-doxygen-web.tag.xml
 
-setup: cpp-doxygen-web.tag.xml
+setup:
+	cpp-doxygen-web.tag.xml
+	test -d $(api_directory_name) || mkdir $(api_directory_name)
