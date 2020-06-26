@@ -44,7 +44,7 @@ done
 shift $((OPTIND-1))
 
 if [ -z ${opt_repos+x} ]; then
-  repos_file_url=https://raw.githubusercontent.com/ros2/ros2/${opt_rosdistro}-release/ros2.repos
+  repos_file_url=https://raw.githubusercontent.com/ros2/ros2/${opt_rosdistro}/ros2.repos
 else
   repos_file_url=${opt_repos}
 fi
@@ -72,8 +72,7 @@ else
       class_loader
       libstatistics_collector
       rcl_lifecycle
-      # TODO(jacobperron): Add rcl_logging_spdlog after https://github.com/ros2/rcl_logging/pull/42 is released
-      # rcl_logging_spdlog
+      rcl_logging_spdlog
       rclcpp_lifecycle
       rcpputils
       rmw_dds_common
