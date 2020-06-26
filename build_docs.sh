@@ -117,6 +117,8 @@ cd ${workspace_dir}
 mkdir src
 curl -o ros2.repos ${repos_file_url}
 vcs import src < ros2.repos
+rosdep update
+rosdep install --rosdistro ${opt_release_name} --from-paths src -iry
 colcon build --packages-up-to ${package_names}
 
 # Clone documentation-specific repos
