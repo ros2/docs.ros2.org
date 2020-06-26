@@ -184,7 +184,7 @@ src/ros2/rcutils/doc_output/html doxygen_tag_files/rcutils.tag: src/ros2/rcutils
 	rm doxygen_tag_files/rcutils.tag || true
 	cd src/ros2/rcutils && doxygen Doxyfile
 
-src/ros2/rcpputils/doc_output/html doxygen_tag_files/rcpputils.tag: src/ros2/rcpputils/Doxyfile doxygen_tag_files/rcutils.tag
+src/ros2/rcpputils/doc_output/html doxygen_tag_files/rcpputils.tag: src/ros2/rcpputils/Doxyfile
 	. install/setup.sh && \
 		cd src/ros2/rcpputils && \
 		git clean -dfx && \
@@ -193,7 +193,7 @@ src/ros2/rcpputils/doc_output/html doxygen_tag_files/rcpputils.tag: src/ros2/rcp
 	rm doxygen_tag_files/rcpputils.tag || true
 	cd src/ros2/rcpputils && doxygen Doxyfile
 
-src/ros2/rmw/rmw/doc_output/html doxygen_tag_files/rmw.tag: src/ros2/rmw/rmw/Doxyfile doxygen_tag_files/rcutils.tag doxygen_tag_files/rcpputils.tag
+src/ros2/rmw/rmw/doc_output/html doxygen_tag_files/rmw.tag: src/ros2/rmw/rmw/Doxyfile
 	. install/setup.sh && \
 		cd src/ros2/rmw/rmw && \
 		git clean -dfx && \
@@ -211,7 +211,7 @@ src/ros2/rmw_dds_common/rmw_dds_common/doc_output/html doxygen_tag_files/rmw_dds
 	rm doxygen_tag_files/rmw_dds_common.tag || true
 	cd src/ros2/rmw_dds_common/rmw_dds_common && doxygen Doxyfile
 
-src/ros2/rcl/rcl/doc_output/html doxygen_tag_files/rcl.tag: src/ros2/rcl/rcl/Doxyfile doxygen_tag_files/rcutils.tag doxygen_tag_files/rcpputils.tag doxygen_tag_files/rmw.tag
+src/ros2/rcl/rcl/doc_output/html doxygen_tag_files/rcl.tag: src/ros2/rcl/rcl/Doxyfile
 	. install/setup.sh && \
 		cd src/ros2/rcl/rcl && \
 		git clean -dfx && \
@@ -220,7 +220,7 @@ src/ros2/rcl/rcl/doc_output/html doxygen_tag_files/rcl.tag: src/ros2/rcl/rcl/Dox
 	rm doxygen_tag_files/rcl.tag || true
 	cd src/ros2/rcl/rcl && doxygen Doxyfile
 
-src/ros2/rcl/rcl_action/doc_output/html doxygen_tag_files/rcl_action.tag: src/ros2/rcl/rcl_action/Doxyfile doxygen_tag_files/rcutils.tag doxygen_tag_files/rcpputils.tag doxygen_tag_files/rmw.tag doxygen_tag_files/rcl.tag
+src/ros2/rcl/rcl_action/doc_output/html doxygen_tag_files/rcl_action.tag: src/ros2/rcl/rcl_action/Doxyfile
 	. install/setup.sh && \
 		cd src/ros2/rcl/rcl_action && \
 		git clean -dfx && \
@@ -229,7 +229,7 @@ src/ros2/rcl/rcl_action/doc_output/html doxygen_tag_files/rcl_action.tag: src/ro
 	rm doxygen_tag_files/rcl_action.tag || true
 	cd src/ros2/rcl/rcl_action && doxygen Doxyfile
 
-src/ros2/rcl/rcl_lifecycle/doc_output/html doxygen_tag_files/rcl_lifecycle.tag: src/ros2/rcl/rcl_lifecycle/Doxyfile doxygen_tag_files/rcutils.tag doxygen_tag_files/rcpputils.tag doxygen_tag_files/rmw.tag doxygen_tag_files/rcl.tag
+src/ros2/rcl/rcl_lifecycle/doc_output/html doxygen_tag_files/rcl_lifecycle.tag: src/ros2/rcl/rcl_lifecycle/Doxyfile
 	. install/setup.sh && \
 		cd src/ros2/rcl/rcl_lifecycle && \
 		git clean -dfx && \
@@ -238,7 +238,7 @@ src/ros2/rcl/rcl_lifecycle/doc_output/html doxygen_tag_files/rcl_lifecycle.tag: 
 	rm doxygen_tag_files/rcl_lifecycle.tag || true
 	cd src/ros2/rcl/rcl_lifecycle && doxygen Doxyfile
 
-src/ros2/rcl_logging/rcl_logging_spdlog/doc_output/html doxygen_tag_files/rcl_logging_spdlog.tag: src/ros2/rcl_logging/rcl_logging_spdlog/Doxyfile doxygen_tag_files/rcutils.tag
+src/ros2/rcl_logging/rcl_logging_spdlog/doc_output/html doxygen_tag_files/rcl_logging_spdlog.tag: src/ros2/rcl_logging/rcl_logging_spdlog/Doxyfile
 	. install/setup.sh && \
 		cd src/ros2/rcl_logging/rcl_logging_spdlog && \
 		git clean -dfx && \
@@ -247,7 +247,7 @@ src/ros2/rcl_logging/rcl_logging_spdlog/doc_output/html doxygen_tag_files/rcl_lo
 	rm doxygen_tag_files/rcl_logging_spdlog.tag || true
 	cd src/ros2/rcl_logging/rcl_logging_spdlog && doxygen Doxyfile
 
-src/ros2/rcl/rcl_yaml_param_parser/doc_output/html doxygen_tag_files/rcl_lifecycle.tag: src/ros2/rcl/rcl_yaml_param_parser/Doxyfile doxygen_tag_files/rcutils.tag doxygen_tag_files/rmw.tag doxygen_tag_files/rcl.tag
+src/ros2/rcl/rcl_yaml_param_parser/doc_output/html doxygen_tag_files/rcl_lifecycle.tag: src/ros2/rcl/rcl_yaml_param_parser/Doxyfile
 	. install/setup.sh && \
 		cd src/ros2/rcl/rcl_yaml_param_parser && \
 		git clean -dfx && \
@@ -256,7 +256,7 @@ src/ros2/rcl/rcl_yaml_param_parser/doc_output/html doxygen_tag_files/rcl_lifecyc
 	rm doxygen_tag_files/rcl_yaml_param_parser.tag || true
 	cd src/ros2/rcl/rcl_yaml_param_parser && doxygen Doxyfile
 
-src/ros2/rclcpp/rclcpp/doc_output/html doxygen_tag_files/rclcpp.tag: src/ros2/rclcpp/rclcpp/Doxyfile doxygen_tag_files/rcl.tag doxygen_tag_files/rcpputils.tag doxygen_tag_files/rmw.tag doxygen_tag_files/rcutils.tag
+src/ros2/rclcpp/rclcpp/doc_output/html doxygen_tag_files/rclcpp.tag: src/ros2/rclcpp/rclcpp/Doxyfile
 	. install/setup.sh && \
 		cd src/ros2/rclcpp/rclcpp && \
 		git clean -dfx && \
@@ -265,7 +265,7 @@ src/ros2/rclcpp/rclcpp/doc_output/html doxygen_tag_files/rclcpp.tag: src/ros2/rc
 	rm doxygen_tag_files/rclcpp.tag || true
 	cd src/ros2/rclcpp/rclcpp && doxygen Doxyfile
 
-src/ros2/rclcpp/rclcpp_action/doc_output/html doxygen_tag_files/rclcpp_action.tag: src/ros2/rclcpp/rclcpp_action/Doxyfile doxygen_tag_files/rclcpp.tag doxygen_tag_files/rcl.tag doxygen_tag_files/rmw.tag doxygen_tag_files/rcutils.tag  doxygen_tag_files/rcpputils.tag
+src/ros2/rclcpp/rclcpp_action/doc_output/html doxygen_tag_files/rclcpp_action.tag: src/ros2/rclcpp/rclcpp_action/Doxyfile
 	. install/setup.sh && \
 		cd src/ros2/rclcpp/rclcpp_action && \
 		git clean -dfx && \
@@ -274,7 +274,7 @@ src/ros2/rclcpp/rclcpp_action/doc_output/html doxygen_tag_files/rclcpp_action.ta
 	rm doxygen_tag_files/rclcpp_action.tag || true
 	cd src/ros2/rclcpp/rclcpp_action && doxygen Doxyfile
 
-src/ros2/rclcpp/rclcpp_components/doc_output/html doxygen_tag_files/rclcpp_components.tag: src/ros2/rclcpp/rclcpp_components/Doxyfile doxygen_tag_files/rclcpp.tag doxygen_tag_files/rcl.tag doxygen_tag_files/rmw.tag doxygen_tag_files/rcutils.tag
+src/ros2/rclcpp/rclcpp_components/doc_output/html doxygen_tag_files/rclcpp_components.tag: src/ros2/rclcpp/rclcpp_components/Doxyfile
 	. install/setup.sh && \
 		cd src/ros2/rclcpp/rclcpp_components && \
 		git clean -dfx && \
@@ -283,7 +283,7 @@ src/ros2/rclcpp/rclcpp_components/doc_output/html doxygen_tag_files/rclcpp_compo
 	rm doxygen_tag_files/rclcpp_components.tag || true
 	cd src/ros2/rclcpp/rclcpp_components && doxygen Doxyfile
 
-src/ros2/rclcpp/rclcpp_lifecycle/doc_output/html doxygen_tag_files/rclcpp_lifecycle.tag: src/ros2/rclcpp/rclcpp_lifecycle/Doxyfile doxygen_tag_files/rclcpp.tag doxygen_tag_files/rcl.tag doxygen_tag_files/rmw.tag doxygen_tag_files/rcutils.tag  doxygen_tag_files/rcpputils.tag
+src/ros2/rclcpp/rclcpp_lifecycle/doc_output/html doxygen_tag_files/rclcpp_lifecycle.tag: src/ros2/rclcpp/rclcpp_lifecycle/Doxyfile
 	. install/setup.sh && \
 		cd src/ros2/rclcpp/rclcpp_lifecycle && \
 		git clean -dfx && \
@@ -412,6 +412,5 @@ cpp-doxygen-web.tag.xml:
 	wget 'http://upload.cppreference.com/mwiki/images/f/f8/cppreference-doxygen-web.tag.xml' \
 		-O doxygen_tag_files/cppreference-doxygen-web.tag.xml
 
-setup:
-	cpp-doxygen-web.tag.xml
+setup: cpp-doxygen-web.tag.xml
 	test -d $(api_directory_name) || mkdir $(api_directory_name)
