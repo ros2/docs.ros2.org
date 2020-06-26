@@ -97,7 +97,7 @@ fi
 
 
 if [ 0 -eq ${opt_interactive} ]; then
-  echo "Bulding docs with the following configuration:"
+  echo "Building docs with the following configuration:"
   echo "    Release name: ${opt_release_name}"
   echo "    Repos file: ${repos_file_url}"
   echo "    Packages: ${package_names}"
