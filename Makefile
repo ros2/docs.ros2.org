@@ -247,7 +247,7 @@ src/ros2/rcl_logging/rcl_logging_spdlog/doc_output/html doxygen_tag_files/rcl_lo
 	rm doxygen_tag_files/rcl_logging_spdlog.tag || true
 	cd src/ros2/rcl_logging/rcl_logging_spdlog && doxygen Doxyfile
 
-src/ros2/rcl/rcl_yaml_param_parser/doc_output/html doxygen_tag_files/rcl_lifecycle.tag: src/ros2/rcl/rcl_yaml_param_parser/Doxyfile
+src/ros2/rcl/rcl_yaml_param_parser/doc_output/html doxygen_tag_files/rcl_yaml_param_parser.tag: src/ros2/rcl/rcl_yaml_param_parser/Doxyfile
 	. install/setup.sh && \
 		cd src/ros2/rcl/rcl_yaml_param_parser && \
 		git clean -dfx && \
