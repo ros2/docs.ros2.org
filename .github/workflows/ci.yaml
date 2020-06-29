@@ -30,5 +30,6 @@ jobs:
         sudo apt install -y curl doxygen python3-pip
         pip3 install sphinx sphinx-rtd-theme sphinx-autodoc-typehints
     - name: Build code and docs
-      # run: ${GITHUB_WORKSPACE}/build_docs.sh -y -r ${{ matrix.rosdistro }}
-      run: du -a / | grep sphinx-build
+      run: |
+        export SPHINXBUILD=/home/runner/.local/bin/sphinx-build
+        ${GITHUB_WORKSPACE}/build_docs.sh -y -r ${{ matrix.rosdistro }}
