@@ -32,4 +32,6 @@ jobs:
     - name: Build code and docs
       run: |
         export SPHINXBUILD=/home/runner/.local/bin
+        echo $SPHINXBUILD
+        ls /home/runner/.local/bin
         ${GITHUB_WORKSPACE}/build_docs.sh -y -r ${{ matrix.rosdistro }}
