@@ -31,5 +31,5 @@ jobs:
         pip3 install sphinx sphinx-rtd-theme sphinx-autodoc-typehints
     - name: Build code and docs
       run: |
-        export SPHINXBUILD=/home/runner/.local/bin/sphinx-build
+        export SPHINXBUILD=/home/runner/.local/bin
         ${GITHUB_WORKSPACE}/build_docs.sh -y -r ${{ matrix.rosdistro }}
