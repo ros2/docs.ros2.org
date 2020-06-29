@@ -21,9 +21,6 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
     - uses: ros-tooling/setup-ros@0.0.23
       with:
         required-ros-distributions: ${{ matrix.rosdistro }}
@@ -33,4 +30,6 @@ jobs:
         sudo apt install -y curl doxygen python3-pip
         pip3 install sphinx sphinx-rtd-theme sphinx-autodoc-typehints
     - name: Build code and docs
-      run: ${GITHUB_WORKSPACE}/build_docs.sh -y -r ${{ matrix.rosdistro }}
+      run: |
+        export PATH="/home/runner/.local/bin:$PATH"
+        ${GITHUB_WORKSPACE}/build_docs.sh -y -r ${{ matrix.rosdistro }}
