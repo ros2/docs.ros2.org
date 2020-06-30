@@ -4,6 +4,7 @@ set -e
 # Default options
 opt_rosdistro=${ROS_DISTRO:-foxy}
 opt_interactive=0
+opt_generate_interfaces=0
 unset opt_repos
 
 print_usage() {
@@ -12,6 +13,7 @@ print_usage() {
   echo "  -r DISTRO  Set the name of the ROS distribution (default: ${opt_rosdistro})"
   echo "             This also determines the version of repositories unless the '-e' option is given."
   echo "  -e URL     Location of a ROS 2 repos file to use instead of a release repos file."
+  echo "  -i         Generate interface documentation"
   echo "  -y         Run the script in non-interactive mode"
   echo "  -h         Display this help message"
 }
@@ -20,13 +22,16 @@ print_usage() {
 # Taken from SO post https://stackoverflow.com/a/246128
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-while getopts "r:e:yh" opt; do
+while getopts "r:e:iyh" opt; do
   case "${opt}" in
     r)
       opt_rosdistro=${OPTARG}
       ;;
     e)
       opt_repos=${OPTARG}
+      ;;
+    i)
+      opt_generate_interfaces=1
       ;;
     y)
       opt_interactive=1
@@ -119,7 +124,7 @@ vcs import src < ros2.repos
 git clone https://github.com/ros2/ros2_generate_interface_docs src/ros2_generate_interface_docs
 rosdep update
 rosdep install --rosdistro ${opt_rosdistro} --from-paths src -iry
-colcon build --packages-up-to ${package_names}
+colcon build --packages-up-to ${package_names} ros2_generate_interface_docs
 
 # Clone documentation-specific repos
 vcs import src < ${script_dir}/ros2_doc.repos
@@ -139,9 +144,11 @@ cp ${script_dir}/Makefile .
 make install release_name=${opt_rosdistro} package_names=${sorted_packages}
 
 # Build interfaces docs
-. install/setup.sh
-ros2 run ros2_generate_interface_docs ros2_generate_interface_docs --outputdir ${workspace_dir}/api
-cp -r ${workspace_dir}/api/html/* ${workspace_dir}/src/ros2/docs.ros2.org/${RELEASE_NAME}/api
+if [ 1 -eq ${opt_generate_interfaces} ]; then
+  . install/setup.sh
+  ros2 run ros2_generate_interface_docs ros2_generate_interface_docs --outputdir ${workspace_dir}/api
+  cp -r ${workspace_dir}/api/html/* ${workspace_dir}/src/ros2/docs.ros2.org/${opt_rosdistro}/api
+fi
 
 echo "Documentation has been generated and copied into '${workspace_dir}/src/ros2/docs.ros2.org'."
 echo ""
