@@ -81,6 +81,8 @@ else
       rmw_fastrtps_shared_cpp
       rosidl_runtime_c
       rosidl_runtime_cpp
+      rosidl_typesupport_c
+      rosidl_typesupport_cpp
       tf2
       tf2_bullet
       tf2_eigen
