@@ -124,7 +124,7 @@ vcs import src < ros2.repos
 git clone https://github.com/ros2/ros2_generate_interface_docs src/ros2_generate_interface_docs
 rosdep update
 rosdep install --rosdistro ${opt_rosdistro} --from-paths src -iry
-colcon build --packages-up-to ${package_names} ros2_generate_interface_docs
+colcon build --packages-up-to ${package_names} ros2_generate_interface_docs ros2run
 
 # Clone documentation-specific repos
 vcs import src < ${script_dir}/ros2_doc.repos
