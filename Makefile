@@ -105,6 +105,18 @@ rosidl_typesupport_cpp: src/ros2/rosidl_typesupport/rosidl_typesupport_cpp/doc_o
 	rm -r $(api_directory_name)/$@ || true
 	cp -r $< $(api_directory_name)/$@
 
+rosidl_typesupport_fastrtps_c: src/ros2/rosidl_typesupport_fastrtps/rosidl_typesupport_fastrtps_c/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
+
+rosidl_typesupport_fastrtps_cpp: src/ros2/rosidl_typesupport_fastrtps/rosidl_typesupport_fastrtps_cpp/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
+
+rosidl_typesupport_interface: src/ros2/rosidl/rosidl_typesupport_interface/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
+
 rmw_fastrtps_cpp: src/ros2/rmw_fastrtps/rmw_fastrtps_cpp/doc_output/html
 	rm -r $(api_directory_name)/$@ || true
 	cp -r $< $(api_directory_name)/$@
@@ -352,6 +364,15 @@ src/ros2/rosidl/rosidl_runtime_cpp/doc_output/html:
 	rm doxygen_tag_files/rosidl_runtime_cpp.tag || true
 	cd src/ros2/rosidl/rosidl_runtime_cpp && doxygen Doxyfile
 
+src/ros2/rosidl/rosidl_typesupport_interface/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/rosidl/rosidl_typesupport_interface && \
+		git clean -dfx && \
+		cmake . && make -j 8
+	rm -r $@ || true
+	rm doxygen_tag_files/rosidl_typesupport_interface.tag || true
+	cd src/ros2/rosidl/rosidl_typesupport_interface && doxygen Doxyfile
+
 src/ros2/rosidl_typesupport/rosidl_typesupport_c/doc_output/html:
 	. install/setup.sh && \
 		cd src/ros2/rosidl_typesupport/rosidl_typesupport_c && \
@@ -369,6 +390,24 @@ src/ros2/rosidl_typesupport/rosidl_typesupport_cpp/doc_output/html:
 	rm -r $@ || true
 	rm doxygen_tag_files/rosidl_typesupport_cpp.tag || true
 	cd src/ros2/rosidl_typesupport/rosidl_typesupport_cpp && doxygen Doxyfile
+
+src/ros2/rosidl_typesupport_fastrtps/rosidl_typesupport_fastrtps_c/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/rosidl_typesupport_fastrtps/rosidl_typesupport_fastrtps_c && \
+		git clean -dfx && \
+		cmake . && make -j 8
+	rm -r $@ || true
+	rm doxygen_tag_files/rosidl_typesupport_fastrtps_c.tag || true
+	cd src/ros2/rosidl_typesupport_fastrtps/rosidl_typesupport_fastrtps_c && doxygen Doxyfile
+
+src/ros2/rosidl_typesupport_fastrtps/rosidl_typesupport_fastrtps_cpp/doc_output/html:
+	. install/setup.sh && \
+		cd src/ros2/rosidl_typesupport_fastrtps/rosidl_typesupport_fastrtps_cpp && \
+		git clean -dfx && \
+		cmake . && make -j 8
+	rm -r $@ || true
+	rm doxygen_tag_files/rosidl_typesupport_fastrtps_cpp.tag || true
+	cd src/ros2/rosidl_typesupport_fastrtps/rosidl_typesupport_fastrtps_cpp && doxygen Doxyfile
 
 src/ros2/geometry2/tf2/doc_output/html:
 	. install/setup.sh && \

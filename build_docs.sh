@@ -83,6 +83,9 @@ else
       rosidl_runtime_cpp
       rosidl_typesupport_c
       rosidl_typesupport_cpp
+      rosidl_typesupport_fastrtps_c
+      rosidl_typesupport_fastrtps_cpp
+      rosidl_typesupport_interface
       tf2
       tf2_bullet
       tf2_eigen
