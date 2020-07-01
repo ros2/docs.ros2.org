@@ -143,6 +143,11 @@ cp ${script_dir}/Makefile .
 # Build the docs
 make install release_name=${opt_rosdistro} package_names=${sorted_packages}
 
+#API is not ready in Dashing to generate interfaces
+if [[ "dashing" == "${opt_rosdistro}" ]]; then
+  opt_generate_interfaces=0
+fi
+
 # Build interfaces docs
 if [ 1 -eq ${opt_generate_interfaces} ]; then
   . install/setup.sh
