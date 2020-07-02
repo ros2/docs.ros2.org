@@ -4,7 +4,7 @@ set -e
 # Default options
 opt_rosdistro=${ROS_DISTRO:-foxy}
 opt_interactive=0
-opt_generate_interfaces=0
+opt_skip_generate_interfaces=0
 unset opt_repos
 
 print_usage() {
@@ -13,7 +13,7 @@ print_usage() {
   echo "  -r DISTRO  Set the name of the ROS distribution (default: ${opt_rosdistro})"
   echo "             This also determines the version of repositories unless the '-e' option is given."
   echo "  -e URL     Location of a ROS 2 repos file to use instead of a release repos file."
-  echo "  -i         Generate interface documentation"
+  echo "  -i         Skip the generation of the interface documentation"
   echo "  -y         Run the script in non-interactive mode"
   echo "  -h         Display this help message"
 }
@@ -31,7 +31,7 @@ while getopts "r:e:iyh" opt; do
       opt_repos=${OPTARG}
       ;;
     i)
-      opt_generate_interfaces=1
+      opt_skip_generate_interfaces=1
       ;;
     y)
       opt_interactive=1
@@ -145,11 +145,11 @@ make install release_name=${opt_rosdistro} package_names=${sorted_packages}
 
 #API is not ready in Dashing to generate interfaces
 if [[ "dashing" == "${opt_rosdistro}" ]]; then
-  opt_generate_interfaces=0
+  opt_skip_generate_interfaces=1
 fi
 
 # Build interfaces docs
-if [ 1 -eq ${opt_generate_interfaces} ]; then
+if [ 0 -eq ${opt_skip_generate_interfaces} ]; then
   . install/setup.sh
   ros2 run ros2_generate_interface_docs ros2_generate_interface_docs --outputdir ${workspace_dir}/api
   cp -r ${workspace_dir}/api/html/* ${workspace_dir}/src/ros2/docs.ros2.org/${opt_rosdistro}/api

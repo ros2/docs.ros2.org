@@ -32,4 +32,4 @@ jobs:
     - name: Build code and docs
       run: |
         export PATH="/home/runner/.local/bin:$PATH"
-        ${GITHUB_WORKSPACE}/build_docs.sh -y -r ${{ matrix.rosdistro }} -i
+        ${GITHUB_WORKSPACE}/build_docs.sh -y -r ${{ matrix.rosdistro }}
