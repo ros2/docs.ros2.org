@@ -29,7 +29,7 @@ class_loader: src/ros/class_loader/doc_output/html
 	rm -r $(api_directory_name)/$@ || true
 	cp -r $< $(api_directory_name)/$@
 
-console_bridge_vendor: src/ros/console_bridge/doc_output/html
+console_bridge_vendor: src/ros2/console_bridge_vendor/doc_output/html
 	rm -r $(api_directory_name)/$@ || true
 	cp -r $< $(api_directory_name)/$@
 
@@ -190,7 +190,7 @@ src/ros/class_loader/doc_output/html doxygen_tag_files/class_loader.tag: src/ros
 	rm doxygen_tag_files/class_loader.tag || true
 	cd src/ros/class_loader && doxygen Doxyfile
 
-src/ros/console_bridge/doc_output/html doxygen_tag_files/console_bridge.tag: src/ros/console_bridge/Doxyfile
+src/ros2/console_bridge_vendor/doc_output/html doxygen_tag_files/console_bridge.tag: src/ros2/console_bridge_vendor//Doxyfile
 	. install/setup.sh && \
 		cd src/ros/console_bridge && \
 		git clean -dfx && \
