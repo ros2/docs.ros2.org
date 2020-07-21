@@ -197,7 +197,9 @@ src/ros/console_bridge/doc_output/html doxygen_tag_files/console_bridge.tag: src
 		cmake . && make
 	rm -r $@ || true
 	rm doxygen_tag_files/console_bridge.tag || true
-	cd src/ros/console_bridge && doxygen Doxyfile
+	cd build/console_bridge_vendor/console_bridge-*-prefix/src/ \
+	version=`ls *.tar.gz | awk '{print $1}' | rev | cut -f 3- -d '.' | rev` \
+	cd console_bridge-${version} && doxygen Doxyfile
 
 src/ros-tooling/libstatistics_collector/doc_output/html doxygen_tag_files/libstatistics_collector.tag: src/ros-tooling/libstatistics_collector/Doxyfile
 	. install/setup.sh && \
