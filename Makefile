@@ -29,7 +29,7 @@ class_loader: src/ros/class_loader/doc_output/html
 	rm -r $(api_directory_name)/$@ || true
 	cp -r $< $(api_directory_name)/$@
 
-console_bridge: src/ros/console_bridge/doc_output/html
+console_bridge_vendor: src/ros/console_bridge/doc_output/html
 	rm -r $(api_directory_name)/$@ || true
 	cp -r $< $(api_directory_name)/$@
 

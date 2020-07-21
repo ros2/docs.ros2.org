@@ -74,7 +74,7 @@ else
     package_names+=(
       ament_index_cpp
       ament_index_python
-      console_bridge
+      console_bridge_vendor
       class_loader
       libstatistics_collector
       rcl_lifecycle
