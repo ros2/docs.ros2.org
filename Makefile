@@ -29,6 +29,10 @@ class_loader: src/ros/class_loader/doc_output/html
 	rm -r $(api_directory_name)/$@ || true
 	cp -r $< $(api_directory_name)/$@
 
+console_bridge_vendor: src/ros2/console_bridge_vendor/console_bridge/doc_output/html
+	rm -r $(api_directory_name)/$@ || true
+	cp -r $< $(api_directory_name)/$@
+
 libstatistics_collector: src/ros-tooling/libstatistics_collector/doc_output/html
 	rm -r $(api_directory_name)/$@ || true
 	cp -r $< $(api_directory_name)/$@
@@ -185,6 +189,20 @@ src/ros/class_loader/doc_output/html doxygen_tag_files/class_loader.tag: src/ros
 	rm -r $@ || true
 	rm doxygen_tag_files/class_loader.tag || true
 	cd src/ros/class_loader && doxygen Doxyfile
+
+src/ros2/console_bridge_vendor/console_bridge/doc_output/html doxygen_tag_files/console_bridge_dev.tag: $(eval SHELL:=/bin/bash)
+	. install/setup.sh && \
+		cd src/ros2/console_bridge_vendor && \
+		git clean -dfx && \
+		cmake . && make
+	rm -r $@ || true
+	rm doxygen_tag_files/console_bridge_dev.tag || true
+	mkdir src/ros2/console_bridge_vendor/console_bridge && \
+	export version_console_bridge=`awk '{idx = split(FILENAME, parts, "/"); print parts[idx]; nextfile}' \
+		build/console_bridge_vendor/console_bridge-*-prefix/src/*.tar.gz | awk '{print $1}' | rev | cut -f 3- -d '.' | rev` && \
+	cp -r build/console_bridge_vendor/console_bridge-`printenv version_console_bridge`-prefix/src/console_bridge-`printenv version_console_bridge`/* \
+		src/ros2/console_bridge_vendor/console_bridge && \
+	cd src/ros2/console_bridge_vendor/console_bridge && doxygen Doxyfile
 
 src/ros-tooling/libstatistics_collector/doc_output/html doxygen_tag_files/libstatistics_collector.tag: src/ros-tooling/libstatistics_collector/Doxyfile
 	. install/setup.sh && \
