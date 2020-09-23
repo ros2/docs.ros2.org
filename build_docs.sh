@@ -99,6 +99,7 @@ else
       tf2_kdl
       tf2_ros
       tf2_tools
+      tracetools
     )
   fi
   # Convert bash array to string
