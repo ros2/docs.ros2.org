@@ -178,7 +178,7 @@ src/ament/ament_index/ament_index_cpp/doc_output/html doxygen_tag_files/ament_in
 	rm doxygen_tag_files/ament_index_cpp.tag || true
 	cd  src/ament/ament_index/ament_index_cpp/ && doxygen Doxyfile
 
-src/ament/ament_index/ament_index_python/docs/build/html doxygen_tag_files/ament_index_python.tag: src/ros2/rcutils/Doxyfile
+src/ament/ament_index/ament_index_python/docs/build/html doxygen_tag_files/ament_index_python.tag:
 	rm -r $@ || true
 	cd src/ament/ament_index/ament_index_python/docs/ && \
 	 \
