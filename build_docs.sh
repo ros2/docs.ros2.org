@@ -106,12 +106,57 @@ else
   package_names=${package_names[@]}
 fi
 
+# List packages for generating ROS interface documentation
+generate_interface_docs_packages=""
+if [ 0 -eq ${opt_skip_generate_interfaces} ]; then
+  # Packages used for generating documentation
+  generate_interface_docs_packages=(
+    ros2_generate_interface_docs
+    ros2run
+  )
+  # Packages to generate documentation for
+  interface_packages=(
+    action_msgs
+    action_tutorials_interfaces
+    builtin_interfaces
+    composition_interfaces
+    diagnostic_msgs
+    example_interfaces
+    geometry_msgs
+    lifecycle_msgs
+    logging_demo
+    map_msgs
+    move_base_msgs
+    nav_msgs
+    pendulum_msgs
+    rcl_interfaces
+    rmw_dds_common
+    rosgraph_msgs
+    sensor_msgs
+    shape_msgs
+    statistics_msgs
+    std_msgs
+    std_srvs
+    stereo_msgs
+    test_msgs
+    tf2_msgs
+    trajectory_msgs
+    turtlesim
+    unique_identifier_msgs
+    visualization_msgs
+  )
+  # Convert bash array to string
+  generate_interface_docs_packages="${generate_interface_docs_packages[@]} ${interface_packages[@]}"
+fi
 
 if [ 0 -eq ${opt_interactive} ]; then
   echo "Building docs with the following configuration:"
   echo "    Release name: ${opt_rosdistro}"
   echo "    Repos file: ${repos_file_url}"
   echo "    Packages: ${package_names}"
+  if [ 0 -eq ${opt_skip_generate_interfaces} ]; then
+    echo "    Interfaces: ${interface_packages[@]}"
+  fi
   echo ""
   read -p "Is this correct? (Yn) " yn
   case $yn in
@@ -119,12 +164,6 @@ if [ 0 -eq ${opt_interactive} ]; then
     [Nn]* ) exit;;
     * ) echo "Please answer yes or no."; exit;;
   esac
-fi
-
-# Packages needed to generate ROS interface documentation
-generate_interface_docs_packages=""
-if [ 0 -eq ${opt_skip_generate_interfaces} ]; then
-  generate_interface_docs_packages="ros2_generate_interface_docs ros2run"
 fi
 
 # Build code
