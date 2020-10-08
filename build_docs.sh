@@ -148,13 +148,13 @@ sed -i "s/#\s*GENERATE_TAGFILE/GENERATE_TAGFILE/g" $(find src -name Doxyfile)
 sed -i "s/\(^TAGFILES.*docs\.ros2\.org\/\)latest/\1${opt_rosdistro}/g" $(find src -name Doxyfile)
 
 # Sort packages topologically so that Doxygen tags are available for packages later in order
-sorted_packages=$(colcon list --names-only -t --packages-select ${package_names})
+sorted_packages=$(colcon list --names-only -t --packages-select ${package_names} | tr '\n' ' ')
 
 # Copy Makefile to current directory
 cp ${script_dir}/Makefile .
 
 # Build the docs
-make install release_name=${opt_rosdistro} package_names=${sorted_packages}
+make install release_name=${opt_rosdistro} package_names="${sorted_packages}"
 
 #API is not ready in Dashing to generate interfaces
 if [[ "dashing" == "${opt_rosdistro}" ]]; then
