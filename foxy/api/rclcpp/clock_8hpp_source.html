@@ -96,7 +96,7 @@ $(function() {
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="time_8hpp.html">rclcpp/time.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="visibility__control_8hpp.html">rclcpp/visibility_control.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/time_8h.html">rcl/time.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;rcl/time.h&quot;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/time_8h.html">rcutils/time.h</a>&quot;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/rcutils__ret_8h.html">rcutils/types/rcutils_ret.h</a>&quot;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
@@ -131,7 +131,7 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="visibility__control_8hpp.html#a802feb4ddc87a0699f6339a4b9ab7f23">RCLCPP_PUBLIC</a></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classrclcpp_1_1Clock.html">Clock</a>(<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/time_8h.html#a5c734f508ce06aec7974af10ad09d071">rcl_clock_type_t</a> clock_type = <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/time_8h.html#a5c734f508ce06aec7974af10ad09d071a423b9ea49c5f5119c3b9b812c01e6bc9">RCL_SYSTEM_TIME</a>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classrclcpp_1_1Clock.html">Clock</a>(rcl_clock_type_t clock_type = RCL_SYSTEM_TIME);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <a class="code" href="visibility__control_8hpp.html#a802feb4ddc87a0699f6339a4b9ab7f23">RCLCPP_PUBLIC</a></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  ~<a class="code" href="classrclcpp_1_1Clock.html">Clock</a>();</div>
@@ -149,7 +149,7 @@ $(function() {
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  get_clock_handle() noexcept;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="visibility__control_8hpp.html#a802feb4ddc87a0699f6339a4b9ab7f23">RCLCPP_PUBLIC</a></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/time_8h.html#a5c734f508ce06aec7974af10ad09d071">rcl_clock_type_t</a></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  rcl_clock_type_t</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  get_clock_type() <span class="keyword">const</span> noexcept;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <a class="code" href="visibility__control_8hpp.html#a802feb4ddc87a0699f6339a4b9ab7f23">RCLCPP_PUBLIC</a></div>
@@ -182,9 +182,8 @@ $(function() {
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">#endif  // RCLCPP__CLOCK_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="atime_8h_html_a5c734f508ce06aec7974af10ad09d071"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/time_8h.html#a5c734f508ce06aec7974af10ad09d071">rcl_clock_type_t</a></div><div class="ttdeci">rcl_clock_type_t</div></div>
 <div class="ttc" id="ashared_ptr_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/memory/shared_ptr.html">std::shared_ptr&lt; Impl &gt;</a></div></div>
-<div class="ttc" id="atime_8h.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/time_8h.html">time.h</a></div></div>
+<div class="ttc" id="atime_8h.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcutils/time_8h.html">time.h</a></div></div>
 <div class="ttc" id="aclassrclcpp_1_1Time_html"><div class="ttname"><a href="classrclcpp_1_1Time.html">rclcpp::Time</a></div><div class="ttdef"><b>Definition:</b> time.hpp:31</div></div>
 <div class="ttc" id="afunction_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/utility/functional/function.html">std::function&lt; void()&gt;</a></div></div>
 <div class="ttc" id="aclassrclcpp_1_1JumpHandler_html_a518bfd4ea80de39a445237e4f27a3a52"><div class="ttname"><a href="classrclcpp_1_1JumpHandler.html#a518bfd4ea80de39a445237e4f27a3a52">rclcpp::JumpHandler::post_callback</a></div><div class="ttdeci">post_callback_t post_callback</div><div class="ttdef"><b>Definition:</b> clock.hpp:49</div></div>
@@ -197,7 +196,6 @@ $(function() {
 <div class="ttc" id="amacros_8hpp_html"><div class="ttname"><a href="macros_8hpp.html">macros.hpp</a></div></div>
 <div class="ttc" id="aclassrclcpp_1_1JumpHandler_html_ab53dc82c74252e85e6210aee2733c0a1"><div class="ttname"><a href="classrclcpp_1_1JumpHandler.html#ab53dc82c74252e85e6210aee2733c0a1">rclcpp::JumpHandler::pre_callback</a></div><div class="ttdeci">pre_callback_t pre_callback</div><div class="ttdef"><b>Definition:</b> clock.hpp:48</div></div>
 <div class="ttc" id="astructrcl__jump__threshold__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/structrcl__jump__threshold__t.html">rcl_jump_threshold_t</a></div></div>
-<div class="ttc" id="atime_8h_html_a5c734f508ce06aec7974af10ad09d071a423b9ea49c5f5119c3b9b812c01e6bc9"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/time_8h.html#a5c734f508ce06aec7974af10ad09d071a423b9ea49c5f5119c3b9b812c01e6bc9">RCL_SYSTEM_TIME</a></div><div class="ttdeci">RCL_SYSTEM_TIME</div></div>
 <div class="ttc" id="astructrcl__clock__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/structrcl__clock__t.html">rcl_clock_t</a></div></div>
 <div class="ttc" id="aclassrclcpp_1_1Clock_html"><div class="ttname"><a href="classrclcpp_1_1Clock.html">rclcpp::Clock</a></div><div class="ttdef"><b>Definition:</b> clock.hpp:53</div></div>
 <div class="ttc" id="avisibility__control_8hpp_html"><div class="ttname"><a href="visibility__control_8hpp.html">visibility_control.hpp</a></div></div>

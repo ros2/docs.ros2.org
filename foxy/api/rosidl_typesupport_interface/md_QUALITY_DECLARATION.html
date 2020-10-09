@@ -70,7 +70,7 @@ $(function() {
 <div class="textblock"><p>This document is a declaration of software quality for the <code>rosidl_typesupport_interface</code> package, based on the guidelines in <a href="https://www.ros.org/reps/rep-2004.html">REP-2004</a>.</p>
 <h1><a class="anchor" id="autotoc_md3"></a>
 rosidl_typesupport_interface Quality Declaration</h1>
-<p>The package <code>rosidl_typesupport_interface</code> claims to be in the <b>Quality Level 4</b> category.</p>
+<p>The package <code>rosidl_typesupport_interface</code> claims to be in the <b>Quality Level 2</b> category.</p>
 <p>Below are the rationales, notes, and caveats for this claim, organized by each requirement listed in the <a href="https://www.ros.org/reps/rep-2004.html">Package Requirements for Quality Level 4 in REP-2004</a>.</p>
 <h2><a class="anchor" id="autotoc_md4"></a>
 Version Policy [1]</h2>
@@ -143,7 +143,15 @@ Public API Testing [4.ii]</h3>
 <p>Most recent test results can be found <a href="https://ci.ros2.org/job/nightly_linux_release/lastBuild/testReport/rosidl_typesupport_interface">here</a>.</p>
 <h3><a class="anchor" id="autotoc_md24"></a>
 Coverage [4.iv]</h3>
-<p><code>rosidl_typesupport_interface</code> does not currently track test coverage.</p>
+<p><code>rosidl_typesupport_interface</code> follows the recommendations for ROS Core packages in the <a href="https://index.ros.org/doc/ros2/Contributing/Developer-Guide/#code-coverage">ROS 2 Developer Guide</a>, and opts to use line coverage instead of branch coverage.</p>
+<p>This includes:</p>
+<ul>
+<li>tracking and reporting line coverage statistics</li>
+<li>achieving and maintaining a reasonable branch line coverage (90-100%)</li>
+<li>no lines are manually skipped in coverage calculations</li>
+</ul>
+<p>Changes are required to make a best effort to keep or increase coverage before being accepted, but decreases are allowed if properly justified and accepted by reviewers.</p>
+<p>Because this package is a header only library with just C macro definitions, its coverage is not able to be reported. The unit test of all its macros can be found in the test directory.</p>
 <h3><a class="anchor" id="autotoc_md25"></a>
 Performance [4.iv]</h3>
 <p><code>rosidl_typesupport_interface</code> does not currently have performance tests.</p>

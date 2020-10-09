@@ -99,13 +99,13 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">rcutils/types.h</a>&quot;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="visibility__control_8h.html">rcutils/visibility_control.h</a>&quot;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="time_8h.html#a09bb0400aa6b85f877d616e7475aa173">   30</a></span>&#160;<span class="preprocessor">#define RCUTILS_S_TO_NS(seconds) (seconds * (1000LL * 1000LL * 1000LL))</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define RCUTILS_MS_TO_NS(milliseconds) (milliseconds * (1000LL * 1000LL))</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define RCUTILS_US_TO_NS(microseconds) (microseconds * 1000LL)</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="time_8h.html#a09bb0400aa6b85f877d616e7475aa173">   30</a></span>&#160;<span class="preprocessor">#define RCUTILS_S_TO_NS(seconds) ((seconds) * (1000LL * 1000LL * 1000LL))</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define RCUTILS_MS_TO_NS(milliseconds) ((milliseconds) * (1000LL * 1000LL))</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define RCUTILS_US_TO_NS(microseconds) ((microseconds) * 1000LL)</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="time_8h.html#aa67004f0b6b3206da7b72b7ed8dd7914">   37</a></span>&#160;<span class="preprocessor">#define RCUTILS_NS_TO_S(nanoseconds) (nanoseconds / (1000LL * 1000LL * 1000LL))</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define RCUTILS_NS_TO_MS(nanoseconds) (nanoseconds / (1000LL * 1000LL))</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define RCUTILS_NS_TO_US(nanoseconds) (nanoseconds / 1000LL)</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="time_8h.html#aa67004f0b6b3206da7b72b7ed8dd7914">   37</a></span>&#160;<span class="preprocessor">#define RCUTILS_NS_TO_S(nanoseconds) ((nanoseconds) / (1000LL * 1000LL * 1000LL))</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define RCUTILS_NS_TO_MS(nanoseconds) ((nanoseconds) / (1000LL * 1000LL))</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define RCUTILS_NS_TO_US(nanoseconds) ((nanoseconds) / 1000LL)</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#define RCUTILS_STEADY_TIME rcutils_steady_time_now</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="time_8h.html#a1155c6e3107d5a1011fe65d470b3e431">   46</a></span>&#160;<span class="keyword">typedef</span> int64_t <a class="code" href="time_8h.html#a1155c6e3107d5a1011fe65d470b3e431">rcutils_time_point_value_t</a>;</div>

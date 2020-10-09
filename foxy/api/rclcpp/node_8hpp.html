@@ -84,8 +84,9 @@ $(function() {
 <code>#include &lt;tuple&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="elRef" href="http://docs.ros2.org/foxy/api/rcl/error__handling_8h.html">rcl/error_handling.h</a>&quot;</code><br />
-<code>#include &quot;<a class="elRef" href="http://docs.ros2.org/foxy/api/rcl/node_8h.html">rcl/node.h</a>&quot;</code><br />
+<code>#include &quot;<a class="elRef" href="http://docs.ros2.org/foxy/api/rcutils/macros_8h.html">rcutils/macros.h</a>&quot;</code><br />
+<code>#include &quot;rcl/error_handling.h&quot;</code><br />
+<code>#include &quot;rcl/node.h&quot;</code><br />
 <code>#include &quot;rcl_interfaces/msg/list_parameters_result.hpp&quot;</code><br />
 <code>#include &quot;rcl_interfaces/msg/parameter_descriptor.hpp&quot;</code><br />
 <code>#include &quot;rcl_interfaces/msg/parameter_event.hpp&quot;</code><br />
@@ -126,56 +127,56 @@ Include dependency graph for node.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="node_8hpp__incl.png" border="0" usemap="#include_2rclcpp_2node_8hpp" alt=""/></div>
 <map name="include_2rclcpp_2node_8hpp" id="include_2rclcpp_2node_8hpp">
-<area shape="rect" title=" " alt="" coords="3549,5,3725,32"/>
-<area shape="rect" title=" " alt="" coords="508,765,575,792"/>
-<area shape="rect" title=" " alt="" coords="4838,683,4981,710"/>
-<area shape="rect" title=" " alt="" coords="7251,87,7293,114"/>
-<area shape="rect" title=" " alt="" coords="1136,683,1187,710"/>
-<area shape="rect" title=" " alt="" coords="4180,840,4257,867"/>
-<area shape="rect" title=" " alt="" coords="4307,683,4371,710"/>
-<area shape="rect" title=" " alt="" coords="5065,765,5124,792"/>
-<area shape="rect" title=" " alt="" coords="297,594,351,621"/>
-<area shape="rect" title=" " alt="" coords="587,840,647,867"/>
-<area shape="rect" title=" " alt="" coords="4395,683,4458,710"/>
-<area shape="rect" href="http://docs.ros2.org/foxy/api/rcl/error__handling_8h.html.html" title=" " alt="" coords="934,594,1082,621"/>
-<area shape="rect" href="http://docs.ros2.org/foxy/api/rcl/node_8h.html.html" title=" " alt="" coords="6835,765,6922,792"/>
-<area shape="rect" title=" " alt="" coords="5795,587,5995,628"/>
-<area shape="rect" title=" " alt="" coords="6019,587,6213,628"/>
-<area shape="rect" title=" " alt="" coords="7318,80,7485,121"/>
-<area shape="rect" title=" " alt="" coords="6621,587,6821,628"/>
-<area shape="rect" href="callback__group_8hpp.html" title=" " alt="" coords="2766,423,2957,449"/>
-<area shape="rect" href="client_8hpp.html" title=" " alt="" coords="755,505,885,531"/>
-<area shape="rect" href="macros_8hpp.html" title=" " alt="" coords="1408,765,1549,792"/>
-<area shape="rect" href="node__graph__interface_8hpp.html" title=" " alt="" coords="1765,587,1960,628"/>
+<area shape="rect" title=" " alt="" coords="2960,5,3136,32"/>
+<area shape="rect" title=" " alt="" coords="381,765,448,792"/>
+<area shape="rect" title=" " alt="" coords="4102,683,4245,710"/>
+<area shape="rect" title=" " alt="" coords="7041,87,7084,114"/>
+<area shape="rect" title=" " alt="" coords="1237,683,1288,710"/>
+<area shape="rect" title=" " alt="" coords="4476,840,4553,867"/>
+<area shape="rect" title=" " alt="" coords="2688,683,2752,710"/>
+<area shape="rect" title=" " alt="" coords="4735,765,4793,792"/>
+<area shape="rect" title=" " alt="" coords="398,594,453,621"/>
+<area shape="rect" title=" " alt="" coords="258,840,318,867"/>
+<area shape="rect" title=" " alt="" coords="4511,683,4574,710"/>
+<area shape="rect" href="http://docs.ros2.org/foxy/api/rcutils/macros_8h.html.html" title=" " alt="" coords="7109,87,7235,114"/>
+<area shape="rect" title=" " alt="" coords="1491,594,1639,621"/>
+<area shape="rect" title=" " alt="" coords="6779,765,6866,792"/>
+<area shape="rect" title=" " alt="" coords="5535,587,5735,628"/>
+<area shape="rect" title=" " alt="" coords="5809,587,6004,628"/>
+<area shape="rect" title=" " alt="" coords="7259,80,7426,121"/>
+<area shape="rect" title=" " alt="" coords="6028,587,6228,628"/>
+<area shape="rect" href="callback__group_8hpp.html" title=" " alt="" coords="2339,423,2530,449"/>
+<area shape="rect" href="client_8hpp.html" title=" " alt="" coords="1035,505,1165,531"/>
+<area shape="rect" href="macros_8hpp.html" title=" " alt="" coords="1129,765,1271,792"/>
+<area shape="rect" href="node__graph__interface_8hpp.html" title=" " alt="" coords="1968,587,2163,628"/>
 <area shape="rect" href="event_8hpp.html" title=" " alt="" coords="1363,683,1493,710"/>
-<area shape="rect" href="visibility__control_8hpp.html" title=" " alt="" coords="2887,765,3089,792"/>
-<area shape="rect" href="qos_8hpp.html" title=" " alt="" coords="3913,683,4029,710"/>
-<area shape="rect" href="service_8hpp.html" title=" " alt="" coords="1537,505,1677,531"/>
-<area shape="rect" href="timer_8hpp.html" title=" " alt="" coords="2107,505,2235,531"/>
-<area shape="rect" href="clock_8hpp.html" title=" " alt="" coords="2306,594,2433,621"/>
-<area shape="rect" href="time_8hpp.html" title=" " alt="" coords="2237,683,2360,710"/>
-<area shape="rect" href="context_8hpp.html" title=" " alt="" coords="4601,594,4743,621"/>
-<area shape="rect" href="logger_8hpp.html" title=" " alt="" coords="6310,683,6445,710"/>
-<area shape="rect" href="message__memory__strategy_8hpp.html" title=" " alt="" coords="2485,676,2672,717"/>
-<area shape="rect" href="node__base__interface_8hpp.html" title=" " alt="" coords="4296,333,4485,375"/>
-<area shape="rect" href="node__clock__interface_8hpp.html" title=" " alt="" coords="2360,497,2552,539"/>
-<area shape="rect" href="node__logging__interface_8hpp.html" title=" " alt="" coords="6238,587,6445,628"/>
-<area shape="rect" href="node__parameters__interface_8hpp.html" title=" " alt="" coords="5542,497,5775,539"/>
-<area shape="rect" href="parameter_8hpp.html" title=" " alt="" coords="4819,594,4981,621"/>
-<area shape="rect" href="node__services__interface_8hpp.html" title=" " alt="" coords="1426,333,1638,375"/>
-<area shape="rect" href="node__time__source__interface_8hpp.html" title=" " alt="" coords="1619,676,1858,717"/>
-<area shape="rect" href="node__timers__interface_8hpp.html" title=" " alt="" coords="2393,333,2593,375"/>
-<area shape="rect" href="node__topics__interface_8hpp.html" title=" " alt="" coords="3235,80,3432,121"/>
-<area shape="rect" href="publisher_8hpp.html" title=" " alt="" coords="3789,251,3942,278"/>
-<area shape="rect" href="publisher__options_8hpp.html" title=" " alt="" coords="5107,594,5315,621"/>
-<area shape="rect" href="subscription_8hpp.html" title=" " alt="" coords="3213,169,3385,196"/>
-<area shape="rect" href="subscription__options_8hpp.html" title=" " alt="" coords="3920,333,4064,375"/>
-<area shape="rect" href="subscription__traits_8hpp.html" title=" " alt="" coords="4068,244,4212,285"/>
-<area shape="rect" href="node__waitables__interface_8hpp.html" title=" " alt="" coords="2617,333,2839,375"/>
-<area shape="rect" href="node__options_8hpp.html" title=" " alt="" coords="4801,505,4981,531"/>
-<area shape="rect" href="node__impl_8hpp.html" title=" " alt="" coords="3430,423,3549,449"/>
-<area shape="rect" href="publisher__base_8hpp.html" title=" " alt="" coords="3979,594,4170,621"/>
-<area shape="rect" href="subscription__base_8hpp.html" title=" " alt="" coords="3355,587,3499,628"/>
+<area shape="rect" href="visibility__control_8hpp.html" title=" " alt="" coords="2907,765,3109,792"/>
+<area shape="rect" href="qos_8hpp.html" title=" " alt="" coords="4371,683,4487,710"/>
+<area shape="rect" href="service_8hpp.html" title=" " alt="" coords="1189,505,1329,531"/>
+<area shape="rect" href="timer_8hpp.html" title=" " alt="" coords="2136,505,2264,531"/>
+<area shape="rect" href="clock_8hpp.html" title=" " alt="" coords="2542,594,2669,621"/>
+<area shape="rect" href="time_8hpp.html" title=" " alt="" coords="2541,683,2664,710"/>
+<area shape="rect" href="context_8hpp.html" title=" " alt="" coords="3619,594,3762,621"/>
+<area shape="rect" href="logger_8hpp.html" title=" " alt="" coords="6506,683,6641,710"/>
+<area shape="rect" href="message__memory__strategy_8hpp.html" title=" " alt="" coords="2776,676,2963,717"/>
+<area shape="rect" href="node__base__interface_8hpp.html" title=" " alt="" coords="3371,333,3560,375"/>
+<area shape="rect" href="node__clock__interface_8hpp.html" title=" " alt="" coords="2491,497,2683,539"/>
+<area shape="rect" href="node__logging__interface_8hpp.html" title=" " alt="" coords="6455,587,6662,628"/>
+<area shape="rect" href="node__parameters__interface_8hpp.html" title=" " alt="" coords="5333,497,5566,539"/>
+<area shape="rect" href="parameter_8hpp.html" title=" " alt="" coords="4610,594,4771,621"/>
+<area shape="rect" href="node__services__interface_8hpp.html" title=" " alt="" coords="1187,333,1399,375"/>
+<area shape="rect" href="node__time__source__interface_8hpp.html" title=" " alt="" coords="1569,676,1807,717"/>
+<area shape="rect" href="node__timers__interface_8hpp.html" title=" " alt="" coords="2259,333,2459,375"/>
+<area shape="rect" href="node__topics__interface_8hpp.html" title=" " alt="" coords="3136,80,3333,121"/>
+<area shape="rect" href="publisher_8hpp.html" title=" " alt="" coords="3486,251,3639,278"/>
+<area shape="rect" href="publisher__options_8hpp.html" title=" " alt="" coords="4948,594,5156,621"/>
+<area shape="rect" href="subscription_8hpp.html" title=" " alt="" coords="3238,169,3410,196"/>
+<area shape="rect" href="subscription__options_8hpp.html" title=" " alt="" coords="4497,333,4641,375"/>
+<area shape="rect" href="subscription__traits_8hpp.html" title=" " alt="" coords="4657,244,4801,285"/>
+<area shape="rect" href="node__waitables__interface_8hpp.html" title=" " alt="" coords="1941,333,2163,375"/>
+<area shape="rect" href="node__options_8hpp.html" title=" " alt="" coords="4490,505,4670,531"/>
+<area shape="rect" href="node__impl_8hpp.html" title=" " alt="" coords="3265,423,3383,449"/>
+<area shape="rect" href="publisher__base_8hpp.html" title=" " alt="" coords="3786,594,3977,621"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">

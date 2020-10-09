@@ -1,5 +1,23 @@
 var searchData=
 [
-  ['qos_4207',['qos',['http://docs.ros2.org/foxy/api/rcl/structrcl__client__options__t.html#abcc6a3efe706a52286b5d588aa3c0638',1,'rcl_client_options_t::qos()'],['http://docs.ros2.org/foxy/api/rcl/structrcl__publisher__options__t.html#aea9fe9493335beeff2d1bc4988b9cf2b',1,'rcl_publisher_options_t::qos()'],['http://docs.ros2.org/foxy/api/rcl/structrcl__service__options__t.html#acdf0e4e6e063100e40e61ab576368cf7',1,'rcl_service_options_t::qos()'],['http://docs.ros2.org/foxy/api/rcl/structrcl__subscription__options__t.html#a5197e7f95c85d3d34fc86bbda7db1a66',1,'rcl_subscription_options_t::qos()']]],
-  ['qos_5fprofile_4208',['qos_profile',['http://docs.ros2.org/foxy/api/rmw/structrmw__topic__endpoint__info__t.html#a6dd9a79216c58d634857eb59b589dbad',1,'rmw_topic_endpoint_info_t']]]
+  ['reader_5fguid_5f_4093',['reader_guid_',['../structCustomClientInfo.html#aa3c49115357061a504b8f12c7401d239',1,'CustomClientInfo']]],
+  ['reallocate_4094',['reallocate',['http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html#a86fd98797490e58b6b7c1e95f93bea67',1,'rcutils_allocator_t']]],
+  ['received_5ftimestamp_4095',['received_timestamp',['http://docs.ros2.org/foxy/api/rmw/structrmw__message__info__t.html#acb2c71bb7a415bfb972425dff9af1ea3',1,'rmw_message_info_t::received_timestamp()'],['http://docs.ros2.org/foxy/api/rmw/structrmw__service__info__t.html#a0c2a080c7e852e9615bf2b1f2dab89e9',1,'rmw_service_info_t::received_timestamp()']]],
+  ['reliability_4096',['reliability',['http://docs.ros2.org/foxy/api/rmw/structrmw__qos__profile__t.html#a3b2953829e35b233012a0ab87ee98097',1,'rmw_qos_profile_t']]],
+  ['request_5fid_4097',['request_id',['http://docs.ros2.org/foxy/api/rmw/structrmw__service__info__t.html#a140322113c48a267a85c678a862f188f',1,'rmw_service_info_t']]],
+  ['request_5fpublisher_5f_4098',['request_publisher_',['../structCustomClientInfo.html#ad3dd90d163bd7ca6a1e3d9f22afcaa29',1,'CustomClientInfo']]],
+  ['request_5fpublisher_5fmatched_5fcount_5f_4099',['request_publisher_matched_count_',['../structCustomClientInfo.html#af45176a1f8f3d55b96d1b45092d21cc4',1,'CustomClientInfo']]],
+  ['request_5fsubscriber_5f_4100',['request_subscriber_',['../structCustomServiceInfo.html#a1a88fa1f7e493c5e481795e98b6f4f71',1,'CustomServiceInfo']]],
+  ['request_5ftype_5fsupport_5f_4101',['request_type_support_',['../structCustomClientInfo.html#ac34687fd960efb5a15f04fd49b8bc33d',1,'CustomClientInfo::request_type_support_()'],['../structCustomServiceInfo.html#a962ed742da4e9a12b81c5eae0320be91',1,'CustomServiceInfo::request_type_support_()']]],
+  ['request_5ftype_5fsupport_5fimpl_5f_4102',['request_type_support_impl_',['../structCustomClientInfo.html#ab870ba19377de14094638362526eb1f4',1,'CustomClientInfo::request_type_support_impl_()'],['../structCustomServiceInfo.html#ae7182983382124d0470a596cd03371d4',1,'CustomServiceInfo::request_type_support_impl_()']]],
+  ['response_5fpublisher_5f_4103',['response_publisher_',['../structCustomServiceInfo.html#ad8c335117d894df6b1351a500b6b94a5',1,'CustomServiceInfo']]],
+  ['response_5fsubscriber_5f_4104',['response_subscriber_',['../structCustomClientInfo.html#add913cdc50ba2b265c18ba5fa5fcdb9a',1,'CustomClientInfo']]],
+  ['response_5fsubscriber_5fmatched_5fcount_5f_4105',['response_subscriber_matched_count_',['../structCustomClientInfo.html#a3e288ed89d919147ed5e56cb890871dc',1,'CustomClientInfo']]],
+  ['response_5ftype_5fsupport_5f_4106',['response_type_support_',['../structCustomClientInfo.html#a04b42f888acb8229eb8694e66142b0a6',1,'CustomClientInfo::response_type_support_()'],['../structCustomServiceInfo.html#acec989defeff1182132483cdca5f8d73',1,'CustomServiceInfo::response_type_support_()']]],
+  ['response_5ftype_5fsupport_5fimpl_5f_4107',['response_type_support_impl_',['../structCustomClientInfo.html#a393fbef5c9a12f1b19f1703ef8dc20a0',1,'CustomClientInfo::response_type_support_impl_()'],['../structCustomServiceInfo.html#aea02e67b17fa49f47be789cdafe24cf8',1,'CustomServiceInfo::response_type_support_impl_()']]],
+  ['rmw_5fspecific_5fpublisher_5fpayload_4108',['rmw_specific_publisher_payload',['http://docs.ros2.org/foxy/api/rmw/structrmw__publisher__options__t.html#ab9d194b7183f83771c2a9f9473fd87fd',1,'rmw_publisher_options_t']]],
+  ['rmw_5fspecific_5fsubscription_5fpayload_4109',['rmw_specific_subscription_payload',['http://docs.ros2.org/foxy/api/rmw/structrmw__subscription__options__t.html#a345a2622b3e74b0f4039f032f258fc90',1,'rmw_subscription_options_t']]],
+  ['ros_5fservice_5frequester_5fprefix_4110',['ros_service_requester_prefix',['../namespace__prefix_8hpp.html#a83f5d6d94870ee8c3607f5401f1fdc52',1,'namespace_prefix.hpp']]],
+  ['ros_5fservice_5fresponse_5fprefix_4111',['ros_service_response_prefix',['../namespace__prefix_8hpp.html#a5a002fe7329e610e31acb1e3d44cdb03',1,'namespace_prefix.hpp']]],
+  ['ros_5ftopic_5fprefix_4112',['ros_topic_prefix',['../namespace__prefix_8hpp.html#ac8a71d25be20ba29804ce34ff60ecb86',1,'namespace_prefix.hpp']]]
 ];

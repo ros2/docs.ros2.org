@@ -79,10 +79,13 @@ $(function() {
 
 <p>Cross-platform filesystem helper functions and additional emulation of <a href="https://en.cppreference.com/w/cpp/filesystem">std::filesystem</a>.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;sys/stat.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;limits.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;dirent.h&gt;</code><br />
 <code>#include &lt;sys/types.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="split_8hpp_source.html">rcpputils/split.hpp</a>&quot;</code><br />
@@ -91,16 +94,19 @@ Include dependency graph for filesystem_helper.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="filesystem__helper_8hpp__incl.png" border="0" usemap="#include_2rcpputils_2filesystem__helper_8hpp" alt=""/></div>
 <map name="include_2rcpputils_2filesystem__helper_8hpp" id="include_2rcpputils_2filesystem__helper_8hpp">
-<area shape="rect" title="Cross&#45;platform filesystem helper functions and additional emulation of std::filesystem." alt="" coords="187,5,389,47"/>
-<area shape="rect" title=" " alt="" coords="5,95,91,121"/>
-<area shape="rect" title=" " alt="" coords="115,95,200,121"/>
-<area shape="rect" title=" " alt="" coords="199,169,257,196"/>
-<area shape="rect" title=" " alt="" coords="282,169,345,196"/>
-<area shape="rect" title=" " alt="" coords="488,95,584,121"/>
-<area shape="rect" title=" " alt="" coords="608,95,683,121"/>
-<area shape="rect" href="split_8hpp.html" title="Split string by provided delimiter." alt="" coords="325,95,464,121"/>
-<area shape="rect" title=" " alt="" coords="369,169,439,196"/>
-<area shape="rect" title=" " alt="" coords="464,169,539,196"/>
+<area shape="rect" title="Cross&#45;platform filesystem helper functions and additional emulation of std::filesystem." alt="" coords="347,5,550,47"/>
+<area shape="rect" title=" " alt="" coords="5,95,76,121"/>
+<area shape="rect" title=" " alt="" coords="101,95,186,121"/>
+<area shape="rect" title=" " alt="" coords="210,95,295,121"/>
+<area shape="rect" title=" " alt="" coords="319,95,386,121"/>
+<area shape="rect" title=" " alt="" coords="385,169,443,196"/>
+<area shape="rect" title=" " alt="" coords="468,169,531,196"/>
+<area shape="rect" title=" " alt="" coords="674,95,746,121"/>
+<area shape="rect" title=" " alt="" coords="770,95,866,121"/>
+<area shape="rect" title=" " alt="" coords="890,95,965,121"/>
+<area shape="rect" href="split_8hpp.html" title="Split string by provided delimiter." alt="" coords="511,95,650,121"/>
+<area shape="rect" title=" " alt="" coords="555,169,625,196"/>
+<area shape="rect" title=" " alt="" coords="650,169,725,196"/>
 </map>
 </div>
 </div>
@@ -141,12 +147,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a6b8b0f03347fd6967929df857dd55f1f"><td class="memItemLeft" align="right" valign="top">path&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercpputils_1_1fs.html#a6b8b0f03347fd6967929df857dd55f1f">rcpputils::fs::temp_directory_path</a> ()</td></tr>
 <tr class="memdesc:a6b8b0f03347fd6967929df857dd55f1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a path to a location in the temporary directory, if it's available.  <a href="namespacercpputils_1_1fs.html#a6b8b0f03347fd6967929df857dd55f1f">More...</a><br /></td></tr>
 <tr class="separator:a6b8b0f03347fd6967929df857dd55f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6588f686ff9c8ba699dc0707f514ea56"><td class="memItemLeft" align="right" valign="top">path&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercpputils_1_1fs.html#a6588f686ff9c8ba699dc0707f514ea56">rcpputils::fs::current_path</a> ()</td></tr>
+<tr class="memdesc:a6588f686ff9c8ba699dc0707f514ea56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return current working directory.  <a href="namespacercpputils_1_1fs.html#a6588f686ff9c8ba699dc0707f514ea56">More...</a><br /></td></tr>
+<tr class="separator:a6588f686ff9c8ba699dc0707f514ea56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92b275ab987cc10f793f5cd03e76380d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercpputils_1_1fs.html#a92b275ab987cc10f793f5cd03e76380d">rcpputils::fs::create_directories</a> (const path &amp;p)</td></tr>
 <tr class="memdesc:a92b275ab987cc10f793f5cd03e76380d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a directory with the given path p.  <a href="namespacercpputils_1_1fs.html#a92b275ab987cc10f793f5cd03e76380d">More...</a><br /></td></tr>
 <tr class="separator:a92b275ab987cc10f793f5cd03e76380d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4c78edeb35f86d943ca7b5118ac9fbb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercpputils_1_1fs.html#af4c78edeb35f86d943ca7b5118ac9fbb">rcpputils::fs::remove</a> (const path &amp;p)</td></tr>
 <tr class="memdesc:af4c78edeb35f86d943ca7b5118ac9fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the file or directory at the path p.  <a href="namespacercpputils_1_1fs.html#af4c78edeb35f86d943ca7b5118ac9fbb">More...</a><br /></td></tr>
 <tr class="separator:af4c78edeb35f86d943ca7b5118ac9fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa772a97a7982df046f6122a5d34bbab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercpputils_1_1fs.html#afa772a97a7982df046f6122a5d34bbab">rcpputils::fs::remove_all</a> (const path &amp;p)</td></tr>
+<tr class="memdesc:afa772a97a7982df046f6122a5d34bbab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the directory at the path p and its content.  <a href="namespacercpputils_1_1fs.html#afa772a97a7982df046f6122a5d34bbab">More...</a><br /></td></tr>
+<tr class="separator:afa772a97a7982df046f6122a5d34bbab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c36b244e05aabd51d6959845ae5c3d3"><td class="memItemLeft" align="right" valign="top">path&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercpputils_1_1fs.html#a4c36b244e05aabd51d6959845ae5c3d3">rcpputils::fs::remove_extension</a> (const path &amp;file_path, int n_times=1)</td></tr>
 <tr class="memdesc:a4c36b244e05aabd51d6959845ae5c3d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove extension(s) from a path.  <a href="namespacercpputils_1_1fs.html#a4c36b244e05aabd51d6959845ae5c3d3">More...</a><br /></td></tr>
 <tr class="separator:a4c36b244e05aabd51d6959845ae5c3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>

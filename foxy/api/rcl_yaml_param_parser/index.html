@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>rcl_yaml_param_parser: rcl_yaml_param_parser: Parse a YAML parameter file and populate the C data structure</title>
+<title>rcl_yaml_param_parser: Main Page</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,23 +64,32 @@ $(function() {
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">rcl_yaml_param_parser: Parse a YAML parameter file and populate the C data structure </div>  </div>
+<div class="title">rcl_yaml_param_parser Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><ul>
-<li>Parser</li>
-<li>rcl/parser.h</li>
-</ul>
-<p>Some useful abstractions and utilities:</p><ul>
-<li>Return code types<ul>
-<li>rcl/types.h</li>
-</ul>
-</li>
-<li>Macros for controlling symbol visibility on the library<ul>
-<li>rcl/visibility_control.h </li>
-</ul>
-</li>
-</ul>
+<div class="textblock"><p><b>ROS2 rcl YAML paramter parser</b></p>
+<p>Parse a YAML parameter file and populate the C data structure.</p>
+<p>Features are described in detail at <a href="http://docs.ros2.org/latest/api/rcl_yaml_param_parser/index.html">http://docs.ros2.org</a></p>
+<p>The data structure params_st will then be used during node initialization</p>
+<p>YAML parameter file should follow the yaml syntax shown below</p>
+<p>NOTE: It only supports canonical int and float types</p>
+<div class="fragment"><div class="line">&lt;node_namespace_string&gt;:  # optional</div>
+<div class="line">  &lt;node1_name&gt;:</div>
+<div class="line">    ros__parameters:</div>
+<div class="line">      &lt;field_name&gt;: &lt;field_value&gt;</div>
+<div class="line">      &lt;parameter_namespace_string&gt;:   # optional</div>
+<div class="line">        &lt;field1_name&gt;: &lt;field1_value&gt;</div>
+<div class="line">        &lt;field2_name&gt;: &lt;field2_value&gt;</div>
+<div class="line">  &lt;node2_name&gt;:</div>
+<div class="line">    ros__parameters:</div>
+<div class="line">      &lt;field_name&gt;: &lt;field_value&gt;</div>
+<div class="line">      &lt;parameter_namespace_string&gt;:   # optional</div>
+<div class="line">        &lt;field1_name&gt;: &lt;field1_value&gt;</div>
+<div class="line">        &lt;field2_name&gt;: &lt;field2_value&gt;</div>
+</div><!-- fragment --><p>This package depends on C libyaml.</p>
+<h2><a class="anchor" id="autotoc_md0"></a>
+Quality Declaration</h2>
+<p>This package claims to be in the <b>Quality Level 4</b> category, see the Quality Declaration for more details. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

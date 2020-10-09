@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pointer_5ftraits_2ehpp_2081',['pointer_traits.hpp',['../pointer__traits_8hpp.html',1,'']]]
+  ['join_2ehpp_2089',['join.hpp',['../join_8hpp.html',1,'']]]
 ];

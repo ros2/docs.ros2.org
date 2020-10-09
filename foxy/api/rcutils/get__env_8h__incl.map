@@ -1,6 +1,10 @@
 <map id="include/rcutils/get_env.h" name="include/rcutils/get_env.h">
-<area shape="rect" id="node1" title=" " alt="" coords="74,5,213,47"/>
-<area shape="rect" id="node2" href="$macros_8h.html" title=" " alt="" coords="5,102,132,129"/>
-<area shape="rect" id="node3" href="$visibility__control_8h.html" title=" " alt="" coords="157,95,279,136"/>
-<area shape="rect" id="node4" href="$visibility__control__macros_8h.html" title=" " alt="" coords="147,184,289,225"/>
+<area shape="rect" id="node1" title=" " alt="" coords="224,5,363,47"/>
+<area shape="rect" id="node2" href="$macros_8h.html" title=" " alt="" coords="175,95,302,121"/>
+<area shape="rect" id="node7" href="$visibility__control_8h.html" title=" " alt="" coords="299,259,421,300"/>
+<area shape="rect" id="node3" href="$fault__injection_8h.html" title=" " alt="" coords="166,169,311,211"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,266,88,293"/>
+<area shape="rect" id="node5" title=" " alt="" coords="112,266,179,293"/>
+<area shape="rect" id="node6" title=" " alt="" coords="203,266,274,293"/>
+<area shape="rect" id="node8" href="$visibility__control__macros_8h.html" title=" " alt="" coords="289,348,431,389"/>
 </map>

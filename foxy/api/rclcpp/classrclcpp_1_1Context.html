@@ -419,7 +419,7 @@ Protected Member Functions</h2></td></tr>
 <ul>
 <li>acquires a lock to prevent race conditions with init, on_shutdown, etc.</li>
 <li>if the context is not initialized, return false</li>
-<li><a class="elRef" href="http://docs.ros2.org/foxy/api/rcl/init_8h.html#a87e421f97cf55ea30804874d7b62b751">rcl_shutdown()</a> is called on the internal <a class="elRef" href="http://docs.ros2.org/foxy/api/rcl/structrcl__context__t.html">rcl_context_t</a> instance</li>
+<li>rcl_shutdown() is called on the internal <a class="elRef" href="http://docs.ros2.org/foxy/api/rcl/structrcl__context__t.html">rcl_context_t</a> instance</li>
 <li>the shutdown reason is set</li>
 <li>each on_shutdown callback is called, in the order that they were added</li>
 <li>interrupt blocking <a class="el" href="classrclcpp_1_1Context.html#adf25fc22a74daf5ce85f6bdde3b92aa2" title="Sleep for a given period of time or until shutdown() is called.">sleep_for()</a> calls, so they return early due to shutdown</li>

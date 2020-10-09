@@ -67,7 +67,22 @@ $(function() {
 <div class="title"><a class="el" href="namespacermw__dds__common.html">rmw_dds_common</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Package with a common implementation of Node discovery for all DDS based rmw implementations.</p>
+<div class="textblock"><p>Package with a common implementation of Node discovery for all DDS based <code>rmw</code> implementations, including:</p>
+<ul>
+<li>A generic <a href="rmw_dds_common/include/rmw_dds_common/graph_cache.hpp"><code>GraphCache</code></a> to track DDS entities such as participants and data readers and writers, plus ROS nodes as an additional abstraction for any DDS based <code>rmw</code> implementation to use</li>
+<li>Common messages to communicate <a href="https://github.com/ros2/design/pull/250">ROS nodes discovery information</a>:<ul>
+<li><a href="rmw_dds_common/msg/Gid.msg"><code>rmw_dds_common/msg/Gid</code></a></li>
+<li><a href="rmw_dds_common/msg/NodeEntitiesInfo.msg"><code>rmw_dds_common/msg/NodeEntitiesInfo</code></a></li>
+<li><a href="rmw_dds_common/msg/ParticipantEntitiesInfo.msg"><code>rmw_dds_common/msg/ParticipantEntitiesInfo</code></a></li>
+</ul>
+</li>
+<li>Some useful data types and utilities:<ul>
+<li>A generic <a href="rmw_dds_common/include/rmw_dds_common/context.hpp"><code>Context</code></a> type to withhold most state needed to implement <a href="https://github.com/ros2/design/pull/250">ROS nodes discovery</a></li>
+<li><a href="rmw_dds_common/include/rmw_dds_common/gid_utils.hpp">Comparison utilities and some C++ operator overloads</a> for <code><a class="elRef" href="http://docs.ros2.org/foxy/api/rmw/structrmw__gid__t.html">rmw_gid_t</a></code> instances</li>
+<li><a href="rmw_dds_common/include/rmw_dds_common/gid_utils.hpp">Conversion utilities</a> between <code>rmw_dds_common/msg/Gid</code> messages and <code><a class="elRef" href="http://docs.ros2.org/foxy/api/rmw/structrmw__gid__t.html">rmw_gid_t</a></code> instances</li>
+</ul>
+</li>
+</ul>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Quality Declaration</h1>
 <p>This package claims to be in the <b>Quality Level 4</b> category, see the Quality Declaration for more details. </p>

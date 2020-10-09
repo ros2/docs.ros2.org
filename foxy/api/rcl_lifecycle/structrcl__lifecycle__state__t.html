@@ -71,86 +71,42 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>It contains the state of the lifecycle state machine.  
+ <a href="structrcl__lifecycle__state__t.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="data__types_8h_source.html">data_types.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for rcl_lifecycle_state_t:</div>
 <div class="dyncontent">
 <div class="center"><img src="structrcl__lifecycle__state__t__coll__graph.png" border="0" usemap="#rcl__lifecycle__state__t_coll__map" alt="Collaboration graph"/></div>
 <map name="rcl__lifecycle__state__t_coll__map" id="rcl__lifecycle__state__t_coll__map">
-<area shape="rect" title=" " alt="" coords="20,5,172,32"/>
-<area shape="rect" href="structrcl__lifecycle__transition__t.html" title=" " alt="" coords="5,109,187,136"/>
+<area shape="rect" title="It contains the state of the lifecycle state machine." alt="" coords="20,5,172,32"/>
+<area shape="rect" href="structrcl__lifecycle__transition__t.html" title="It contains the transitions of the lifecycle state machine." alt="" coords="5,109,187,136"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a64e260c7271ba24a1eb1daee70d92d36"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__lifecycle__state__t.html#a64e260c7271ba24a1eb1daee70d92d36">label</a></td></tr>
+<tr class="memitem:a64e260c7271ba24a1eb1daee70d92d36"><td class="memItemLeft" align="right" valign="top"><a id="a64e260c7271ba24a1eb1daee70d92d36"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__lifecycle__state__t.html#a64e260c7271ba24a1eb1daee70d92d36">label</a></td></tr>
+<tr class="memdesc:a64e260c7271ba24a1eb1daee70d92d36"><td class="mdescLeft">&#160;</td><td class="mdescRight">String with state name: Unconfigured, Inactive, Active or Finalized. <br /></td></tr>
 <tr class="separator:a64e260c7271ba24a1eb1daee70d92d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ed092a73441a5ea058e8864e4f44eff"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__lifecycle__state__t.html#a6ed092a73441a5ea058e8864e4f44eff">id</a></td></tr>
+<tr class="memitem:a6ed092a73441a5ea058e8864e4f44eff"><td class="memItemLeft" align="right" valign="top"><a id="a6ed092a73441a5ea058e8864e4f44eff"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__lifecycle__state__t.html#a6ed092a73441a5ea058e8864e4f44eff">id</a></td></tr>
+<tr class="memdesc:a6ed092a73441a5ea058e8864e4f44eff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifier of the state. <br /></td></tr>
 <tr class="separator:a6ed092a73441a5ea058e8864e4f44eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa665a455063aa7d004cf9e146e3d2316"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrcl__lifecycle__transition__t.html">rcl_lifecycle_transition_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__lifecycle__state__t.html#aa665a455063aa7d004cf9e146e3d2316">valid_transitions</a></td></tr>
+<tr class="memitem:aa665a455063aa7d004cf9e146e3d2316"><td class="memItemLeft" align="right" valign="top"><a id="aa665a455063aa7d004cf9e146e3d2316"></a>
+<a class="el" href="structrcl__lifecycle__transition__t.html">rcl_lifecycle_transition_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__lifecycle__state__t.html#aa665a455063aa7d004cf9e146e3d2316">valid_transitions</a></td></tr>
+<tr class="memdesc:aa665a455063aa7d004cf9e146e3d2316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to a struct with the valid transitions. <br /></td></tr>
 <tr class="separator:aa665a455063aa7d004cf9e146e3d2316"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef13bce4fe581c83e68ab4b6dbf3efe6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__lifecycle__state__t.html#aef13bce4fe581c83e68ab4b6dbf3efe6">valid_transition_size</a></td></tr>
+<tr class="memitem:aef13bce4fe581c83e68ab4b6dbf3efe6"><td class="memItemLeft" align="right" valign="top"><a id="aef13bce4fe581c83e68ab4b6dbf3efe6"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__lifecycle__state__t.html#aef13bce4fe581c83e68ab4b6dbf3efe6">valid_transition_size</a></td></tr>
+<tr class="memdesc:aef13bce4fe581c83e68ab4b6dbf3efe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of valid transitions. <br /></td></tr>
 <tr class="separator:aef13bce4fe581c83e68ab4b6dbf3efe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a64e260c7271ba24a1eb1daee70d92d36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64e260c7271ba24a1eb1daee70d92d36">&#9670;&nbsp;</a></span>label</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* rcl_lifecycle_state_t::label</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6ed092a73441a5ea058e8864e4f44eff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ed092a73441a5ea058e8864e4f44eff">&#9670;&nbsp;</a></span>id</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int rcl_lifecycle_state_t::id</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa665a455063aa7d004cf9e146e3d2316"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa665a455063aa7d004cf9e146e3d2316">&#9670;&nbsp;</a></span>valid_transitions</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structrcl__lifecycle__transition__t.html">rcl_lifecycle_transition_t</a>* rcl_lifecycle_state_t::valid_transitions</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aef13bce4fe581c83e68ab4b6dbf3efe6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef13bce4fe581c83e68ab4b6dbf3efe6">&#9670;&nbsp;</a></span>valid_transition_size</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int rcl_lifecycle_state_t::valid_transition_size</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>It contains the state of the lifecycle state machine. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/rcl_lifecycle/<a class="el" href="data__types_8h_source.html">data_types.h</a></li>
 </ul>
 </div><!-- contents -->

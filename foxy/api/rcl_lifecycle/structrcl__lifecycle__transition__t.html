@@ -71,14 +71,17 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>It contains the transitions of the lifecycle state machine.  
+ <a href="structrcl__lifecycle__transition__t.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="data__types_8h_source.html">data_types.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for rcl_lifecycle_transition_t:</div>
 <div class="dyncontent">
 <div class="center"><img src="structrcl__lifecycle__transition__t__coll__graph.png" border="0" usemap="#rcl__lifecycle__transition__t_coll__map" alt="Collaboration graph"/></div>
 <map name="rcl__lifecycle__transition__t_coll__map" id="rcl__lifecycle__transition__t_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,187,32"/>
-<area shape="rect" href="structrcl__lifecycle__state__t.html" title=" " alt="" coords="20,109,172,136"/>
+<area shape="rect" title="It contains the transitions of the lifecycle state machine." alt="" coords="5,5,187,32"/>
+<area shape="rect" href="structrcl__lifecycle__state__t.html" title="It contains the state of the lifecycle state machine." alt="" coords="20,109,172,136"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -86,14 +89,22 @@ Collaboration diagram for rcl_lifecycle_transition_t:</div>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a735fb0fed5173766990e7ff7711edfdc"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__lifecycle__transition__t.html#a735fb0fed5173766990e7ff7711edfdc">label</a></td></tr>
 <tr class="separator:a735fb0fed5173766990e7ff7711edfdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e45751d7909d471fbc359151e56ebb6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__lifecycle__transition__t.html#a5e45751d7909d471fbc359151e56ebb6">id</a></td></tr>
+<tr class="memitem:a5e45751d7909d471fbc359151e56ebb6"><td class="memItemLeft" align="right" valign="top"><a id="a5e45751d7909d471fbc359151e56ebb6"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__lifecycle__transition__t.html#a5e45751d7909d471fbc359151e56ebb6">id</a></td></tr>
+<tr class="memdesc:a5e45751d7909d471fbc359151e56ebb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifier of the transition. <br /></td></tr>
 <tr class="separator:a5e45751d7909d471fbc359151e56ebb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c271e815ea5254d2f72143746663256"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrcl__lifecycle__state__t.html">rcl_lifecycle_state_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__lifecycle__transition__t.html#a0c271e815ea5254d2f72143746663256">start</a></td></tr>
+<tr class="memitem:a0c271e815ea5254d2f72143746663256"><td class="memItemLeft" align="right" valign="top"><a id="a0c271e815ea5254d2f72143746663256"></a>
+<a class="el" href="structrcl__lifecycle__state__t.html">rcl_lifecycle_state_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__lifecycle__transition__t.html#a0c271e815ea5254d2f72143746663256">start</a></td></tr>
+<tr class="memdesc:a0c271e815ea5254d2f72143746663256"><td class="mdescLeft">&#160;</td><td class="mdescRight">The value where the transition is initialized. <br /></td></tr>
 <tr class="separator:a0c271e815ea5254d2f72143746663256"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe3fe500052797ace61cb89190f8c782"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrcl__lifecycle__state__t.html">rcl_lifecycle_state_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__lifecycle__transition__t.html#abe3fe500052797ace61cb89190f8c782">goal</a></td></tr>
+<tr class="memitem:abe3fe500052797ace61cb89190f8c782"><td class="memItemLeft" align="right" valign="top"><a id="abe3fe500052797ace61cb89190f8c782"></a>
+<a class="el" href="structrcl__lifecycle__state__t.html">rcl_lifecycle_state_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__lifecycle__transition__t.html#abe3fe500052797ace61cb89190f8c782">goal</a></td></tr>
+<tr class="memdesc:abe3fe500052797ace61cb89190f8c782"><td class="mdescLeft">&#160;</td><td class="mdescRight">The objetive of the transition. <br /></td></tr>
 <tr class="separator:abe3fe500052797ace61cb89190f8c782"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>It contains the transitions of the lifecycle state machine. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a735fb0fed5173766990e7ff7711edfdc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a735fb0fed5173766990e7ff7711edfdc">&#9670;&nbsp;</a></span>label</h2>
 
@@ -105,48 +116,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5e45751d7909d471fbc359151e56ebb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e45751d7909d471fbc359151e56ebb6">&#9670;&nbsp;</a></span>id</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int rcl_lifecycle_transition_t::id</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0c271e815ea5254d2f72143746663256"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c271e815ea5254d2f72143746663256">&#9670;&nbsp;</a></span>start</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structrcl__lifecycle__state__t.html">rcl_lifecycle_state_t</a>* rcl_lifecycle_transition_t::start</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abe3fe500052797ace61cb89190f8c782"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe3fe500052797ace61cb89190f8c782">&#9670;&nbsp;</a></span>goal</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structrcl__lifecycle__state__t.html">rcl_lifecycle_state_t</a>* rcl_lifecycle_transition_t::goal</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>String with transition name: configuring, cleaningup, activating, deactivating, errorprocessing or shuttingdown. </p>
 
 </div>
 </div>

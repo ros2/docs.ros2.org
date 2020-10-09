@@ -1,7 +1,0 @@
-<map id="include/rcl_action/goal_state_machine.h" name="include/rcl_action/goal_state_machine.h">
-<area shape="rect" id="node1" title=" " alt="" coords="110,5,279,47"/>
-<area shape="rect" id="node2" href="$goal__handle_8h.html" title=" " alt="" coords="75,95,211,136"/>
-<area shape="rect" id="node4" href="$rcl__action_8h.html" title=" " alt="" coords="76,363,212,404"/>
-<area shape="rect" id="node3" href="$action__server_8h.html" title=" " alt="" coords="24,184,160,225"/>
-<area shape="rect" id="node5" href="$wait_8h.html" title=" " alt="" coords="24,273,160,315"/>
-</map>

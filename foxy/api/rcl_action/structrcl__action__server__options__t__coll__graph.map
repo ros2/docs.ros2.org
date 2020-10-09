@@ -1,7 +1,6 @@
 <map id="rcl_action_server_options_t" name="rcl_action_server_options_t">
-<area shape="rect" id="node1" title="Options available for a rcl_action_server_t." alt="" coords="138,272,338,299"/>
-<area shape="rect" id="node2" href="/tmp/tmp.7irCm9IFI6/doxygen_tag_files/rmw.tag$structrmw__qos__profile__t.html" title=" " alt="" coords="5,124,148,151"/>
-<area shape="rect" id="node3" href="/tmp/tmp.7irCm9IFI6/doxygen_tag_files/rmw.tag$structrmw__time__t.html" title=" " alt="" coords="27,5,127,32"/>
-<area shape="rect" id="node4" href="/tmp/tmp.7irCm9IFI6/doxygen_tag_files/rcl.tag$structrcl__duration__t.html" title=" " alt="" coords="183,124,293,151"/>
-<area shape="rect" id="node5" href="/tmp/tmp.7irCm9IFI6/doxygen_tag_files/rcutils.tag$structrcutils__allocator__t.html" title=" " alt="" coords="318,124,457,151"/>
+<area shape="rect" id="node1" title="Options available for a rcl_action_server_t." alt="" coords="57,272,257,299"/>
+<area shape="rect" id="node2" href="/tmp/tmp.G0mQUHO3yi/doxygen_tag_files/rmw.tag$structrmw__qos__profile__t.html" title=" " alt="" coords="5,124,148,151"/>
+<area shape="rect" id="node3" href="/tmp/tmp.G0mQUHO3yi/doxygen_tag_files/rmw.tag$structrmw__time__t.html" title=" " alt="" coords="27,5,127,32"/>
+<area shape="rect" id="node4" href="/tmp/tmp.G0mQUHO3yi/doxygen_tag_files/rcl.tag$structrcl__duration__t.html" title=" " alt="" coords="183,124,293,151"/>
 </map>

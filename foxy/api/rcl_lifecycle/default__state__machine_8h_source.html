@@ -71,7 +71,7 @@ $(function() {
 <div class="title">default_state_machine.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="default__state__machine_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2016 Open Source Robotics Foundation, Inc.</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2016 Open Source Robotics Foundation, Inc.</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// you may not use this file except in compliance with the License.</span></div>
@@ -88,26 +88,26 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifndef RCL_LIFECYCLE__DEFAULT_STATE_MACHINE_H_</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define RCL_LIFECYCLE__DEFAULT_STATE_MACHINE_H_</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/macros_8h.html">rcl/macros.h</a>&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/types_8h.html">rcl/types.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;rcl/macros.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;rcl/types.h&quot;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="data__types_8h.html">rcl_lifecycle/data_types.h</a>&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="visibility__control_8h.html">rcl_lifecycle/visibility_control.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;rcl_lifecycle/data_types.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;rcl_lifecycle/visibility_control.h&quot;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<a class="code" href="visibility__control_8h.html#a1c24d5fb2dc34c0b76a1ad99d9a78801">RCL_LIFECYCLE_PUBLIC</a> <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="default__state__machine_8h.html#adc2761e30020c1e8dadefc8696169716">rcl_lifecycle_configure_label</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<a class="code" href="visibility__control_8h.html#a1c24d5fb2dc34c0b76a1ad99d9a78801">RCL_LIFECYCLE_PUBLIC</a> <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="default__state__machine_8h.html#a407233e2d36281301de63aa9f39c3739">rcl_lifecycle_cleanup_label</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<a class="code" href="visibility__control_8h.html#a1c24d5fb2dc34c0b76a1ad99d9a78801">RCL_LIFECYCLE_PUBLIC</a> <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="default__state__machine_8h.html#a43a495ce8cfcd50c14cac1ec7cb322ad">rcl_lifecycle_activate_label</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<a class="code" href="visibility__control_8h.html#a1c24d5fb2dc34c0b76a1ad99d9a78801">RCL_LIFECYCLE_PUBLIC</a> <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="default__state__machine_8h.html#a14be110a2d426ba590014f9306de8ac7">rcl_lifecycle_deactivate_label</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<a class="code" href="visibility__control_8h.html#a1c24d5fb2dc34c0b76a1ad99d9a78801">RCL_LIFECYCLE_PUBLIC</a> <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="default__state__machine_8h.html#ad6eb514bdbf9e923ff8a4f99ec5d13d5">rcl_lifecycle_shutdown_label</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;RCL_LIFECYCLE_PUBLIC <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * rcl_lifecycle_configure_label;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;RCL_LIFECYCLE_PUBLIC <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * rcl_lifecycle_cleanup_label;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;RCL_LIFECYCLE_PUBLIC <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * rcl_lifecycle_activate_label;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;RCL_LIFECYCLE_PUBLIC <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * rcl_lifecycle_deactivate_label;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;RCL_LIFECYCLE_PUBLIC <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * rcl_lifecycle_shutdown_label;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<a class="code" href="visibility__control_8h.html#a1c24d5fb2dc34c0b76a1ad99d9a78801">RCL_LIFECYCLE_PUBLIC</a> <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="default__state__machine_8h.html#affb40baca4c0d5c522d7c5d3f0f0aff8">rcl_lifecycle_transition_success_label</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<a class="code" href="visibility__control_8h.html#a1c24d5fb2dc34c0b76a1ad99d9a78801">RCL_LIFECYCLE_PUBLIC</a> <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="default__state__machine_8h.html#a1becd4443f4059c785877a3f42848efb">rcl_lifecycle_transition_failure_label</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<a class="code" href="visibility__control_8h.html#a1c24d5fb2dc34c0b76a1ad99d9a78801">RCL_LIFECYCLE_PUBLIC</a> <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="default__state__machine_8h.html#a88b17508134855282d432c02c78e4fb9">rcl_lifecycle_transition_error_label</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;RCL_LIFECYCLE_PUBLIC <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * rcl_lifecycle_transition_success_label;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;RCL_LIFECYCLE_PUBLIC <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * rcl_lifecycle_transition_failure_label;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;RCL_LIFECYCLE_PUBLIC <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * rcl_lifecycle_transition_error_label;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"> * This function initializes a default state machine. It registers all: primary states,</span></div>
@@ -156,11 +156,11 @@ $(function() {
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"> * \return `RCL_RET_OK` if the state machine was initialized successfully, or</span></div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"> * \return `RCL_RET_ERROR` if an unspecified error occurs.</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<a class="code" href="visibility__control_8h.html#a1c24d5fb2dc34c0b76a1ad99d9a78801">RCL_LIFECYCLE_PUBLIC</a></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<a class="code" href="default__state__machine_8h.html#a88d4d7188bb954bb545a89b18436aeda">rcl_lifecycle_init_default_state_machine</a>(</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="code" href="structrcl__lifecycle__state__machine__t.html">rcl_lifecycle_state_machine_t</a> * state_machine, <span class="keyword">const</span> <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcl_allocator_t</a> * allocator);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;RCL_LIFECYCLE_PUBLIC</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;rcl_ret_t</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;rcl_lifecycle_init_default_state_machine(</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="code" href="structrcl__lifecycle__state__machine__t.html">rcl_lifecycle_state_machine_t</a> * state_machine, <span class="keyword">const</span> rcl_allocator_t * allocator);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
@@ -168,24 +168,7 @@ $(function() {
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif  // RCL_LIFECYCLE__DEFAULT_STATE_MACHINE_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="adefault__state__machine_8h_html_a407233e2d36281301de63aa9f39c3739"><div class="ttname"><a href="default__state__machine_8h.html#a407233e2d36281301de63aa9f39c3739">rcl_lifecycle_cleanup_label</a></div><div class="ttdeci">const char * rcl_lifecycle_cleanup_label</div></div>
-<div class="ttc" id="adata__types_8h_html"><div class="ttname"><a href="data__types_8h.html">data_types.h</a></div></div>
-<div class="ttc" id="adefault__state__machine_8h_html_ad6eb514bdbf9e923ff8a4f99ec5d13d5"><div class="ttname"><a href="default__state__machine_8h.html#ad6eb514bdbf9e923ff8a4f99ec5d13d5">rcl_lifecycle_shutdown_label</a></div><div class="ttdeci">const char * rcl_lifecycle_shutdown_label</div></div>
-<div class="ttc" id="amacros_8h_html_a3a59b27e092b1fd10e7fc7336b29aa16"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div><div class="ttdeci">#define RCL_WARN_UNUSED</div></div>
-<div class="ttc" id="atypes_8h_html_af66ec2e20118b821dbf3f9b0067e8796"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div><div class="ttdeci">rmw_ret_t rcl_ret_t</div></div>
-<div class="ttc" id="adefault__state__machine_8h_html_a88d4d7188bb954bb545a89b18436aeda"><div class="ttname"><a href="default__state__machine_8h.html#a88d4d7188bb954bb545a89b18436aeda">rcl_lifecycle_init_default_state_machine</a></div><div class="ttdeci">RCL_WARN_UNUSED rcl_ret_t rcl_lifecycle_init_default_state_machine(rcl_lifecycle_state_machine_t *state_machine, const rcl_allocator_t *allocator)</div><div class="ttdoc">Initialize a default state machine.</div></div>
-<div class="ttc" id="adefault__state__machine_8h_html_affb40baca4c0d5c522d7c5d3f0f0aff8"><div class="ttname"><a href="default__state__machine_8h.html#affb40baca4c0d5c522d7c5d3f0f0aff8">rcl_lifecycle_transition_success_label</a></div><div class="ttdeci">const char * rcl_lifecycle_transition_success_label</div></div>
-<div class="ttc" id="adefault__state__machine_8h_html_a88b17508134855282d432c02c78e4fb9"><div class="ttname"><a href="default__state__machine_8h.html#a88b17508134855282d432c02c78e4fb9">rcl_lifecycle_transition_error_label</a></div><div class="ttdeci">const char * rcl_lifecycle_transition_error_label</div></div>
-<div class="ttc" id="astructrcl__lifecycle__state__machine__t_html"><div class="ttname"><a href="structrcl__lifecycle__state__machine__t.html">rcl_lifecycle_state_machine_t</a></div><div class="ttdef"><b>Definition:</b> data_types.h:65</div></div>
-<div class="ttc" id="adefault__state__machine_8h_html_a43a495ce8cfcd50c14cac1ec7cb322ad"><div class="ttname"><a href="default__state__machine_8h.html#a43a495ce8cfcd50c14cac1ec7cb322ad">rcl_lifecycle_activate_label</a></div><div class="ttdeci">const char * rcl_lifecycle_activate_label</div></div>
-<div class="ttc" id="adefault__state__machine_8h_html_a1becd4443f4059c785877a3f42848efb"><div class="ttname"><a href="default__state__machine_8h.html#a1becd4443f4059c785877a3f42848efb">rcl_lifecycle_transition_failure_label</a></div><div class="ttdeci">const char * rcl_lifecycle_transition_failure_label</div></div>
-<div class="ttc" id="avisibility__control_8h_html"><div class="ttname"><a href="visibility__control_8h.html">visibility_control.h</a></div></div>
-<div class="ttc" id="astructrcutils__allocator__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcutils_allocator_t</a></div></div>
-<div class="ttc" id="adefault__state__machine_8h_html_adc2761e30020c1e8dadefc8696169716"><div class="ttname"><a href="default__state__machine_8h.html#adc2761e30020c1e8dadefc8696169716">rcl_lifecycle_configure_label</a></div><div class="ttdeci">const char * rcl_lifecycle_configure_label</div></div>
-<div class="ttc" id="adefault__state__machine_8h_html_a14be110a2d426ba590014f9306de8ac7"><div class="ttname"><a href="default__state__machine_8h.html#a14be110a2d426ba590014f9306de8ac7">rcl_lifecycle_deactivate_label</a></div><div class="ttdeci">const char * rcl_lifecycle_deactivate_label</div></div>
-<div class="ttc" id="atypes_8h.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/types_8h.html">types.h</a></div></div>
-<div class="ttc" id="amacros_8h.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="avisibility__control_8h_html_a1c24d5fb2dc34c0b76a1ad99d9a78801"><div class="ttname"><a href="visibility__control_8h.html#a1c24d5fb2dc34c0b76a1ad99d9a78801">RCL_LIFECYCLE_PUBLIC</a></div><div class="ttdeci">#define RCL_LIFECYCLE_PUBLIC</div><div class="ttdef"><b>Definition:</b> visibility_control.h:50</div></div>
+<div class="ttc" id="astructrcl__lifecycle__state__machine__t_html"><div class="ttname"><a href="structrcl__lifecycle__state__machine__t.html">rcl_lifecycle_state_machine_t</a></div><div class="ttdoc">It contains the state machine data.</div><div class="ttdef"><b>Definition:</b> data_types.h:90</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

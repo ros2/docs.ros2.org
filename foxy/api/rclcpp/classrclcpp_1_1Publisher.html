@@ -152,7 +152,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aace16d5f3e3c1c533fd0098602613a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad517601ae3bc33b139b3a44e81b04898"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrclcpp_1_1Publisher.html#ad517601ae3bc33b139b3a44e81b04898">publish</a> (const MessageT &amp;msg)</td></tr>
 <tr class="separator:ad517601ae3bc33b139b3a44e81b04898"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a220ff5e23791adf9fc0ece8b456b4881"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrclcpp_1_1Publisher.html#a220ff5e23791adf9fc0ece8b456b4881">publish</a> (const <a class="elRef" href="http://docs.ros2.org/foxy/api/rcl/types_8h.html#aacac4adc45d07815b73188eafd77d705">rcl_serialized_message_t</a> &amp;serialized_msg)</td></tr>
+<tr class="memitem:a220ff5e23791adf9fc0ece8b456b4881"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrclcpp_1_1Publisher.html#a220ff5e23791adf9fc0ece8b456b4881">publish</a> (const rcl_serialized_message_t &amp;serialized_msg)</td></tr>
 <tr class="separator:a220ff5e23791adf9fc0ece8b456b4881"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10b5ec669fe9dd1f3e1034dc54c88289"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrclcpp_1_1Publisher.html#a10b5ec669fe9dd1f3e1034dc54c88289">publish</a> (const <a class="el" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a> &amp;serialized_msg)</td></tr>
 <tr class="separator:a10b5ec669fe9dd1f3e1034dc54c88289"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -223,7 +223,7 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a881e4ef60a4d67059419668a6644ff61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrclcpp_1_1Publisher.html#a881e4ef60a4d67059419668a6644ff61">do_inter_process_publish</a> (const MessageT &amp;msg)</td></tr>
 <tr class="separator:a881e4ef60a4d67059419668a6644ff61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af52d4691f23e658cd153f0285f194068"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrclcpp_1_1Publisher.html#af52d4691f23e658cd153f0285f194068">do_serialized_publish</a> (const <a class="elRef" href="http://docs.ros2.org/foxy/api/rcl/types_8h.html#aacac4adc45d07815b73188eafd77d705">rcl_serialized_message_t</a> *serialized_msg)</td></tr>
+<tr class="memitem:af52d4691f23e658cd153f0285f194068"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrclcpp_1_1Publisher.html#af52d4691f23e658cd153f0285f194068">do_serialized_publish</a> (const rcl_serialized_message_t *serialized_msg)</td></tr>
 <tr class="separator:af52d4691f23e658cd153f0285f194068"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4aa7b7b9f7d868b2f2224ad87415fe5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrclcpp_1_1Publisher.html#ac4aa7b7b9f7d868b2f2224ad87415fe5">do_loaned_message_publish</a> (MessageT *msg)</td></tr>
 <tr class="separator:ac4aa7b7b9f7d868b2f2224ad87415fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -233,7 +233,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ad78992eb2fa941c1594c48b4d650a86f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classrclcpp_1_1PublisherBase"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classrclcpp_1_1PublisherBase')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classrclcpp_1_1PublisherBase.html">rclcpp::PublisherBase</a></td></tr>
 <tr class="memitem:ad84eedef6a8269f553551296cbf41b34 inherit pro_methods_classrclcpp_1_1PublisherBase"><td class="memTemplParams" colspan="2">template&lt;typename EventCallbackT &gt; </td></tr>
-<tr class="memitem:ad84eedef6a8269f553551296cbf41b34 inherit pro_methods_classrclcpp_1_1PublisherBase"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrclcpp_1_1PublisherBase.html#ad84eedef6a8269f553551296cbf41b34">add_event_handler</a> (const EventCallbackT &amp;callback, const <a class="elRef" href="http://docs.ros2.org/foxy/api/rcl/event_8h.html#acab63164956510e894600ecad3e6dd6a">rcl_publisher_event_type_t</a> event_type)</td></tr>
+<tr class="memitem:ad84eedef6a8269f553551296cbf41b34 inherit pro_methods_classrclcpp_1_1PublisherBase"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrclcpp_1_1PublisherBase.html#ad84eedef6a8269f553551296cbf41b34">add_event_handler</a> (const EventCallbackT &amp;callback, const rcl_publisher_event_type_t event_type)</td></tr>
 <tr class="separator:ad84eedef6a8269f553551296cbf41b34 inherit pro_methods_classrclcpp_1_1PublisherBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e1803c62b437626f125f997e1d79028 inherit pro_methods_classrclcpp_1_1PublisherBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrclcpp_1_1PublisherBase.html#a2e1803c62b437626f125f997e1d79028">default_incompatible_qos_callback</a> (<a class="el" href="namespacerclcpp.html#af6174538b0f569e38ba3be09812ad54c">QOSOfferedIncompatibleQoSInfo</a> &amp;info) const</td></tr>
 <tr class="separator:a2e1803c62b437626f125f997e1d79028 inherit pro_methods_classrclcpp_1_1PublisherBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -610,7 +610,7 @@ template&lt;typename MessageT , typename AllocatorT  = std::allocator&lt;void&gt
         <tr>
           <td class="memname">void <a class="el" href="classrclcpp_1_1Publisher.html">rclcpp::Publisher</a>&lt; MessageT, AllocatorT &gt;::publish </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" href="http://docs.ros2.org/foxy/api/rcl/types_8h.html#aacac4adc45d07815b73188eafd77d705">rcl_serialized_message_t</a> &amp;&#160;</td>
+          <td class="paramtype">const rcl_serialized_message_t &amp;&#160;</td>
           <td class="paramname"><em>serialized_msg</em></td><td>)</td>
           <td></td>
         </tr>
@@ -758,7 +758,7 @@ template&lt;typename MessageT , typename AllocatorT  = std::allocator&lt;void&gt
         <tr>
           <td class="memname">void <a class="el" href="classrclcpp_1_1Publisher.html">rclcpp::Publisher</a>&lt; MessageT, AllocatorT &gt;::do_serialized_publish </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" href="http://docs.ros2.org/foxy/api/rcl/types_8h.html#aacac4adc45d07815b73188eafd77d705">rcl_serialized_message_t</a> *&#160;</td>
+          <td class="paramtype">const rcl_serialized_message_t *&#160;</td>
           <td class="paramname"><em>serialized_msg</em></td><td>)</td>
           <td></td>
         </tr>

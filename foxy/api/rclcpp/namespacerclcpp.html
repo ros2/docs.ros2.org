@@ -1376,7 +1376,37 @@ template&lt;typename MessageT , typename CallbackT , typename AllocatorT  = std:
 </div><div class="memdoc">
 
 <p>Create and return a subscription of the given MessageT type. </p>
-<p>The NodeT type only needs to have a method called <a class="el" href="namespacerclcpp_1_1node__interfaces.html#a8d074b92216b7d65e128633546e88132" title="Get the NodeTopicsInterface as a shared pointer from a pointer to a &quot;Node like&quot; object.">get_node_topics_interface()</a> which returns a shared_ptr to a NodeTopicsInterface, or be a NodeTopicsInterface pointer itself. </p>
+<p>The NodeT type only needs to have a method called <a class="el" href="namespacerclcpp_1_1node__interfaces.html#a8d074b92216b7d65e128633546e88132" title="Get the NodeTopicsInterface as a shared pointer from a pointer to a &quot;Node like&quot; object.">get_node_topics_interface()</a> which returns a shared_ptr to a NodeTopicsInterface, or be a NodeTopicsInterface pointer itself.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MessageT</td><td></td></tr>
+    <tr><td class="paramname">CallbackT</td><td></td></tr>
+    <tr><td class="paramname">AllocatorT</td><td></td></tr>
+    <tr><td class="paramname">CallbackMessageT</td><td></td></tr>
+    <tr><td class="paramname">SubscriptionT</td><td></td></tr>
+    <tr><td class="paramname">MessageMemoryStrategyT</td><td></td></tr>
+    <tr><td class="paramname">NodeT</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td></td></tr>
+    <tr><td class="paramname">topic_name</td><td></td></tr>
+    <tr><td class="paramname">qos</td><td></td></tr>
+    <tr><td class="paramname">callback</td><td></td></tr>
+    <tr><td class="paramname">options</td><td></td></tr>
+    <tr><td class="paramname">msg_mem_strat</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the created subscription </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="elRef" href="http://en.cppreference.com/w/cpp/error/invalid_argument.html">std::invalid_argument</a></td><td>if topic statistics is enabled and the publish period is less than or equal to zero. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2308,7 +2338,7 @@ template&lt;typename MessageT , typename CallbackT , typename AllocatorT , typen
     <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>The user-defined callback function to receive a message </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Additional options for the creation of the <a class="el" href="classrclcpp_1_1Subscription.html" title="Subscription implementation, templated on the type of message this subscription receives.">Subscription</a>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">msg_mem_strat</td><td>The message memory strategy to use for allocating messages. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">subscription_topic_Optinal</td><td>stats callback for <a class="el" href="namespacerclcpp_1_1topic__statistics.html">topic_statistics</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">subscription_topic_stats</td><td>Optional stats callback for <a class="el" href="namespacerclcpp_1_1topic__statistics.html">topic_statistics</a> </td></tr>
   </table>
   </dd>
 </dl>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['uniqueptr_3383',['UniquePtr',['../classclass__loader_1_1ClassLoader.html#acabadf67775aababcd3fa41a3886eac3',1,'class_loader::ClassLoader']]]
+  ['type_3494',['type',['http://docs.ros2.org/foxy/api/rcpputils/structrcpputils_1_1remove__pointer.html#ac814853a87b3ce5d97edcd8d306bd032',1,'rcpputils::remove_pointer']]]
 ];

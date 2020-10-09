@@ -91,113 +91,34 @@ Collaboration diagram for rcl_clock_t:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aa658825b1d2d69f7db1dc3383ed4690f"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="time_8h.html#a5c734f508ce06aec7974af10ad09d071">rcl_clock_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__clock__t.html#aa658825b1d2d69f7db1dc3383ed4690f">type</a></td></tr>
+<tr class="memitem:aa658825b1d2d69f7db1dc3383ed4690f"><td class="memItemLeft" align="right" valign="top"><a id="aa658825b1d2d69f7db1dc3383ed4690f"></a>
+enum rcl_clock_type_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__clock__t.html#aa658825b1d2d69f7db1dc3383ed4690f">type</a></td></tr>
+<tr class="memdesc:aa658825b1d2d69f7db1dc3383ed4690f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clock type. <br /></td></tr>
 <tr class="separator:aa658825b1d2d69f7db1dc3383ed4690f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac08e95482258ef10aaed60efe82a1bc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrcl__jump__callback__info__t.html">rcl_jump_callback_info_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__clock__t.html#ac08e95482258ef10aaed60efe82a1bc2">jump_callbacks</a></td></tr>
-<tr class="memdesc:ac08e95482258ef10aaed60efe82a1bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array of added jump callbacks.  <a href="structrcl__clock__t.html#ac08e95482258ef10aaed60efe82a1bc2">More...</a><br /></td></tr>
+<tr class="memitem:ac08e95482258ef10aaed60efe82a1bc2"><td class="memItemLeft" align="right" valign="top"><a id="ac08e95482258ef10aaed60efe82a1bc2"></a>
+<a class="el" href="structrcl__jump__callback__info__t.html">rcl_jump_callback_info_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__clock__t.html#ac08e95482258ef10aaed60efe82a1bc2">jump_callbacks</a></td></tr>
+<tr class="memdesc:ac08e95482258ef10aaed60efe82a1bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array of added jump callbacks. <br /></td></tr>
 <tr class="separator:ac08e95482258ef10aaed60efe82a1bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbe3bc4a715c9773b352dd84c0cf2a64"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__clock__t.html#afbe3bc4a715c9773b352dd84c0cf2a64">num_jump_callbacks</a></td></tr>
-<tr class="memdesc:afbe3bc4a715c9773b352dd84c0cf2a64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of callbacks in jump_callbacks.  <a href="structrcl__clock__t.html#afbe3bc4a715c9773b352dd84c0cf2a64">More...</a><br /></td></tr>
+<tr class="memitem:afbe3bc4a715c9773b352dd84c0cf2a64"><td class="memItemLeft" align="right" valign="top"><a id="afbe3bc4a715c9773b352dd84c0cf2a64"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__clock__t.html#afbe3bc4a715c9773b352dd84c0cf2a64">num_jump_callbacks</a></td></tr>
+<tr class="memdesc:afbe3bc4a715c9773b352dd84c0cf2a64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of callbacks in jump_callbacks. <br /></td></tr>
 <tr class="separator:afbe3bc4a715c9773b352dd84c0cf2a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98450494661b40bbbdcb234d55ad6e89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__clock__t.html#a98450494661b40bbbdcb234d55ad6e89">get_now</a> )(void *<a class="el" href="structrcl__clock__t.html#a300888b8f3f89967f169f8d8819e28fa">data</a>, <a class="el" href="time_8h.html#a504861cd584105c7ddfea1dd6539f8e8">rcl_time_point_value_t</a> *now)</td></tr>
+<tr class="memitem:a98450494661b40bbbdcb234d55ad6e89"><td class="memItemLeft" align="right" valign="top"><a id="a98450494661b40bbbdcb234d55ad6e89"></a>
+rcl_ret_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__clock__t.html#a98450494661b40bbbdcb234d55ad6e89">get_now</a> )(void *<a class="el" href="structrcl__clock__t.html#a300888b8f3f89967f169f8d8819e28fa">data</a>, rcl_time_point_value_t *now)</td></tr>
+<tr class="memdesc:a98450494661b40bbbdcb234d55ad6e89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to get_now function. <br /></td></tr>
 <tr class="separator:a98450494661b40bbbdcb234d55ad6e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a300888b8f3f89967f169f8d8819e28fa"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__clock__t.html#a300888b8f3f89967f169f8d8819e28fa">data</a></td></tr>
+<tr class="memitem:a300888b8f3f89967f169f8d8819e28fa"><td class="memItemLeft" align="right" valign="top"><a id="a300888b8f3f89967f169f8d8819e28fa"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__clock__t.html#a300888b8f3f89967f169f8d8819e28fa">data</a></td></tr>
+<tr class="memdesc:a300888b8f3f89967f169f8d8819e28fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clock storage. <br /></td></tr>
 <tr class="separator:a300888b8f3f89967f169f8d8819e28fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7af496ad74fac128ae48ffc04dcd900"><td class="memItemLeft" align="right" valign="top"><a class="el" href="allocator_8h.html#ac7146d98a03ca836efa0d0d77c78984c">rcl_allocator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__clock__t.html#ab7af496ad74fac128ae48ffc04dcd900">allocator</a></td></tr>
+<tr class="memitem:ab7af496ad74fac128ae48ffc04dcd900"><td class="memItemLeft" align="right" valign="top"><a id="ab7af496ad74fac128ae48ffc04dcd900"></a>
+<a class="elRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcl_allocator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcl__clock__t.html#ab7af496ad74fac128ae48ffc04dcd900">allocator</a></td></tr>
+<tr class="memdesc:ab7af496ad74fac128ae48ffc04dcd900"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom allocator used for internal allocations. <br /></td></tr>
 <tr class="separator:ab7af496ad74fac128ae48ffc04dcd900"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Encapsulation of a time source. </p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa658825b1d2d69f7db1dc3383ed4690f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa658825b1d2d69f7db1dc3383ed4690f">&#9670;&nbsp;</a></span>type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="time_8h.html#a5c734f508ce06aec7974af10ad09d071">rcl_clock_type_t</a> rcl_clock_t::type</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac08e95482258ef10aaed60efe82a1bc2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac08e95482258ef10aaed60efe82a1bc2">&#9670;&nbsp;</a></span>jump_callbacks</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structrcl__jump__callback__info__t.html">rcl_jump_callback_info_t</a>* rcl_clock_t::jump_callbacks</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>An array of added jump callbacks. </p>
-
-</div>
-</div>
-<a id="afbe3bc4a715c9773b352dd84c0cf2a64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbe3bc4a715c9773b352dd84c0cf2a64">&#9670;&nbsp;</a></span>num_jump_callbacks</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t rcl_clock_t::num_jump_callbacks</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Number of callbacks in jump_callbacks. </p>
-
-</div>
-</div>
-<a id="a98450494661b40bbbdcb234d55ad6e89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98450494661b40bbbdcb234d55ad6e89">&#9670;&nbsp;</a></span>get_now</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a>(* rcl_clock_t::get_now) (void *<a class="el" href="structrcl__clock__t.html#a300888b8f3f89967f169f8d8819e28fa">data</a>, <a class="el" href="time_8h.html#a504861cd584105c7ddfea1dd6539f8e8">rcl_time_point_value_t</a> *now)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a300888b8f3f89967f169f8d8819e28fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a300888b8f3f89967f169f8d8819e28fa">&#9670;&nbsp;</a></span>data</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* rcl_clock_t::data</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab7af496ad74fac128ae48ffc04dcd900"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7af496ad74fac128ae48ffc04dcd900">&#9670;&nbsp;</a></span>allocator</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="allocator_8h.html#ac7146d98a03ca836efa0d0d77c78984c">rcl_allocator_t</a> rcl_clock_t::allocator</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/rcl/<a class="el" href="time_8h_source.html">time.h</a></li>
 </ul>
 </div><!-- contents -->

@@ -1,12 +1,15 @@
 <map id="include/rcpputils/filesystem_helper.hpp" name="include/rcpputils/filesystem_helper.hpp">
-<area shape="rect" id="node1" title="Cross&#45;platform filesystem helper functions and additional emulation of std::filesystem." alt="" coords="187,5,389,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,95,91,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="115,95,200,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="199,169,257,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="282,169,345,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="488,95,584,121"/>
-<area shape="rect" id="node7" title=" " alt="" coords="608,95,683,121"/>
-<area shape="rect" id="node8" href="$split_8hpp.html" title="Split string by provided delimiter." alt="" coords="325,95,464,121"/>
-<area shape="rect" id="node9" title=" " alt="" coords="369,169,439,196"/>
-<area shape="rect" id="node10" title=" " alt="" coords="464,169,539,196"/>
+<area shape="rect" id="node1" title="Cross&#45;platform filesystem helper functions and additional emulation of std::filesystem." alt="" coords="347,5,550,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,76,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="101,95,186,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="210,95,295,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="319,95,386,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="385,169,443,196"/>
+<area shape="rect" id="node7" title=" " alt="" coords="468,169,531,196"/>
+<area shape="rect" id="node8" title=" " alt="" coords="674,95,746,121"/>
+<area shape="rect" id="node9" title=" " alt="" coords="770,95,866,121"/>
+<area shape="rect" id="node10" title=" " alt="" coords="890,95,965,121"/>
+<area shape="rect" id="node11" href="$split_8hpp.html" title="Split string by provided delimiter." alt="" coords="511,95,650,121"/>
+<area shape="rect" id="node12" title=" " alt="" coords="555,169,625,196"/>
+<area shape="rect" id="node13" title=" " alt="" coords="650,169,725,196"/>
 </map>

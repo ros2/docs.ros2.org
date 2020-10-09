@@ -118,39 +118,39 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">template</span>&lt;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">class </span>InsertIterator,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">typename</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/types/enable_if.html">std::enable_if</a>&lt;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="codeRef" href="http://en.cppreference.com/w/cpp/types/is_same.html">std::is_same</a>&lt;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      InsertIterator &amp;,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      decltype(std::declval&lt;InsertIterator&gt;().<span class="keyword">operator</span>=(std::declval&lt;std::string&gt;()))&gt;::value</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  &gt;::type * = <span class="keyword">nullptr</span>&gt;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="namespacercpputils.html#a47e909fe12d1193c49c2bd021465e2d2">   67</a></span>&#160;<a class="code" href="namespacercpputils.html#a47e909fe12d1193c49c2bd021465e2d2">split</a>(<span class="keyword">const</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp; input, <span class="keywordtype">char</span> delim, InsertIterator &amp; it, <span class="keywordtype">bool</span> skip_empty = <span class="keyword">false</span>)</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="codeRef" href="http://en.cppreference.com/w/cpp/io/basic_stringstream.html">std::stringstream</a> ss;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  ss.<a class="codeRef" href="http://en.cppreference.com/w/cpp/io/basic_stringstream/str.html">str</a>(input);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="codeRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> item;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordflow">while</span> (<a class="codeRef" href="http://en.cppreference.com/w/cpp/string/basic_string/getline.html">std::getline</a>(ss, item, delim)) {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (skip_empty &amp;&amp; item == <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    it = item;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">inline</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector&lt;std::string&gt;</a></div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="namespacercpputils.html#a345c5a517eb613e45f68668b50824a45">   89</a></span>&#160;<a class="code" href="namespacercpputils.html#a47e909fe12d1193c49c2bd021465e2d2">split</a>(<span class="keyword">const</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp; input, <span class="keywordtype">char</span> delim, <span class="keywordtype">bool</span> skip_empty = <span class="keyword">false</span>)</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="codeRef" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector&lt;std::string&gt;</a> result;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">auto</span> it = <a class="codeRef" href="http://en.cppreference.com/w/cpp/iterator/back_inserter.html">std::back_inserter</a>(result);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="code" href="namespacercpputils.html#a47e909fe12d1193c49c2bd021465e2d2">split</a>(input, delim, it, skip_empty);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}  <span class="comment">// namespace rcpputils</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif  // RCPPUTILS__SPLIT_HPP_</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">template</span>&lt;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">class </span>InsertIterator,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">typename</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/types/enable_if.html">std::enable_if</a>&lt;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="codeRef" href="http://en.cppreference.com/w/cpp/types/is_same.html">std::is_same</a>&lt;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      InsertIterator &amp;,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      decltype(std::declval&lt;InsertIterator&gt;().<span class="keyword">operator</span>=(std::declval&lt;std::string&gt;()))&gt;::value</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  &gt;::type * = <span class="keyword">nullptr</span>&gt;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="namespacercpputils.html#a47e909fe12d1193c49c2bd021465e2d2">   68</a></span>&#160;<a class="code" href="namespacercpputils.html#a47e909fe12d1193c49c2bd021465e2d2">split</a>(<span class="keyword">const</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp; input, <span class="keywordtype">char</span> delim, InsertIterator &amp; it, <span class="keywordtype">bool</span> skip_empty = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <a class="codeRef" href="http://en.cppreference.com/w/cpp/io/basic_stringstream.html">std::stringstream</a> ss;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  ss.<a class="codeRef" href="http://en.cppreference.com/w/cpp/io/basic_stringstream/str.html">str</a>(input);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <a class="codeRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> item;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordflow">while</span> (<a class="codeRef" href="http://en.cppreference.com/w/cpp/string/basic_string/getline.html">std::getline</a>(ss, item, delim)) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">if</span> (skip_empty &amp;&amp; item == <span class="stringliteral">&quot;&quot;</span>) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    it = item;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">inline</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector&lt;std::string&gt;</a></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="namespacercpputils.html#a345c5a517eb613e45f68668b50824a45">   91</a></span>&#160;<a class="code" href="namespacercpputils.html#a47e909fe12d1193c49c2bd021465e2d2">split</a>(<span class="keyword">const</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp; input, <span class="keywordtype">char</span> delim, <span class="keywordtype">bool</span> skip_empty = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="codeRef" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector&lt;std::string&gt;</a> result;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keyword">auto</span> it = <a class="codeRef" href="http://en.cppreference.com/w/cpp/iterator/back_inserter.html">std::back_inserter</a>(result);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="namespacercpputils.html#a47e909fe12d1193c49c2bd021465e2d2">split</a>(input, delim, it, skip_empty);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}  <span class="comment">// namespace rcpputils</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif  // RCPPUTILS__SPLIT_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="ais_same_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/types/is_same.html">std::is_same</a></div></div>
 <div class="ttc" id="abasic_string_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a></div></div>
@@ -159,7 +159,7 @@ $(function() {
 <div class="ttc" id="aback_inserter_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/iterator/back_inserter.html">std::back_inserter</a></div><div class="ttdeci">T back_inserter(T... args)</div></div>
 <div class="ttc" id="abasic_stringstream_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/io/basic_stringstream.html">std::stringstream</a></div></div>
 <div class="ttc" id="aenable_if_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/types/enable_if.html">std::enable_if</a></div></div>
-<div class="ttc" id="anamespacercpputils_html_a47e909fe12d1193c49c2bd021465e2d2"><div class="ttname"><a href="namespacercpputils.html#a47e909fe12d1193c49c2bd021465e2d2">rcpputils::split</a></div><div class="ttdeci">void split(const std::string &amp;input, char delim, InsertIterator &amp;it, bool skip_empty=false)</div><div class="ttdoc">Split a specified input into tokens using a delimiter and a type erased insert iterator.</div><div class="ttdef"><b>Definition:</b> split.hpp:67</div></div>
+<div class="ttc" id="anamespacercpputils_html_a47e909fe12d1193c49c2bd021465e2d2"><div class="ttname"><a href="namespacercpputils.html#a47e909fe12d1193c49c2bd021465e2d2">rcpputils::split</a></div><div class="ttdeci">void split(const std::string &amp;input, char delim, InsertIterator &amp;it, bool skip_empty=false)</div><div class="ttdoc">Split a specified input into tokens using a delimiter and a type erased insert iterator.</div><div class="ttdef"><b>Definition:</b> split.hpp:68</div></div>
 <div class="ttc" id="agetline_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/string/basic_string/getline.html">std::getline</a></div><div class="ttdeci">T getline(T... args)</div></div>
 <div class="ttc" id="astr_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/io/basic_stringstream/str.html">std::stringstream::str</a></div><div class="ttdeci">T str(T... args)</div></div>
 <!-- start footer part -->

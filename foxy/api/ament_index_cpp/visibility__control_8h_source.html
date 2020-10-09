@@ -71,7 +71,7 @@ $(function() {
 <div class="title">visibility_control.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="visibility__control_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2015 Open Source Robotics Foundation, Inc.</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2015 Open Source Robotics Foundation, Inc.</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// you may not use this file except in compliance with the License.</span></div>
@@ -111,14 +111,14 @@ $(function() {
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">  #endif</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">  #define AMENT_INDEX_CPP_LOCAL</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="visibility__control_8h.html#af8e4d77decc9c2b8623cd8915a913576">   41</a></span>&#160;<span class="preprocessor">  #define AMENT_INDEX_CPP_EXPORT __attribute__ ((visibility(&quot;default&quot;)))</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="visibility__control_8h.html#aad9ec3555240bd152eb2e2e631591ae2">   42</a></span>&#160;<span class="preprocessor">  #define AMENT_INDEX_CPP_IMPORT</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">  #define AMENT_INDEX_CPP_EXPORT __attribute__ ((visibility(&quot;default&quot;)))</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">  #define AMENT_INDEX_CPP_IMPORT</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">  #if __GNUC__ &gt;= 4</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">    #define AMENT_INDEX_CPP_PUBLIC __attribute__ ((visibility(&quot;default&quot;)))</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">    #define AMENT_INDEX_CPP_LOCAL  __attribute__ ((visibility(&quot;hidden&quot;)))</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">  #else</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="visibility__control_8h.html#a50bcbbc37ac782135abc5e900c8a7178">   47</a></span>&#160;<span class="preprocessor">    #define AMENT_INDEX_CPP_PUBLIC</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="visibility__control_8h.html#a16ee29b9ce43b626b812689a3faa5451">   48</a></span>&#160;<span class="preprocessor">    #define AMENT_INDEX_CPP_LOCAL</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">    #define AMENT_INDEX_CPP_PUBLIC</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">    #define AMENT_INDEX_CPP_LOCAL</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">  #endif</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>

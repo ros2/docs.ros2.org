@@ -177,62 +177,62 @@ $(function() {
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="keywordtype">void</span> <a class="code" href="logging_8h.html#aa13e74b0ec8bb89b3dd310a27b20abfc">rcutils_logging_set_output_handler</a>(<a class="code" href="logging_8h.html#a85bd535a004f803137f63c0fd5ec78a1">rcutils_logging_output_handler_t</a> <span class="keyword">function</span>);</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<a class="code" href="macros_8h.html#a6be4031432c70fddf878bd574c8bccc4">RCUTILS_WARN_UNUSED</a></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<a class="code" href="rcutils__ret_8h.html#a016de12b840689bdc6c96cab97b08c21">rcutils_ret_t</a> <a class="code" href="logging_8h.html#a3a35200b6c0d4089b7e5b46d9803b334">rcutils_logging_format_message</a>(</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keyword">const</span> <a class="code" href="structrcutils__log__location__t.html">rcutils_log_location_t</a> * location,</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <span class="keywordtype">int</span> severity, <span class="keyword">const</span> <span class="keywordtype">char</span> * name, <a class="code" href="time_8h.html#a1155c6e3107d5a1011fe65d470b3e431">rcutils_time_point_value_t</a> timestamp,</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * msg, <a class="code" href="structrcutils__char__array__t.html">rcutils_char_array_t</a> * logging_output);</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="logging_8h.html#a98d15e6f56fc761bba69075d35928c1c">g_rcutils_logging_default_logger_level</a>;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<a class="code" href="macros_8h.html#a6be4031432c70fddf878bd574c8bccc4">RCUTILS_WARN_UNUSED</a></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="keywordtype">int</span> <a class="code" href="logging_8h.html#a2d3450cc470e5bb1236c945b62b0a6e8">rcutils_logging_get_default_logger_level</a>();</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="keywordtype">void</span> <a class="code" href="logging_8h.html#a61bcf3bc886038c1205fcec5e82c3259">rcutils_logging_set_default_logger_level</a>(<span class="keywordtype">int</span> level);</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<a class="code" href="macros_8h.html#a6be4031432c70fddf878bd574c8bccc4">RCUTILS_WARN_UNUSED</a></div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="keywordtype">int</span> <a class="code" href="logging_8h.html#abc3a9b08c537cdf86f5fc782aa8ac906">rcutils_logging_get_logger_level</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * name);</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<a class="code" href="macros_8h.html#a6be4031432c70fddf878bd574c8bccc4">RCUTILS_WARN_UNUSED</a></div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="keywordtype">int</span> <a class="code" href="logging_8h.html#a8970ef05aeac7600429d0f8e8c66e94c">rcutils_logging_get_logger_leveln</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * name, <span class="keywordtype">size_t</span> name_length);</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<a class="code" href="macros_8h.html#a6be4031432c70fddf878bd574c8bccc4">RCUTILS_WARN_UNUSED</a></div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<a class="code" href="rcutils__ret_8h.html#a016de12b840689bdc6c96cab97b08c21">rcutils_ret_t</a> <a class="code" href="logging_8h.html#a3e2a62aee6aa5d85c4e96a47d1c8e01e">rcutils_logging_set_logger_level</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * name, <span class="keywordtype">int</span> level);</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160; </div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;<a class="code" href="macros_8h.html#a6be4031432c70fddf878bd574c8bccc4">RCUTILS_WARN_UNUSED</a></div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="logging_8h.html#a5520e2e49b0efcfcd8c162c78b6eec13">rcutils_logging_logger_is_enabled_for</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * name, <span class="keywordtype">int</span> severity);</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160; </div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160; </div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<a class="code" href="macros_8h.html#a6be4031432c70fddf878bd574c8bccc4">RCUTILS_WARN_UNUSED</a></div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;<span class="keywordtype">int</span> <a class="code" href="logging_8h.html#afe8888de46bb928949387da83530d8c7">rcutils_logging_get_logger_effective_level</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * name);</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160; </div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160; </div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;<span class="keywordtype">void</span> <a class="code" href="logging_8h.html#a07b308114e70617c216770b33542cd77">rcutils_log</a>(</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;  <span class="keyword">const</span> <a class="code" href="structrcutils__log__location__t.html">rcutils_log_location_t</a> * location,</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;  <span class="keywordtype">int</span> severity,</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * name,</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * format,</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;  ...)</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;<a class="code" href="macros_8h.html#ab1d6a5d267cee7a9b9f73e839c21e5d0">RCUTILS_ATTRIBUTE_PRINTF_FORMAT</a>(4, 5);</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160; </div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160; </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<a class="code" href="macros_8h.html#a6be4031432c70fddf878bd574c8bccc4">RCUTILS_WARN_UNUSED</a></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<a class="code" href="rcutils__ret_8h.html#a016de12b840689bdc6c96cab97b08c21">rcutils_ret_t</a> <a class="code" href="logging_8h.html#a3a35200b6c0d4089b7e5b46d9803b334">rcutils_logging_format_message</a>(</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="keyword">const</span> <a class="code" href="structrcutils__log__location__t.html">rcutils_log_location_t</a> * location,</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keywordtype">int</span> severity, <span class="keyword">const</span> <span class="keywordtype">char</span> * name, <a class="code" href="time_8h.html#a1155c6e3107d5a1011fe65d470b3e431">rcutils_time_point_value_t</a> timestamp,</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * msg, <a class="code" href="structrcutils__char__array__t.html">rcutils_char_array_t</a> * logging_output);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="logging_8h.html#a98d15e6f56fc761bba69075d35928c1c">g_rcutils_logging_default_logger_level</a>;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<a class="code" href="macros_8h.html#a6be4031432c70fddf878bd574c8bccc4">RCUTILS_WARN_UNUSED</a></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="keywordtype">int</span> <a class="code" href="logging_8h.html#a2d3450cc470e5bb1236c945b62b0a6e8">rcutils_logging_get_default_logger_level</a>();</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="keywordtype">void</span> <a class="code" href="logging_8h.html#a61bcf3bc886038c1205fcec5e82c3259">rcutils_logging_set_default_logger_level</a>(<span class="keywordtype">int</span> level);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<a class="code" href="macros_8h.html#a6be4031432c70fddf878bd574c8bccc4">RCUTILS_WARN_UNUSED</a></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="keywordtype">int</span> <a class="code" href="logging_8h.html#abc3a9b08c537cdf86f5fc782aa8ac906">rcutils_logging_get_logger_level</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * name);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<a class="code" href="macros_8h.html#a6be4031432c70fddf878bd574c8bccc4">RCUTILS_WARN_UNUSED</a></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="keywordtype">int</span> <a class="code" href="logging_8h.html#a8970ef05aeac7600429d0f8e8c66e94c">rcutils_logging_get_logger_leveln</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * name, <span class="keywordtype">size_t</span> name_length);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160; </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;<a class="code" href="macros_8h.html#a6be4031432c70fddf878bd574c8bccc4">RCUTILS_WARN_UNUSED</a></div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<a class="code" href="rcutils__ret_8h.html#a016de12b840689bdc6c96cab97b08c21">rcutils_ret_t</a> <a class="code" href="logging_8h.html#a3e2a62aee6aa5d85c4e96a47d1c8e01e">rcutils_logging_set_logger_level</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * name, <span class="keywordtype">int</span> level);</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160; </div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160; </div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<a class="code" href="macros_8h.html#a6be4031432c70fddf878bd574c8bccc4">RCUTILS_WARN_UNUSED</a></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="logging_8h.html#a5520e2e49b0efcfcd8c162c78b6eec13">rcutils_logging_logger_is_enabled_for</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * name, <span class="keywordtype">int</span> severity);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<a class="code" href="macros_8h.html#a6be4031432c70fddf878bd574c8bccc4">RCUTILS_WARN_UNUSED</a></div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="keywordtype">int</span> <a class="code" href="logging_8h.html#afe8888de46bb928949387da83530d8c7">rcutils_logging_get_logger_effective_level</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * name);</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160; </div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160; </div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;<span class="keywordtype">void</span> <a class="code" href="logging_8h.html#a07b308114e70617c216770b33542cd77">rcutils_log</a>(</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;  <span class="keyword">const</span> <a class="code" href="structrcutils__log__location__t.html">rcutils_log_location_t</a> * location,</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;  <span class="keywordtype">int</span> severity,</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * name,</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * format,</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;  ...)</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;<a class="code" href="macros_8h.html#ab1d6a5d267cee7a9b9f73e839c21e5d0">RCUTILS_ATTRIBUTE_PRINTF_FORMAT</a>(4, 5);</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160; </div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160; </div>
 <div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;<a class="code" href="visibility__control_8h.html#a6d8dae5bd2658d75d094bc3705e173e3">RCUTILS_PUBLIC</a></div>
 <div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;<span class="keywordtype">void</span> <a class="code" href="logging_8h.html#aad92d782fcd5e01512c8385347fd5273">rcutils_logging_console_output_handler</a>(</div>
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;  const <a class="code" href="structrcutils__log__location__t.html">rcutils_log_location_t</a> * location,</div>
@@ -264,7 +264,7 @@ $(function() {
 <div class="ttc" id="alogging_8h_html_a71612f441eb1d1857fafe5f7bcc298ef"><div class="ttname"><a href="logging_8h.html#a71612f441eb1d1857fafe5f7bcc298ef">rcutils_logging_shutdown</a></div><div class="ttdeci">rcutils_ret_t rcutils_logging_shutdown(void)</div><div class="ttdoc">Shutdown the logging system.</div></div>
 <div class="ttc" id="alogging_8h_html_a3e2a62aee6aa5d85c4e96a47d1c8e01e"><div class="ttname"><a href="logging_8h.html#a3e2a62aee6aa5d85c4e96a47d1c8e01e">rcutils_logging_set_logger_level</a></div><div class="ttdeci">rcutils_ret_t rcutils_logging_set_logger_level(const char *name, int level)</div><div class="ttdoc">Set the severity level for a logger.</div></div>
 <div class="ttc" id="alogging_8h_html_a2d3450cc470e5bb1236c945b62b0a6e8"><div class="ttname"><a href="logging_8h.html#a2d3450cc470e5bb1236c945b62b0a6e8">rcutils_logging_get_default_logger_level</a></div><div class="ttdeci">int rcutils_logging_get_default_logger_level()</div><div class="ttdoc">Get the default level for loggers.</div></div>
-<div class="ttc" id="amacros_8h_html_ab1d6a5d267cee7a9b9f73e839c21e5d0"><div class="ttname"><a href="macros_8h.html#ab1d6a5d267cee7a9b9f73e839c21e5d0">RCUTILS_ATTRIBUTE_PRINTF_FORMAT</a></div><div class="ttdeci">#define RCUTILS_ATTRIBUTE_PRINTF_FORMAT(format_string_index, first_to_check_index)</div><div class="ttdef"><b>Definition:</b> macros.h:91</div></div>
+<div class="ttc" id="amacros_8h_html_ab1d6a5d267cee7a9b9f73e839c21e5d0"><div class="ttname"><a href="macros_8h.html#ab1d6a5d267cee7a9b9f73e839c21e5d0">RCUTILS_ATTRIBUTE_PRINTF_FORMAT</a></div><div class="ttdeci">#define RCUTILS_ATTRIBUTE_PRINTF_FORMAT(format_string_index, first_to_check_index)</div><div class="ttdef"><b>Definition:</b> macros.h:94</div></div>
 <div class="ttc" id="alogging_8h_html_a475dfb4997bc9625fae6ddca38234889a6258e6da22f16dadc3104c753a553bf4"><div class="ttname"><a href="logging_8h.html#a475dfb4997bc9625fae6ddca38234889a6258e6da22f16dadc3104c753a553bf4">RCUTILS_LOG_SEVERITY_DEBUG</a></div><div class="ttdeci">@ RCUTILS_LOG_SEVERITY_DEBUG</div><div class="ttdoc">The debug log level.</div><div class="ttdef"><b>Definition:</b> logging.h:168</div></div>
 <div class="ttc" id="alogging_8h_html_aaa51f6713cf1948d87ce2a6345a32f9a"><div class="ttname"><a href="logging_8h.html#aaa51f6713cf1948d87ce2a6345a32f9a">rcutils_logging_initialize</a></div><div class="ttdeci">rcutils_ret_t rcutils_logging_initialize(void)</div><div class="ttdoc">Initialize the logging system.</div></div>
 <div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>

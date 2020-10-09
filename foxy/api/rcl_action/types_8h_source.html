@@ -71,7 +71,7 @@ $(function() {
 <div class="title">types.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="types_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2018 Open Source Robotics Foundation, Inc.</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2018 Open Source Robotics Foundation, Inc.</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// you may not use this file except in compliance with the License.</span></div>
@@ -93,21 +93,21 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="visibility__control_8h.html">rcl_action/visibility_control.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;rcl_action/visibility_control.h&quot;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;action_msgs/msg/goal_info.h&quot;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;action_msgs/msg/goal_status.h&quot;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;action_msgs/msg/goal_status_array.h&quot;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;action_msgs/srv/cancel_goal.h&quot;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/allocator_8h.html">rcl/allocator.h</a>&quot;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/macros_8h.html">rcl/macros.h</a>&quot;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/types_8h.html">rcl/types.h</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;rcl/allocator.h&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;rcl/macros.h&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;rcl/types.h&quot;</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;rosidl_runtime_c/action_type_support_struct.h&quot;</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// rcl action specific ret codes in 2XXX</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="types_8h.html#a12629862df3ce341ee6b1bc3b210624b">   38</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define RCL_RET_ACTION_NAME_INVALID 2000</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"></span><span class="preprocessor">#define RCL_RET_ACTION_NAME_INVALID 2000</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define RCL_RET_ACTION_GOAL_ACCEPTED 2100</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define RCL_RET_ACTION_GOAL_REJECTED 2101</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define RCL_RET_ACTION_CLIENT_INVALID 2102</span></div>
@@ -118,153 +118,122 @@ $(function() {
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#define RCL_RET_ACTION_GOAL_EVENT_INVALID 2301</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">// TODO(jacobperron): Move these to a common place for UUIDs</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="types_8h.html#a5db91c4b658dc322b42959cb5c851020">   57</a></span>&#160;<span class="preprocessor">#define UUID_SIZE 16</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="types_8h.html#acb86f87b62a28673361eb6ebcabf3558">   58</a></span>&#160;<span class="preprocessor">#define uuidcmp(uuid0, uuid1) (0 == memcmp(uuid0, uuid1, UUID_SIZE))</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="types_8h.html#a35906c63135b20ab3187ab8b97a0b498">   59</a></span>&#160;<span class="preprocessor">#define zerouuid (uint8_t[UUID_SIZE]) {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="types_8h.html#a93018e2220e4ab3dcc5048d562f1b25f">   60</a></span>&#160;<span class="preprocessor">#define uuidcmpzero(uuid) uuidcmp(uuid, (zerouuid))</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#define UUID_SIZE 16</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#define uuidcmp(uuid0, uuid1) (0 == memcmp(uuid0, uuid1, UUID_SIZE))</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#define zerouuid (uint8_t[UUID_SIZE]) {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#define uuidcmpzero(uuid) uuidcmp(uuid, (zerouuid))</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">// Forward declare</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="types_8h.html#ac7b0d1bb4767483764a16f755c6370ee">   63</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structrcl__action__server__t.html">rcl_action_server_t</a> <a class="code" href="structrcl__action__server__t.html">rcl_action_server_t</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structrcl__action__server__t.html">rcl_action_server_t</a> <a class="code" href="structrcl__action__server__t.html">rcl_action_server_t</a>;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">// Typedef generated messages for convenience</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="types_8h.html#aa1931c22457629ad8cc3fff84746d9ae">   66</a></span>&#160;<span class="keyword">typedef</span> action_msgs__msg__GoalInfo <a class="code" href="types_8h.html#aa1931c22457629ad8cc3fff84746d9ae">rcl_action_goal_info_t</a>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="types_8h.html#abf5d02b3f5043bbdbdb4ac78d252c188">   67</a></span>&#160;<span class="keyword">typedef</span> action_msgs__msg__GoalStatus <a class="code" href="types_8h.html#abf5d02b3f5043bbdbdb4ac78d252c188">rcl_action_goal_status_t</a>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="structrcl__action__goal__status__array__t.html">   68</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structrcl__action__goal__status__array__t.html">rcl_action_goal_status_array_t</a></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="structrcl__action__goal__status__array__t.html#a0c693ec3acf1c2711a5a21c4a43806c4">   70</a></span>&#160;  action_msgs__msg__GoalStatusArray <a class="code" href="structrcl__action__goal__status__array__t.html#a0c693ec3acf1c2711a5a21c4a43806c4">msg</a>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="structrcl__action__goal__status__array__t.html#af0d229fa89539c02dc88c22f26d4633b">   72</a></span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcl_allocator_t</a> <a class="code" href="structrcl__action__goal__status__array__t.html#af0d229fa89539c02dc88c22f26d4633b">allocator</a>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;} <a class="code" href="types_8h.html#a5fe38c227fcc49221acc2174a58cf620">rcl_action_goal_status_array_t</a>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="types_8h.html#acaed442eaf978dbb9270c93025165769">   74</a></span>&#160;<span class="keyword">typedef</span> action_msgs__srv__CancelGoal_Request <a class="code" href="types_8h.html#acaed442eaf978dbb9270c93025165769">rcl_action_cancel_request_t</a>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="structrcl__action__cancel__response__t.html">   75</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structrcl__action__cancel__response__t.html">rcl_action_cancel_response_t</a></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="structrcl__action__cancel__response__t.html#a899d408c779835c1b1832480dd1f49dd">   77</a></span>&#160;  action_msgs__srv__CancelGoal_Response <a class="code" href="structrcl__action__cancel__response__t.html#a899d408c779835c1b1832480dd1f49dd">msg</a>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="structrcl__action__cancel__response__t.html#a72242104b0b84ae39425ab79f4d4b911">   79</a></span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcl_allocator_t</a> <a class="code" href="structrcl__action__cancel__response__t.html#a72242104b0b84ae39425ab79f4d4b911">allocator</a>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;} <a class="code" href="types_8h.html#a17dd4f1dd4480e2a3ab1125e12347b9d">rcl_action_cancel_response_t</a>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">// TODO(jacobperron): Let states be defined by action_msgs/msg/goal_status.h</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">// Ideally, we could use an enum type directly from the message when the feature</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">// is available. Issue: https://github.com/ros2/rosidl/issues/260</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="types_8h.html#a4c99b806adf1c08e95b0f3b2786a9b12">   86</a></span>&#160;<span class="keyword">typedef</span> int8_t <a class="code" href="types_8h.html#a4c99b806adf1c08e95b0f3b2786a9b12">rcl_action_goal_state_t</a>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="types_8h.html#ace3fc2cde0ed9e2673f7464d6a350195">   87</a></span>&#160;<span class="preprocessor">#define GOAL_STATE_UNKNOWN action_msgs__msg__GoalStatus__STATUS_UNKNOWN</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="types_8h.html#a828b9efa4339e8f0708e5fa0a8ad121a">   88</a></span>&#160;<span class="preprocessor">#define GOAL_STATE_ACCEPTED action_msgs__msg__GoalStatus__STATUS_ACCEPTED</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="types_8h.html#a94ea3b25d9e0f911b53268c8c8961149">   89</a></span>&#160;<span class="preprocessor">#define GOAL_STATE_EXECUTING action_msgs__msg__GoalStatus__STATUS_EXECUTING</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="types_8h.html#abf2918c7709dd62a2e2747d2699e8a24">   90</a></span>&#160;<span class="preprocessor">#define GOAL_STATE_CANCELING action_msgs__msg__GoalStatus__STATUS_CANCELING</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="types_8h.html#ad3927f0a2b7ae1783147374d07a5a70b">   91</a></span>&#160;<span class="preprocessor">#define GOAL_STATE_SUCCEEDED action_msgs__msg__GoalStatus__STATUS_SUCCEEDED</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="types_8h.html#abd96dfa1949d684b39d60af7c7f9ec79">   92</a></span>&#160;<span class="preprocessor">#define GOAL_STATE_CANCELED action_msgs__msg__GoalStatus__STATUS_CANCELED</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="types_8h.html#ac162a8102fc5bd02ee704d757b7cfec8">   93</a></span>&#160;<span class="preprocessor">#define GOAL_STATE_ABORTED action_msgs__msg__GoalStatus__STATUS_ABORTED</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="types_8h.html#aca094122b9c371f2a67391cac15dea1d">   94</a></span>&#160;<span class="preprocessor">#define GOAL_STATE_NUM_STATES 7</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">// Description variables in types.c should be changed if enum values change</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="types_8h.html#a373eeaeba2bdac0136212fce92ec328d">goal_state_descriptions</a>[];</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="types_8h.html#a713e2bf6e3e90bc2466634504774562f">goal_event_descriptions</a>[];</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eede">  102</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eede">rcl_action_goal_event_t</a></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eedea35f4759415394243273e44132b0372d6">  104</a></span>&#160;  <a class="code" href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eedea35f4759415394243273e44132b0372d6">GOAL_EVENT_EXECUTE</a> = 0,</div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eedeac015ea42190bbac16263f64c007da18e">  105</a></span>&#160;  <a class="code" href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eedeac015ea42190bbac16263f64c007da18e">GOAL_EVENT_CANCEL_GOAL</a>,</div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eedea8483a24183a10c3d23c4f3a16764c482">  106</a></span>&#160;  <a class="code" href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eedea8483a24183a10c3d23c4f3a16764c482">GOAL_EVENT_SUCCEED</a>,</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eedeae342cff0005bc4530c60d388d845eb9c">  107</a></span>&#160;  <a class="code" href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eedeae342cff0005bc4530c60d388d845eb9c">GOAL_EVENT_ABORT</a>,</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eedea311e82a2faed87bd3c050dd3a8b74252">  108</a></span>&#160;  <a class="code" href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eedea311e82a2faed87bd3c050dd3a8b74252">GOAL_EVENT_CANCELED</a>,</div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eedead5f7fc2ae4af02cf7197191ed7df1440">  109</a></span>&#160;  <a class="code" href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eedead5f7fc2ae4af02cf7197191ed7df1440">GOAL_EVENT_NUM_EVENTS</a></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;} <a class="code" href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eede">rcl_action_goal_event_t</a>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<a class="code" href="visibility__control_8h.html#a697147f89f84557cd0fe6ab287126416">RCL_ACTION_PUBLIC</a></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<a class="code" href="types_8h.html#aa1931c22457629ad8cc3fff84746d9ae">rcl_action_goal_info_t</a></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<a class="code" href="types_8h.html#a72d6412e03139e23326ca16800c31bf2">rcl_action_get_zero_initialized_goal_info</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<a class="code" href="visibility__control_8h.html#a697147f89f84557cd0fe6ab287126416">RCL_ACTION_PUBLIC</a></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<a class="code" href="structrcl__action__goal__status__array__t.html">rcl_action_goal_status_array_t</a></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<a class="code" href="types_8h.html#a6f2637fadbd789bb82d7eb3e45ed32ff">rcl_action_get_zero_initialized_goal_status_array</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<a class="code" href="visibility__control_8h.html#a697147f89f84557cd0fe6ab287126416">RCL_ACTION_PUBLIC</a></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<a class="code" href="types_8h.html#acaed442eaf978dbb9270c93025165769">rcl_action_cancel_request_t</a></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<a class="code" href="types_8h.html#a98d10a7257ae4dd4303eee090f779420">rcl_action_get_zero_initialized_cancel_request</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<a class="code" href="visibility__control_8h.html#a697147f89f84557cd0fe6ab287126416">RCL_ACTION_PUBLIC</a></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<a class="code" href="structrcl__action__cancel__response__t.html">rcl_action_cancel_response_t</a></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<a class="code" href="types_8h.html#aecc1a254d9c8f53ce53a3bae3fb6f1ec">rcl_action_get_zero_initialized_cancel_response</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<a class="code" href="visibility__control_8h.html#a697147f89f84557cd0fe6ab287126416">RCL_ACTION_PUBLIC</a></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<a class="code" href="types_8h.html#a328a284046a3ca196aa82eab6d633f95">rcl_action_goal_status_array_init</a>(</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <a class="code" href="structrcl__action__goal__status__array__t.html">rcl_action_goal_status_array_t</a> * status_array,</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_status,</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keyword">const</span> <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcl_allocator_t</a> allocator);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<a class="code" href="visibility__control_8h.html#a697147f89f84557cd0fe6ab287126416">RCL_ACTION_PUBLIC</a></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<a class="code" href="types_8h.html#a00f01efca81bc1a8d0923890dc50c1a7">rcl_action_goal_status_array_fini</a>(<a class="code" href="structrcl__action__goal__status__array__t.html">rcl_action_goal_status_array_t</a> * status_array);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<a class="code" href="visibility__control_8h.html#a697147f89f84557cd0fe6ab287126416">RCL_ACTION_PUBLIC</a></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<a class="code" href="types_8h.html#a359610bbd2c9f8fd3ec8a437b2d254c4">rcl_action_cancel_response_init</a>(</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  <a class="code" href="structrcl__action__cancel__response__t.html">rcl_action_cancel_response_t</a> * cancel_response,</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_goals_canceling,</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <span class="keyword">const</span> <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcl_allocator_t</a> allocator);</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<a class="code" href="visibility__control_8h.html#a697147f89f84557cd0fe6ab287126416">RCL_ACTION_PUBLIC</a></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<a class="code" href="types_8h.html#a663605faf5849b3d19a0f608db0fd78e">rcl_action_cancel_response_fini</a>(<a class="code" href="structrcl__action__cancel__response__t.html">rcl_action_cancel_response_t</a> * cancel_response);</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;}</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">typedef</span> action_msgs__msg__GoalInfo rcl_action_goal_info_t;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">typedef</span> action_msgs__msg__GoalStatus rcl_action_goal_status_t;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="structrcl__action__goal__status__array__t.html">   69</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structrcl__action__goal__status__array__t.html">rcl_action_goal_status_array_t</a></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="structrcl__action__goal__status__array__t.html#a0c693ec3acf1c2711a5a21c4a43806c4">   72</a></span>&#160;  action_msgs__msg__GoalStatusArray <a class="code" href="structrcl__action__goal__status__array__t.html#a0c693ec3acf1c2711a5a21c4a43806c4">msg</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="structrcl__action__goal__status__array__t.html#af0d229fa89539c02dc88c22f26d4633b">   74</a></span>&#160;  rcl_allocator_t <a class="code" href="structrcl__action__goal__status__array__t.html#af0d229fa89539c02dc88c22f26d4633b">allocator</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;} <a class="code" href="structrcl__action__goal__status__array__t.html">rcl_action_goal_status_array_t</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">typedef</span> action_msgs__srv__CancelGoal_Request rcl_action_cancel_request_t;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="structrcl__action__cancel__response__t.html">   78</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structrcl__action__cancel__response__t.html">rcl_action_cancel_response_t</a></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="structrcl__action__cancel__response__t.html#a899d408c779835c1b1832480dd1f49dd">   81</a></span>&#160;  action_msgs__srv__CancelGoal_Response <a class="code" href="structrcl__action__cancel__response__t.html#a899d408c779835c1b1832480dd1f49dd">msg</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="structrcl__action__cancel__response__t.html#a72242104b0b84ae39425ab79f4d4b911">   83</a></span>&#160;  rcl_allocator_t <a class="code" href="structrcl__action__cancel__response__t.html#a72242104b0b84ae39425ab79f4d4b911">allocator</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;} <a class="code" href="structrcl__action__cancel__response__t.html">rcl_action_cancel_response_t</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">// TODO(jacobperron): Let states be defined by action_msgs/msg/goal_status.h</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">// Ideally, we could use an enum type directly from the message when the feature</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">// is available. Issue: https://github.com/ros2/rosidl/issues/260</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">typedef</span> int8_t rcl_action_goal_state_t;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#define GOAL_STATE_UNKNOWN action_msgs__msg__GoalStatus__STATUS_UNKNOWN</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#define GOAL_STATE_ACCEPTED action_msgs__msg__GoalStatus__STATUS_ACCEPTED</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#define GOAL_STATE_EXECUTING action_msgs__msg__GoalStatus__STATUS_EXECUTING</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#define GOAL_STATE_CANCELING action_msgs__msg__GoalStatus__STATUS_CANCELING</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#define GOAL_STATE_SUCCEEDED action_msgs__msg__GoalStatus__STATUS_SUCCEEDED</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#define GOAL_STATE_CANCELED action_msgs__msg__GoalStatus__STATUS_CANCELED</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#define GOAL_STATE_ABORTED action_msgs__msg__GoalStatus__STATUS_ABORTED</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#define GOAL_STATE_NUM_STATES 7</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">// Description variables in types.c should be changed if enum values change</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * goal_state_descriptions[];</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * goal_event_descriptions[];</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> rcl_action_goal_event_t</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;{</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  GOAL_EVENT_EXECUTE = 0,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  GOAL_EVENT_CANCEL_GOAL,</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  GOAL_EVENT_SUCCEED,</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  GOAL_EVENT_ABORT,</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  GOAL_EVENT_CANCELED,</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  GOAL_EVENT_NUM_EVENTS</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;} rcl_action_goal_event_t;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;RCL_ACTION_PUBLIC</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;rcl_action_goal_info_t</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;rcl_action_get_zero_initialized_goal_info(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;RCL_ACTION_PUBLIC</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<a class="code" href="structrcl__action__goal__status__array__t.html">rcl_action_goal_status_array_t</a></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;rcl_action_get_zero_initialized_goal_status_array(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;RCL_ACTION_PUBLIC</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;rcl_action_cancel_request_t</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;rcl_action_get_zero_initialized_cancel_request(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;RCL_ACTION_PUBLIC</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<a class="code" href="structrcl__action__cancel__response__t.html">rcl_action_cancel_response_t</a></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;rcl_action_get_zero_initialized_cancel_response(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;RCL_ACTION_PUBLIC</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;rcl_ret_t</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;rcl_action_goal_status_array_init(</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <a class="code" href="structrcl__action__goal__status__array__t.html">rcl_action_goal_status_array_t</a> * status_array,</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_status,</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <span class="keyword">const</span> rcl_allocator_t allocator);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;RCL_ACTION_PUBLIC</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;rcl_ret_t</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;rcl_action_goal_status_array_fini(<a class="code" href="structrcl__action__goal__status__array__t.html">rcl_action_goal_status_array_t</a> * status_array);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;RCL_ACTION_PUBLIC</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;rcl_ret_t</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;rcl_action_cancel_response_init(</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <a class="code" href="structrcl__action__cancel__response__t.html">rcl_action_cancel_response_t</a> * cancel_response,</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_goals_canceling,</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <span class="keyword">const</span> rcl_allocator_t allocator);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;RCL_ACTION_PUBLIC</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;rcl_ret_t</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;rcl_action_cancel_response_fini(<a class="code" href="structrcl__action__cancel__response__t.html">rcl_action_cancel_response_t</a> * cancel_response);</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor">#endif  // RCL_ACTION__TYPES_H_</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;}</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="preprocessor">#endif  // RCL_ACTION__TYPES_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astructrcl__action__server__t_html"><div class="ttname"><a href="structrcl__action__server__t.html">rcl_action_server_t</a></div><div class="ttdoc">Structure which encapsulates a ROS Action Server.</div><div class="ttdef"><b>Definition:</b> action_server.h:36</div></div>
-<div class="ttc" id="atypes_8h_html_a7b7ec4a9bda835afc9251cc68bd5eedea311e82a2faed87bd3c050dd3a8b74252"><div class="ttname"><a href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eedea311e82a2faed87bd3c050dd3a8b74252">GOAL_EVENT_CANCELED</a></div><div class="ttdeci">@ GOAL_EVENT_CANCELED</div><div class="ttdef"><b>Definition:</b> types.h:108</div></div>
-<div class="ttc" id="astructrcl__action__cancel__response__t_html"><div class="ttname"><a href="structrcl__action__cancel__response__t.html">rcl_action_cancel_response_t</a></div><div class="ttdef"><b>Definition:</b> types.h:75</div></div>
-<div class="ttc" id="astructrcl__action__goal__status__array__t_html_af0d229fa89539c02dc88c22f26d4633b"><div class="ttname"><a href="structrcl__action__goal__status__array__t.html#af0d229fa89539c02dc88c22f26d4633b">rcl_action_goal_status_array_t::allocator</a></div><div class="ttdeci">rcl_allocator_t allocator</div><div class="ttdoc">Allocator used to initialize this struct.</div><div class="ttdef"><b>Definition:</b> types.h:72</div></div>
-<div class="ttc" id="atypes_8h_html_a663605faf5849b3d19a0f608db0fd78e"><div class="ttname"><a href="types_8h.html#a663605faf5849b3d19a0f608db0fd78e">rcl_action_cancel_response_fini</a></div><div class="ttdeci">RCL_ACTION_PUBLIC rcl_ret_t rcl_action_cancel_response_fini(rcl_action_cancel_response_t *cancel_response)</div><div class="ttdoc">Finalize a rcl_action_cancel_response_t.</div></div>
-<div class="ttc" id="amacros_8h_html_a3a59b27e092b1fd10e7fc7336b29aa16"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div><div class="ttdeci">#define RCL_WARN_UNUSED</div></div>
-<div class="ttc" id="atypes_8h_html_af66ec2e20118b821dbf3f9b0067e8796"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div><div class="ttdeci">rmw_ret_t rcl_ret_t</div></div>
-<div class="ttc" id="avisibility__control_8h_html_a697147f89f84557cd0fe6ab287126416"><div class="ttname"><a href="visibility__control_8h.html#a697147f89f84557cd0fe6ab287126416">RCL_ACTION_PUBLIC</a></div><div class="ttdeci">#define RCL_ACTION_PUBLIC</div><div class="ttdef"><b>Definition:</b> visibility_control.h:50</div></div>
-<div class="ttc" id="atypes_8h_html_a00f01efca81bc1a8d0923890dc50c1a7"><div class="ttname"><a href="types_8h.html#a00f01efca81bc1a8d0923890dc50c1a7">rcl_action_goal_status_array_fini</a></div><div class="ttdeci">RCL_ACTION_PUBLIC rcl_ret_t rcl_action_goal_status_array_fini(rcl_action_goal_status_array_t *status_array)</div><div class="ttdoc">Finalize a rcl_action_goal_status_array_t.</div></div>
-<div class="ttc" id="atypes_8h_html_a7b7ec4a9bda835afc9251cc68bd5eede"><div class="ttname"><a href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eede">rcl_action_goal_event_t</a></div><div class="ttdeci">rcl_action_goal_event_t</div><div class="ttdoc">Goal state transition events.</div><div class="ttdef"><b>Definition:</b> types.h:102</div></div>
-<div class="ttc" id="atypes_8h_html_a7b7ec4a9bda835afc9251cc68bd5eedea8483a24183a10c3d23c4f3a16764c482"><div class="ttname"><a href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eedea8483a24183a10c3d23c4f3a16764c482">GOAL_EVENT_SUCCEED</a></div><div class="ttdeci">@ GOAL_EVENT_SUCCEED</div><div class="ttdef"><b>Definition:</b> types.h:106</div></div>
-<div class="ttc" id="astructrcl__action__goal__status__array__t_html"><div class="ttname"><a href="structrcl__action__goal__status__array__t.html">rcl_action_goal_status_array_t</a></div><div class="ttdef"><b>Definition:</b> types.h:68</div></div>
-<div class="ttc" id="atypes_8h_html_a359610bbd2c9f8fd3ec8a437b2d254c4"><div class="ttname"><a href="types_8h.html#a359610bbd2c9f8fd3ec8a437b2d254c4">rcl_action_cancel_response_init</a></div><div class="ttdeci">RCL_ACTION_PUBLIC rcl_ret_t rcl_action_cancel_response_init(rcl_action_cancel_response_t *cancel_response, const size_t num_goals_canceling, const rcl_allocator_t allocator)</div><div class="ttdoc">Initialize a rcl_action_cancel_response_t.</div></div>
-<div class="ttc" id="atypes_8h_html_a713e2bf6e3e90bc2466634504774562f"><div class="ttname"><a href="types_8h.html#a713e2bf6e3e90bc2466634504774562f">goal_event_descriptions</a></div><div class="ttdeci">const char * goal_event_descriptions[]</div></div>
-<div class="ttc" id="atypes_8h_html_a7b7ec4a9bda835afc9251cc68bd5eedeac015ea42190bbac16263f64c007da18e"><div class="ttname"><a href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eedeac015ea42190bbac16263f64c007da18e">GOAL_EVENT_CANCEL_GOAL</a></div><div class="ttdeci">@ GOAL_EVENT_CANCEL_GOAL</div><div class="ttdef"><b>Definition:</b> types.h:105</div></div>
-<div class="ttc" id="aallocator_8h.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/allocator_8h.html">allocator.h</a></div></div>
-<div class="ttc" id="atypes_8h_html_acaed442eaf978dbb9270c93025165769"><div class="ttname"><a href="types_8h.html#acaed442eaf978dbb9270c93025165769">rcl_action_cancel_request_t</a></div><div class="ttdeci">action_msgs__srv__CancelGoal_Request rcl_action_cancel_request_t</div><div class="ttdef"><b>Definition:</b> types.h:74</div></div>
-<div class="ttc" id="astructrcl__action__cancel__response__t_html_a72242104b0b84ae39425ab79f4d4b911"><div class="ttname"><a href="structrcl__action__cancel__response__t.html#a72242104b0b84ae39425ab79f4d4b911">rcl_action_cancel_response_t::allocator</a></div><div class="ttdeci">rcl_allocator_t allocator</div><div class="ttdoc">Allocator used to initialize this struct.</div><div class="ttdef"><b>Definition:</b> types.h:79</div></div>
-<div class="ttc" id="atypes_8h_html_a7b7ec4a9bda835afc9251cc68bd5eedea35f4759415394243273e44132b0372d6"><div class="ttname"><a href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eedea35f4759415394243273e44132b0372d6">GOAL_EVENT_EXECUTE</a></div><div class="ttdeci">@ GOAL_EVENT_EXECUTE</div><div class="ttdef"><b>Definition:</b> types.h:104</div></div>
-<div class="ttc" id="atypes_8h_html_a4c99b806adf1c08e95b0f3b2786a9b12"><div class="ttname"><a href="types_8h.html#a4c99b806adf1c08e95b0f3b2786a9b12">rcl_action_goal_state_t</a></div><div class="ttdeci">int8_t rcl_action_goal_state_t</div><div class="ttdoc">Goal states.</div><div class="ttdef"><b>Definition:</b> types.h:86</div></div>
-<div class="ttc" id="atypes_8h_html_a5fe38c227fcc49221acc2174a58cf620"><div class="ttname"><a href="types_8h.html#a5fe38c227fcc49221acc2174a58cf620">rcl_action_goal_status_array_t</a></div><div class="ttdeci">struct rcl_action_goal_status_array_t rcl_action_goal_status_array_t</div></div>
-<div class="ttc" id="atypes_8h_html_aecc1a254d9c8f53ce53a3bae3fb6f1ec"><div class="ttname"><a href="types_8h.html#aecc1a254d9c8f53ce53a3bae3fb6f1ec">rcl_action_get_zero_initialized_cancel_response</a></div><div class="ttdeci">RCL_ACTION_PUBLIC rcl_action_cancel_response_t rcl_action_get_zero_initialized_cancel_response(void)</div><div class="ttdoc">Return a rcl_action_cancel_response_t with members set to NULL.</div></div>
-<div class="ttc" id="avisibility__control_8h_html"><div class="ttname"><a href="visibility__control_8h.html">visibility_control.h</a></div></div>
-<div class="ttc" id="astructrcutils__allocator__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcutils_allocator_t</a></div></div>
-<div class="ttc" id="astructrcl__action__cancel__response__t_html_a899d408c779835c1b1832480dd1f49dd"><div class="ttname"><a href="structrcl__action__cancel__response__t.html#a899d408c779835c1b1832480dd1f49dd">rcl_action_cancel_response_t::msg</a></div><div class="ttdeci">action_msgs__srv__CancelGoal_Response msg</div><div class="ttdef"><b>Definition:</b> types.h:77</div></div>
-<div class="ttc" id="atypes_8h_html_a17dd4f1dd4480e2a3ab1125e12347b9d"><div class="ttname"><a href="types_8h.html#a17dd4f1dd4480e2a3ab1125e12347b9d">rcl_action_cancel_response_t</a></div><div class="ttdeci">struct rcl_action_cancel_response_t rcl_action_cancel_response_t</div></div>
-<div class="ttc" id="atypes_8h_html_a7b7ec4a9bda835afc9251cc68bd5eedead5f7fc2ae4af02cf7197191ed7df1440"><div class="ttname"><a href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eedead5f7fc2ae4af02cf7197191ed7df1440">GOAL_EVENT_NUM_EVENTS</a></div><div class="ttdeci">@ GOAL_EVENT_NUM_EVENTS</div><div class="ttdef"><b>Definition:</b> types.h:109</div></div>
-<div class="ttc" id="atypes_8h_html_a6f2637fadbd789bb82d7eb3e45ed32ff"><div class="ttname"><a href="types_8h.html#a6f2637fadbd789bb82d7eb3e45ed32ff">rcl_action_get_zero_initialized_goal_status_array</a></div><div class="ttdeci">RCL_ACTION_PUBLIC rcl_action_goal_status_array_t rcl_action_get_zero_initialized_goal_status_array(void)</div><div class="ttdoc">Return a rcl_action_goal_status_array_t with members set to NULL.</div></div>
-<div class="ttc" id="atypes_8h_html_a98d10a7257ae4dd4303eee090f779420"><div class="ttname"><a href="types_8h.html#a98d10a7257ae4dd4303eee090f779420">rcl_action_get_zero_initialized_cancel_request</a></div><div class="ttdeci">RCL_ACTION_PUBLIC rcl_action_cancel_request_t rcl_action_get_zero_initialized_cancel_request(void)</div><div class="ttdoc">Return a rcl_action_cancel_request_t with members set to NULL.</div></div>
-<div class="ttc" id="atypes_8h_html_a7b7ec4a9bda835afc9251cc68bd5eedeae342cff0005bc4530c60d388d845eb9c"><div class="ttname"><a href="types_8h.html#a7b7ec4a9bda835afc9251cc68bd5eedeae342cff0005bc4530c60d388d845eb9c">GOAL_EVENT_ABORT</a></div><div class="ttdeci">@ GOAL_EVENT_ABORT</div><div class="ttdef"><b>Definition:</b> types.h:107</div></div>
-<div class="ttc" id="atypes_8h_html_a328a284046a3ca196aa82eab6d633f95"><div class="ttname"><a href="types_8h.html#a328a284046a3ca196aa82eab6d633f95">rcl_action_goal_status_array_init</a></div><div class="ttdeci">RCL_ACTION_PUBLIC rcl_ret_t rcl_action_goal_status_array_init(rcl_action_goal_status_array_t *status_array, const size_t num_status, const rcl_allocator_t allocator)</div><div class="ttdoc">Initialize a rcl_action_goal_status_array_t.</div></div>
-<div class="ttc" id="atypes_8h.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/types_8h.html">types.h</a></div></div>
-<div class="ttc" id="atypes_8h_html_a373eeaeba2bdac0136212fce92ec328d"><div class="ttname"><a href="types_8h.html#a373eeaeba2bdac0136212fce92ec328d">goal_state_descriptions</a></div><div class="ttdeci">const char * goal_state_descriptions[]</div><div class="ttdoc">User friendly error messages for invalid trasntions.</div></div>
-<div class="ttc" id="amacros_8h.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="astructrcl__action__goal__status__array__t_html_a0c693ec3acf1c2711a5a21c4a43806c4"><div class="ttname"><a href="structrcl__action__goal__status__array__t.html#a0c693ec3acf1c2711a5a21c4a43806c4">rcl_action_goal_status_array_t::msg</a></div><div class="ttdeci">action_msgs__msg__GoalStatusArray msg</div><div class="ttdef"><b>Definition:</b> types.h:70</div></div>
-<div class="ttc" id="atypes_8h_html_a72d6412e03139e23326ca16800c31bf2"><div class="ttname"><a href="types_8h.html#a72d6412e03139e23326ca16800c31bf2">rcl_action_get_zero_initialized_goal_info</a></div><div class="ttdeci">RCL_ACTION_PUBLIC rcl_action_goal_info_t rcl_action_get_zero_initialized_goal_info(void)</div><div class="ttdoc">Return a rcl_action_goal_info_t with members set to zero values.</div></div>
-<div class="ttc" id="atypes_8h_html_aa1931c22457629ad8cc3fff84746d9ae"><div class="ttname"><a href="types_8h.html#aa1931c22457629ad8cc3fff84746d9ae">rcl_action_goal_info_t</a></div><div class="ttdeci">action_msgs__msg__GoalInfo rcl_action_goal_info_t</div><div class="ttdef"><b>Definition:</b> types.h:66</div></div>
-<div class="ttc" id="atypes_8h_html_abf5d02b3f5043bbdbdb4ac78d252c188"><div class="ttname"><a href="types_8h.html#abf5d02b3f5043bbdbdb4ac78d252c188">rcl_action_goal_status_t</a></div><div class="ttdeci">action_msgs__msg__GoalStatus rcl_action_goal_status_t</div><div class="ttdef"><b>Definition:</b> types.h:67</div></div>
+<div class="ttc" id="astructrcl__action__cancel__response__t_html"><div class="ttname"><a href="structrcl__action__cancel__response__t.html">rcl_action_cancel_response_t</a></div><div class="ttdoc">Struct with the action cancel response.</div><div class="ttdef"><b>Definition:</b> types.h:78</div></div>
+<div class="ttc" id="astructrcl__action__goal__status__array__t_html_af0d229fa89539c02dc88c22f26d4633b"><div class="ttname"><a href="structrcl__action__goal__status__array__t.html#af0d229fa89539c02dc88c22f26d4633b">rcl_action_goal_status_array_t::allocator</a></div><div class="ttdeci">rcl_allocator_t allocator</div><div class="ttdoc">Allocator used to initialize this struct.</div><div class="ttdef"><b>Definition:</b> types.h:74</div></div>
+<div class="ttc" id="astructrcl__action__goal__status__array__t_html"><div class="ttname"><a href="structrcl__action__goal__status__array__t.html">rcl_action_goal_status_array_t</a></div><div class="ttdoc">Struct with the action goal status array.</div><div class="ttdef"><b>Definition:</b> types.h:69</div></div>
+<div class="ttc" id="astructrcl__action__cancel__response__t_html_a72242104b0b84ae39425ab79f4d4b911"><div class="ttname"><a href="structrcl__action__cancel__response__t.html#a72242104b0b84ae39425ab79f4d4b911">rcl_action_cancel_response_t::allocator</a></div><div class="ttdeci">rcl_allocator_t allocator</div><div class="ttdoc">Allocator used to initialize this struct.</div><div class="ttdef"><b>Definition:</b> types.h:83</div></div>
+<div class="ttc" id="astructrcl__action__cancel__response__t_html_a899d408c779835c1b1832480dd1f49dd"><div class="ttname"><a href="structrcl__action__cancel__response__t.html#a899d408c779835c1b1832480dd1f49dd">rcl_action_cancel_response_t::msg</a></div><div class="ttdeci">action_msgs__srv__CancelGoal_Response msg</div><div class="ttdoc">Cancel goal response message.</div><div class="ttdef"><b>Definition:</b> types.h:81</div></div>
+<div class="ttc" id="astructrcl__action__goal__status__array__t_html_a0c693ec3acf1c2711a5a21c4a43806c4"><div class="ttname"><a href="structrcl__action__goal__status__array__t.html#a0c693ec3acf1c2711a5a21c4a43806c4">rcl_action_goal_status_array_t::msg</a></div><div class="ttdeci">action_msgs__msg__GoalStatusArray msg</div><div class="ttdoc">Goal status array message.</div><div class="ttdef"><b>Definition:</b> types.h:72</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

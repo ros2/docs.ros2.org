@@ -90,7 +90,7 @@ $(function() {
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/allocator_8h.html">rcl/allocator.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;rcl/allocator.h&quot;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="allocator__deleter_8hpp.html">rclcpp/allocator/allocator_deleter.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
@@ -141,14 +141,14 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">typename</span> T,</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keyword">typename</span> Alloc,</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">typename</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/types/enable_if.html">std::enable_if&lt;!std::is_same&lt;Alloc, std::allocator&lt;void&gt;</a>&gt;::value&gt;::type * = <span class="keyword">nullptr</span>&gt;</div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="namespacerclcpp_1_1allocator.html#a818a205bf62909c16a2f6439eb4c6a1f">   71</a></span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcl_allocator_t</a> <a class="code" href="namespacerclcpp_1_1allocator.html#a818a205bf62909c16a2f6439eb4c6a1f">get_rcl_allocator</a>(Alloc &amp; allocator)</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="namespacerclcpp_1_1allocator.html#a818a205bf62909c16a2f6439eb4c6a1f">   71</a></span>&#160;rcl_allocator_t <a class="code" href="namespacerclcpp_1_1allocator.html#a818a205bf62909c16a2f6439eb4c6a1f">get_rcl_allocator</a>(Alloc &amp; allocator)</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcl_allocator_t</a> rcl_allocator = <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/allocator_8h.html#a2546f065f55387ed642d455a55ba7602">rcl_get_default_allocator</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  rcl_allocator_t rcl_allocator = rcl_get_default_allocator();</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#ifndef _WIN32</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  rcl_allocator.<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html#a0a7609fd28eb9991693062a73a0db530">allocate</a> = &amp;retyped_allocate&lt;Alloc&gt;;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  rcl_allocator.<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html#ab4a6ed507595efef14c9b6d2b6590774">deallocate</a> = &amp;retyped_deallocate&lt;T, Alloc&gt;;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  rcl_allocator.<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html#a86fd98797490e58b6b7c1e95f93bea67">reallocate</a> = &amp;retyped_reallocate&lt;T, Alloc&gt;;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  rcl_allocator.<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html#a7d621d5b54c627f55d2c505f8c4a325b">state</a> = &amp;allocator;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  rcl_allocator.allocate = &amp;retyped_allocate&lt;Alloc&gt;;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  rcl_allocator.deallocate = &amp;retyped_deallocate&lt;T, Alloc&gt;;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  rcl_allocator.reallocate = &amp;retyped_reallocate&lt;T, Alloc&gt;;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  rcl_allocator.state = &amp;allocator;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  (void)allocator;  <span class="comment">// Remove warning</span></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif</span></div>
@@ -160,10 +160,10 @@ $(function() {
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keyword">typename</span> T,</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">typename</span> Alloc,</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">typename</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/types/enable_if.html">std::enable_if&lt;std::is_same&lt;Alloc, std::allocator&lt;void&gt;</a>&gt;::value&gt;::type * = <span class="keyword">nullptr</span>&gt;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcl_allocator_t</a> <a class="code" href="namespacerclcpp_1_1allocator.html#a818a205bf62909c16a2f6439eb4c6a1f">get_rcl_allocator</a>(Alloc &amp; allocator)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;rcl_allocator_t <a class="code" href="namespacerclcpp_1_1allocator.html#a818a205bf62909c16a2f6439eb4c6a1f">get_rcl_allocator</a>(Alloc &amp; allocator)</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  (void)allocator;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordflow">return</span> <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/allocator_8h.html#a2546f065f55387ed642d455a55ba7602">rcl_get_default_allocator</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordflow">return</span> rcl_get_default_allocator();</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}  <span class="comment">// namespace allocator</span></div>
@@ -171,24 +171,17 @@ $(function() {
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif  // RCLCPP__ALLOCATOR__ALLOCATOR_COMMON_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aallocator_8h_html_a2546f065f55387ed642d455a55ba7602"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/allocator_8h.html#a2546f065f55387ed642d455a55ba7602">rcl_get_default_allocator</a></div><div class="ttdeci">#define rcl_get_default_allocator</div></div>
 <div class="ttc" id="aallocator_traits_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/memory/allocator_traits.html">std::allocator_traits</a></div></div>
 <div class="ttc" id="anamespacerclcpp_html"><div class="ttname"><a href="namespacerclcpp.html">rclcpp</a></div><div class="ttdoc">This header provides the get_node_base_interface() template function.</div><div class="ttdef"><b>Definition:</b> allocator_common.hpp:24</div></div>
 <div class="ttc" id="aallocator__deleter_8hpp_html"><div class="ttname"><a href="allocator__deleter_8hpp.html">allocator_deleter.hpp</a></div></div>
 <div class="ttc" id="aenable_if_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/types/enable_if.html">std::enable_if</a></div></div>
 <div class="ttc" id="anamespacerclcpp_1_1allocator_html_a89c84a2945dc1cea1d6dfd4fa72a9dcd"><div class="ttname"><a href="namespacerclcpp_1_1allocator.html#a89c84a2945dc1cea1d6dfd4fa72a9dcd">rclcpp::allocator::AllocRebind</a></div><div class="ttdeci">typename std::allocator_traits&lt; Alloc &gt;::template rebind_traits&lt; T &gt; AllocRebind</div><div class="ttdef"><b>Definition:</b> allocator_common.hpp:30</div></div>
 <div class="ttc" id="aallocate_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/memory/allocator_traits/allocate.html">std::allocator_traits::allocate</a></div><div class="ttdeci">T allocate(T... args)</div></div>
-<div class="ttc" id="aallocator_8h.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/allocator_8h.html">allocator.h</a></div></div>
 <div class="ttc" id="anamespacerclcpp_1_1allocator_html_a9e8e54de535dc24500c6b0bd40f66b45"><div class="ttname"><a href="namespacerclcpp_1_1allocator.html#a9e8e54de535dc24500c6b0bd40f66b45">rclcpp::allocator::retyped_allocate</a></div><div class="ttdeci">void * retyped_allocate(size_t size, void *untyped_allocator)</div><div class="ttdef"><b>Definition:</b> allocator_common.hpp:33</div></div>
 <div class="ttc" id="adeallocate_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/memory/allocator_traits/deallocate.html">std::allocator_traits::deallocate</a></div><div class="ttdeci">T deallocate(T... args)</div></div>
 <div class="ttc" id="aruntime_error_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/error/runtime_error.html">std::runtime_error</a></div></div>
-<div class="ttc" id="astructrcutils__allocator__t_html_a86fd98797490e58b6b7c1e95f93bea67"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html#a86fd98797490e58b6b7c1e95f93bea67">rcutils_allocator_t::reallocate</a></div><div class="ttdeci">void *(* reallocate)(void *pointer, size_t size, void *state)</div></div>
 <div class="ttc" id="anamespacerclcpp_1_1allocator_html_a818a205bf62909c16a2f6439eb4c6a1f"><div class="ttname"><a href="namespacerclcpp_1_1allocator.html#a818a205bf62909c16a2f6439eb4c6a1f">rclcpp::allocator::get_rcl_allocator</a></div><div class="ttdeci">rcl_allocator_t get_rcl_allocator(Alloc &amp;allocator)</div><div class="ttdef"><b>Definition:</b> allocator_common.hpp:71</div></div>
 <div class="ttc" id="anamespacerclcpp_1_1allocator_html_a670a5abe8a315e3fdea5e2a1119ad72f"><div class="ttname"><a href="namespacerclcpp_1_1allocator.html#a670a5abe8a315e3fdea5e2a1119ad72f">rclcpp::allocator::retyped_reallocate</a></div><div class="ttdeci">void * retyped_reallocate(void *untyped_pointer, size_t size, void *untyped_allocator)</div><div class="ttdef"><b>Definition:</b> allocator_common.hpp:54</div></div>
-<div class="ttc" id="astructrcutils__allocator__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcutils_allocator_t</a></div></div>
-<div class="ttc" id="astructrcutils__allocator__t_html_a7d621d5b54c627f55d2c505f8c4a325b"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html#a7d621d5b54c627f55d2c505f8c4a325b">rcutils_allocator_t::state</a></div><div class="ttdeci">void * state</div></div>
-<div class="ttc" id="astructrcutils__allocator__t_html_ab4a6ed507595efef14c9b6d2b6590774"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html#ab4a6ed507595efef14c9b6d2b6590774">rcutils_allocator_t::deallocate</a></div><div class="ttdeci">void(* deallocate)(void *pointer, void *state)</div></div>
-<div class="ttc" id="astructrcutils__allocator__t_html_a0a7609fd28eb9991693062a73a0db530"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html#a0a7609fd28eb9991693062a73a0db530">rcutils_allocator_t::allocate</a></div><div class="ttdeci">void *(* allocate)(size_t size, void *state)</div></div>
 <div class="ttc" id="anamespacerclcpp_1_1allocator_html_aaefceff62e574693508452a7a125d9c9"><div class="ttname"><a href="namespacerclcpp_1_1allocator.html#aaefceff62e574693508452a7a125d9c9">rclcpp::allocator::retyped_deallocate</a></div><div class="ttdeci">void retyped_deallocate(void *untyped_pointer, void *untyped_allocator)</div><div class="ttdef"><b>Definition:</b> allocator_common.hpp:43</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

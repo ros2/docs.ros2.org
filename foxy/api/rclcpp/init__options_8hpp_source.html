@@ -90,7 +90,7 @@ $(function() {
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/init__options_8h.html">rcl/init_options.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;rcl/init_options.h&quot;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="visibility__control_8hpp.html">rclcpp/visibility_control.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacerclcpp.html">rclcpp</a></div>
@@ -103,7 +103,7 @@ $(function() {
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="visibility__control_8hpp.html#a802feb4ddc87a0699f6339a4b9ab7f23">RCLCPP_PUBLIC</a></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classrclcpp_1_1InitOptions.html#a8c499c99605e08d779df9e787c61bca0">InitOptions</a>(<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcl_allocator_t</a> allocator = <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/allocator_8h.html#a2546f065f55387ed642d455a55ba7602">rcl_get_default_allocator</a>());</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classrclcpp_1_1InitOptions.html#a8c499c99605e08d779df9e787c61bca0">InitOptions</a>(rcl_allocator_t allocator = rcl_get_default_allocator());</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="visibility__control_8hpp.html#a802feb4ddc87a0699f6339a4b9ab7f23">RCLCPP_PUBLIC</a></div>
@@ -146,7 +146,6 @@ $(function() {
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif  // RCLCPP__INIT_OPTIONS_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aallocator_8h_html_a2546f065f55387ed642d455a55ba7602"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/allocator_8h.html#a2546f065f55387ed642d455a55ba7602">rcl_get_default_allocator</a></div><div class="ttdeci">#define rcl_get_default_allocator</div></div>
 <div class="ttc" id="aclassrclcpp_1_1InitOptions_html_ac9af088145cc20179cb0ed19580becda"><div class="ttname"><a href="classrclcpp_1_1InitOptions.html#ac9af088145cc20179cb0ed19580becda">rclcpp::InitOptions::~InitOptions</a></div><div class="ttdeci">virtual ~InitOptions()</div></div>
 <div class="ttc" id="aclassrclcpp_1_1InitOptions_html_a2261e0f7fd90e45909957d344b135070"><div class="ttname"><a href="classrclcpp_1_1InitOptions.html#a2261e0f7fd90e45909957d344b135070">rclcpp::InitOptions::operator=</a></div><div class="ttdeci">InitOptions &amp; operator=(const InitOptions &amp;other)</div><div class="ttdoc">Assignment operator.</div></div>
 <div class="ttc" id="aclassrclcpp_1_1InitOptions_html_a8c499c99605e08d779df9e787c61bca0"><div class="ttname"><a href="classrclcpp_1_1InitOptions.html#a8c499c99605e08d779df9e787c61bca0">rclcpp::InitOptions::InitOptions</a></div><div class="ttdeci">InitOptions(rcl_allocator_t allocator=rcl_get_default_allocator())</div><div class="ttdoc">Constructor.</div></div>
@@ -156,10 +155,8 @@ $(function() {
 <div class="ttc" id="astructrcl__init__options__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/structrcl__init__options__t.html">rcl_init_options_t</a></div></div>
 <div class="ttc" id="aclassrclcpp_1_1InitOptions_html_a1243d2aeb64593534b68afe5017c7047"><div class="ttname"><a href="classrclcpp_1_1InitOptions.html#a1243d2aeb64593534b68afe5017c7047">rclcpp::InitOptions::shutdown_on_sigint</a></div><div class="ttdeci">bool shutdown_on_sigint</div><div class="ttdoc">If true, the context will be shutdown on SIGINT by the signal handler (if it was installed).</div><div class="ttdef"><b>Definition:</b> init_options.hpp:31</div></div>
 <div class="ttc" id="aclassrclcpp_1_1InitOptions_html_a078d0f36a02249b135842f603fb92da3"><div class="ttname"><a href="classrclcpp_1_1InitOptions.html#a078d0f36a02249b135842f603fb92da3">rclcpp::InitOptions::auto_initialize_logging</a></div><div class="ttdeci">bool auto_initialize_logging() const</div><div class="ttdoc">Return true if logging should be initialized when rclcpp::Context::init is called.</div></div>
-<div class="ttc" id="ainit__options_8h.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/init__options_8h.html">init_options.h</a></div></div>
 <div class="ttc" id="aclassrclcpp_1_1InitOptions_html_ade615ac330c30a51508e3eaa7031555b"><div class="ttname"><a href="classrclcpp_1_1InitOptions.html#ade615ac330c30a51508e3eaa7031555b">rclcpp::InitOptions::finalize_init_options</a></div><div class="ttdeci">void finalize_init_options()</div></div>
 <div class="ttc" id="aclassrclcpp_1_1InitOptions_html"><div class="ttname"><a href="classrclcpp_1_1InitOptions.html">rclcpp::InitOptions</a></div><div class="ttdoc">Encapsulation of options for initializing rclcpp.</div><div class="ttdef"><b>Definition:</b> init_options.hpp:27</div></div>
-<div class="ttc" id="astructrcutils__allocator__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcutils_allocator_t</a></div></div>
 <div class="ttc" id="avisibility__control_8hpp_html"><div class="ttname"><a href="visibility__control_8hpp.html">visibility_control.hpp</a></div></div>
 <div class="ttc" id="aunique_ptr_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">std::unique_ptr&lt; rcl_init_options_t &gt;</a></div></div>
 <!-- start footer part -->

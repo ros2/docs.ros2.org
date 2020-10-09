@@ -70,8 +70,8 @@ $(function() {
 <div class="textblock"><p>This document is a declaration of software quality for the <code>rosidl_runtime_c</code> package, based on the guidelines in <a href="https://www.ros.org/reps/rep-2004.html">REP-2004</a>.</p>
 <h1><a class="anchor" id="autotoc_md7"></a>
 rosidl_runtime_c Quality Declaration</h1>
-<p>The package <code>rosidl_runtime_c</code> claims to be in the <b>Quality Level 4</b> category.</p>
-<p>Below are the rationales, notes, and caveats for this claim, organized by each requirement listed in the <a href="https://www.ros.org/reps/rep-2004.html">Package Requirements for Quality Level 4 in REP-2004</a>.</p>
+<p>The package <code>rosidl_runtime_c</code> claims to be in the <b>Quality Level 2</b> category.</p>
+<p>Below are the rationales, notes, and caveats for this claim, organized by each requirement listed in the <a href="https://www.ros.org/reps/rep-2004.html">Package Requirements for Quality Level 2 in REP-2004</a>.</p>
 <h2><a class="anchor" id="autotoc_md8"></a>
 Version Policy [1]</h2>
 <h3><a class="anchor" id="autotoc_md9"></a>
@@ -143,7 +143,15 @@ Public API Testing [4.ii]</h3>
 <p>Most recent test results can be found <a href="https://ci.ros2.org/job/nightly_linux_release/lastBuild/testReport/rosidl_runtime_c">here</a>.</p>
 <h3><a class="anchor" id="autotoc_md28"></a>
 Coverage [4.iv]</h3>
-<p><code>rosidl_runtime_c</code> does not currently track test coverage.</p>
+<p><code>rosidl_runtime_c</code> follows the recommendations for ROS Core packages in the <a href="https://index.ros.org/doc/ros2/Contributing/Developer-Guide/#code-coverage">ROS 2 Developer Guide</a>, and opts to use line coverage instead of branch coverage.</p>
+<p>This includes:</p>
+<ul>
+<li>tracking and reporting line coverage statistics</li>
+<li>achieving and maintaining a reasonable branch line coverage (90-100%)</li>
+<li>no lines are manually skipped in coverage calculations</li>
+</ul>
+<p>Changes are required to make a best effort to keep or increase coverage before being accepted, but decreases are allowed if properly justified and accepted by reviewers.</p>
+<p>Current coverage statistics can be viewed <a href="https://ci.ros2.org/job/ci_linux_coverage/lastSuccessfulBuild/cobertura/">here</a>. A description of how coverage statistics are summarized from this page, can be found in the <a href="https://index.ros.org/doc/ros2/Contributing/ROS-2-On-boarding-Guide/#note-on-coverage-runs">ROS 2 Onboarding Guide</a>.</p>
 <h3><a class="anchor" id="autotoc_md29"></a>
 Performance [4.iv]</h3>
 <p><code>rosidl_runtime_c</code> does not currently have performance tests.</p>
@@ -160,7 +168,7 @@ Direct Runtime ROS Dependencies [5.i/5.ii]</h3>
 <h4><a class="anchor" id="autotoc_md33"></a>
 &lt;tt&gt;rosidl_typesupport_interface&lt;/tt&gt;</h4>
 <p>The <code>rosidl_typesupport_interface</code> package provides several macros to define the rosidl C typesupport interface.</p>
-<p>It is <b>Quality Level 4</b>, see its ../rosidl_typesupport_interface/QUALITY_DECLARATION.md "Quality Declaration document".</p>
+<p>It is <b>Quality Level 2</b>, see its ../rosidl_typesupport_interface/QUALITY_DECLARATION.md "Quality Declaration document".</p>
 <h3><a class="anchor" id="autotoc_md34"></a>
 Direct Runtime Non-ROS Dependencies [5.iii]</h3>
 <p><code>rosidl_runtime_c</code> does not have any runtime non-ROS dependencies.</p>
