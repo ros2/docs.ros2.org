@@ -91,14 +91,14 @@ $(function() {
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/rmw_8h.html">rmw/rmw.h</a>&quot;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/subscription__options_8h.html">rmw/subscription_options.h</a>&quot;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;rmw_fastrtps_shared_cpp/custom_participant_info.hpp&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw_fastrtps_shared_cpp/custom__participant__info_8hpp.html">rmw_fastrtps_shared_cpp/custom_participant_info.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacermw__fastrtps__cpp.html">rmw_fastrtps_cpp</a></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/structrmw__subscription__t.html">rmw_subscription_t</a> *</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<a class="code" href="namespacermw__fastrtps__cpp.html#a94baca4cb3d8b0ba916a30d36dc01125">create_subscription</a>(</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">const</span> CustomParticipantInfo * participant_info,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">const</span> <a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw_fastrtps_shared_cpp/structCustomParticipantInfo.html">CustomParticipantInfo</a> * participant_info,</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">const</span> rosidl_message_type_support_t * type_supports,</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * topic_name,</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">const</span> <a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/structrmw__qos__profile__t.html">rmw_qos_profile_t</a> * qos_policies,</div>
@@ -110,10 +110,12 @@ $(function() {
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif  // RMW_FASTRTPS_CPP__SUBSCRIPTION_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="acustom__participant__info_8hpp.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rmw_fastrtps_shared_cpp/custom__participant__info_8hpp.html">custom_participant_info.hpp</a></div></div>
 <div class="ttc" id="asubscription__options_8h.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rmw/subscription__options_8h.html">subscription_options.h</a></div></div>
 <div class="ttc" id="anamespacermw__fastrtps__cpp_html"><div class="ttname"><a href="namespacermw__fastrtps__cpp.html">rmw_fastrtps_cpp</a></div><div class="ttdef"><b>Definition:</b> get_client.hpp:23</div></div>
 <div class="ttc" id="armw_8h.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rmw/rmw_8h.html">rmw.h</a></div></div>
 <div class="ttc" id="astructrmw__subscription__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rmw/structrmw__subscription__t.html">rmw_subscription_t</a></div></div>
+<div class="ttc" id="astructCustomParticipantInfo_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rmw_fastrtps_shared_cpp/structCustomParticipantInfo.html">CustomParticipantInfo</a></div></div>
 <div class="ttc" id="anamespacermw__fastrtps__cpp_html_a94baca4cb3d8b0ba916a30d36dc01125"><div class="ttname"><a href="namespacermw__fastrtps__cpp.html#a94baca4cb3d8b0ba916a30d36dc01125">rmw_fastrtps_cpp::create_subscription</a></div><div class="ttdeci">rmw_subscription_t * create_subscription(const CustomParticipantInfo *participant_info, const rosidl_message_type_support_t *type_supports, const char *topic_name, const rmw_qos_profile_t *qos_policies, const rmw_subscription_options_t *subscription_options, bool keyed, bool create_subscription_listener)</div></div>
 <div class="ttc" id="astructrmw__subscription__options__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rmw/structrmw__subscription__options__t.html">rmw_subscription_options_t</a></div></div>
 <div class="ttc" id="astructrmw__qos__profile__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rmw/structrmw__qos__profile__t.html">rmw_qos_profile_t</a></div></div>

@@ -71,7 +71,7 @@ $(function() {
 <div class="title">visibility_control.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="visibility__control_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2016 Open Source Robotics Foundation, Inc.</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2016 Open Source Robotics Foundation, Inc.</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// you may not use this file except in compliance with the License.</span></div>
@@ -114,16 +114,16 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">  #define RCL_ACTION_PUBLIC_TYPE RCL_ACTION_PUBLIC</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">  #define RCL_ACTION_LOCAL</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="visibility__control_8h.html#a40175d52487f253f5776938443cf3291">   44</a></span>&#160;<span class="preprocessor">  #define RCL_ACTION_EXPORT __attribute__ ((visibility(&quot;default&quot;)))</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="visibility__control_8h.html#a003cac8c82f5f4eec318d73bef48b544">   45</a></span>&#160;<span class="preprocessor">  #define RCL_ACTION_IMPORT</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">  #define RCL_ACTION_EXPORT __attribute__ ((visibility(&quot;default&quot;)))</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">  #define RCL_ACTION_IMPORT</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">  #if __GNUC__ &gt;= 4</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">    #define RCL_ACTION_PUBLIC __attribute__ ((visibility(&quot;default&quot;)))</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">    #define RCL_ACTION_LOCAL  __attribute__ ((visibility(&quot;hidden&quot;)))</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">  #else</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="visibility__control_8h.html#a697147f89f84557cd0fe6ab287126416">   50</a></span>&#160;<span class="preprocessor">    #define RCL_ACTION_PUBLIC</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="visibility__control_8h.html#a7ce23dcb77cea1a39b776a7b09acb7a9">   51</a></span>&#160;<span class="preprocessor">    #define RCL_ACTION_LOCAL</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">    #define RCL_ACTION_PUBLIC</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">    #define RCL_ACTION_LOCAL</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">  #endif</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="visibility__control_8h.html#ae4e30675cde78eacc378949dfc4aa3cc">   53</a></span>&#160;<span class="preprocessor">  #define RCL_ACTION_PUBLIC_TYPE</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">  #define RCL_ACTION_PUBLIC_TYPE</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif  // RCL_ACTION__VISIBILITY_CONTROL_H_</span></div>

@@ -88,8 +88,8 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifndef RCLCPP__SERIALIZED_MESSAGE_HPP_</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define RCLCPP__SERIALIZED_MESSAGE_HPP_</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/allocator_8h.html">rcl/allocator.h</a>&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/types_8h.html">rcl/types.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;rcl/allocator.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;rcl/types.h&quot;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="visibility__control_8hpp.html">rclcpp/visibility_control.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
@@ -101,35 +101,35 @@ $(function() {
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a>(</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">const</span> <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcl_allocator_t</a> &amp; allocator = <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/allocator_8h.html#a2546f065f55387ed642d455a55ba7602">rcl_get_default_allocator</a>());</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">const</span> rcl_allocator_t &amp; allocator = rcl_get_default_allocator());</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a>(</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">size_t</span> initial_capacity,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">const</span> <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcl_allocator_t</a> &amp; allocator = <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/allocator_8h.html#a2546f065f55387ed642d455a55ba7602">rcl_get_default_allocator</a>());</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">const</span> rcl_allocator_t &amp; allocator = rcl_get_default_allocator());</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a>(<span class="keyword">const</span> <a class="code" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a> &amp; other);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a>(<span class="keyword">const</span> <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__uint8__array__t.html">rcl_serialized_message_t</a> &amp; other);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a>(<span class="keyword">const</span> rcl_serialized_message_t &amp; other);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a>(<a class="code" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a> &amp;&amp; other);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a>(<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__uint8__array__t.html">rcl_serialized_message_t</a> &amp;&amp; other);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a>(rcl_serialized_message_t &amp;&amp; other);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a> &amp; operator=(<span class="keyword">const</span> <a class="code" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a> &amp; other);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <a class="code" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a> &amp; operator=(<span class="keyword">const</span> <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__uint8__array__t.html">rcl_serialized_message_t</a> &amp; other);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <a class="code" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a> &amp; operator=(<span class="keyword">const</span> rcl_serialized_message_t &amp; other);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a> &amp; operator=(<a class="code" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a> &amp;&amp; other);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a> &amp; operator=(<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__uint8__array__t.html">rcl_serialized_message_t</a> &amp;&amp; other);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a> &amp; operator=(rcl_serialized_message_t &amp;&amp; other);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classrclcpp_1_1SerializedMessage.html">SerializedMessage</a>();</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__uint8__array__t.html">rcl_serialized_message_t</a> &amp; get_rcl_serialized_message();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  rcl_serialized_message_t &amp; get_rcl_serialized_message();</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="comment">// Get a const handle to the underlying rcl_serialized_message_t</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">const</span> <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__uint8__array__t.html">rcl_serialized_message_t</a> &amp; get_rcl_serialized_message() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">const</span> rcl_serialized_message_t &amp; get_rcl_serialized_message() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordtype">size_t</span> size() <span class="keyword">const</span>;</div>
@@ -141,25 +141,20 @@ $(function() {
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">void</span> reserve(<span class="keywordtype">size_t</span> capacity);</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__uint8__array__t.html">rcl_serialized_message_t</a> release_rcl_serialized_message();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  rcl_serialized_message_t release_rcl_serialized_message();</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__uint8__array__t.html">rcl_serialized_message_t</a> serialized_message_;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  rcl_serialized_message_t serialized_message_;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;};</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}  <span class="comment">// namespace rclcpp</span></div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif  // RCLCPP__SERIALIZED_MESSAGE_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aallocator_8h_html_a2546f065f55387ed642d455a55ba7602"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/allocator_8h.html#a2546f065f55387ed642d455a55ba7602">rcl_get_default_allocator</a></div><div class="ttdeci">#define rcl_get_default_allocator</div></div>
-<div class="ttc" id="astructrcutils__uint8__array__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__uint8__array__t.html">rcutils_uint8_array_t</a></div></div>
 <div class="ttc" id="anamespacerclcpp_html"><div class="ttname"><a href="namespacerclcpp.html">rclcpp</a></div><div class="ttdoc">This header provides the get_node_base_interface() template function.</div><div class="ttdef"><b>Definition:</b> allocator_common.hpp:24</div></div>
-<div class="ttc" id="aallocator_8h.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/allocator_8h.html">allocator.h</a></div></div>
-<div class="ttc" id="astructrcutils__allocator__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcutils_allocator_t</a></div></div>
 <div class="ttc" id="avisibility__control_8hpp_html_ae6a62ebf5d69c6853af09a85d4257592"><div class="ttname"><a href="visibility__control_8hpp.html#ae6a62ebf5d69c6853af09a85d4257592">RCLCPP_PUBLIC_TYPE</a></div><div class="ttdeci">#define RCLCPP_PUBLIC_TYPE</div><div class="ttdef"><b>Definition:</b> visibility_control.hpp:53</div></div>
 <div class="ttc" id="avisibility__control_8hpp_html"><div class="ttname"><a href="visibility__control_8hpp.html">visibility_control.hpp</a></div></div>
 <div class="ttc" id="aclassrclcpp_1_1SerializedMessage_html"><div class="ttname"><a href="classrclcpp_1_1SerializedMessage.html">rclcpp::SerializedMessage</a></div><div class="ttdoc">Object oriented version of rcl_serialized_message_t with destructor to avoid memory leaks.</div><div class="ttdef"><b>Definition:</b> serialized_message.hpp:27</div></div>
-<div class="ttc" id="atypes_8h.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/types_8h.html">types.h</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

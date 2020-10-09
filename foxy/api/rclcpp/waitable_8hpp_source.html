@@ -93,7 +93,7 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="macros_8hpp.html">rclcpp/macros.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="visibility__control_8hpp.html">rclcpp/visibility_control.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/wait_8h.html">rcl/wait.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;rcl/wait.h&quot;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacerclcpp.html">rclcpp</a></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
@@ -152,7 +152,7 @@ $(function() {
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <a class="code" href="visibility__control_8hpp.html#a802feb4ddc87a0699f6339a4b9ab7f23">RCLCPP_PUBLIC</a></div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keyword">virtual</span></div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <a class="code" href="classrclcpp_1_1Waitable.html#a74bb82ee41910ac1717d27bf3a1978ce">is_ready</a>(<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/structrcl__wait__set__t.html">rcl_wait_set_t</a> *) = 0;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <a class="code" href="classrclcpp_1_1Waitable.html#a7a71a73b57677c3097012a0bb23b83d4">is_ready</a>(<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/structrcl__wait__set__t.html">rcl_wait_set_t</a> * wait_set) = 0;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <a class="code" href="visibility__control_8hpp.html#a802feb4ddc87a0699f6339a4b9ab7f23">RCLCPP_PUBLIC</a></div>
@@ -173,12 +173,11 @@ $(function() {
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">#endif  // RCLCPP__WAITABLE_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassrclcpp_1_1Waitable_html_a74bb82ee41910ac1717d27bf3a1978ce"><div class="ttname"><a href="classrclcpp_1_1Waitable.html#a74bb82ee41910ac1717d27bf3a1978ce">rclcpp::Waitable::is_ready</a></div><div class="ttdeci">virtual bool is_ready(rcl_wait_set_t *)=0</div><div class="ttdoc">Check if the Waitable is ready.</div></div>
 <div class="ttc" id="aclassrclcpp_1_1Waitable_html_aa73eeb074bfbbd858d5c559d6b185ff8"><div class="ttname"><a href="classrclcpp_1_1Waitable.html#aa73eeb074bfbbd858d5c559d6b185ff8">rclcpp::Waitable::exchange_in_use_by_wait_set_state</a></div><div class="ttdeci">bool exchange_in_use_by_wait_set_state(bool in_use_state)</div><div class="ttdoc">Exchange the &quot;in use by wait set&quot; state for this timer.</div></div>
 <div class="ttc" id="aclassrclcpp_1_1Waitable_html_a4f428f90de03558d8e5090b45fa96ac8"><div class="ttname"><a href="classrclcpp_1_1Waitable.html#a4f428f90de03558d8e5090b45fa96ac8">rclcpp::Waitable::get_number_of_ready_subscriptions</a></div><div class="ttdeci">virtual size_t get_number_of_ready_subscriptions()</div><div class="ttdoc">Get the number of ready subscriptions.</div></div>
 <div class="ttc" id="aclassrclcpp_1_1Waitable_html_af46ecd60ac2ddee1a76f280a05155334"><div class="ttname"><a href="classrclcpp_1_1Waitable.html#af46ecd60ac2ddee1a76f280a05155334">rclcpp::Waitable::get_number_of_ready_timers</a></div><div class="ttdeci">virtual size_t get_number_of_ready_timers()</div><div class="ttdoc">Get the number of ready timers.</div></div>
-<div class="ttc" id="await_8h.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/wait_8h.html">wait.h</a></div></div>
 <div class="ttc" id="aclassrclcpp_1_1Waitable_html_ad9dd88c08883a5de0aa7931fbf57c240"><div class="ttname"><a href="classrclcpp_1_1Waitable.html#ad9dd88c08883a5de0aa7931fbf57c240">rclcpp::Waitable::execute</a></div><div class="ttdeci">virtual void execute()=0</div><div class="ttdoc">Execute any entities of the Waitable that are ready.</div></div>
+<div class="ttc" id="aclassrclcpp_1_1Waitable_html_a7a71a73b57677c3097012a0bb23b83d4"><div class="ttname"><a href="classrclcpp_1_1Waitable.html#a7a71a73b57677c3097012a0bb23b83d4">rclcpp::Waitable::is_ready</a></div><div class="ttdeci">virtual bool is_ready(rcl_wait_set_t *wait_set)=0</div><div class="ttdoc">Check if the Waitable is ready.</div></div>
 <div class="ttc" id="aclassrclcpp_1_1Waitable_html"><div class="ttname"><a href="classrclcpp_1_1Waitable.html">rclcpp::Waitable</a></div><div class="ttdef"><b>Definition:</b> waitable.hpp:28</div></div>
 <div class="ttc" id="anamespacerclcpp_html"><div class="ttname"><a href="namespacerclcpp.html">rclcpp</a></div><div class="ttdoc">This header provides the get_node_base_interface() template function.</div><div class="ttdef"><b>Definition:</b> allocator_common.hpp:24</div></div>
 <div class="ttc" id="aclassrclcpp_1_1Waitable_html_a441c473cb21623371b8ae0bc4d4ff7ce"><div class="ttname"><a href="classrclcpp_1_1Waitable.html#a441c473cb21623371b8ae0bc4d4ff7ce">rclcpp::Waitable::get_number_of_ready_events</a></div><div class="ttdeci">virtual size_t get_number_of_ready_events()</div><div class="ttdoc">Get the number of ready events.</div></div>

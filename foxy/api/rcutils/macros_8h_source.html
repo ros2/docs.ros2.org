@@ -137,45 +137,63 @@ $(function() {
 <div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="macros_8h.html#af2b9ce1541aac9196754aa78f3440eec">   64</a></span>&#160;<span class="preprocessor">#define RCUTILS_STRINGIFY(x) RCUTILS_STRINGIFY_IMPL(x)</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="macros_8h.html#ab0ecfeb8b40cb44ab4b15b49f8e1e6dc">   65</a></span>&#160;<span class="preprocessor">#define RCUTILS_UNUSED(x) (void)(x)</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#if defined _WIN32 || defined __CYGWIN__</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#define RCUTILS_ATTRIBUTE_PRINTF_FORMAT(format_string_index, first_to_check_index)</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="macros_8h.html#ab1d6a5d267cee7a9b9f73e839c21e5d0">   91</a></span>&#160;<span class="preprocessor">#define RCUTILS_ATTRIBUTE_PRINTF_FORMAT(format_string_index, first_to_check_index) \</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">  __attribute__ ((format(printf, format_string_index, first_to_check_index)))</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif  // !defined _WIN32 || defined __CYGWIN__</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#ifndef _WIN32</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="macros_8h.html#a89bb020130c07f467c0e17be6a911b5d">   97</a></span>&#160;<span class="preprocessor"># define RCUTILS_DEPRECATED __attribute__((deprecated))</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor"># define RCUTILS_DEPRECATED __declspec(deprecated)</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#ifndef _WIN32</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="macros_8h.html#a21f5e8e9f5754460df4a227cea68ae4b">  104</a></span>&#160;<span class="preprocessor"># define RCUTILS_DEPRECATED_WITH_MSG(msg) __attribute__((deprecated(msg)))</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor"># define RCUTILS_DEPRECATED_WITH_MSG(msg) __declspec(deprecated(msg))</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">// Provide the compiler with branch prediction information</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#ifndef _WIN32</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="macros_8h.html#a44947814a985d9ba63a9e8e8b1d3d830">   67</a></span>&#160;<span class="preprocessor">#define RCUTILS_JOIN_IMPL(arg1, arg2) arg1 ## arg2</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="macros_8h.html#a1613d484c8c576741629c1469843409c">   68</a></span>&#160;<span class="preprocessor">#define RCUTILS_JOIN(arg1, arg2) RCUTILS_JOIN_IMPL(arg1, arg2)</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#if defined _WIN32 || defined __CYGWIN__</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#define RCUTILS_ATTRIBUTE_PRINTF_FORMAT(format_string_index, first_to_check_index)</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="macros_8h.html#ab1d6a5d267cee7a9b9f73e839c21e5d0">   94</a></span>&#160;<span class="preprocessor">#define RCUTILS_ATTRIBUTE_PRINTF_FORMAT(format_string_index, first_to_check_index) \</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">  __attribute__ ((format(printf, format_string_index, first_to_check_index)))</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif  // !defined _WIN32 || defined __CYGWIN__</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#ifndef _WIN32</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="macros_8h.html#a89bb020130c07f467c0e17be6a911b5d">  100</a></span>&#160;<span class="preprocessor"># define RCUTILS_DEPRECATED __attribute__((deprecated))</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor"># define RCUTILS_DEPRECATED __declspec(deprecated)</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#ifndef _WIN32</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="macros_8h.html#a21f5e8e9f5754460df4a227cea68ae4b">  107</a></span>&#160;<span class="preprocessor"># define RCUTILS_DEPRECATED_WITH_MSG(msg) __attribute__((deprecated(msg)))</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor"># define RCUTILS_DEPRECATED_WITH_MSG(msg) __declspec(deprecated(msg))</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="macros_8h.html#ada5aa1bcc233fb7386c9fe84820a878d">  115</a></span>&#160;<span class="preprocessor"># define RCUTILS_LIKELY(x) __builtin_expect((x), 1)</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="macros_8h.html#a2b9f82226d7cd0e496163422a6f4b9fb">  120</a></span>&#160;<span class="preprocessor"># define RCUTILS_UNLIKELY(x) __builtin_expect((x), 0)</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor"># define RCUTILS_LIKELY(x) (x)</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor"># define RCUTILS_UNLIKELY(x) (x)</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif  // _WIN32</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#endif  // RCUTILS__MACROS_H_</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">// Provide the compiler with branch prediction information</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#ifndef _WIN32</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="macros_8h.html#ada5aa1bcc233fb7386c9fe84820a878d">  118</a></span>&#160;<span class="preprocessor"># define RCUTILS_LIKELY(x) __builtin_expect((x), 1)</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="macros_8h.html#a2b9f82226d7cd0e496163422a6f4b9fb">  123</a></span>&#160;<span class="preprocessor"># define RCUTILS_UNLIKELY(x) __builtin_expect((x), 0)</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor"># define RCUTILS_LIKELY(x) (x)</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor"># define RCUTILS_UNLIKELY(x) (x)</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">#endif  // _WIN32</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#if defined RCUTILS_ENABLE_FAULT_INJECTION</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fault__injection_8h.html">rcutils/testing/fault_injection.h</a>&quot;</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="macros_8h.html#a61feb5c81eefb5aa0b2cc8e4147e4ba1">  181</a></span>&#160;<span class="preprocessor"># define RCUTILS_CAN_RETURN_WITH_ERROR_OF(error_return_value) \</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="preprocessor">  RCUTILS_FAULT_INJECTION_MAYBE_RETURN_ERROR(error_return_value);</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="macros_8h.html#a99bc3fc2959615f56cf6c0304e6b4ba7">  198</a></span>&#160;<span class="preprocessor"># define RCUTILS_CAN_FAIL_WITH(failure_code) \</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">  RCUTILS_FAULT_INJECTION_MAYBE_FAIL(failure_code);</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor"># define RCUTILS_CAN_RETURN_WITH_ERROR_OF(error_return_value)</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor"># define RCUTILS_CAN_FAIL_WITH(failure_code)</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor">#endif  // defined RCUTILS_ENABLE_FAULT_INJECTION</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;}</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="preprocessor">#endif  // RCUTILS__MACROS_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="afault__injection_8h_html"><div class="ttname"><a href="fault__injection_8h.html">fault_injection.h</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

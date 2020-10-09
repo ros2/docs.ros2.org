@@ -120,6 +120,15 @@ $(function() {
 <li>rcutils_calculate_directory_size()
 : <a class="el" href="filesystem_8h.html#a84a232f56e89b4149d985a77615655d6">filesystem.h</a>
 </li>
+<li>RCUTILS_CAN_FAIL_WITH
+: <a class="el" href="macros_8h.html#a99bc3fc2959615f56cf6c0304e6b4ba7">macros.h</a>
+</li>
+<li>RCUTILS_CAN_RETURN_WITH_ERROR_OF
+: <a class="el" href="macros_8h.html#a61feb5c81eefb5aa0b2cc8e4147e4ba1">macros.h</a>
+</li>
+<li>RCUTILS_CAN_SET_MSG_AND_RETURN_WITH_ERROR_OF
+: <a class="el" href="error__handling_8h.html#abcec275932785ddba3f1ffa23b7b1134">error_handling.h</a>
+</li>
 <li>rcutils_char_array_expand_as_needed()
 : <a class="el" href="char__array_8h.html#a20d301ef967f416036c68bd972ae0a7d">char_array.h</a>
 </li>
@@ -209,6 +218,30 @@ $(function() {
 </li>
 <li>RCUTILS_EXPORT
 : <a class="el" href="visibility__control__macros_8h.html#a25f96099773b85b7ad35ead36d063d59">visibility_control_macros.h</a>
+</li>
+<li>RCUTILS_FAULT_INJECTION_FAIL_NOW
+: <a class="el" href="fault__injection_8h.html#a3483964f16256ce7f497c5df2ae56b11">fault_injection.h</a>
+</li>
+<li>rcutils_fault_injection_get_count()
+: <a class="el" href="fault__injection_8h.html#a2497ed2e5e0998f37923549e3f430572">fault_injection.h</a>
+</li>
+<li>rcutils_fault_injection_is_test_complete()
+: <a class="el" href="fault__injection_8h.html#a262400c302115f9a27e9f33892980e01">fault_injection.h</a>
+</li>
+<li>RCUTILS_FAULT_INJECTION_MAYBE_FAIL
+: <a class="el" href="fault__injection_8h.html#a308d22a420af93664515141f4783a9f9">fault_injection.h</a>
+</li>
+<li>RCUTILS_FAULT_INJECTION_MAYBE_RETURN_ERROR
+: <a class="el" href="fault__injection_8h.html#a7894c16978b88b20c6a3983487dbaefb">fault_injection.h</a>
+</li>
+<li>RCUTILS_FAULT_INJECTION_NEVER_FAIL
+: <a class="el" href="fault__injection_8h.html#a9be415886b878c1f50bb39ff8fd831f8">fault_injection.h</a>
+</li>
+<li>rcutils_fault_injection_set_count()
+: <a class="el" href="fault__injection_8h.html#a1785cb949b4d7af67805bbc8c649babb">fault_injection.h</a>
+</li>
+<li>RCUTILS_FAULT_INJECTION_TEST
+: <a class="el" href="fault__injection_8h.html#a9a0981ee39afd28abc57fe098f7c2f44">fault_injection.h</a>
 </li>
 <li>rcutils_find()
 : <a class="el" href="find_8h.html#a9b8af18fdd1734c1aac08b3a883aca73">find.h</a>
@@ -353,6 +386,12 @@ $(function() {
 </li>
 <li>rcutils_is_writable()
 : <a class="el" href="filesystem_8h.html#a8c985b5bfa296746c6df01254fc2dc00">filesystem.h</a>
+</li>
+<li>RCUTILS_JOIN
+: <a class="el" href="macros_8h.html#a1613d484c8c576741629c1469843409c">macros.h</a>
+</li>
+<li>RCUTILS_JOIN_IMPL
+: <a class="el" href="macros_8h.html#a44947814a985d9ba63a9e8e8b1d3d830">macros.h</a>
 </li>
 <li>rcutils_join_path()
 : <a class="el" href="filesystem_8h.html#a93b2be092c368a12fcfa70e6a03db0a7">filesystem.h</a>
@@ -723,6 +762,9 @@ $(function() {
 <li>RCUTILS_MS_TO_NS
 : <a class="el" href="time_8h.html#a428e1debfc4394e50ba59f1aaa2a5a03">time.h</a>
 </li>
+<li>RCUTILS_NO_FAULT_INJECTION
+: <a class="el" href="fault__injection_8h.html#af14a5b235001cda34fedc2bb7d8ffcaa">fault_injection.h</a>
+</li>
 <li>RCUTILS_NS_TO_MS
 : <a class="el" href="time_8h.html#a32b8b03e8399363992e8b7b2275072d2">time.h</a>
 </li>
@@ -737,6 +779,9 @@ $(function() {
 </li>
 <li>RCUTILS_PUBLIC_TYPE
 : <a class="el" href="visibility__control_8h.html#ae9d290b7c9e29c2c1927f57832a6da2a">visibility_control.h</a>
+</li>
+<li>rcutils_qsort()
+: <a class="el" href="qsort_8h.html#ab446aad1763144ae1ccf189b9e25fb55">qsort.h</a>
 </li>
 <li>rcutils_reallocf()
 : <a class="el" href="allocator_8h.html#ac159eba8f5cde86f891d28c7be7693bc">allocator.h</a>
@@ -842,6 +887,15 @@ $(function() {
 </li>
 <li>rcutils_string_array_init()
 : <a class="el" href="string__array_8h.html#a4643e8124ca347e66fce23f59dd68b9e">string_array.h</a>
+</li>
+<li>rcutils_string_array_resize()
+: <a class="el" href="string__array_8h.html#a106683415656e478a6d62786165a947d">string_array.h</a>
+</li>
+<li>rcutils_string_array_sort()
+: <a class="el" href="string__array_8h.html#a1e9c045c0f7db64f74870eeb5bcec59b">string_array.h</a>
+</li>
+<li>rcutils_string_array_sort_compare()
+: <a class="el" href="string__array_8h.html#aae2c42af686dca4405307556f8c6788f">string_array.h</a>
 </li>
 <li>rcutils_string_array_t
 : <a class="el" href="string__array_8h.html#a4aca18e90b0fe697d1aa27d44f0da309">string_array.h</a>

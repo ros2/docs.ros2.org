@@ -88,7 +88,7 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifndef RCLCPP_ACTION__TYPES_HPP_</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define RCLCPP_ACTION__TYPES_HPP_</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl_action/types_8h.html">rcl_action/types.h</a>&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;rcl_action/types.h&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;action_msgs/msg/goal_status.hpp&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;action_msgs/msg/goal_info.hpp&gt;</span></div>
@@ -113,12 +113,12 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">// Convert C++ GoalID to rcl_action_goal_info_t</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<a class="code" href="visibility__control_8hpp.html#a736fe60d4de4417a213ed34ba1926048">RCLCPP_ACTION_PUBLIC</a></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<a class="code" href="namespacerclcpp__action.html#a7942bcea6e5d0de462bca301b4ed2e49">convert</a>(<span class="keyword">const</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/container/array.html">GoalUUID</a> &amp; goal_id, <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl_action/types_8h.html#aa1931c22457629ad8cc3fff84746d9ae">rcl_action_goal_info_t</a> * info);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<a class="code" href="namespacerclcpp__action.html#a7942bcea6e5d0de462bca301b4ed2e49">convert</a>(<span class="keyword">const</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/container/array.html">GoalUUID</a> &amp; goal_id, rcl_action_goal_info_t * info);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">// Convert rcl_action_goal_info_t to C++ GoalID</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<a class="code" href="visibility__control_8hpp.html#a736fe60d4de4417a213ed34ba1926048">RCLCPP_ACTION_PUBLIC</a></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<a class="code" href="namespacerclcpp__action.html#a7942bcea6e5d0de462bca301b4ed2e49">convert</a>(<span class="keyword">const</span> <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl_action/types_8h.html#aa1931c22457629ad8cc3fff84746d9ae">rcl_action_goal_info_t</a> &amp; info, <a class="codeRef" href="http://en.cppreference.com/w/cpp/container/array.html">GoalUUID</a> * goal_id);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<a class="code" href="namespacerclcpp__action.html#a7942bcea6e5d0de462bca301b4ed2e49">convert</a>(<span class="keyword">const</span> rcl_action_goal_info_t &amp; info, <a class="codeRef" href="http://en.cppreference.com/w/cpp/container/array.html">GoalUUID</a> * goal_id);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}  <span class="comment">// namespace rclcpp_action</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacestd.html">std</a></div>
@@ -169,8 +169,6 @@ $(function() {
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
 <div class="ttc" id="avisibility__control_8hpp_html_a736fe60d4de4417a213ed34ba1926048"><div class="ttname"><a href="visibility__control_8hpp.html#a736fe60d4de4417a213ed34ba1926048">RCLCPP_ACTION_PUBLIC</a></div><div class="ttdeci">#define RCLCPP_ACTION_PUBLIC</div><div class="ttdef"><b>Definition:</b> visibility_control.hpp:50</div></div>
 <div class="ttc" id="asize_t_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/types/size_t.html">std::size_t</a></div></div>
-<div class="ttc" id="atypes_8h.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl_action/types_8h.html">types.h</a></div></div>
-<div class="ttc" id="atypes_8h_html_aa1931c22457629ad8cc3fff84746d9ae"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl_action/types_8h.html#aa1931c22457629ad8cc3fff84746d9ae">rcl_action_goal_info_t</a></div><div class="ttdeci">action_msgs__msg__GoalInfo rcl_action_goal_info_t</div></div>
 <div class="ttc" id="ahash_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/utility/hash.html">std::hash</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -104,7 +104,7 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a67daf44a45003173e42ccc612fcb052b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp__action.html#a67daf44a45003173e42ccc612fcb052b">GoalUUID</a> = <a class="elRef" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; uint8_t, <a class="elRef" href="http://docs.ros2.org/foxy/api/rcl_action/types_8h.html#a5db91c4b658dc322b42959cb5c851020">UUID_SIZE</a> &gt;</td></tr>
+<tr class="memitem:a67daf44a45003173e42ccc612fcb052b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp__action.html#a67daf44a45003173e42ccc612fcb052b">GoalUUID</a> = <a class="elRef" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; uint8_t, UUID_SIZE &gt;</td></tr>
 <tr class="separator:a67daf44a45003173e42ccc612fcb052b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ad8c2a7c9c386cbeb8913bc618eec4c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp__action.html#a5ad8c2a7c9c386cbeb8913bc618eec4c">GoalStatus</a> = action_msgs::msg::GoalStatus</td></tr>
 <tr class="separator:a5ad8c2a7c9c386cbeb8913bc618eec4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,19 +143,19 @@ Functions</h2></td></tr>
 <tr class="memdesc:a464f73efea313d6adb57cbbe5f487f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an action client.  <a href="namespacerclcpp__action.html#a464f73efea313d6adb57cbbe5f487f18">More...</a><br /></td></tr>
 <tr class="separator:a464f73efea313d6adb57cbbe5f487f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac27305f020b4586d4ae781024ac80e4"><td class="memTemplParams" colspan="2">template&lt;typename ActionT &gt; </td></tr>
-<tr class="memitem:aac27305f020b4586d4ae781024ac80e4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classrclcpp__action_1_1Server.html">Server</a>&lt; ActionT &gt;::SharedPtr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerclcpp__action.html#aac27305f020b4586d4ae781024ac80e4">create_server</a> (rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_base_interface, rclcpp::node_interfaces::NodeClockInterface::SharedPtr node_clock_interface, rclcpp::node_interfaces::NodeLoggingInterface::SharedPtr node_logging_interface, rclcpp::node_interfaces::NodeWaitablesInterface::SharedPtr node_waitables_interface, const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp;name, typename <a class="el" href="classrclcpp__action_1_1Server.html">Server</a>&lt; ActionT &gt;::GoalCallback handle_goal, typename <a class="el" href="classrclcpp__action_1_1Server.html">Server</a>&lt; ActionT &gt;::CancelCallback handle_cancel, typename <a class="el" href="classrclcpp__action_1_1Server.html">Server</a>&lt; ActionT &gt;::AcceptedCallback handle_accepted, const <a class="elRef" href="http://docs.ros2.org/foxy/api/rcl_action/structrcl__action__server__options__t.html">rcl_action_server_options_t</a> &amp;options=<a class="elRef" href="http://docs.ros2.org/foxy/api/rcl_action/action__server_8h.html#a39c3506e27aaec597d8344f3d2518b73">rcl_action_server_get_default_options</a>(), rclcpp::CallbackGroup::SharedPtr group=nullptr)</td></tr>
+<tr class="memitem:aac27305f020b4586d4ae781024ac80e4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classrclcpp__action_1_1Server.html">Server</a>&lt; ActionT &gt;::SharedPtr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerclcpp__action.html#aac27305f020b4586d4ae781024ac80e4">create_server</a> (rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_base_interface, rclcpp::node_interfaces::NodeClockInterface::SharedPtr node_clock_interface, rclcpp::node_interfaces::NodeLoggingInterface::SharedPtr node_logging_interface, rclcpp::node_interfaces::NodeWaitablesInterface::SharedPtr node_waitables_interface, const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp;name, typename <a class="el" href="classrclcpp__action_1_1Server.html">Server</a>&lt; ActionT &gt;::GoalCallback handle_goal, typename <a class="el" href="classrclcpp__action_1_1Server.html">Server</a>&lt; ActionT &gt;::CancelCallback handle_cancel, typename <a class="el" href="classrclcpp__action_1_1Server.html">Server</a>&lt; ActionT &gt;::AcceptedCallback handle_accepted, const <a class="elRef" href="http://docs.ros2.org/foxy/api/rcl_action/structrcl__action__server__options__t.html">rcl_action_server_options_t</a> &amp;options=rcl_action_server_get_default_options(), rclcpp::CallbackGroup::SharedPtr group=nullptr)</td></tr>
 <tr class="memdesc:aac27305f020b4586d4ae781024ac80e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an action server.  <a href="namespacerclcpp__action.html#aac27305f020b4586d4ae781024ac80e4">More...</a><br /></td></tr>
 <tr class="separator:aac27305f020b4586d4ae781024ac80e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac979659607812bb8b489bc7ddaff3039"><td class="memTemplParams" colspan="2">template&lt;typename ActionT , typename NodeT &gt; </td></tr>
-<tr class="memitem:ac979659607812bb8b489bc7ddaff3039"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classrclcpp__action_1_1Server.html">Server</a>&lt; ActionT &gt;::SharedPtr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerclcpp__action.html#ac979659607812bb8b489bc7ddaff3039">create_server</a> (NodeT node, const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp;name, typename <a class="el" href="classrclcpp__action_1_1Server.html">Server</a>&lt; ActionT &gt;::GoalCallback handle_goal, typename <a class="el" href="classrclcpp__action_1_1Server.html">Server</a>&lt; ActionT &gt;::CancelCallback handle_cancel, typename <a class="el" href="classrclcpp__action_1_1Server.html">Server</a>&lt; ActionT &gt;::AcceptedCallback handle_accepted, const <a class="elRef" href="http://docs.ros2.org/foxy/api/rcl_action/structrcl__action__server__options__t.html">rcl_action_server_options_t</a> &amp;options=<a class="elRef" href="http://docs.ros2.org/foxy/api/rcl_action/action__server_8h.html#a39c3506e27aaec597d8344f3d2518b73">rcl_action_server_get_default_options</a>(), rclcpp::CallbackGroup::SharedPtr group=nullptr)</td></tr>
+<tr class="memitem:ac979659607812bb8b489bc7ddaff3039"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classrclcpp__action_1_1Server.html">Server</a>&lt; ActionT &gt;::SharedPtr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerclcpp__action.html#ac979659607812bb8b489bc7ddaff3039">create_server</a> (NodeT node, const <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &amp;name, typename <a class="el" href="classrclcpp__action_1_1Server.html">Server</a>&lt; ActionT &gt;::GoalCallback handle_goal, typename <a class="el" href="classrclcpp__action_1_1Server.html">Server</a>&lt; ActionT &gt;::CancelCallback handle_cancel, typename <a class="el" href="classrclcpp__action_1_1Server.html">Server</a>&lt; ActionT &gt;::AcceptedCallback handle_accepted, const <a class="elRef" href="http://docs.ros2.org/foxy/api/rcl_action/structrcl__action__server__options__t.html">rcl_action_server_options_t</a> &amp;options=rcl_action_server_get_default_options(), rclcpp::CallbackGroup::SharedPtr group=nullptr)</td></tr>
 <tr class="memdesc:ac979659607812bb8b489bc7ddaff3039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an action server.  <a href="namespacerclcpp__action.html#ac979659607812bb8b489bc7ddaff3039">More...</a><br /></td></tr>
 <tr class="separator:ac979659607812bb8b489bc7ddaff3039"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0695327569239900cc40173739235d8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="visibility__control_8hpp.html#a736fe60d4de4417a213ed34ba1926048">RCLCPP_ACTION_PUBLIC</a> <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp__action.html#a0695327569239900cc40173739235d8d">to_string</a> (const <a class="el" href="namespacerclcpp__action.html#a67daf44a45003173e42ccc612fcb052b">GoalUUID</a> &amp;goal_id)</td></tr>
 <tr class="memdesc:a0695327569239900cc40173739235d8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a goal id to a human readable string.  <a href="namespacerclcpp__action.html#a0695327569239900cc40173739235d8d">More...</a><br /></td></tr>
 <tr class="separator:a0695327569239900cc40173739235d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7942bcea6e5d0de462bca301b4ed2e49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="visibility__control_8hpp.html#a736fe60d4de4417a213ed34ba1926048">RCLCPP_ACTION_PUBLIC</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp__action.html#a7942bcea6e5d0de462bca301b4ed2e49">convert</a> (const <a class="el" href="namespacerclcpp__action.html#a67daf44a45003173e42ccc612fcb052b">GoalUUID</a> &amp;goal_id, <a class="elRef" href="http://docs.ros2.org/foxy/api/rcl_action/types_8h.html#aa1931c22457629ad8cc3fff84746d9ae">rcl_action_goal_info_t</a> *info)</td></tr>
+<tr class="memitem:a7942bcea6e5d0de462bca301b4ed2e49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="visibility__control_8hpp.html#a736fe60d4de4417a213ed34ba1926048">RCLCPP_ACTION_PUBLIC</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp__action.html#a7942bcea6e5d0de462bca301b4ed2e49">convert</a> (const <a class="el" href="namespacerclcpp__action.html#a67daf44a45003173e42ccc612fcb052b">GoalUUID</a> &amp;goal_id, rcl_action_goal_info_t *info)</td></tr>
 <tr class="separator:a7942bcea6e5d0de462bca301b4ed2e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a826516fbeed9afb69ba892ee9e68f0ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="visibility__control_8hpp.html#a736fe60d4de4417a213ed34ba1926048">RCLCPP_ACTION_PUBLIC</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp__action.html#a826516fbeed9afb69ba892ee9e68f0ef">convert</a> (const <a class="elRef" href="http://docs.ros2.org/foxy/api/rcl_action/types_8h.html#aa1931c22457629ad8cc3fff84746d9ae">rcl_action_goal_info_t</a> &amp;info, <a class="el" href="namespacerclcpp__action.html#a67daf44a45003173e42ccc612fcb052b">GoalUUID</a> *goal_id)</td></tr>
+<tr class="memitem:a826516fbeed9afb69ba892ee9e68f0ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="visibility__control_8hpp.html#a736fe60d4de4417a213ed34ba1926048">RCLCPP_ACTION_PUBLIC</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerclcpp__action.html#a826516fbeed9afb69ba892ee9e68f0ef">convert</a> (const rcl_action_goal_info_t &amp;info, <a class="el" href="namespacerclcpp__action.html#a67daf44a45003173e42ccc612fcb052b">GoalUUID</a> *goal_id)</td></tr>
 <tr class="separator:a826516fbeed9afb69ba892ee9e68f0ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -166,7 +166,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacerclcpp__action.html#a67daf44a45003173e42ccc612fcb052b">rclcpp_action::GoalUUID</a> = typedef <a class="elRef" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt;uint8_t, <a class="elRef" href="http://docs.ros2.org/foxy/api/rcl_action/types_8h.html#a5db91c4b658dc322b42959cb5c851020">UUID_SIZE</a>&gt;</td>
+          <td class="memname">using <a class="el" href="namespacerclcpp__action.html#a67daf44a45003173e42ccc612fcb052b">rclcpp_action::GoalUUID</a> = typedef <a class="elRef" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt;uint8_t, UUID_SIZE&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -351,10 +351,10 @@ template&lt;typename ActionT &gt; </div>
 <p>This function is equivalent to </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacerclcpp__action.html#aebd56d58afc9b7c0c5b3e58cb1613ebd" title="Create an action client.">create_client()</a>` however is using the individual node interfaces to create the client.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir"></td><td class="paramname">node_base_interface[in]</td><td>The node base interface of the corresponding node. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">node_graph_interface[in]</td><td>The node graph interface of the corresponding node. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">node_logging_interface[in]</td><td>The node logging interface of the corresponding node. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">node_waitables_interface[in]</td><td>The node waitables interface of the corresponding node. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node_base_interface</td><td>The node base interface of the corresponding node. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node_graph_interface</td><td>The node graph interface of the corresponding node. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node_logging_interface</td><td>The node logging interface of the corresponding node. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node_waitables_interface</td><td>The node waitables interface of the corresponding node. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>The action name. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">group</td><td>The action client will be added to this callback group. If <code>nullptr</code>, then the action client is added to the default callback group. </td></tr>
   </table>
@@ -469,7 +469,7 @@ template&lt;typename ActionT &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="elRef" href="http://docs.ros2.org/foxy/api/rcl_action/structrcl__action__server__options__t.html">rcl_action_server_options_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>options</em> = <code><a class="elRef" href="http://docs.ros2.org/foxy/api/rcl_action/action__server_8h.html#a39c3506e27aaec597d8344f3d2518b73">rcl_action_server_get_default_options</a>()</code>, </td>
+          <td class="paramname"><em>options</em> = <code>rcl_action_server_get_default_options()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -491,16 +491,16 @@ template&lt;typename ActionT &gt; </div>
 <a class="el" href="classrclcpp__action_1_1Server.html#a41e0c0fb01bf320ce0a261f448576c1e" title="Construct an action server.">Server::Server()</a> for more information.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir"></td><td class="paramname">node_base_interface[in]</td><td>The node base interface of the corresponding node. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">node_clock_interface[in]</td><td>The node clock interface of the corresponding node. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">node_logging_interface[in]</td><td>The node logging interface of the corresponding node. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">node_waitables_interface[in]</td><td>The node waitables interface of the corresponding node. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">name[in]</td><td>The action name. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node_base_interface</td><td>The node base interface of the corresponding node. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node_clock_interface</td><td>The node clock interface of the corresponding node. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node_logging_interface</td><td>The node logging interface of the corresponding node. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node_waitables_interface</td><td>The node waitables interface of the corresponding node. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>The action name. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">handle_goal</td><td>A callback that decides if a goal should be accepted or rejected. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">handle_cancel</td><td>A callback that decides if a goal should be attempted to be canceled. The return from this callback only indicates if the server will try to cancel a goal. It does not indicate if the goal was actually canceled. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">handle_accepted</td><td>A callback that is called to give the user a handle to the goal. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>options to pass to the underlying <code><a class="elRef" href="http://docs.ros2.org/foxy/api/rcl_action/structrcl__action__server__t.html">rcl_action_server_t</a></code>. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">group[in]</td><td>The action server will be added to this callback group. If <code>nullptr</code>, then the action server is added to the default callback group. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">group</td><td>The action server will be added to this callback group. If <code>nullptr</code>, then the action server is added to the default callback group. </td></tr>
   </table>
   </dd>
 </dl>
@@ -549,7 +549,7 @@ template&lt;typename ActionT , typename NodeT &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="elRef" href="http://docs.ros2.org/foxy/api/rcl_action/structrcl__action__server__options__t.html">rcl_action_server_options_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>options</em> = <code><a class="elRef" href="http://docs.ros2.org/foxy/api/rcl_action/action__server_8h.html#a39c3506e27aaec597d8344f3d2518b73">rcl_action_server_get_default_options</a>()</code>, </td>
+          <td class="paramname"><em>options</em> = <code>rcl_action_server_get_default_options()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -570,13 +570,13 @@ template&lt;typename ActionT , typename NodeT &gt; </div>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classrclcpp__action_1_1Server.html#a41e0c0fb01bf320ce0a261f448576c1e" title="Construct an action server.">Server::Server()</a> for more information.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir"></td><td class="paramname">node[in]</td><td>The action server will be added to this node. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">name[in]</td><td>The action name. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node]</td><td>The action server will be added to this node. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>The action name. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">handle_goal</td><td>A callback that decides if a goal should be accepted or rejected. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">handle_cancel</td><td>A callback that decides if a goal should be attempted to be canceled. The return from this callback only indicates if the server will try to cancel a goal. It does not indicate if the goal was actually canceled. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">handle_accepted</td><td>A callback that is called to give the user a handle to the goal. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>options to pass to the underlying <code><a class="elRef" href="http://docs.ros2.org/foxy/api/rcl_action/structrcl__action__server__t.html">rcl_action_server_t</a></code>. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">group[in]</td><td>The action server will be added to this callback group. If <code>nullptr</code>, then the action server is added to the default callback group. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">group</td><td>The action server will be added to this callback group. If <code>nullptr</code>, then the action server is added to the default callback group. </td></tr>
   </table>
   </dd>
 </dl>
@@ -618,7 +618,7 @@ template&lt;typename ActionT , typename NodeT &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="elRef" href="http://docs.ros2.org/foxy/api/rcl_action/types_8h.html#aa1931c22457629ad8cc3fff84746d9ae">rcl_action_goal_info_t</a> *&#160;</td>
+          <td class="paramtype">rcl_action_goal_info_t *&#160;</td>
           <td class="paramname"><em>info</em>&#160;</td>
         </tr>
         <tr>
@@ -640,7 +640,7 @@ template&lt;typename ActionT , typename NodeT &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="visibility__control_8hpp.html#a736fe60d4de4417a213ed34ba1926048">RCLCPP_ACTION_PUBLIC</a> void rclcpp_action::convert </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" href="http://docs.ros2.org/foxy/api/rcl_action/types_8h.html#aa1931c22457629ad8cc3fff84746d9ae">rcl_action_goal_info_t</a> &amp;&#160;</td>
+          <td class="paramtype">const rcl_action_goal_info_t &amp;&#160;</td>
           <td class="paramname"><em>info</em>, </td>
         </tr>
         <tr>

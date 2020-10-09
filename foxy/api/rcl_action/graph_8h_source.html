@@ -71,7 +71,7 @@ $(function() {
 <div class="title">graph.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="graph_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2019 Open Source Robotics Foundation, Inc.</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2019 Open Source Robotics Foundation, Inc.</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// you may not use this file except in compliance with the License.</span></div>
@@ -93,41 +93,41 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/graph_8h.html">rcl/graph.h</a>&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/node_8h.html">rcl/node.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;rcl/graph.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;rcl/node.h&quot;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="visibility__control_8h.html">rcl_action/visibility_control.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;rcl_action/visibility_control.h&quot;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<a class="code" href="visibility__control_8h.html#a697147f89f84557cd0fe6ab287126416">RCL_ACTION_PUBLIC</a></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<a class="code" href="graph_8h.html#acb004f3edc3fdda38dfc502f97a8d752">rcl_action_get_client_names_and_types_by_node</a>(</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;RCL_ACTION_PUBLIC</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;rcl_ret_t</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;rcl_action_get_client_names_and_types_by_node(</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keyword">const</span> <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/structrcl__node__t.html">rcl_node_t</a> * node,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcl_allocator_t</a> * allocator,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  rcl_allocator_t * allocator,</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * node_name,</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * node_namespace,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/structrmw__names__and__types__t.html">rcl_names_and_types_t</a> * action_names_and_types);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  rcl_names_and_types_t * action_names_and_types);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<a class="code" href="visibility__control_8h.html#a697147f89f84557cd0fe6ab287126416">RCL_ACTION_PUBLIC</a></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<a class="code" href="graph_8h.html#af6cd60e35c2a7ec0b806f5e0e25883cc">rcl_action_get_server_names_and_types_by_node</a>(</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;RCL_ACTION_PUBLIC</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;rcl_ret_t</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;rcl_action_get_server_names_and_types_by_node(</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keyword">const</span> <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/structrcl__node__t.html">rcl_node_t</a> * node,</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcl_allocator_t</a> * allocator,</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  rcl_allocator_t * allocator,</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * node_name,</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * node_namespace,</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/structrmw__names__and__types__t.html">rcl_names_and_types_t</a> * action_names_and_types);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  rcl_names_and_types_t * action_names_and_types);</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<a class="code" href="visibility__control_8h.html#a697147f89f84557cd0fe6ab287126416">RCL_ACTION_PUBLIC</a></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<a class="code" href="graph_8h.html#a22f5045067044c34e8fd62c9b6f07b5c">rcl_action_get_names_and_types</a>(</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;RCL_ACTION_PUBLIC</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;rcl_ret_t</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;rcl_action_get_names_and_types(</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keyword">const</span> <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/structrcl__node__t.html">rcl_node_t</a> * node,</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcl_allocator_t</a> * allocator,</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/structrmw__names__and__types__t.html">rcl_names_and_types_t</a> * action_names_and_types);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  rcl_allocator_t * allocator,</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  rcl_names_and_types_t * action_names_and_types);</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
@@ -136,17 +136,6 @@ $(function() {
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#endif  // RCL_ACTION__GRAPH_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astructrcl__node__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/structrcl__node__t.html">rcl_node_t</a></div></div>
-<div class="ttc" id="agraph_8h.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/graph_8h.html">graph.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_a3a59b27e092b1fd10e7fc7336b29aa16"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div><div class="ttdeci">#define RCL_WARN_UNUSED</div></div>
-<div class="ttc" id="atypes_8h_html_af66ec2e20118b821dbf3f9b0067e8796"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div><div class="ttdeci">rmw_ret_t rcl_ret_t</div></div>
-<div class="ttc" id="avisibility__control_8h_html_a697147f89f84557cd0fe6ab287126416"><div class="ttname"><a href="visibility__control_8h.html#a697147f89f84557cd0fe6ab287126416">RCL_ACTION_PUBLIC</a></div><div class="ttdeci">#define RCL_ACTION_PUBLIC</div><div class="ttdef"><b>Definition:</b> visibility_control.h:50</div></div>
-<div class="ttc" id="agraph_8h_html_a22f5045067044c34e8fd62c9b6f07b5c"><div class="ttname"><a href="graph_8h.html#a22f5045067044c34e8fd62c9b6f07b5c">rcl_action_get_names_and_types</a></div><div class="ttdeci">RCL_ACTION_PUBLIC rcl_ret_t rcl_action_get_names_and_types(const rcl_node_t *node, rcl_allocator_t *allocator, rcl_names_and_types_t *action_names_and_types)</div><div class="ttdoc">Return a list of action names and their types.</div></div>
-<div class="ttc" id="agraph_8h_html_acb004f3edc3fdda38dfc502f97a8d752"><div class="ttname"><a href="graph_8h.html#acb004f3edc3fdda38dfc502f97a8d752">rcl_action_get_client_names_and_types_by_node</a></div><div class="ttdeci">RCL_ACTION_PUBLIC rcl_ret_t rcl_action_get_client_names_and_types_by_node(const rcl_node_t *node, rcl_allocator_t *allocator, const char *node_name, const char *node_namespace, rcl_names_and_types_t *action_names_and_types)</div><div class="ttdoc">Get a list of action names and types for action clients associated with a node.</div></div>
-<div class="ttc" id="agraph_8h_html_af6cd60e35c2a7ec0b806f5e0e25883cc"><div class="ttname"><a href="graph_8h.html#af6cd60e35c2a7ec0b806f5e0e25883cc">rcl_action_get_server_names_and_types_by_node</a></div><div class="ttdeci">RCL_ACTION_PUBLIC rcl_ret_t rcl_action_get_server_names_and_types_by_node(const rcl_node_t *node, rcl_allocator_t *allocator, const char *node_name, const char *node_namespace, rcl_names_and_types_t *action_names_and_types)</div><div class="ttdoc">Get a list of action names and types for action servers associated with a node.</div></div>
-<div class="ttc" id="astructrmw__names__and__types__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rmw/structrmw__names__and__types__t.html">rmw_names_and_types_t</a></div></div>
-<div class="ttc" id="avisibility__control_8h_html"><div class="ttname"><a href="visibility__control_8h.html">visibility_control.h</a></div></div>
-<div class="ttc" id="astructrcutils__allocator__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcutils_allocator_t</a></div></div>
-<div class="ttc" id="anode_8h.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/node_8h.html">node.h</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

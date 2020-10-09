@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['buffer_5fimplementation_5fbase_2ehpp_4149',['buffer_implementation_base.hpp',['../buffer__implementation__base_8hpp.html',1,'']]]
+  ['buffer_5fimplementation_5fbase_2ehpp_4126',['buffer_implementation_base.hpp',['../buffer__implementation__base_8hpp.html',1,'']]]
 ];

@@ -171,14 +171,14 @@ constructed.</p>
 <dt id="rclpy.action.client.ActionClient.wait_for_server">
 <code class="sig-name descname">wait_for_server</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timeout_sec</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rclpy.action.client.ActionClient.wait_for_server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for an action sever to be ready.</p>
-<p>Returns as soon as an action server is ready for this client.</p>
+<p>Returns as soon as an action server is ready for this client.
+:param timeout_sec: Number of seconds to wait until an action server is available.</p>
+<blockquote>
+<div><p>If None, then wait indefinitely.</p>
+</div></blockquote>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>timeout_sec</strong> – Number of seconds to wait until an action server is available.
-If None, then wait indefinitely.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>True if an action server is available, False if the timeout is exceeded.</p>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if an action server is available, False if the timeout is exceeded.</p>
 </dd>
 </dl>
 </dd></dl>

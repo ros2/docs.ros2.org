@@ -223,9 +223,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a64c1608620df32b93caf4efbaa372b31"><td class="memItemLeft" align="right" valign="top">rcl_interfaces::msg::ListParametersResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrclcpp__lifecycle_1_1LifecycleNode.html#a64c1608620df32b93caf4efbaa372b31">list_parameters</a> (const <a class="elRef" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> &gt; &amp;prefixes, uint64_t depth) const</td></tr>
 <tr class="memdesc:a64c1608620df32b93caf4efbaa372b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a list of parameters with any of the given prefixes, up to the given depth.  <a href="classrclcpp__lifecycle_1_1LifecycleNode.html#a64c1608620df32b93caf4efbaa372b31">More...</a><br /></td></tr>
 <tr class="separator:a64c1608620df32b93caf4efbaa372b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dd83b770236c30efd7223437b97587c"><td class="memItemLeft" align="right" valign="top">rclcpp_lifecycle::LifecycleNode::OnSetParametersCallbackHandle::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrclcpp__lifecycle_1_1LifecycleNode.html#a9dd83b770236c30efd7223437b97587c">add_on_set_parameters_callback</a> (<a class="el" href="classrclcpp__lifecycle_1_1LifecycleNode.html#a68c8fc8d2c42ff1e32038e089a8dce62">rclcpp_lifecycle::LifecycleNode::OnParametersSetCallbackType</a> callback)</td></tr>
-<tr class="memdesc:a9dd83b770236c30efd7223437b97587c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a callback for when parameters are being set.  <a href="classrclcpp__lifecycle_1_1LifecycleNode.html#a9dd83b770236c30efd7223437b97587c">More...</a><br /></td></tr>
-<tr class="separator:a9dd83b770236c30efd7223437b97587c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1546abc755c509d94db27e377a20ccc0"><td class="memItemLeft" align="right" valign="top">RCUTILS_WARN_UNUSED rclcpp_lifecycle::LifecycleNode::OnSetParametersCallbackHandle::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrclcpp__lifecycle_1_1LifecycleNode.html#a1546abc755c509d94db27e377a20ccc0">add_on_set_parameters_callback</a> (<a class="el" href="classrclcpp__lifecycle_1_1LifecycleNode.html#a68c8fc8d2c42ff1e32038e089a8dce62">rclcpp_lifecycle::LifecycleNode::OnParametersSetCallbackType</a> callback)</td></tr>
+<tr class="memdesc:a1546abc755c509d94db27e377a20ccc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a callback for when parameters are being set.  <a href="classrclcpp__lifecycle_1_1LifecycleNode.html#a1546abc755c509d94db27e377a20ccc0">More...</a><br /></td></tr>
+<tr class="separator:a1546abc755c509d94db27e377a20ccc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41652617c6bc008e6d39b6f8c3bd6c27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrclcpp__lifecycle_1_1LifecycleNode.html#a41652617c6bc008e6d39b6f8c3bd6c27">remove_on_set_parameters_callback</a> (const <a class="el" href="classrclcpp__lifecycle_1_1LifecycleNode.html#a714bdd79df33577d09ed0a8bbf14c9be">rclcpp_lifecycle::LifecycleNode::OnSetParametersCallbackHandle</a> *const handler)</td></tr>
 <tr class="memdesc:a41652617c6bc008e6d39b6f8c3bd6c27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a callback registered with <code>add_on_set_parameters_callback</code>.  <a href="classrclcpp__lifecycle_1_1LifecycleNode.html#a41652617c6bc008e6d39b6f8c3bd6c27">More...</a><br /></td></tr>
 <tr class="separator:a41652617c6bc008e6d39b6f8c3bd6c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -488,7 +488,6 @@ Protected Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">node_name</td><td>Name of the node. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">namespace_</td><td>Namespace of the node. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Additional options to control creation of the node. </td></tr>
   </table>
   </dd>
@@ -1430,14 +1429,14 @@ template&lt;typename MapValueT &gt; </div>
 
 </div>
 </div>
-<a id="a9dd83b770236c30efd7223437b97587c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9dd83b770236c30efd7223437b97587c">&#9670;&nbsp;</a></span>add_on_set_parameters_callback()</h2>
+<a id="a1546abc755c509d94db27e377a20ccc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1546abc755c509d94db27e377a20ccc0">&#9670;&nbsp;</a></span>add_on_set_parameters_callback()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">rclcpp_lifecycle::LifecycleNode::OnSetParametersCallbackHandle::SharedPtr rclcpp_lifecycle::LifecycleNode::add_on_set_parameters_callback </td>
+          <td class="memname">RCUTILS_WARN_UNUSED rclcpp_lifecycle::LifecycleNode::OnSetParametersCallbackHandle::SharedPtr rclcpp_lifecycle::LifecycleNode::add_on_set_parameters_callback </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classrclcpp__lifecycle_1_1LifecycleNode.html#a68c8fc8d2c42ff1e32038e089a8dce62">rclcpp_lifecycle::LifecycleNode::OnParametersSetCallbackType</a>&#160;</td>
           <td class="paramname"><em>callback</em></td><td>)</td>
@@ -1447,7 +1446,7 @@ template&lt;typename MapValueT &gt; </div>
 </div><div class="memdoc">
 
 <p>Add a callback for when parameters are being set. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="elRef" href="http://docs.ros2.org/foxy/api/rclcpp/classrclcpp_1_1Node.html#a0c3ad2ca5c56eb54af0227f04e943679">rclcpp::Node::add_on_set_parameters_callback</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="elRef" href="http://docs.ros2.org/foxy/api/rclcpp/classrclcpp_1_1Node.html#a12d535bced9f26b65c0a450e6f40aff8">rclcpp::Node::add_on_set_parameters_callback</a> </dd></dl>
 
 </div>
 </div>

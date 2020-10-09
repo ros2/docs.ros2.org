@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value_4267',['value',['http://docs.ros2.org/foxy/api/rcpputils/structrcpputils_1_1is__pointer.html#a92d149814331fb875829016998d1e9a5',1,'rcpputils::is_pointer']]]
+  ['zero_5fallocate_4141',['zero_allocate',['http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html#a0f4f296c51ed386672f041f698c9d399',1,'rcutils_allocator_t']]]
 ];

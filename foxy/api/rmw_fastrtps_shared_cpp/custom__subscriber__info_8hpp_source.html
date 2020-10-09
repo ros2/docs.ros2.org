@@ -139,148 +139,136 @@ $(function() {
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="comment">// SubscriberListener implementation</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classSubListener.html#afe7a4743f6dc7dac7df2e8c9493bebfe">   69</a></span>&#160;  <a class="code" href="classSubListener.html#afe7a4743f6dc7dac7df2e8c9493bebfe">onSubscriptionMatched</a>(</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    eprosima::fastrtps::Subscriber * <span class="comment">/*sub*/</span>, eprosima::fastrtps::rtps::MatchingInfo &amp; info) <span class="keyword">final</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classSubListener.html#a03d0993bdff329804d3f258b0709f171">   69</a></span>&#160;  <a class="code" href="classSubListener.html#a03d0993bdff329804d3f258b0709f171">onSubscriptionMatched</a>(</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    eprosima::fastrtps::Subscriber * sub, eprosima::fastrtps::rtps::MatchingInfo &amp; info) <span class="keyword">final</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/lock_guard.html">std::lock_guard&lt;std::mutex&gt;</a> lock(internalMutex_);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (eprosima::fastrtps::rtps::MATCHED_MATCHING == info.status) {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      publishers_.insert(info.remoteEndpointGuid);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (eprosima::fastrtps::rtps::REMOVED_MATCHING == info.status) {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      publishers_.erase(info.remoteEndpointGuid);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classSubListener.html#a3bb01d8673feb30e2547d49429c9c74c">   81</a></span>&#160;  <a class="code" href="classSubListener.html#a3bb01d8673feb30e2547d49429c9c74c">onNewDataMessage</a>(eprosima::fastrtps::Subscriber * sub) <span class="keyword">final</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">// Make sure to call into Fast-RTPS before taking the lock to avoid an</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">// ABBA deadlock between internalMutex_ and mutexes inside of Fast-RTPS.</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#if FASTRTPS_VERSION_MAJOR == 1 &amp;&amp; FASTRTPS_VERSION_MINOR &lt; 9</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    uint64_t unread_count = sub-&gt;getUnreadCount();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    uint64_t unread_count = sub-&gt;get_unread_count();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/lock_guard.html">std::lock_guard&lt;std::mutex&gt;</a> lock(internalMutex_);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">// the change to liveliness_lost_count_ needs to be mutually exclusive with</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">// rmw_wait() which checks hasEvent() and decides if wait() needs to be called</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="classEventListenerInterface_1_1ConditionalScopedLock.html">ConditionalScopedLock</a> clock(conditionMutex_, conditionVariable_);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    data_.store(unread_count, std::memory_order_relaxed);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <a class="code" href="visibility__control_8h.html#a349521b5218fc6115d3c24787a18c481">RMW_FASTRTPS_SHARED_CPP_PUBLIC</a></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  on_requested_deadline_missed(</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    eprosima::fastrtps::Subscriber *,</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">const</span> eprosima::fastrtps::RequestedDeadlineMissedStatus &amp;) <span class="keyword">final</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/lock_guard.html">std::lock_guard&lt;std::mutex&gt;</a> lock(internalMutex_);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">if</span> (eprosima::fastrtps::rtps::MATCHED_MATCHING == info.status) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        publishers_.insert(info.remoteEndpointGuid);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (eprosima::fastrtps::rtps::REMOVED_MATCHING == info.status) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        publishers_.erase(info.remoteEndpointGuid);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    data_taken(sub);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classSubListener.html#a3bb01d8673feb30e2547d49429c9c74c">   84</a></span>&#160;  <a class="code" href="classSubListener.html#a3bb01d8673feb30e2547d49429c9c74c">onNewDataMessage</a>(eprosima::fastrtps::Subscriber * sub) <span class="keyword">final</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    data_taken(sub);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <a class="code" href="visibility__control_8h.html#a349521b5218fc6115d3c24787a18c481">RMW_FASTRTPS_SHARED_CPP_PUBLIC</a></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  on_requested_deadline_missed(</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    eprosima::fastrtps::Subscriber *,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">const</span> eprosima::fastrtps::RequestedDeadlineMissedStatus &amp;) <span class="keyword">final</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="visibility__control_8h.html#a349521b5218fc6115d3c24787a18c481">RMW_FASTRTPS_SHARED_CPP_PUBLIC</a></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  on_liveliness_changed(</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    eprosima::fastrtps::Subscriber *,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">const</span> eprosima::fastrtps::LivelinessChangedStatus &amp;) <span class="keyword">final</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="comment">// EventListenerInterface implementation</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <a class="code" href="visibility__control_8h.html#a349521b5218fc6115d3c24787a18c481">RMW_FASTRTPS_SHARED_CPP_PUBLIC</a></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  hasEvent(<a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/event_8h.html#a8a03b6e76e7e3d65ea90edfaadc130e0">rmw_event_type_t</a> event_type) <span class="keyword">const</span> <span class="keyword">final</span>;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <a class="code" href="visibility__control_8h.html#a349521b5218fc6115d3c24787a18c481">RMW_FASTRTPS_SHARED_CPP_PUBLIC</a></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  on_liveliness_changed(</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    eprosima::fastrtps::Subscriber *,</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">const</span> eprosima::fastrtps::LivelinessChangedStatus &amp;) <span class="keyword">final</span>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="comment">// EventListenerInterface implementation</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <a class="code" href="visibility__control_8h.html#a349521b5218fc6115d3c24787a18c481">RMW_FASTRTPS_SHARED_CPP_PUBLIC</a></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  hasEvent(<a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/event_8h.html#a8a03b6e76e7e3d65ea90edfaadc130e0">rmw_event_type_t</a> event_type) <span class="keyword">const</span> <span class="keyword">final</span>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <a class="code" href="visibility__control_8h.html#a349521b5218fc6115d3c24787a18c481">RMW_FASTRTPS_SHARED_CPP_PUBLIC</a></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  takeNextEvent(<a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/event_8h.html#a8a03b6e76e7e3d65ea90edfaadc130e0">rmw_event_type_t</a> event_type, <span class="keywordtype">void</span> * event_info) <span class="keyword">final</span>;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="comment">// SubListener API</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classSubListener.html#a3a8063eb6679764db54436062bf807e4">  123</a></span>&#160;  <a class="code" href="classSubListener.html#a3a8063eb6679764db54436062bf807e4">attachCondition</a>(<a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/mutex.html">std::mutex</a> * conditionMutex, <a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/condition_variable.html">std::condition_variable</a> * conditionVariable)</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/lock_guard.html">std::lock_guard&lt;std::mutex&gt;</a> lock(internalMutex_);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    conditionMutex_ = conditionMutex;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    conditionVariable_ = conditionVariable;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  }</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classSubListener.html#a72e151c389d76716ca73a563967dc029">  131</a></span>&#160;  <a class="code" href="classSubListener.html#a72e151c389d76716ca73a563967dc029">detachCondition</a>()</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  {</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/lock_guard.html">std::lock_guard&lt;std::mutex&gt;</a> lock(internalMutex_);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    conditionMutex_ = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    conditionVariable_ = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  }</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classSubListener.html#a582f12cd9a7326019d643630f7689475">  139</a></span>&#160;  <a class="code" href="classSubListener.html#a582f12cd9a7326019d643630f7689475">hasData</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">return</span> data_.load(std::memory_order_relaxed) &gt; 0;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  takeNextEvent(<a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/event_8h.html#a8a03b6e76e7e3d65ea90edfaadc130e0">rmw_event_type_t</a> event_type, <span class="keywordtype">void</span> * event_info) <span class="keyword">final</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="comment">// SubListener API</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classSubListener.html#a3a8063eb6679764db54436062bf807e4">  112</a></span>&#160;  <a class="code" href="classSubListener.html#a3a8063eb6679764db54436062bf807e4">attachCondition</a>(<a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/mutex.html">std::mutex</a> * conditionMutex, <a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/condition_variable.html">std::condition_variable</a> * conditionVariable)</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/lock_guard.html">std::lock_guard&lt;std::mutex&gt;</a> lock(internalMutex_);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    conditionMutex_ = conditionMutex;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    conditionVariable_ = conditionVariable;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classSubListener.html#a72e151c389d76716ca73a563967dc029">  120</a></span>&#160;  <a class="code" href="classSubListener.html#a72e151c389d76716ca73a563967dc029">detachCondition</a>()</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/lock_guard.html">std::lock_guard&lt;std::mutex&gt;</a> lock(internalMutex_);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    conditionMutex_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    conditionVariable_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="classSubListener.html#a582f12cd9a7326019d643630f7689475">  128</a></span>&#160;  <a class="code" href="classSubListener.html#a582f12cd9a7326019d643630f7689475">hasData</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">return</span> data_.load(std::memory_order_relaxed) &gt; 0;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classSubListener.html#a0011bd233abd1abc8c7dab063d83d9dc">  134</a></span>&#160;  <a class="code" href="classSubListener.html#a0011bd233abd1abc8c7dab063d83d9dc">data_taken</a>(eprosima::fastrtps::Subscriber * sub)</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">// Make sure to call into Fast-RTPS before taking the lock to avoid an</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="comment">// ABBA deadlock between internalMutex_ and mutexes inside of Fast-RTPS.</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#if FASTRTPS_VERSION_MAJOR == 1 &amp;&amp; FASTRTPS_VERSION_MINOR &lt; 9</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    uint64_t unread_count = sub-&gt;getUnreadCount();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    uint64_t unread_count = sub-&gt;get_unread_count();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classSubListener.html#a0011bd233abd1abc8c7dab063d83d9dc">  145</a></span>&#160;  <a class="code" href="classSubListener.html#a0011bd233abd1abc8c7dab063d83d9dc">data_taken</a>(eprosima::fastrtps::Subscriber * sub)</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  {</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="comment">// Make sure to call into Fast-RTPS before taking the lock to avoid an</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="comment">// ABBA deadlock between internalMutex_ and mutexes inside of Fast-RTPS.</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">#if FASTRTPS_VERSION_MAJOR == 1 &amp;&amp; FASTRTPS_VERSION_MINOR &lt; 9</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    uint64_t unread_count = sub-&gt;getUnreadCount();</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    uint64_t unread_count = sub-&gt;get_unread_count();</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/lock_guard.html">std::lock_guard&lt;std::mutex&gt;</a> lock(internalMutex_);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="classEventListenerInterface_1_1ConditionalScopedLock.html">ConditionalScopedLock</a> clock(conditionMutex_, conditionVariable_);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    data_.store(unread_count, std::memory_order_relaxed);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="classSubListener.html#a462c709bfa7b2d98c364e04cc2ba3239">  149</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classSubListener.html#a462c709bfa7b2d98c364e04cc2ba3239">publisherCount</a>()</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/lock_guard.html">std::lock_guard&lt;std::mutex&gt;</a> lock(internalMutex_);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">return</span> publishers_.size();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  }</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/lock_guard.html">std::lock_guard&lt;std::mutex&gt;</a> lock(internalMutex_);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="classEventListenerInterface_1_1ConditionalScopedLock.html">ConditionalScopedLock</a> clock(conditionMutex_);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    data_.store(unread_count, std::memory_order_relaxed);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keyword">mutable</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/mutex.html">std::mutex</a> internalMutex_;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  std::atomic_size_t data_;</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="classSubListener.html#a462c709bfa7b2d98c364e04cc2ba3239">  160</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classSubListener.html#a462c709bfa7b2d98c364e04cc2ba3239">publisherCount</a>()</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  {</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/lock_guard.html">std::lock_guard&lt;std::mutex&gt;</a> lock(internalMutex_);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">return</span> publishers_.size();</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  }</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="keyword">mutable</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/mutex.html">std::mutex</a> internalMutex_;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  std::atomic_size_t data_;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  std::atomic_bool deadline_changes_;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  eprosima::fastrtps::RequestedDeadlineMissedStatus requested_deadline_missed_status_</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcpputils/thread__safety__annotations_8hpp.html#a1781035ba74ae67444879f6b13d86a5f">RCPPUTILS_TSA_GUARDED_BY</a>(internalMutex_);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  std::atomic_bool liveliness_changes_;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  eprosima::fastrtps::LivelinessChangedStatus liveliness_changed_status_</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcpputils/thread__safety__annotations_8hpp.html#a1781035ba74ae67444879f6b13d86a5f">RCPPUTILS_TSA_GUARDED_BY</a>(internalMutex_);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/mutex.html">std::mutex</a> * conditionMutex_ <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcpputils/thread__safety__annotations_8hpp.html#a1781035ba74ae67444879f6b13d86a5f">RCPPUTILS_TSA_GUARDED_BY</a>(internalMutex_);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/condition_variable.html">std::condition_variable</a> * conditionVariable_ <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcpputils/thread__safety__annotations_8hpp.html#a1781035ba74ae67444879f6b13d86a5f">RCPPUTILS_TSA_GUARDED_BY</a>(internalMutex_);</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  std::atomic_bool deadline_changes_;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  eprosima::fastrtps::RequestedDeadlineMissedStatus requested_deadline_missed_status_</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcpputils/thread__safety__annotations_8hpp.html#a1781035ba74ae67444879f6b13d86a5f">RCPPUTILS_TSA_GUARDED_BY</a>(internalMutex_);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  std::atomic_bool liveliness_changes_;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  eprosima::fastrtps::LivelinessChangedStatus liveliness_changed_status_</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcpputils/thread__safety__annotations_8hpp.html#a1781035ba74ae67444879f6b13d86a5f">RCPPUTILS_TSA_GUARDED_BY</a>(internalMutex_);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/mutex.html">std::mutex</a> * conditionMutex_ <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcpputils/thread__safety__annotations_8hpp.html#a1781035ba74ae67444879f6b13d86a5f">RCPPUTILS_TSA_GUARDED_BY</a>(internalMutex_);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <a class="codeRef" href="http://en.cppreference.com/w/cpp/thread/condition_variable.html">std::condition_variable</a> * conditionVariable_ <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcpputils/thread__safety__annotations_8hpp.html#a1781035ba74ae67444879f6b13d86a5f">RCPPUTILS_TSA_GUARDED_BY</a>(internalMutex_);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <a class="codeRef" href="http://en.cppreference.com/w/cpp/container/set.html">std::set&lt;eprosima::fastrtps::rtps::GUID_t&gt;</a> publishers_ <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcpputils/thread__safety__annotations_8hpp.html#a1781035ba74ae67444879f6b13d86a5f">RCPPUTILS_TSA_GUARDED_BY</a>(internalMutex_);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;};</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="preprocessor">#endif  // RMW_FASTRTPS_SHARED_CPP__CUSTOM_SUBSCRIBER_INFO_HPP_</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <a class="codeRef" href="http://en.cppreference.com/w/cpp/container/set.html">std::set&lt;eprosima::fastrtps::rtps::GUID_t&gt;</a> publishers_ <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcpputils/thread__safety__annotations_8hpp.html#a1781035ba74ae67444879f6b13d86a5f">RCPPUTILS_TSA_GUARDED_BY</a>(internalMutex_);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;};</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">#endif  // RMW_FASTRTPS_SHARED_CPP__CUSTOM_SUBSCRIBER_INFO_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astructCustomSubscriberInfo_html_a43301df672fce3c49084f7058780efa0"><div class="ttname"><a href="structCustomSubscriberInfo.html#a43301df672fce3c49084f7058780efa0">CustomSubscriberInfo::typesupport_identifier_</a></div><div class="ttdeci">const char * typesupport_identifier_</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:46</div></div>
-<div class="ttc" id="aclassSubListener_html_a3bb01d8673feb30e2547d49429c9c74c"><div class="ttname"><a href="classSubListener.html#a3bb01d8673feb30e2547d49429c9c74c">SubListener::onNewDataMessage</a></div><div class="ttdeci">void onNewDataMessage(eprosima::fastrtps::Subscriber *sub) final</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:81</div></div>
+<div class="ttc" id="aclassSubListener_html_a3bb01d8673feb30e2547d49429c9c74c"><div class="ttname"><a href="classSubListener.html#a3bb01d8673feb30e2547d49429c9c74c">SubListener::onNewDataMessage</a></div><div class="ttdeci">void onNewDataMessage(eprosima::fastrtps::Subscriber *sub) final</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:84</div></div>
 <div class="ttc" id="aevent_8h_html_a8a03b6e76e7e3d65ea90edfaadc130e0"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rmw/event_8h.html#a8a03b6e76e7e3d65ea90edfaadc130e0">rmw_event_type_t</a></div><div class="ttdeci">rmw_event_type_t</div></div>
 <div class="ttc" id="athread__safety__annotations_8hpp_html_a1781035ba74ae67444879f6b13d86a5f"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcpputils/thread__safety__annotations_8hpp.html#a1781035ba74ae67444879f6b13d86a5f">RCPPUTILS_TSA_GUARDED_BY</a></div><div class="ttdeci">#define RCPPUTILS_TSA_GUARDED_BY(x)</div></div>
 <div class="ttc" id="aclassrmw__fastrtps__shared__cpp_1_1TypeSupport_html"><div class="ttname"><a href="classrmw__fastrtps__shared__cpp_1_1TypeSupport.html">rmw_fastrtps_shared_cpp::TypeSupport</a></div><div class="ttdef"><b>Definition:</b> TypeSupport.hpp:41</div></div>
 <div class="ttc" id="astructCustomSubscriberInfo_html_ab5a43e64d68d3bbeccb76ffd7d13f10c"><div class="ttname"><a href="structCustomSubscriberInfo.html#ab5a43e64d68d3bbeccb76ffd7d13f10c">CustomSubscriberInfo::type_support_</a></div><div class="ttdeci">rmw_fastrtps_shared_cpp::TypeSupport * type_support_</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:43</div></div>
-<div class="ttc" id="aclassSubListener_html_a462c709bfa7b2d98c364e04cc2ba3239"><div class="ttname"><a href="classSubListener.html#a462c709bfa7b2d98c364e04cc2ba3239">SubListener::publisherCount</a></div><div class="ttdeci">size_t publisherCount()</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:160</div></div>
+<div class="ttc" id="aclassSubListener_html_a462c709bfa7b2d98c364e04cc2ba3239"><div class="ttname"><a href="classSubListener.html#a462c709bfa7b2d98c364e04cc2ba3239">SubListener::publisherCount</a></div><div class="ttdeci">size_t publisherCount()</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:149</div></div>
 <div class="ttc" id="alock_guard_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/thread/lock_guard.html">std::lock_guard</a></div></div>
 <div class="ttc" id="avisibility__control_8h_html_a349521b5218fc6115d3c24787a18c481"><div class="ttname"><a href="visibility__control_8h.html#a349521b5218fc6115d3c24787a18c481">RMW_FASTRTPS_SHARED_CPP_PUBLIC</a></div><div class="ttdeci">#define RMW_FASTRTPS_SHARED_CPP_PUBLIC</div><div class="ttdef"><b>Definition:</b> visibility_control.h:50</div></div>
-<div class="ttc" id="aclassSubListener_html_a3a8063eb6679764db54436062bf807e4"><div class="ttname"><a href="classSubListener.html#a3a8063eb6679764db54436062bf807e4">SubListener::attachCondition</a></div><div class="ttdeci">void attachCondition(std::mutex *conditionMutex, std::condition_variable *conditionVariable)</div><div class="ttdoc">Connect a condition variable so a waiter can be notified of new data.</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:123</div></div>
+<div class="ttc" id="aclassSubListener_html_a3a8063eb6679764db54436062bf807e4"><div class="ttname"><a href="classSubListener.html#a3a8063eb6679764db54436062bf807e4">SubListener::attachCondition</a></div><div class="ttdeci">void attachCondition(std::mutex *conditionMutex, std::condition_variable *conditionVariable)</div><div class="ttdoc">Connect a condition variable so a waiter can be notified of new data.</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:112</div></div>
 <div class="ttc" id="aTypeSupport_8hpp_html"><div class="ttname"><a href="TypeSupport_8hpp.html">TypeSupport.hpp</a></div></div>
 <div class="ttc" id="astructCustomSubscriberInfo_html_ab3d2ec5760fc981e8b0221582d4efeb0"><div class="ttname"><a href="structCustomSubscriberInfo.html#ab3d2ec5760fc981e8b0221582d4efeb0">CustomSubscriberInfo::subscription_gid_</a></div><div class="ttdeci">rmw_gid_t subscription_gid_</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:45</div></div>
 <div class="ttc" id="astructCustomSubscriberInfo_html_add17424d654fe19597e317793decc311"><div class="ttname"><a href="structCustomSubscriberInfo.html#add17424d654fe19597e317793decc311">CustomSubscriberInfo::listener_</a></div><div class="ttdeci">SubListener * listener_</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:42</div></div>
 <div class="ttc" id="astructCustomSubscriberInfo_html_a96994e0b8375af468a96f265cd4b0954"><div class="ttname"><a href="structCustomSubscriberInfo.html#a96994e0b8375af468a96f265cd4b0954">CustomSubscriberInfo::getListener</a></div><div class="ttdeci">EventListenerInterface * getListener() const final</div></div>
 <div class="ttc" id="astructCustomSubscriberInfo_html_ac30c65bf87761fe91e3b94a58be76349"><div class="ttname"><a href="structCustomSubscriberInfo.html#ac30c65bf87761fe91e3b94a58be76349">CustomSubscriberInfo::type_support_impl_</a></div><div class="ttdeci">const void * type_support_impl_</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:44</div></div>
 <div class="ttc" id="astructCustomSubscriberInfo_html"><div class="ttname"><a href="structCustomSubscriberInfo.html">CustomSubscriberInfo</a></div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:37</div></div>
-<div class="ttc" id="aclassSubListener_html_a0011bd233abd1abc8c7dab063d83d9dc"><div class="ttname"><a href="classSubListener.html#a0011bd233abd1abc8c7dab063d83d9dc">SubListener::data_taken</a></div><div class="ttdeci">void data_taken(eprosima::fastrtps::Subscriber *sub)</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:145</div></div>
-<div class="ttc" id="aclassSubListener_html_a72e151c389d76716ca73a563967dc029"><div class="ttname"><a href="classSubListener.html#a72e151c389d76716ca73a563967dc029">SubListener::detachCondition</a></div><div class="ttdeci">void detachCondition()</div><div class="ttdoc">Unset the information from attachCondition.</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:131</div></div>
+<div class="ttc" id="aclassSubListener_html_a0011bd233abd1abc8c7dab063d83d9dc"><div class="ttname"><a href="classSubListener.html#a0011bd233abd1abc8c7dab063d83d9dc">SubListener::data_taken</a></div><div class="ttdeci">void data_taken(eprosima::fastrtps::Subscriber *sub)</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:134</div></div>
+<div class="ttc" id="aclassSubListener_html_a72e151c389d76716ca73a563967dc029"><div class="ttname"><a href="classSubListener.html#a72e151c389d76716ca73a563967dc029">SubListener::detachCondition</a></div><div class="ttdeci">void detachCondition()</div><div class="ttdoc">Unset the information from attachCondition.</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:120</div></div>
 <div class="ttc" id="aclassEventListenerInterface_1_1ConditionalScopedLock_html"><div class="ttname"><a href="classEventListenerInterface_1_1ConditionalScopedLock.html">EventListenerInterface::ConditionalScopedLock</a></div><div class="ttdef"><b>Definition:</b> custom_event_info.hpp:70</div></div>
 <div class="ttc" id="astructCustomSubscriberInfo_html_a952f5dcf6d1622ee0dd854dcfebd2004"><div class="ttname"><a href="structCustomSubscriberInfo.html#a952f5dcf6d1622ee0dd854dcfebd2004">CustomSubscriberInfo::~CustomSubscriberInfo</a></div><div class="ttdeci">virtual ~CustomSubscriberInfo()=default</div></div>
-<div class="ttc" id="aclassSubListener_html_a582f12cd9a7326019d643630f7689475"><div class="ttname"><a href="classSubListener.html#a582f12cd9a7326019d643630f7689475">SubListener::hasData</a></div><div class="ttdeci">bool hasData() const</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:139</div></div>
+<div class="ttc" id="aclassSubListener_html_a582f12cd9a7326019d643630f7689475"><div class="ttname"><a href="classSubListener.html#a582f12cd9a7326019d643630f7689475">SubListener::hasData</a></div><div class="ttdeci">bool hasData() const</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:128</div></div>
 <div class="ttc" id="aclassSubListener_html"><div class="ttname"><a href="classSubListener.html">SubListener</a></div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:53</div></div>
 <div class="ttc" id="astructrmw__gid__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rmw/structrmw__gid__t.html">rmw_gid_t</a></div></div>
-<div class="ttc" id="aclassSubListener_html_afe7a4743f6dc7dac7df2e8c9493bebfe"><div class="ttname"><a href="classSubListener.html#afe7a4743f6dc7dac7df2e8c9493bebfe">SubListener::onSubscriptionMatched</a></div><div class="ttdeci">void onSubscriptionMatched(eprosima::fastrtps::Subscriber *, eprosima::fastrtps::rtps::MatchingInfo &amp;info) final</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:69</div></div>
 <div class="ttc" id="athread__safety__annotations_8hpp.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcpputils/thread__safety__annotations_8hpp.html">thread_safety_annotations.hpp</a></div></div>
 <div class="ttc" id="acondition_variable_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/thread/condition_variable.html">std::condition_variable</a></div></div>
 <div class="ttc" id="astructCustomSubscriberInfo_html_a04b705a51b66fa838c702c85b2828d6c"><div class="ttname"><a href="structCustomSubscriberInfo.html#a04b705a51b66fa838c702c85b2828d6c">CustomSubscriberInfo::subscriber_</a></div><div class="ttdeci">eprosima::fastrtps::Subscriber * subscriber_</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:41</div></div>
@@ -292,6 +280,7 @@ $(function() {
 <div class="ttc" id="aset_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/container/set.html">std::set&lt; eprosima::fastrtps::rtps::GUID_t &gt;</a></div></div>
 <div class="ttc" id="astructCustomEventInfo_html"><div class="ttname"><a href="structCustomEventInfo.html">CustomEventInfo</a></div><div class="ttdef"><b>Definition:</b> custom_event_info.hpp:98</div></div>
 <div class="ttc" id="aclassEventListenerInterface_html"><div class="ttname"><a href="classEventListenerInterface.html">EventListenerInterface</a></div><div class="ttdef"><b>Definition:</b> custom_event_info.hpp:39</div></div>
+<div class="ttc" id="aclassSubListener_html_a03d0993bdff329804d3f258b0709f171"><div class="ttname"><a href="classSubListener.html#a03d0993bdff329804d3f258b0709f171">SubListener::onSubscriptionMatched</a></div><div class="ttdeci">void onSubscriptionMatched(eprosima::fastrtps::Subscriber *sub, eprosima::fastrtps::rtps::MatchingInfo &amp;info) final</div><div class="ttdef"><b>Definition:</b> custom_subscriber_info.hpp:69</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

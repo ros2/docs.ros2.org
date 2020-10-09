@@ -71,7 +71,7 @@ $(function() {
 <div class="title">service.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="service_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2016 Open Source Robotics Foundation, Inc.</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2016 Open Source Robotics Foundation, Inc.</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// you may not use this file except in compliance with the License.</span></div>
@@ -95,138 +95,119 @@ $(function() {
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;rosidl_runtime_c/service_type_support_struct.h&quot;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">rcl/macros.h</a>&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="node_8h.html">rcl/node.h</a>&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="visibility__control_8h.html">rcl/visibility_control.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;rcl/macros.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;rcl/node.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;rcl/visibility_control.h&quot;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">struct </span>rcl_service_impl_t;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structrcl__service__t.html">   33</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structrcl__service__t.html">rcl_service_t</a></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structrcl__service__t.html#ad577f48bc24f0729c4923601b6b0bdd8">   35</a></span>&#160;  <span class="keyword">struct </span>rcl_service_impl_t * <a class="code" href="structrcl__service__t.html#ad577f48bc24f0729c4923601b6b0bdd8">impl</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;} <a class="code" href="service_8h.html#ab88490cf3348c32a20a5c9615a97e643">rcl_service_t</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structrcl__service__options__t.html">   39</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structrcl__service__options__t.html">rcl_service_options_t</a></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structrcl__service__options__t.html#acdf0e4e6e063100e40e61ab576368cf7">   42</a></span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/structrmw__qos__profile__t.html">rmw_qos_profile_t</a> <a class="code" href="structrcl__service__options__t.html#acdf0e4e6e063100e40e61ab576368cf7">qos</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structrcl__service__options__t.html#a00924be2a42ae3f8e88819aa6dd1586b">   45</a></span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcl_allocator_t</a> <a class="code" href="structrcl__service__options__t.html#a00924be2a42ae3f8e88819aa6dd1586b">allocator</a>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;} <a class="code" href="service_8h.html#aaea230aa540663d6a4dc05c3d9429827">rcl_service_options_t</a>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<a class="code" href="visibility__control_8h.html#a25c0ccf03bf45c5a90f4cc728235448c">RCL_PUBLIC</a></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<a class="code" href="macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<a class="code" href="structrcl__service__t.html">rcl_service_t</a></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<a class="code" href="service_8h.html#aa6ed44193f26570c22caa8b002263dd3">rcl_get_zero_initialized_service</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<a class="code" href="visibility__control_8h.html#a25c0ccf03bf45c5a90f4cc728235448c">RCL_PUBLIC</a></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<a class="code" href="macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<a class="code" href="types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<a class="code" href="service_8h.html#aeb92bd1565695939306c76330b136727">rcl_service_init</a>(</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <a class="code" href="structrcl__service__t.html">rcl_service_t</a> * service,</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keyword">const</span> <a class="code" href="structrcl__node__t.html">rcl_node_t</a> * node,</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keyword">const</span> rosidl_service_type_support_t * type_support,</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * service_name,</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keyword">const</span> <a class="code" href="structrcl__service__options__t.html">rcl_service_options_t</a> * options);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<a class="code" href="visibility__control_8h.html#a25c0ccf03bf45c5a90f4cc728235448c">RCL_PUBLIC</a></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<a class="code" href="macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<a class="code" href="types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<a class="code" href="service_8h.html#aa2c66c6d6447efd364e68aece8e83ae9">rcl_service_fini</a>(<a class="code" href="structrcl__service__t.html">rcl_service_t</a> * service, <a class="code" href="structrcl__node__t.html">rcl_node_t</a> * node);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<a class="code" href="visibility__control_8h.html#a25c0ccf03bf45c5a90f4cc728235448c">RCL_PUBLIC</a></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<a class="code" href="macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<a class="code" href="structrcl__service__options__t.html">rcl_service_options_t</a></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<a class="code" href="service_8h.html#a233516e6143dec2ee2a1a67b23e13b41">rcl_service_get_default_options</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<a class="code" href="visibility__control_8h.html#a25c0ccf03bf45c5a90f4cc728235448c">RCL_PUBLIC</a></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<a class="code" href="macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<a class="code" href="types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<a class="code" href="service_8h.html#ac3fe1a7d99043ea65d4b035e49e0c38d">rcl_take_request_with_info</a>(</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="keyword">const</span> <a class="code" href="structrcl__service__t.html">rcl_service_t</a> * service,</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/structrmw__service__info__t.html">rmw_service_info_t</a> * request_header,</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="keywordtype">void</span> * ros_request);</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<a class="code" href="visibility__control_8h.html#a25c0ccf03bf45c5a90f4cc728235448c">RCL_PUBLIC</a></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<a class="code" href="macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<a class="code" href="types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<a class="code" href="service_8h.html#a08f83de4831c2c1f2d010229017bc6be">rcl_take_request</a>(</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  <span class="keyword">const</span> <a class="code" href="structrcl__service__t.html">rcl_service_t</a> * service,</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/structrmw__request__id__t.html">rmw_request_id_t</a> * request_header,</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="keywordtype">void</span> * ros_request);</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<a class="code" href="visibility__control_8h.html#a25c0ccf03bf45c5a90f4cc728235448c">RCL_PUBLIC</a></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<a class="code" href="macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<a class="code" href="types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<a class="code" href="service_8h.html#a8631f47c48757228b813d0849d399d81">rcl_send_response</a>(</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  <span class="keyword">const</span> <a class="code" href="structrcl__service__t.html">rcl_service_t</a> * service,</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/structrmw__request__id__t.html">rmw_request_id_t</a> * response_header,</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <span class="keywordtype">void</span> * ros_response);</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<a class="code" href="visibility__control_8h.html#a25c0ccf03bf45c5a90f4cc728235448c">RCL_PUBLIC</a></div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<a class="code" href="macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> *</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<a class="code" href="service_8h.html#a8c005590c9d8049d294326b8929f16d5">rcl_service_get_service_name</a>(<span class="keyword">const</span> <a class="code" href="structrcl__service__t.html">rcl_service_t</a> * service);</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<a class="code" href="visibility__control_8h.html#a25c0ccf03bf45c5a90f4cc728235448c">RCL_PUBLIC</a></div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<a class="code" href="macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="keyword">const</span> <a class="code" href="structrcl__service__options__t.html">rcl_service_options_t</a> *</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<a class="code" href="service_8h.html#a8ac1a60dc39f73ad8f97ad53eb5d5ebb">rcl_service_get_options</a>(<span class="keyword">const</span> <a class="code" href="structrcl__service__t.html">rcl_service_t</a> * service);</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160; </div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160; </div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<a class="code" href="visibility__control_8h.html#a25c0ccf03bf45c5a90f4cc728235448c">RCL_PUBLIC</a></div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<a class="code" href="macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/structrmw__service__t.html">rmw_service_t</a> *</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<a class="code" href="service_8h.html#a3b3f364e84a761aa34dc7c5ff8c5c6e9">rcl_service_get_rmw_handle</a>(<span class="keyword">const</span> <a class="code" href="structrcl__service__t.html">rcl_service_t</a> * service);</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160; </div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160; </div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<a class="code" href="visibility__control_8h.html#a25c0ccf03bf45c5a90f4cc728235448c">RCL_PUBLIC</a></div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;<span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;<a class="code" href="service_8h.html#af364348c25553e12ac9f1c21a94398ae">rcl_service_is_valid</a>(<span class="keyword">const</span> <a class="code" href="structrcl__service__t.html">rcl_service_t</a> * service);</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160; </div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;}</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160; </div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;<span class="preprocessor">#endif  // RCL__SERVICE_H_</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structrcl__service__t.html#ad577f48bc24f0729c4923601b6b0bdd8">   36</a></span>&#160;  <span class="keyword">struct </span>rcl_service_impl_t * <a class="code" href="structrcl__service__t.html#ad577f48bc24f0729c4923601b6b0bdd8">impl</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;} <a class="code" href="structrcl__service__t.html">rcl_service_t</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structrcl__service__options__t.html">   40</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structrcl__service__options__t.html">rcl_service_options_t</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structrcl__service__options__t.html#acdf0e4e6e063100e40e61ab576368cf7">   43</a></span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/structrmw__qos__profile__t.html">rmw_qos_profile_t</a> <a class="code" href="structrcl__service__options__t.html#acdf0e4e6e063100e40e61ab576368cf7">qos</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structrcl__service__options__t.html#a00924be2a42ae3f8e88819aa6dd1586b">   46</a></span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcl_allocator_t</a> <a class="code" href="structrcl__service__options__t.html#a00924be2a42ae3f8e88819aa6dd1586b">allocator</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;} <a class="code" href="structrcl__service__options__t.html">rcl_service_options_t</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;RCL_PUBLIC</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<a class="code" href="structrcl__service__t.html">rcl_service_t</a></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;rcl_get_zero_initialized_service(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;RCL_PUBLIC</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;rcl_ret_t</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;rcl_service_init(</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <a class="code" href="structrcl__service__t.html">rcl_service_t</a> * service,</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keyword">const</span> <a class="code" href="structrcl__node__t.html">rcl_node_t</a> * node,</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keyword">const</span> rosidl_service_type_support_t * type_support,</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * service_name,</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keyword">const</span> <a class="code" href="structrcl__service__options__t.html">rcl_service_options_t</a> * options);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;RCL_PUBLIC</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;rcl_ret_t</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;rcl_service_fini(<a class="code" href="structrcl__service__t.html">rcl_service_t</a> * service, <a class="code" href="structrcl__node__t.html">rcl_node_t</a> * node);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;RCL_PUBLIC</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<a class="code" href="structrcl__service__options__t.html">rcl_service_options_t</a></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;rcl_service_get_default_options(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;RCL_PUBLIC</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;rcl_ret_t</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;rcl_take_request_with_info(</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  <span class="keyword">const</span> <a class="code" href="structrcl__service__t.html">rcl_service_t</a> * service,</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/structrmw__service__info__t.html">rmw_service_info_t</a> * request_header,</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="keywordtype">void</span> * ros_request);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;RCL_PUBLIC</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;rcl_ret_t</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;rcl_take_request(</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="keyword">const</span> <a class="code" href="structrcl__service__t.html">rcl_service_t</a> * service,</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/structrmw__request__id__t.html">rmw_request_id_t</a> * request_header,</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <span class="keywordtype">void</span> * ros_request);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;RCL_PUBLIC</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;rcl_ret_t</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;rcl_send_response(</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <span class="keyword">const</span> <a class="code" href="structrcl__service__t.html">rcl_service_t</a> * service,</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/structrmw__request__id__t.html">rmw_request_id_t</a> * response_header,</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <span class="keywordtype">void</span> * ros_response);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;RCL_PUBLIC</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> *</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;rcl_service_get_service_name(<span class="keyword">const</span> <a class="code" href="structrcl__service__t.html">rcl_service_t</a> * service);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;RCL_PUBLIC</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="keyword">const</span> <a class="code" href="structrcl__service__options__t.html">rcl_service_options_t</a> *</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;rcl_service_get_options(<span class="keyword">const</span> <a class="code" href="structrcl__service__t.html">rcl_service_t</a> * service);</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;RCL_PUBLIC</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/structrmw__service__t.html">rmw_service_t</a> *</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;rcl_service_get_rmw_handle(<span class="keyword">const</span> <a class="code" href="structrcl__service__t.html">rcl_service_t</a> * service);</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160; </div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;RCL_PUBLIC</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;<span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;rcl_service_is_valid(<span class="keyword">const</span> <a class="code" href="structrcl__service__t.html">rcl_service_t</a> * service);</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;}</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;<span class="preprocessor">#endif  // RCL__SERVICE_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astructrcl__node__t_html"><div class="ttname"><a href="structrcl__node__t.html">rcl_node_t</a></div><div class="ttdoc">Structure which encapsulates a ROS Node.</div><div class="ttdef"><b>Definition:</b> node.h:37</div></div>
-<div class="ttc" id="aservice_8h_html_a3b3f364e84a761aa34dc7c5ff8c5c6e9"><div class="ttname"><a href="service_8h.html#a3b3f364e84a761aa34dc7c5ff8c5c6e9">rcl_service_get_rmw_handle</a></div><div class="ttdeci">rmw_service_t * rcl_service_get_rmw_handle(const rcl_service_t *service)</div><div class="ttdoc">Return the rmw service handle.</div></div>
-<div class="ttc" id="astructrcl__service__t_html_ad577f48bc24f0729c4923601b6b0bdd8"><div class="ttname"><a href="structrcl__service__t.html#ad577f48bc24f0729c4923601b6b0bdd8">rcl_service_t::impl</a></div><div class="ttdeci">struct rcl_service_impl_t * impl</div><div class="ttdef"><b>Definition:</b> service.h:35</div></div>
+<div class="ttc" id="astructrcl__service__t_html_ad577f48bc24f0729c4923601b6b0bdd8"><div class="ttname"><a href="structrcl__service__t.html#ad577f48bc24f0729c4923601b6b0bdd8">rcl_service_t::impl</a></div><div class="ttdeci">struct rcl_service_impl_t * impl</div><div class="ttdoc">Pointer to the service implementation.</div><div class="ttdef"><b>Definition:</b> service.h:36</div></div>
 <div class="ttc" id="astructrmw__service__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rmw/structrmw__service__t.html">rmw_service_t</a></div></div>
-<div class="ttc" id="amacros_8h_html_a3a59b27e092b1fd10e7fc7336b29aa16"><div class="ttname"><a href="macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div><div class="ttdeci">#define RCL_WARN_UNUSED</div><div class="ttdoc">Ignored return values of functions with this macro will emit a warning.</div><div class="ttdef"><b>Definition:</b> macros.h:24</div></div>
-<div class="ttc" id="aservice_8h_html_ab88490cf3348c32a20a5c9615a97e643"><div class="ttname"><a href="service_8h.html#ab88490cf3348c32a20a5c9615a97e643">rcl_service_t</a></div><div class="ttdeci">struct rcl_service_t rcl_service_t</div><div class="ttdoc">Structure which encapsulates a ROS Service.</div></div>
-<div class="ttc" id="atypes_8h_html_af66ec2e20118b821dbf3f9b0067e8796"><div class="ttname"><a href="types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div><div class="ttdeci">rmw_ret_t rcl_ret_t</div><div class="ttdef"><b>Definition:</b> types.h:20</div></div>
-<div class="ttc" id="astructrcl__service__options__t_html"><div class="ttname"><a href="structrcl__service__options__t.html">rcl_service_options_t</a></div><div class="ttdoc">Options available for a rcl service.</div><div class="ttdef"><b>Definition:</b> service.h:39</div></div>
-<div class="ttc" id="aservice_8h_html_aeb92bd1565695939306c76330b136727"><div class="ttname"><a href="service_8h.html#aeb92bd1565695939306c76330b136727">rcl_service_init</a></div><div class="ttdeci">rcl_ret_t rcl_service_init(rcl_service_t *service, const rcl_node_t *node, const rosidl_service_type_support_t *type_support, const char *service_name, const rcl_service_options_t *options)</div><div class="ttdoc">Initialize a rcl service.</div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="astructrcl__service__options__t_html_a00924be2a42ae3f8e88819aa6dd1586b"><div class="ttname"><a href="structrcl__service__options__t.html#a00924be2a42ae3f8e88819aa6dd1586b">rcl_service_options_t::allocator</a></div><div class="ttdeci">rcl_allocator_t allocator</div><div class="ttdoc">Custom allocator for the service, used for incidental allocations.</div><div class="ttdef"><b>Definition:</b> service.h:45</div></div>
+<div class="ttc" id="astructrcl__service__options__t_html"><div class="ttname"><a href="structrcl__service__options__t.html">rcl_service_options_t</a></div><div class="ttdoc">Options available for a rcl service.</div><div class="ttdef"><b>Definition:</b> service.h:40</div></div>
+<div class="ttc" id="astructrcl__service__options__t_html_a00924be2a42ae3f8e88819aa6dd1586b"><div class="ttname"><a href="structrcl__service__options__t.html#a00924be2a42ae3f8e88819aa6dd1586b">rcl_service_options_t::allocator</a></div><div class="ttdeci">rcl_allocator_t allocator</div><div class="ttdoc">Custom allocator for the service, used for incidental allocations.</div><div class="ttdef"><b>Definition:</b> service.h:46</div></div>
 <div class="ttc" id="astructrmw__service__info__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rmw/structrmw__service__info__t.html">rmw_service_info_t</a></div></div>
-<div class="ttc" id="aservice_8h_html_ac3fe1a7d99043ea65d4b035e49e0c38d"><div class="ttname"><a href="service_8h.html#ac3fe1a7d99043ea65d4b035e49e0c38d">rcl_take_request_with_info</a></div><div class="ttdeci">rcl_ret_t rcl_take_request_with_info(const rcl_service_t *service, rmw_service_info_t *request_header, void *ros_request)</div><div class="ttdoc">Take a pending ROS request using a rcl service.</div></div>
-<div class="ttc" id="astructrcl__service__options__t_html_acdf0e4e6e063100e40e61ab576368cf7"><div class="ttname"><a href="structrcl__service__options__t.html#acdf0e4e6e063100e40e61ab576368cf7">rcl_service_options_t::qos</a></div><div class="ttdeci">rmw_qos_profile_t qos</div><div class="ttdoc">Middleware quality of service settings for the service.</div><div class="ttdef"><b>Definition:</b> service.h:42</div></div>
-<div class="ttc" id="anode_8h_html"><div class="ttname"><a href="node_8h.html">node.h</a></div></div>
-<div class="ttc" id="aservice_8h_html_a8631f47c48757228b813d0849d399d81"><div class="ttname"><a href="service_8h.html#a8631f47c48757228b813d0849d399d81">rcl_send_response</a></div><div class="ttdeci">rcl_ret_t rcl_send_response(const rcl_service_t *service, rmw_request_id_t *response_header, void *ros_response)</div><div class="ttdoc">Send a ROS response to a client using a service.</div></div>
-<div class="ttc" id="aservice_8h_html_a08f83de4831c2c1f2d010229017bc6be"><div class="ttname"><a href="service_8h.html#a08f83de4831c2c1f2d010229017bc6be">rcl_take_request</a></div><div class="ttdeci">rcl_ret_t rcl_take_request(const rcl_service_t *service, rmw_request_id_t *request_header, void *ros_request)</div><div class="ttdoc">backwards compatibility version that takes a request_id only</div></div>
-<div class="ttc" id="aservice_8h_html_aaea230aa540663d6a4dc05c3d9429827"><div class="ttname"><a href="service_8h.html#aaea230aa540663d6a4dc05c3d9429827">rcl_service_options_t</a></div><div class="ttdeci">struct rcl_service_options_t rcl_service_options_t</div><div class="ttdoc">Options available for a rcl service.</div></div>
+<div class="ttc" id="astructrcl__service__options__t_html_acdf0e4e6e063100e40e61ab576368cf7"><div class="ttname"><a href="structrcl__service__options__t.html#acdf0e4e6e063100e40e61ab576368cf7">rcl_service_options_t::qos</a></div><div class="ttdeci">rmw_qos_profile_t qos</div><div class="ttdoc">Middleware quality of service settings for the service.</div><div class="ttdef"><b>Definition:</b> service.h:43</div></div>
 <div class="ttc" id="astructrmw__request__id__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rmw/structrmw__request__id__t.html">rmw_request_id_t</a></div></div>
-<div class="ttc" id="avisibility__control_8h_html_a25c0ccf03bf45c5a90f4cc728235448c"><div class="ttname"><a href="visibility__control_8h.html#a25c0ccf03bf45c5a90f4cc728235448c">RCL_PUBLIC</a></div><div class="ttdeci">#define RCL_PUBLIC</div><div class="ttdef"><b>Definition:</b> visibility_control.h:48</div></div>
-<div class="ttc" id="aservice_8h_html_a8ac1a60dc39f73ad8f97ad53eb5d5ebb"><div class="ttname"><a href="service_8h.html#a8ac1a60dc39f73ad8f97ad53eb5d5ebb">rcl_service_get_options</a></div><div class="ttdeci">const rcl_service_options_t * rcl_service_get_options(const rcl_service_t *service)</div><div class="ttdoc">Return the rcl service options.</div></div>
-<div class="ttc" id="avisibility__control_8h_html"><div class="ttname"><a href="visibility__control_8h.html">visibility_control.h</a></div></div>
-<div class="ttc" id="aservice_8h_html_aa2c66c6d6447efd364e68aece8e83ae9"><div class="ttname"><a href="service_8h.html#aa2c66c6d6447efd364e68aece8e83ae9">rcl_service_fini</a></div><div class="ttdeci">rcl_ret_t rcl_service_fini(rcl_service_t *service, rcl_node_t *node)</div><div class="ttdoc">Finalize a rcl_service_t.</div></div>
 <div class="ttc" id="astructrcutils__allocator__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcutils/structrcutils__allocator__t.html">rcutils_allocator_t</a></div></div>
 <div class="ttc" id="astructrmw__qos__profile__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rmw/structrmw__qos__profile__t.html">rmw_qos_profile_t</a></div></div>
 <div class="ttc" id="astructrcl__service__t_html"><div class="ttname"><a href="structrcl__service__t.html">rcl_service_t</a></div><div class="ttdoc">Structure which encapsulates a ROS Service.</div><div class="ttdef"><b>Definition:</b> service.h:33</div></div>
-<div class="ttc" id="aservice_8h_html_a8c005590c9d8049d294326b8929f16d5"><div class="ttname"><a href="service_8h.html#a8c005590c9d8049d294326b8929f16d5">rcl_service_get_service_name</a></div><div class="ttdeci">const char * rcl_service_get_service_name(const rcl_service_t *service)</div><div class="ttdoc">Get the topic name for the service.</div></div>
-<div class="ttc" id="aservice_8h_html_aa6ed44193f26570c22caa8b002263dd3"><div class="ttname"><a href="service_8h.html#aa6ed44193f26570c22caa8b002263dd3">rcl_get_zero_initialized_service</a></div><div class="ttdeci">rcl_service_t rcl_get_zero_initialized_service(void)</div><div class="ttdoc">Return a rcl_service_t struct with members set to NULL.</div></div>
-<div class="ttc" id="aservice_8h_html_af364348c25553e12ac9f1c21a94398ae"><div class="ttname"><a href="service_8h.html#af364348c25553e12ac9f1c21a94398ae">rcl_service_is_valid</a></div><div class="ttdeci">bool rcl_service_is_valid(const rcl_service_t *service)</div><div class="ttdoc">Check that the service is valid.</div></div>
-<div class="ttc" id="aservice_8h_html_a233516e6143dec2ee2a1a67b23e13b41"><div class="ttname"><a href="service_8h.html#a233516e6143dec2ee2a1a67b23e13b41">rcl_service_get_default_options</a></div><div class="ttdeci">rcl_service_options_t rcl_service_get_default_options(void)</div><div class="ttdoc">Return the default service options in a rcl_service_options_t.</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

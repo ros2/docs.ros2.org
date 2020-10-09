@@ -71,7 +71,7 @@ $(function() {
 <div class="title">parser.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="parser_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2018 Apex.AI, Inc.</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2018 Apex.AI, Inc.</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// you may not use this file except in compliance with the License.</span></div>
@@ -90,67 +90,57 @@ $(function() {
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">rcl_yaml_param_parser/types.h</a>&quot;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="visibility__control_8h.html">rcl_yaml_param_parser/visibility_control.h</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;rcl_yaml_param_parser/types.h&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;rcl_yaml_param_parser/visibility_control.h&quot;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<a class="code" href="visibility__control_8h.html#a4ef6e177317fbeaf2e2487a16e0bce50">RCL_YAML_PARAM_PARSER_PUBLIC</a></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<a class="code" href="structrcl__params__s.html">rcl_params_t</a> * <a class="code" href="parser_8h.html#aa3ecaba0fcdf5bdc7ecf838dfc680a88">rcl_yaml_node_struct_init</a>(</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;RCL_YAML_PARAM_PARSER_PUBLIC</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<a class="code" href="structrcl__params__s.html">rcl_params_t</a> * rcl_yaml_node_struct_init(</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">const</span> <a class="codeRef" href="http://docs.ros2.org//api/rcutils/structrcutils__allocator__t.html">rcutils_allocator_t</a> allocator);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<a class="code" href="visibility__control_8h.html#a4ef6e177317fbeaf2e2487a16e0bce50">RCL_YAML_PARAM_PARSER_PUBLIC</a></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<a class="code" href="structrcl__params__s.html">rcl_params_t</a> * <a class="code" href="parser_8h.html#a03ab9059ccf69778aeaeff6781953bd6">rcl_yaml_node_struct_copy</a>(</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;RCL_YAML_PARAM_PARSER_PUBLIC</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<a class="code" href="structrcl__params__s.html">rcl_params_t</a> * rcl_yaml_node_struct_copy(</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">const</span> <a class="code" href="structrcl__params__s.html">rcl_params_t</a> * params_st);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<a class="code" href="visibility__control_8h.html#a4ef6e177317fbeaf2e2487a16e0bce50">RCL_YAML_PARAM_PARSER_PUBLIC</a></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span> <a class="code" href="parser_8h.html#a8f0733b843785b6900be8d4cc108a864">rcl_yaml_node_struct_fini</a>(</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;RCL_YAML_PARAM_PARSER_PUBLIC</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span> rcl_yaml_node_struct_fini(</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="structrcl__params__s.html">rcl_params_t</a> * params_st);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<a class="code" href="visibility__control_8h.html#a4ef6e177317fbeaf2e2487a16e0bce50">RCL_YAML_PARAM_PARSER_PUBLIC</a></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="parser_8h.html#aa37fb38b78456773371a28226bfd2f21">rcl_parse_yaml_file</a>(</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * file_path,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="structrcl__params__s.html">rcl_params_t</a> * params_st);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<a class="code" href="visibility__control_8h.html#a4ef6e177317fbeaf2e2487a16e0bce50">RCL_YAML_PARAM_PARSER_PUBLIC</a></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="parser_8h.html#afb3176170168682bfa48f7114d7b466f">rcl_parse_yaml_value</a>(</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * node_name,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * param_name,</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * yaml_value,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="structrcl__params__s.html">rcl_params_t</a> * params_st);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<a class="code" href="visibility__control_8h.html#a4ef6e177317fbeaf2e2487a16e0bce50">RCL_YAML_PARAM_PARSER_PUBLIC</a></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<a class="code" href="structrcl__variant__s.html">rcl_variant_t</a> * <a class="code" href="parser_8h.html#a48e1861f8b1f33900998475a81f432ec">rcl_yaml_node_struct_get</a>(</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * node_name,</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * param_name,</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <a class="code" href="structrcl__params__s.html">rcl_params_t</a> * params_st);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<a class="code" href="visibility__control_8h.html#a4ef6e177317fbeaf2e2487a16e0bce50">RCL_YAML_PARAM_PARSER_PUBLIC</a></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordtype">void</span> <a class="code" href="parser_8h.html#aa4752d4f6267742889f7bacc89877ea2">rcl_yaml_node_struct_print</a>(</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keyword">const</span> <a class="code" href="structrcl__params__s.html">rcl_params_t</a> * <span class="keyword">const</span> params_st);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif  // RCL_YAML_PARAM_PARSER__PARSER_H_</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;RCL_YAML_PARAM_PARSER_PUBLIC</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">bool</span> rcl_parse_yaml_file(</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * file_path,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="code" href="structrcl__params__s.html">rcl_params_t</a> * params_st);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;RCL_YAML_PARAM_PARSER_PUBLIC</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordtype">bool</span> rcl_parse_yaml_value(</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * node_name,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * param_name,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * yaml_value,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <a class="code" href="structrcl__params__s.html">rcl_params_t</a> * params_st);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;RCL_YAML_PARAM_PARSER_PUBLIC</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<a class="code" href="structrcl__variant__s.html">rcl_variant_t</a> * rcl_yaml_node_struct_get(</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * node_name,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * param_name,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="structrcl__params__s.html">rcl_params_t</a> * params_st);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;RCL_YAML_PARAM_PARSER_PUBLIC</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keywordtype">void</span> rcl_yaml_node_struct_print(</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keyword">const</span> <a class="code" href="structrcl__params__s.html">rcl_params_t</a> * <span class="keyword">const</span> params_st);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif  // RCL_YAML_PARAM_PARSER__PARSER_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
-<div class="ttc" id="aparser_8h_html_afb3176170168682bfa48f7114d7b466f"><div class="ttname"><a href="parser_8h.html#afb3176170168682bfa48f7114d7b466f">rcl_parse_yaml_value</a></div><div class="ttdeci">bool rcl_parse_yaml_value(const char *node_name, const char *param_name, const char *yaml_value, rcl_params_t *params_st)</div><div class="ttdoc">Parse a parameter value as a YAML string, updating params_st accordingly.</div></div>
-<div class="ttc" id="aparser_8h_html_aa4752d4f6267742889f7bacc89877ea2"><div class="ttname"><a href="parser_8h.html#aa4752d4f6267742889f7bacc89877ea2">rcl_yaml_node_struct_print</a></div><div class="ttdeci">void rcl_yaml_node_struct_print(const rcl_params_t *const params_st)</div><div class="ttdoc">Print the parameter structure to stdout.</div></div>
-<div class="ttc" id="aparser_8h_html_aa3ecaba0fcdf5bdc7ecf838dfc680a88"><div class="ttname"><a href="parser_8h.html#aa3ecaba0fcdf5bdc7ecf838dfc680a88">rcl_yaml_node_struct_init</a></div><div class="ttdeci">rcl_params_t * rcl_yaml_node_struct_init(const rcutils_allocator_t allocator)</div><div class="ttdoc">Initialize parameter structure.</div></div>
-<div class="ttc" id="astructrcl__params__s_html"><div class="ttname"><a href="structrcl__params__s.html">rcl_params_s</a></div><div class="ttdef"><b>Definition:</b> types.h:79</div></div>
-<div class="ttc" id="aparser_8h_html_a48e1861f8b1f33900998475a81f432ec"><div class="ttname"><a href="parser_8h.html#a48e1861f8b1f33900998475a81f432ec">rcl_yaml_node_struct_get</a></div><div class="ttdeci">rcl_variant_t * rcl_yaml_node_struct_get(const char *node_name, const char *param_name, rcl_params_t *params_st)</div><div class="ttdoc">Get the variant value for a given parameter, zero initializing it in the process if not present alrea...</div></div>
-<div class="ttc" id="aparser_8h_html_a8f0733b843785b6900be8d4cc108a864"><div class="ttname"><a href="parser_8h.html#a8f0733b843785b6900be8d4cc108a864">rcl_yaml_node_struct_fini</a></div><div class="ttdeci">void rcl_yaml_node_struct_fini(rcl_params_t *params_st)</div><div class="ttdoc">Free parameter structure.</div></div>
-<div class="ttc" id="aparser_8h_html_aa37fb38b78456773371a28226bfd2f21"><div class="ttname"><a href="parser_8h.html#aa37fb38b78456773371a28226bfd2f21">rcl_parse_yaml_file</a></div><div class="ttdeci">bool rcl_parse_yaml_file(const char *file_path, rcl_params_t *params_st)</div><div class="ttdoc">Parse the YAML file, initialize and populate params_st.</div></div>
-<div class="ttc" id="astructrcl__variant__s_html"><div class="ttname"><a href="structrcl__variant__s.html">rcl_variant_s</a></div><div class="ttdef"><b>Definition:</b> types.h:55</div></div>
-<div class="ttc" id="avisibility__control_8h_html"><div class="ttname"><a href="visibility__control_8h.html">visibility_control.h</a></div></div>
-<div class="ttc" id="avisibility__control_8h_html_a4ef6e177317fbeaf2e2487a16e0bce50"><div class="ttname"><a href="visibility__control_8h.html#a4ef6e177317fbeaf2e2487a16e0bce50">RCL_YAML_PARAM_PARSER_PUBLIC</a></div><div class="ttdeci">#define RCL_YAML_PARAM_PARSER_PUBLIC</div><div class="ttdef"><b>Definition:</b> visibility_control.h:48</div></div>
+<div class="ttc" id="astructrcl__params__s_html"><div class="ttname"><a href="structrcl__params__s.html">rcl_params_s</a></div><div class="ttdoc">stores all the parameters of all nodes of a process</div><div class="ttdef"><b>Definition:</b> types.h:103</div></div>
+<div class="ttc" id="astructrcl__variant__s_html"><div class="ttname"><a href="structrcl__variant__s.html">rcl_variant_s</a></div><div class="ttdoc">variant_t stores the value of a parameter</div><div class="ttdef"><b>Definition:</b> types.h:75</div></div>
 <div class="ttc" id="astructrcutils__allocator__t_html"><div class="ttname"><a href="http://docs.ros2.org//api/rcutils/structrcutils__allocator__t.html">rcutils_allocator_t</a></div></div>
-<div class="ttc" id="aparser_8h_html_a03ab9059ccf69778aeaeff6781953bd6"><div class="ttname"><a href="parser_8h.html#a03ab9059ccf69778aeaeff6781953bd6">rcl_yaml_node_struct_copy</a></div><div class="ttdeci">rcl_params_t * rcl_yaml_node_struct_copy(const rcl_params_t *params_st)</div><div class="ttdoc">Copy parameter structure.</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

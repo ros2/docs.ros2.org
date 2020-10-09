@@ -1,13 +1,5 @@
 var searchData=
 [
-  ['name_4188',['name',['http://docs.ros2.org/foxy/api/rmw/structrmw__node__t.html#ac267760143b4ddc802487bdb08121bb1',1,'rmw_node_t']]],
-  ['names_4189',['names',['http://docs.ros2.org/foxy/api/rmw/structrmw__names__and__types__t.html#a49ddf4c60f8e9db801e3f8976ba936e5',1,'rmw_names_and_types_t']]],
-  ['namespace_5f_4190',['namespace_',['http://docs.ros2.org/foxy/api/rmw/structrmw__node__t.html#a2702449d54dee4857234c2b74ded44da',1,'rmw_node_t']]],
-  ['nanoseconds_4191',['nanoseconds',['http://docs.ros2.org/foxy/api/rcl/structrcl__duration__t.html#a307ddd58be72a5ac89c3d98ef020c02b',1,'rcl_duration_t::nanoseconds()'],['http://docs.ros2.org/foxy/api/rcl/structrcl__time__point__t.html#a1614f8e45e11c74ca3bd5e41b9be68b5',1,'rcl_time_point_t::nanoseconds()']]],
-  ['node_5fname_4192',['node_name',['http://docs.ros2.org/foxy/api/rmw/structrmw__topic__endpoint__info__t.html#a011e82e91debcf0bdd39beedd4648abe',1,'rmw_topic_endpoint_info_t']]],
-  ['node_5fnamespace_4193',['node_namespace',['http://docs.ros2.org/foxy/api/rmw/structrmw__topic__endpoint__info__t.html#ac4ae7404be088fefde764ffba8dfd0b2',1,'rmw_topic_endpoint_info_t']]],
-  ['not_5falive_5fcount_4194',['not_alive_count',['http://docs.ros2.org/foxy/api/rmw/structrmw__liveliness__changed__status__t.html#ab0766818954087a00f01d9e1105e27c1',1,'rmw_liveliness_changed_status_t']]],
-  ['not_5falive_5fcount_5fchange_4195',['not_alive_count_change',['http://docs.ros2.org/foxy/api/rmw/structrmw__liveliness__changed__status__t.html#a082fb74e4ab3ac1772645220a74f92d0',1,'rmw_liveliness_changed_status_t']]],
-  ['nsec_4196',['nsec',['http://docs.ros2.org/foxy/api/rmw/structrmw__time__t.html#ab19e05024fda06a4f54b330cf68abebe',1,'rmw_time_t']]],
-  ['num_5fjump_5fcallbacks_4197',['num_jump_callbacks',['http://docs.ros2.org/foxy/api/rcl/structrcl__clock__t.html#afbe3bc4a715c9773b352dd84c0cf2a64',1,'rcl_clock_t']]]
+  ['options_4084',['options',['http://docs.ros2.org/foxy/api/rmw/structrmw__context__t.html#ad1ffd5b42a545ba67c675399616181f0',1,'rmw_context_t::options()'],['http://docs.ros2.org/foxy/api/rmw/structrmw__publisher__t.html#a6fd38e79f7f32a40176c6736eb10520e',1,'rmw_publisher_t::options()'],['http://docs.ros2.org/foxy/api/rmw/structrmw__subscription__t.html#a956db2496225bfb0b990c4b571950bc7',1,'rmw_subscription_t::options()']]],
+  ['owns_5fbuffer_4085',['owns_buffer',['http://docs.ros2.org/foxy/api/rcutils/structrcutils__char__array__t.html#a023192a0e910f9ff0ce67329a1976bdc',1,'rcutils_char_array_t']]]
 ];

@@ -133,6 +133,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a00ce90ea881ec2c2a5ac74de08c2378c"><td class="memTemplItemLeft" align="right" valign="top"><a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::basic_string</a>&lt; CharT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacercpputils.html#a00ce90ea881ec2c2a5ac74de08c2378c">join</a> (const ContainerT&lt; ValueT, AllocatorT &gt; &amp;container, const CharT *delim)</td></tr>
 <tr class="memdesc:a00ce90ea881ec2c2a5ac74de08c2378c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Join values in a container turned into strings by a given delimiter.  <a href="namespacercpputils.html#a00ce90ea881ec2c2a5ac74de08c2378c">More...</a><br /></td></tr>
 <tr class="separator:a00ce90ea881ec2c2a5ac74de08c2378c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a770b9d6a7797b6de6b3e07bea9484020"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercpputils.html#a770b9d6a7797b6de6b3e07bea9484020">get_executable_name</a> ()</td></tr>
+<tr class="memdesc:a770b9d6a7797b6de6b3e07bea9484020"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the current executable name.  <a href="namespacercpputils.html#a770b9d6a7797b6de6b3e07bea9484020">More...</a><br /></td></tr>
+<tr class="separator:a770b9d6a7797b6de6b3e07bea9484020"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaefd8a9c5828ac863ba8ee17eb569e1"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercpputils.html#abaefd8a9c5828ac863ba8ee17eb569e1">get_platform_library_name</a> (<a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> library_name, bool debug=false)</td></tr>
 <tr class="memdesc:abaefd8a9c5828ac863ba8ee17eb569e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the platform specific library name.  <a href="namespacercpputils.html#abaefd8a9c5828ac863ba8ee17eb569e1">More...</a><br /></td></tr>
 <tr class="separator:abaefd8a9c5828ac863ba8ee17eb569e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -532,6 +535,34 @@ template&lt;typename CharT , typename ValueT , typename AllocatorT , template&lt
 
 </div>
 </div>
+<a id="a770b9d6a7797b6de6b3e07bea9484020"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a770b9d6a7797b6de6b3e07bea9484020">&#9670;&nbsp;</a></span>get_executable_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> rcpputils::get_executable_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the current executable name. </p>
+<p>This function portably retrieves the current program name and returns a copy of it.</p>
+<p>This function is thread-safe.</p>
+<dl class="section return"><dt>Returns</dt><dd>The program name. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="elRef" href="http://en.cppreference.com/w/cpp/error/runtime_error.html">std::runtime_error</a></td><td>on error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="abaefd8a9c5828ac863ba8ee17eb569e1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abaefd8a9c5828ac863ba8ee17eb569e1">&#9670;&nbsp;</a></span>get_platform_library_name()</h2>
 
@@ -562,7 +593,7 @@ template&lt;typename CharT , typename ValueT , typename AllocatorT , template&lt
 <p>The maximum file name size is 1024 characters, if the input library_name is bigger than this value then the method throws an exception.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">symbol_name</td><td>library base name (without prefix and extension) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">library_name</td><td>library base name (without prefix and extension) </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">debug</td><td>if true the library will return a debug library name, otherwise it returns a normal library path </td></tr>
   </table>
   </dd>
@@ -623,7 +654,8 @@ template&lt;class InsertIterator , typename std::enable_if&lt; std::is_same&lt; 
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>the input string to be split </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">delim</td><td>the delimiter used to split the input string </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">insert</td><td>iterator pointing to a storage container </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">it</td><td>iterator pointing to a storage container </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">skip_empty</td><td>remove empty strings from the return vector </td></tr>
   </table>
   </dd>
 </dl>
@@ -676,6 +708,7 @@ template&lt;class InsertIterator , typename std::enable_if&lt; std::is_same&lt; 
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>the input string to be split </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">delim</td><td>the delimiter used to split the input string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">skip_empty</td><td>remove empty strings from the return vector </td></tr>
   </table>
   </dd>
 </dl>

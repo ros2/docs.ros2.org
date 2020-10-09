@@ -97,8 +97,8 @@ Collaboration diagram for SubListener:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1278c1da21b840ae9427e33a5bcede73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSubListener.html#a1278c1da21b840ae9427e33a5bcede73">SubListener</a> (<a class="el" href="structCustomSubscriberInfo.html">CustomSubscriberInfo</a> *info)</td></tr>
 <tr class="separator:a1278c1da21b840ae9427e33a5bcede73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe7a4743f6dc7dac7df2e8c9493bebfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSubListener.html#afe7a4743f6dc7dac7df2e8c9493bebfe">onSubscriptionMatched</a> (eprosima::fastrtps::Subscriber *, eprosima::fastrtps::rtps::MatchingInfo &amp;info) final</td></tr>
-<tr class="separator:afe7a4743f6dc7dac7df2e8c9493bebfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03d0993bdff329804d3f258b0709f171"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSubListener.html#a03d0993bdff329804d3f258b0709f171">onSubscriptionMatched</a> (eprosima::fastrtps::Subscriber *sub, eprosima::fastrtps::rtps::MatchingInfo &amp;info) final</td></tr>
+<tr class="separator:a03d0993bdff329804d3f258b0709f171"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bb01d8673feb30e2547d49429c9c74c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSubListener.html#a3bb01d8673feb30e2547d49429c9c74c">onNewDataMessage</a> (eprosima::fastrtps::Subscriber *sub) final</td></tr>
 <tr class="separator:a3bb01d8673feb30e2547d49429c9c74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98cf5ede7e699f344b5e208315bc4ebc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSubListener.html#a98cf5ede7e699f344b5e208315bc4ebc">on_requested_deadline_missed</a> (eprosima::fastrtps::Subscriber *, const eprosima::fastrtps::RequestedDeadlineMissedStatus &amp;) final</td></tr>
@@ -152,8 +152,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="afe7a4743f6dc7dac7df2e8c9493bebfe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe7a4743f6dc7dac7df2e8c9493bebfe">&#9670;&nbsp;</a></span>onSubscriptionMatched()</h2>
+<a id="a03d0993bdff329804d3f258b0709f171"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03d0993bdff329804d3f258b0709f171">&#9670;&nbsp;</a></span>onSubscriptionMatched()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -165,7 +165,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void SubListener::onSubscriptionMatched </td>
           <td>(</td>
           <td class="paramtype">eprosima::fastrtps::Subscriber *&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>sub</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

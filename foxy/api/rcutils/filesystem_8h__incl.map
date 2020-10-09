@@ -1,10 +1,13 @@
 <map id="include/rcutils/filesystem.h" name="include/rcutils/filesystem.h">
-<area shape="rect" id="node1" title=" " alt="" coords="185,5,383,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,162,88,189"/>
-<area shape="rect" id="node3" title=" " alt="" coords="112,162,187,189"/>
-<area shape="rect" id="node4" href="$allocator_8h.html" title=" " alt="" coords="217,80,351,107"/>
-<area shape="rect" id="node5" href="$macros_8h.html" title=" " alt="" coords="382,162,509,189"/>
-<area shape="rect" id="node7" href="$visibility__control_8h.html" title=" " alt="" coords="533,155,656,196"/>
-<area shape="rect" id="node6" href="$rcutils__ret_8h.html" title=" " alt="" coords="211,155,357,196"/>
-<area shape="rect" id="node8" href="$visibility__control__macros_8h.html" title=" " alt="" coords="524,244,665,285"/>
+<area shape="rect" id="node1" title=" " alt="" coords="150,5,349,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="98,341,180,367"/>
+<area shape="rect" id="node3" title=" " alt="" coords="27,162,102,189"/>
+<area shape="rect" id="node4" href="$allocator_8h.html" title=" " alt="" coords="182,80,317,107"/>
+<area shape="rect" id="node5" href="$macros_8h.html" title=" " alt="" coords="348,162,474,189"/>
+<area shape="rect" id="node9" href="$visibility__control_8h.html" title=" " alt="" coords="462,333,584,375"/>
+<area shape="rect" id="node11" href="$rcutils__ret_8h.html" title=" " alt="" coords="176,155,323,196"/>
+<area shape="rect" id="node6" href="$fault__injection_8h.html" title=" " alt="" coords="329,244,474,285"/>
+<area shape="rect" id="node7" title=" " alt="" coords="275,341,342,367"/>
+<area shape="rect" id="node8" title=" " alt="" coords="366,341,437,367"/>
+<area shape="rect" id="node10" href="$visibility__control__macros_8h.html" title=" " alt="" coords="452,423,594,464"/>
 </map>

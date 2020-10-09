@@ -71,7 +71,7 @@ $(function() {
 <div class="title">validate_enclave_name.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="validate__enclave__name_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2020 Open Source Robotics Foundation, Inc.</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2020 Open Source Robotics Foundation, Inc.</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// you may not use this file except in compliance with the License.</span></div>
@@ -96,48 +96,48 @@ $(function() {
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/validate__namespace_8h.html">rmw/validate_namespace.h</a>&quot;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/validate__node__name_8h.html">rmw/validate_node_name.h</a>&quot;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">rcl/macros.h</a>&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">rcl/types.h</a>&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="visibility__control_8h.html">rcl/visibility_control.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;rcl/macros.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;rcl/types.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;rcl/visibility_control.h&quot;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="validate__enclave__name_8h.html#a15d7f81c1950f0c34a9eeb3b1d080e41">   30</a></span>&#160;<span class="preprocessor">#define RCL_ENCLAVE_NAME_VALID RMW_NAMESPACE_VALID</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="validate__enclave__name_8h.html#ad1c3e70c57c80528d192451144f65077">   31</a></span>&#160;<span class="preprocessor">#define RCL_ENCLAVE_NAME_INVALID_IS_EMPTY_STRING RMW_NAMESPACE_INVALID_IS_EMPTY_STRING</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="validate__enclave__name_8h.html#a1124b0948d071f77aad52c225f1584fb">   32</a></span>&#160;<span class="preprocessor">#define RCL_ENCLAVE_NAME_INVALID_NOT_ABSOLUTE RMW_NAMESPACE_INVALID_NOT_ABSOLUTE</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="validate__enclave__name_8h.html#a598b4921354426f54b2087f7503af019">   33</a></span>&#160;<span class="preprocessor">#define RCL_ENCLAVE_NAME_INVALID_ENDS_WITH_FORWARD_SLASH \</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define RCL_ENCLAVE_NAME_VALID RMW_NAMESPACE_VALID</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define RCL_ENCLAVE_NAME_INVALID_IS_EMPTY_STRING RMW_NAMESPACE_INVALID_IS_EMPTY_STRING</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define RCL_ENCLAVE_NAME_INVALID_NOT_ABSOLUTE RMW_NAMESPACE_INVALID_NOT_ABSOLUTE</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define RCL_ENCLAVE_NAME_INVALID_ENDS_WITH_FORWARD_SLASH \</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">  RMW_NAMESPACE_INVALID_ENDS_WITH_FORWARD_SLASH</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="validate__enclave__name_8h.html#a9326c660d5d9d2208bc815c50271af36">   35</a></span>&#160;<span class="preprocessor">#define RCL_ENCLAVE_NAME_INVALID_CONTAINS_UNALLOWED_CHARACTERS \</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#define RCL_ENCLAVE_NAME_INVALID_CONTAINS_UNALLOWED_CHARACTERS \</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">  RMW_NAMESPACE_INVALID_CONTAINS_UNALLOWED_CHARACTERS</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="validate__enclave__name_8h.html#af7208f9a7fd3cd2d0209037cd562e568">   37</a></span>&#160;<span class="preprocessor">#define RCL_ENCLAVE_NAME_INVALID_CONTAINS_REPEATED_FORWARD_SLASH \</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define RCL_ENCLAVE_NAME_INVALID_CONTAINS_REPEATED_FORWARD_SLASH \</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">  RMW_NAMESPACE_INVALID_CONTAINS_REPEATED_FORWARD_SLASH</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="validate__enclave__name_8h.html#a18c87cc5788fc7ec69217d627628b66c">   39</a></span>&#160;<span class="preprocessor">#define RCL_ENCLAVE_NAME_INVALID_NAME_TOKEN_STARTS_WITH_NUMBER \</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define RCL_ENCLAVE_NAME_INVALID_NAME_TOKEN_STARTS_WITH_NUMBER \</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">  RMW_NAMESPACE_INVALID_NAME_TOKEN_STARTS_WITH_NUMBER</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="validate__enclave__name_8h.html#a1c9a7d3d76113ec2bbcb810998f1c788">   41</a></span>&#160;<span class="preprocessor">#define RCL_ENCLAVE_NAME_INVALID_TOO_LONG RMW_NAMESPACE_INVALID_TOO_LONG</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define RCL_ENCLAVE_NAME_INVALID_TOO_LONG RMW_NAMESPACE_INVALID_TOO_LONG</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="validate__enclave__name_8h.html#a3c37d7ed77cdfe4ed978a188b00b139f">   43</a></span>&#160;<span class="preprocessor">#define RCL_ENCLAVE_NAME_MAX_LENGTH RMW_NODE_NAME_MAX_NAME_LENGTH</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define RCL_ENCLAVE_NAME_MAX_LENGTH RMW_NODE_NAME_MAX_NAME_LENGTH</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<a class="code" href="visibility__control_8h.html#a25c0ccf03bf45c5a90f4cc728235448c">RCL_PUBLIC</a></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<a class="code" href="macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<a class="code" href="types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<a class="code" href="validate__enclave__name_8h.html#afdbf745f414f43809762fe4811cb44b9">rcl_validate_enclave_name</a>(</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;RCL_PUBLIC</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;rcl_ret_t</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;rcl_validate_enclave_name(</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * enclave,</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">int</span> * validation_result,</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">size_t</span> * invalid_index);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<a class="code" href="visibility__control_8h.html#a25c0ccf03bf45c5a90f4cc728235448c">RCL_PUBLIC</a></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<a class="code" href="macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<a class="code" href="types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<a class="code" href="validate__enclave__name_8h.html#ab61200975e3d6185a214840fa1e8fb6b">rcl_validate_enclave_name_with_size</a>(</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;RCL_PUBLIC</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;RCL_WARN_UNUSED</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;rcl_ret_t</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;rcl_validate_enclave_name_with_size(</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * enclave,</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">size_t</span> enclave_length,</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">int</span> * validation_result,</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">size_t</span> * invalid_index);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<a class="code" href="visibility__control_8h.html#a25c0ccf03bf45c5a90f4cc728235448c">RCL_PUBLIC</a></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<a class="code" href="macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;RCL_PUBLIC</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;RCL_WARN_UNUSED</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> *</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<a class="code" href="validate__enclave__name_8h.html#a2d3128606726d9b03939fe765e451717">rcl_enclave_name_validation_result_string</a>(<span class="keywordtype">int</span> validation_result);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;rcl_enclave_name_validation_result_string(<span class="keywordtype">int</span> validation_result);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
@@ -145,16 +145,7 @@ $(function() {
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif  // RCL__VALIDATE_ENCLAVE_NAME_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_a3a59b27e092b1fd10e7fc7336b29aa16"><div class="ttname"><a href="macros_8h.html#a3a59b27e092b1fd10e7fc7336b29aa16">RCL_WARN_UNUSED</a></div><div class="ttdeci">#define RCL_WARN_UNUSED</div><div class="ttdoc">Ignored return values of functions with this macro will emit a warning.</div><div class="ttdef"><b>Definition:</b> macros.h:24</div></div>
-<div class="ttc" id="atypes_8h_html_af66ec2e20118b821dbf3f9b0067e8796"><div class="ttname"><a href="types_8h.html#af66ec2e20118b821dbf3f9b0067e8796">rcl_ret_t</a></div><div class="ttdeci">rmw_ret_t rcl_ret_t</div><div class="ttdef"><b>Definition:</b> types.h:20</div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="avalidate__enclave__name_8h_html_afdbf745f414f43809762fe4811cb44b9"><div class="ttname"><a href="validate__enclave__name_8h.html#afdbf745f414f43809762fe4811cb44b9">rcl_validate_enclave_name</a></div><div class="ttdeci">rcl_ret_t rcl_validate_enclave_name(const char *enclave, int *validation_result, size_t *invalid_index)</div><div class="ttdoc">Determine if a given enclave name is valid.</div></div>
-<div class="ttc" id="avalidate__enclave__name_8h_html_a2d3128606726d9b03939fe765e451717"><div class="ttname"><a href="validate__enclave__name_8h.html#a2d3128606726d9b03939fe765e451717">rcl_enclave_name_validation_result_string</a></div><div class="ttdeci">const char * rcl_enclave_name_validation_result_string(int validation_result)</div><div class="ttdoc">Return a validation result description, or NULL if unknown or RCL_ENCLAVE_NAME_VALID.</div></div>
 <div class="ttc" id="avalidate__namespace_8h.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rmw/validate__namespace_8h.html">validate_namespace.h</a></div></div>
-<div class="ttc" id="avisibility__control_8h_html_a25c0ccf03bf45c5a90f4cc728235448c"><div class="ttname"><a href="visibility__control_8h.html#a25c0ccf03bf45c5a90f4cc728235448c">RCL_PUBLIC</a></div><div class="ttdeci">#define RCL_PUBLIC</div><div class="ttdef"><b>Definition:</b> visibility_control.h:48</div></div>
-<div class="ttc" id="avisibility__control_8h_html"><div class="ttname"><a href="visibility__control_8h.html">visibility_control.h</a></div></div>
-<div class="ttc" id="avalidate__enclave__name_8h_html_ab61200975e3d6185a214840fa1e8fb6b"><div class="ttname"><a href="validate__enclave__name_8h.html#ab61200975e3d6185a214840fa1e8fb6b">rcl_validate_enclave_name_with_size</a></div><div class="ttdeci">rcl_ret_t rcl_validate_enclave_name_with_size(const char *enclave, size_t enclave_length, int *validation_result, size_t *invalid_index)</div><div class="ttdoc">Deterimine if a given enclave name is valid.</div></div>
 <div class="ttc" id="avalidate__node__name_8h.html_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rmw/validate__node__name_8h.html">validate_node_name.h</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

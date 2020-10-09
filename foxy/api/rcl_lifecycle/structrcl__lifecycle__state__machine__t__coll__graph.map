@@ -1,12 +1,12 @@
 <map id="rcl_lifecycle_state_machine_t" name="rcl_lifecycle_state_machine_t">
-<area shape="rect" id="node1" title=" " alt="" coords="441,495,581,536"/>
-<area shape="rect" id="node2" href="$structrcl__lifecycle__com__interface__t.html" title=" " alt="" coords="159,398,371,425"/>
-<area shape="rect" id="node3" href="/tmp/tmp.7irCm9IFI6/doxygen_tag_files/rcl.tag$structrcl__node__t.html" title=" " alt="" coords="24,199,113,225"/>
-<area shape="rect" id="node4" href="/tmp/tmp.7irCm9IFI6/doxygen_tag_files/rcl.tag$structrcl__context__t.html" title=" " alt="" coords="15,95,122,121"/>
-<area shape="rect" id="node5" href="/tmp/tmp.7irCm9IFI6/doxygen_tag_files/rcl.tag$structrcl__arguments__t.html" title=" " alt="" coords="5,5,132,32"/>
-<area shape="rect" id="node6" href="/tmp/tmp.7irCm9IFI6/doxygen_tag_files/rcl.tag$structrcl__service__t.html" title=" " alt="" coords="138,199,242,225"/>
-<area shape="rect" id="node7" href="/tmp/tmp.7irCm9IFI6/doxygen_tag_files/rcl.tag$structrcl__publisher__t.html" title=" " alt="" coords="281,199,398,225"/>
-<area shape="rect" id="node8" href="$structrcl__lifecycle__state__t.html" title=" " alt="" coords="534,95,686,121"/>
-<area shape="rect" id="node9" href="$structrcl__lifecycle__transition__t.html" title=" " alt="" coords="549,199,730,225"/>
-<area shape="rect" id="node10" href="$structrcl__lifecycle__transition__map__t.html" title=" " alt="" coords="555,391,724,432"/>
+<area shape="rect" id="node1" title="It contains the state machine data." alt="" coords="441,495,581,536"/>
+<area shape="rect" id="node2" href="$structrcl__lifecycle__com__interface__t.html" title="It contains the communication interfac with the ROS world." alt="" coords="159,398,371,425"/>
+<area shape="rect" id="node3" href="/tmp/tmp.G0mQUHO3yi/doxygen_tag_files/rcl.tag$structrcl__node__t.html" title=" " alt="" coords="24,199,113,225"/>
+<area shape="rect" id="node4" href="/tmp/tmp.G0mQUHO3yi/doxygen_tag_files/rcl.tag$structrcl__context__t.html" title=" " alt="" coords="15,95,122,121"/>
+<area shape="rect" id="node5" href="/tmp/tmp.G0mQUHO3yi/doxygen_tag_files/rcl.tag$structrcl__arguments__t.html" title=" " alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node6" href="/tmp/tmp.G0mQUHO3yi/doxygen_tag_files/rcl.tag$structrcl__service__t.html" title=" " alt="" coords="138,199,242,225"/>
+<area shape="rect" id="node7" href="/tmp/tmp.G0mQUHO3yi/doxygen_tag_files/rcl.tag$structrcl__publisher__t.html" title=" " alt="" coords="281,199,398,225"/>
+<area shape="rect" id="node8" href="$structrcl__lifecycle__state__t.html" title="It contains the state of the lifecycle state machine." alt="" coords="534,95,686,121"/>
+<area shape="rect" id="node9" href="$structrcl__lifecycle__transition__t.html" title="It contains the transitions of the lifecycle state machine." alt="" coords="549,199,730,225"/>
+<area shape="rect" id="node10" href="$structrcl__lifecycle__transition__map__t.html" title="It contains the transition map states and transitions." alt="" coords="555,391,724,432"/>
 </map>

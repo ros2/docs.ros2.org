@@ -108,7 +108,7 @@ $(function() {
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">const</span> <a class="codeRef" href="http://docs.ros2.org/foxy/api/rmw/structrmw__qos__profile__t.html">rmw_qos_profile_t</a> &amp; qos_profile,</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  rclcpp::CallbackGroup::SharedPtr group)</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/structrcl__client__options__t.html">rcl_client_options_t</a> options = <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/client_8h.html#ab0cab7cc0127b8e5f5cc122e255f1d33">rcl_client_get_default_options</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/structrcl__client__options__t.html">rcl_client_options_t</a> options = rcl_client_get_default_options();</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  options.<a class="codeRef" href="http://docs.ros2.org/foxy/api/rcl/structrcl__client__options__t.html#abcc6a3efe706a52286b5d588aa3c0638">qos</a> = qos_profile;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">auto</span> cli = <a class="code" href="classrclcpp_1_1Client.html">rclcpp::Client&lt;ServiceT&gt;::make_shared</a>(</div>
@@ -137,7 +137,6 @@ $(function() {
 <div class="ttc" id="anode__services__interface_8hpp_html"><div class="ttname"><a href="node__services__interface_8hpp.html">node_services_interface.hpp</a></div></div>
 <div class="ttc" id="aclassrclcpp_1_1Client_html"><div class="ttname"><a href="classrclcpp_1_1Client.html">rclcpp::Client</a></div><div class="ttdef"><b>Definition:</b> client.hpp:178</div></div>
 <div class="ttc" id="astructrmw__qos__profile__t_html"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rmw/structrmw__qos__profile__t.html">rmw_qos_profile_t</a></div></div>
-<div class="ttc" id="aclient_8h_html_ab0cab7cc0127b8e5f5cc122e255f1d33"><div class="ttname"><a href="http://docs.ros2.org/foxy/api/rcl/client_8h.html#ab0cab7cc0127b8e5f5cc122e255f1d33">rcl_client_get_default_options</a></div><div class="ttdeci">rcl_client_options_t rcl_client_get_default_options(void)</div></div>
 <div class="ttc" id="anamespacerclcpp_html_a24538aeccf07c4966c3192623d06440a"><div class="ttname"><a href="namespacerclcpp.html#a24538aeccf07c4966c3192623d06440a">rclcpp::create_client</a></div><div class="ttdeci">rclcpp::Client&lt; ServiceT &gt;::SharedPtr create_client(std::shared_ptr&lt; node_interfaces::NodeBaseInterface &gt; node_base, std::shared_ptr&lt; node_interfaces::NodeGraphInterface &gt; node_graph, std::shared_ptr&lt; node_interfaces::NodeServicesInterface &gt; node_services, const std::string &amp;service_name, const rmw_qos_profile_t &amp;qos_profile, rclcpp::CallbackGroup::SharedPtr group)</div><div class="ttdef"><b>Definition:</b> create_client.hpp:32</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
