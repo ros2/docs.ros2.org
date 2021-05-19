@@ -1,0 +1,12 @@
+<map id="rclcpp::PublisherOptionsWithAllocator&lt; Allocator &gt;" name="rclcpp::PublisherOptionsWithAllocator&lt; Allocator &gt;">
+<area shape="rect" id="node1" title="Structure containing optional configuration for Publishers." alt="" coords="1293,139,1492,180"/>
+<area shape="rect" id="node2" href="$structrclcpp_1_1PublisherOptionsBase.html" title="Non&#45;templated part of PublisherOptionsWithAllocator&lt;Allocator&gt;." alt="" coords="973,113,1184,139"/>
+<area shape="rect" id="node3" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title=" " alt="" coords="551,12,724,53"/>
+<area shape="rect" id="node4" href="$structrclcpp_1_1PublisherEventCallbacks.html" title="Contains callbacks for various types of events a Publisher can receive from the middleware." alt="" coords="523,78,752,105"/>
+<area shape="rect" id="node5" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title=" " alt="" coords="39,5,242,47"/>
+<area shape="rect" id="node6" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title=" " alt="" coords="32,71,249,112"/>
+<area shape="rect" id="node7" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title=" " alt="" coords="5,136,276,177"/>
+<area shape="rect" id="node8" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title=" " alt="" coords="505,129,769,185"/>
+<area shape="rect" id="node9" href="$classrclcpp_1_1QosOverridingOptions.html" title="Options that are passed in subscription/publisher constructor to specify QoSConfigurability." alt="" coords="531,209,743,235"/>
+<area shape="rect" id="node10" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title=" " alt="" coords="975,163,1182,190"/>
+</map>

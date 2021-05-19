@@ -1,0 +1,10 @@
+<map id="rclcpp::Subscription&lt; CallbackMessageT, AllocatorT, MessageMemoryStrategyT &gt;" name="rclcpp::Subscription&lt; CallbackMessageT, AllocatorT, MessageMemoryStrategyT &gt;">
+<area shape="rect" id="node1" title="Subscription implementation, templated on the type of message this subscription receives." alt="" coords="748,170,976,226"/>
+<area shape="rect" id="node2" href="$classrclcpp_1_1SubscriptionBase.html" title=" " alt="" coords="517,185,699,211"/>
+<area shape="rect" id="node3" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/enable_shared_from_this.html" title=" " alt="" coords="32,5,265,47"/>
+<area shape="rect" id="node4" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title=" " alt="" coords="73,71,224,112"/>
+<area shape="rect" id="node5" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title=" " alt="" coords="73,136,224,177"/>
+<area shape="rect" id="node6" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/weak_ptr.html" title=" " alt="" coords="46,202,251,258"/>
+<area shape="rect" id="node7" href="$classrclcpp_1_1node__interfaces_1_1NodeBaseInterface.html" title="Pure virtual interface class for the NodeBase part of the Node API." alt="" coords="62,283,235,324"/>
+<area shape="rect" id="node8" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/container/vector.html" title=" " alt="" coords="5,348,292,389"/>
+</map>

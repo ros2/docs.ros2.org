@@ -1,0 +1,5 @@
+<map id="tf2_ros::BufferInterface" name="tf2_ros::BufferInterface">
+<area shape="rect" id="node1" title="Abstract interface for wrapping tf2::BufferCoreInterface in a ROS&#45;based API. Implementations include ..." alt="" coords="55,5,228,32"/>
+<area shape="rect" id="node2" href="$classtf2__ros_1_1Buffer.html" title="Standard implementation of the tf2_ros::BufferInterface abstract data type." alt="" coords="5,80,120,107"/>
+<area shape="rect" id="node3" href="$classtf2__ros_1_1BufferClient.html" title="Action client&#45;based implementation of the tf2_ros::BufferInterface abstract data type." alt="" coords="145,80,298,107"/>
+</map>

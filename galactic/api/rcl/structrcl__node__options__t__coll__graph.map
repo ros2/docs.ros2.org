@@ -1,0 +1,7 @@
+<map id="rcl_node_options_t" name="rcl_node_options_t">
+<area shape="rect" id="node1" title="Structure which encapsulates the options for creating a rcl_node_t." alt="" coords="163,213,307,240"/>
+<area shape="rect" id="node2" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/rmw.tag$structrmw__qos__profile__t.html" title=" " alt="" coords="5,124,148,151"/>
+<area shape="rect" id="node3" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/rmw.tag$structrmw__time__t.html" title=" " alt="" coords="27,5,127,32"/>
+<area shape="rect" id="node4" href="$structrcl__arguments__t.html" title="Hold output of parsing command line arguments." alt="" coords="172,124,299,151"/>
+<area shape="rect" id="node5" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/rcutils.tag$structrcutils__allocator__t.html" title=" " alt="" coords="323,124,462,151"/>
+</map>

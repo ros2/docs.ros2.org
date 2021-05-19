@@ -1,0 +1,22 @@
+<map id="include/tf2/impl/utils.h" name="include/tf2/impl/utils.h">
+<area shape="rect" id="node1" title=" " alt="" coords="217,5,385,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,180,121"/>
+<area shape="rect" id="node3" href="$transform__datatypes_8h.html" title=" " alt="" coords="205,87,397,114"/>
+<area shape="rect" id="node10" href="$Quaternion_8h.html" title=" " alt="" coords="423,87,629,114"/>
+<area shape="rect" id="node4" title=" " alt="" coords="338,169,394,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="267,244,334,271"/>
+<area shape="rect" id="node6" title=" " alt="" coords="97,244,155,271"/>
+<area shape="rect" id="node7" href="$time_8h.html" title=" " alt="" coords="176,169,263,196"/>
+<area shape="rect" id="node8" title=" " alt="" coords="180,244,243,271"/>
+<area shape="rect" id="node9" href="$visibility__control_8h.html" title=" " alt="" coords="359,244,523,271"/>
+<area shape="rect" id="node11" href="$Vector3_8h.html" title=" " alt="" coords="604,169,688,196"/>
+<area shape="rect" id="node20" href="$QuadWord_8h.html" title=" " alt="" coords="477,169,580,196"/>
+<area shape="rect" id="node12" href="$Scalar_8h.html" title=" " alt="" coords="547,244,622,271"/>
+<area shape="rect" id="node19" href="$MinMax_8h.html" title=" " alt="" coords="647,244,733,271"/>
+<area shape="rect" id="node13" title=" " alt="" coords="321,319,389,345"/>
+<area shape="rect" id="node14" title=" " alt="" coords="413,319,484,345"/>
+<area shape="rect" id="node15" title=" " alt="" coords="508,319,573,345"/>
+<area shape="rect" id="node16" title=" " alt="" coords="598,319,657,345"/>
+<area shape="rect" id="node17" title=" " alt="" coords="681,319,745,345"/>
+<area shape="rect" id="node18" title=" " alt="" coords="769,319,843,345"/>
+</map>

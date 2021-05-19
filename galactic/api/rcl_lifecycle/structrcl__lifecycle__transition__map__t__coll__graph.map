@@ -1,0 +1,5 @@
+<map id="rcl_lifecycle_transition_map_t" name="rcl_lifecycle_transition_map_t">
+<area shape="rect" id="node1" title="It contains the transition map states and transitions." alt="" coords="5,199,175,240"/>
+<area shape="rect" id="node2" href="$structrcl__lifecycle__transition__t.html" title="It contains the transitions of the lifecycle state machine." alt="" coords="22,5,203,32"/>
+<area shape="rect" id="node3" href="$structrcl__lifecycle__state__t.html" title="It contains the state of the lifecycle state machine." alt="" coords="166,109,318,136"/>
+</map>

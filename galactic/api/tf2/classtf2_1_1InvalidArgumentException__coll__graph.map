@@ -1,0 +1,5 @@
+<map id="tf2::InvalidArgumentException" name="tf2::InvalidArgumentException">
+<area shape="rect" id="node1" title="An exception class to notify that one of the arguments is invalid." alt="" coords="5,155,225,181"/>
+<area shape="rect" id="node2" href="$classtf2_1_1TransformException.html" title="A base class for all tf2 exceptions This inherits from ros::exception which inherits from std::runtim..." alt="" coords="26,80,205,107"/>
+<area shape="rect" id="node3" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/error/runtime_error.html" title=" " alt="" coords="46,5,185,32"/>
+</map>
