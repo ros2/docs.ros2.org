@@ -161,7 +161,7 @@ tf2_tools: src/ros2/geometry2/tf2_tools/doc_output/html
 	rm -r $(api_directory_name)/$@ || true
 	cp -r $< $(api_directory_name)/$@
 
-tracetools: src/micro-ROS/ros_tracing/ros2_tracing/tracetools/doc_output/html
+tracetools: src/ros-tracing/ros2_tracing/tracetools/doc_output/html
 	rm -r $(api_directory_name)/$@ || true
 	cp -r $< $(api_directory_name)/$@
 
@@ -185,14 +185,14 @@ src/ament/ament_index/ament_index_python/docs/build/html doxygen_tag_files/ament
 		git clean -dfx && \
 		make html
 
-src/micro-ROS/ros_tracing/ros2_tracing/tracetools/doc_output/html doxygen_tag_files/tracetools.tag: src/micro-ROS/ros_tracing/ros2_tracing/tracetools/Doxyfile
+src/ros-tracing/ros2_tracing/tracetools/doc_output/html doxygen_tag_files/tracetools.tag: src/ros-tracing/ros2_tracing/tracetools/Doxyfile
 	. install/setup.sh && \
-		cd src/micro-ROS/ros_tracing/ros2_tracing/tracetools && \
+		cd src/ros-tracing/ros2_tracing/tracetools && \
 		git clean -dfx && \
 		cmake . && make
 	rm -r $@ || true
 	rm doxygen_tag_files/tracetools.tag || true
-	cd src/micro-ROS/ros_tracing/ros2_tracing/tracetools && doxygen Doxyfile
+	cd src/ros-tracing/ros2_tracing/tracetools && doxygen Doxyfile
 
 src/ros/class_loader/doc_output/html doxygen_tag_files/class_loader.tag: src/ros/class_loader/Doxyfile
 	. install/setup.sh && \
