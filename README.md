@@ -5,11 +5,11 @@
 
   - Clone this repo and checkout the `doc_gen` branch:
 
-        git clone https://github.com/docs.ros2.org.git -b doc_gen
+        git clone https://github.com/ros2/docs.ros2.org.git -b doc_gen
 
   - Run the build script using the `-r` option to select the release codename:
 
-        docs.ros2.org/build_docs.sh -r foxy
+        docs.ros2.org/build_docs.sh -r galactic
 
   - Check that the following are working:
       - Cross-references between packages, e.g. `rmw` links from `rcl` docs.
