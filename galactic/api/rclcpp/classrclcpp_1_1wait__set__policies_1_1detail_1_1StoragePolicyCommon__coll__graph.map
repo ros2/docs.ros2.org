@@ -1,0 +1,12 @@
+<map id="rclcpp::wait_set_policies::detail::StoragePolicyCommon&lt; HasStrongOwnership &gt;" name="rclcpp::wait_set_policies::detail::StoragePolicyCommon&lt; HasStrongOwnership &gt;">
+<area shape="rect" id="node1" title="Common structure for storage policies, which provides rcl wait set access." alt="" coords="1084,115,1307,171"/>
+<area shape="rect" id="node2" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/rcl.tag$structrcl__wait__set__t.html" title=" " alt="" coords="835,129,947,156"/>
+<area shape="rect" id="node3" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/rcl.tag$structrcl__event__t.html" title=" " alt="" coords="543,5,637,32"/>
+<area shape="rect" id="node4" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/rcl.tag$structrcl__subscription__t.html" title=" " alt="" coords="522,56,658,83"/>
+<area shape="rect" id="node5" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/rcl.tag$structrcl__service__t.html" title=" " alt="" coords="538,107,642,133"/>
+<area shape="rect" id="node6" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/rcl.tag$structrcl__guard__condition__t.html" title=" " alt="" coords="509,157,671,184"/>
+<area shape="rect" id="node7" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/rcl.tag$structrcl__context__t.html" title=" " alt="" coords="301,157,408,184"/>
+<area shape="rect" id="node8" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/rcl.tag$structrcl__arguments__t.html" title=" " alt="" coords="5,157,132,184"/>
+<area shape="rect" id="node9" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/rcl.tag$structrcl__client__t.html" title=" " alt="" coords="543,208,637,235"/>
+<area shape="rect" id="node10" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/rcl.tag$structrcl__timer__t.html" title=" " alt="" coords="544,259,636,285"/>
+</map>

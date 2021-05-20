@@ -1,0 +1,5 @@
+<map id="rclcpp::exceptions::UnknownROSArgsError" name="rclcpp::exceptions::UnknownROSArgsError">
+<area shape="rect" id="node1" title="Thrown when unparsed ROS specific arguments are found." alt="" coords="79,95,257,136"/>
+<area shape="rect" id="node2" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/error/runtime_error.html" title=" " alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node3" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/container/vector.html" title=" " alt="" coords="168,5,355,32"/>
+</map>

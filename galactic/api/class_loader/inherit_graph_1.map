@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classclass__loader_1_1impl_1_1AbstractMetaObjectBase.html" title="A base class for MetaObjects that excludes a polymorphic type parameter. Subclasses are class templat..." alt="" coords="5,5,196,47"/>
+<area shape="rect" id="node2" href="$classclass__loader_1_1impl_1_1AbstractMetaObject.html" title="Abstract base class for factories where polymorphic type variable indicates base class for plugin int..." alt="" coords="244,5,443,47"/>
+<area shape="rect" id="node3" href="$classclass__loader_1_1impl_1_1MetaObject.html" title="The actual factory." alt="" coords="491,5,652,47"/>
+</map>

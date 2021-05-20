@@ -1,0 +1,35 @@
+<map id="include/tf2/buffer_core.h" name="include/tf2/buffer_core.h">
+<area shape="rect" id="node1" title=" " alt="" coords="875,5,1009,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="179,95,265,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="785,259,848,285"/>
+<area shape="rect" id="node4" title=" " alt="" coords="1320,95,1407,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="1431,95,1482,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="1506,95,1583,121"/>
+<area shape="rect" id="node7" title=" " alt="" coords="1607,95,1671,121"/>
+<area shape="rect" id="node8" title=" " alt="" coords="459,259,518,285"/>
+<area shape="rect" id="node9" title=" " alt="" coords="1696,95,1820,121"/>
+<area shape="rect" id="node10" title=" " alt="" coords="1844,95,1904,121"/>
+<area shape="rect" id="node11" title=" " alt="" coords="220,177,283,203"/>
+<area shape="rect" id="node12" href="$Transform_8h.html" title=" " alt="" coords="917,95,1095,121"/>
+<area shape="rect" id="node23" href="$visibility__control_8h.html" title=" " alt="" coords="880,408,1044,435"/>
+<area shape="rect" id="node26" title=" " alt="" coords="409,169,635,211"/>
+<area shape="rect" id="node27" href="$buffer__core__interface_8h.html" title=" " alt="" coords="390,95,585,121"/>
+<area shape="rect" id="node30" href="$exceptions_8h.html" title=" " alt="" coords="69,177,196,203"/>
+<area shape="rect" id="node33" href="$transform__storage_8h.html" title=" " alt="" coords="1119,95,1295,121"/>
+<area shape="rect" id="node13" href="$Matrix3x3_8h.html" title=" " alt="" coords="1051,177,1151,203"/>
+<area shape="rect" id="node14" href="$Vector3_8h.html" title=" " alt="" coords="1253,333,1337,360"/>
+<area shape="rect" id="node24" href="$Quaternion_8h.html" title=" " alt="" coords="1101,259,1207,285"/>
+<area shape="rect" id="node15" href="$Scalar_8h.html" title=" " alt="" coords="1143,408,1218,435"/>
+<area shape="rect" id="node22" href="$MinMax_8h.html" title=" " alt="" coords="1248,408,1335,435"/>
+<area shape="rect" id="node16" title=" " alt="" coords="919,483,987,509"/>
+<area shape="rect" id="node17" title=" " alt="" coords="1011,483,1081,509"/>
+<area shape="rect" id="node18" title=" " alt="" coords="1105,483,1171,509"/>
+<area shape="rect" id="node19" title=" " alt="" coords="1195,483,1254,509"/>
+<area shape="rect" id="node20" title=" " alt="" coords="1278,483,1342,509"/>
+<area shape="rect" id="node21" title=" " alt="" coords="1366,483,1441,509"/>
+<area shape="rect" id="node25" href="$QuadWord_8h.html" title=" " alt="" coords="1127,333,1229,360"/>
+<area shape="rect" id="node28" href="$time_8h.html" title=" " alt="" coords="711,177,797,203"/>
+<area shape="rect" id="node29" title=" " alt="" coords="694,259,761,285"/>
+<area shape="rect" id="node31" title=" " alt="" coords="5,259,92,285"/>
+<area shape="rect" id="node32" title=" " alt="" coords="117,259,183,285"/>
+</map>

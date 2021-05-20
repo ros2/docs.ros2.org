@@ -1,0 +1,15 @@
+<map id="rclcpp::SubscriptionOptionsWithAllocator&lt; Allocator &gt;" name="rclcpp::SubscriptionOptionsWithAllocator&lt; Allocator &gt;">
+<area shape="rect" id="node1" title="Structure containing optional configuration for Subscriptions." alt="" coords="1280,243,1479,284"/>
+<area shape="rect" id="node2" href="$structrclcpp_1_1SubscriptionOptionsBase.html" title="Non&#45;template base class for subscription options." alt="" coords="940,217,1171,243"/>
+<area shape="rect" id="node3" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title=" " alt="" coords="472,79,736,135"/>
+<area shape="rect" id="node4" href="$structrclcpp_1_1SubscriptionEventCallbacks.html" title="Contains callbacks for non&#45;message events that a Subscription can receive from the middleware." alt="" coords="511,160,697,201"/>
+<area shape="rect" id="node5" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title=" " alt="" coords="27,5,221,47"/>
+<area shape="rect" id="node6" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title=" " alt="" coords="5,71,243,112"/>
+<area shape="rect" id="node7" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title=" " alt="" coords="11,137,237,193"/>
+<area shape="rect" id="node8" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/utility/functional/function.html" title=" " alt="" coords="8,217,240,259"/>
+<area shape="rect" id="node9" href="$structrclcpp_1_1SubscriptionOptionsBase_1_1TopicStatisticsOptions.html" title=" " alt="" coords="501,259,707,300"/>
+<area shape="rect" id="node10" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/chrono/duration.html" title=" " alt="" coords="32,283,216,310"/>
+<area shape="rect" id="node11" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/string/basic_string.html" title=" " alt="" coords="81,334,167,361"/>
+<area shape="rect" id="node12" href="$classrclcpp_1_1QosOverridingOptions.html" title="Options that are passed in subscription/publisher constructor to specify QoSConfigurability." alt="" coords="498,325,710,351"/>
+<area shape="rect" id="node13" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/shared_ptr.html" title=" " alt="" coords="952,267,1159,294"/>
+</map>

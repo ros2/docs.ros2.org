@@ -1,0 +1,5 @@
+<map id="rosidl_action_type_support_t" name="rosidl_action_type_support_t">
+<area shape="rect" id="node1" title="Contains rosidl action type support data." alt="" coords="98,183,239,224"/>
+<area shape="rect" id="node2" href="$structrosidl__service__type__support__t.html" title="Contains rosidl service type support data." alt="" coords="5,5,153,47"/>
+<area shape="rect" id="node3" href="$structrosidl__message__type__support__t.html" title="Contains rosidl message type support data." alt="" coords="178,5,338,47"/>
+</map>

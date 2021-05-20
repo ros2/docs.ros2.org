@@ -1,0 +1,6 @@
+<map id="rclcpp::exceptions::RCLBadAlloc" name="rclcpp::exceptions::RCLBadAlloc">
+<area shape="rect" id="node1" title="Created when the ret is RCL_RET_BAD_ALLOC." alt="" coords="80,215,220,256"/>
+<area shape="rect" id="node2" href="$classrclcpp_1_1exceptions_1_1RCLErrorBase.html" title=" " alt="" coords="5,124,145,165"/>
+<area shape="rect" id="node3" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/string/basic_string.html" title=" " alt="" coords="32,5,119,32"/>
+<area shape="rect" id="node4" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/cppreference-doxygen-web.tag.xml$cpp/memory/new/bad_alloc.html" title=" " alt="" coords="170,131,282,158"/>
+</map>

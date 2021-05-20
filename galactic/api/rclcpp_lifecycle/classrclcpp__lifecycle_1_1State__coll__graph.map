@@ -1,0 +1,5 @@
+<map id="rclcpp_lifecycle::State" name="rclcpp_lifecycle::State">
+<area shape="rect" id="node1" title="Abstract class for the Lifecycle&#39;s states." alt="" coords="5,109,171,136"/>
+<area shape="rect" id="node2" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/rcl_lifecycle.tag$structrcl__lifecycle__state__t.html" title=" " alt="" coords="145,5,297,32"/>
+<area shape="rect" id="node3" href="/tmp/tmp.oXr5q5Nd7N/doxygen_tag_files/rcl_lifecycle.tag$structrcl__lifecycle__transition__t.html" title=" " alt="" coords="195,109,376,136"/>
+</map>

@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['setupstart_62',['SetupStart',['../classlibstatistics__collector_1_1topic__statistics__collector_1_1ReceivedMessageAgeCollector.html#abf443dec0a57b90553c4cfba96277bab',1,'libstatistics_collector::topic_statistics_collector::ReceivedMessageAgeCollector::SetupStart()'],['../classlibstatistics__collector_1_1topic__statistics__collector_1_1ReceivedMessagePeriodCollector.html#a75e4010abadbe8bc6e93807d97351b52',1,'libstatistics_collector::topic_statistics_collector::ReceivedMessagePeriodCollector::SetupStart()']]],
+  ['setupstop_63',['SetupStop',['../classlibstatistics__collector_1_1topic__statistics__collector_1_1ReceivedMessageAgeCollector.html#a3f0cdc9bf9415a4e9608a5fc9af7c06d',1,'libstatistics_collector::topic_statistics_collector::ReceivedMessageAgeCollector::SetupStop()'],['../classlibstatistics__collector_1_1topic__statistics__collector_1_1ReceivedMessagePeriodCollector.html#a72c80c2d3ce909d316a2cd178a6f4007',1,'libstatistics_collector::topic_statistics_collector::ReceivedMessagePeriodCollector::SetupStop()']]],
+  ['standarddeviation_64',['StandardDeviation',['../classlibstatistics__collector_1_1moving__average__statistics_1_1MovingAverageStatistics.html#a3bccf4f089e34c9c0d10bfb876627415',1,'libstatistics_collector::moving_average_statistics::MovingAverageStatistics']]],
+  ['start_65',['Start',['../classlibstatistics__collector_1_1collector_1_1Collector.html#a6eee89bf0c3630f92a98c1b5b7b9f958',1,'libstatistics_collector::collector::Collector']]],
+  ['stop_66',['Stop',['../classlibstatistics__collector_1_1collector_1_1Collector.html#aaec2f5d2f14e9922cc3a30714ce0c547',1,'libstatistics_collector::collector::Collector']]]
+];
