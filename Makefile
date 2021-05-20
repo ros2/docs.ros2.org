@@ -1,10 +1,12 @@
 api_directory_name ?= api
+skip_distro_html ?= false
 
 default: setup $(release_name) $(package_names)
 
 install: default
 	rm -r src/ros2/docs.ros2.org/$(release_name) || true
-	cp -r $(release_name) src/ros2/docs.ros2.org/$(release_name)
+	$(skip_distro_html) || cp -r $(release_name) src/ros2/docs.ros2.org/$(release_name)
+	mkdir -p src/ros2/docs.ros2.org/$(release_name)
 	cp -r $(api_directory_name) src/ros2/docs.ros2.org/$(release_name)/$(api_directory_name)
 
 clean:
@@ -14,8 +16,8 @@ purge:
 	rm -r src/ros2/**/doc_output src/ros2/ros_core_documentation/build src/ros2/rclpy/rclpy/docs/build || true
 
 $(release_name): src/ros2/ros_core_documentation/build/html
-	rm -r $@ || true
-	cp -r $< $@
+	$(skip_distro_html) || rm -r $@ || true
+	$(skip_distro_html) || cp -r $< $@
 
 ament_index_cpp: src/ament/ament_index/ament_index_cpp/doc_output/html
 	rm -r $(api_directory_name)/$@ || true
