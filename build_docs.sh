@@ -2,7 +2,7 @@
 set -e
 
 # Default options
-opt_rosdistro=${ROS_DISTRO:-foxy}
+opt_rosdistro=${ROS_DISTRO:-galactic}
 opt_interactive=0
 opt_skip_generate_interfaces=0
 unset opt_repos
@@ -70,7 +70,7 @@ else
     rmw
   )
   # Append additional default packages for Foxy
-  if [[ "foxy" == "${opt_rosdistro}" ]]; then
+  if [[ "foxy" == "${opt_rosdistro}" || "galactic" == "${opt_rosdistro}" ]]; then
     package_names+=(
       ament_index_cpp
       ament_index_python
@@ -98,8 +98,12 @@ else
       tf2_geometry_msgs
       tf2_kdl
       tf2_ros
-      tf2_tools
       tracetools
+    )
+  fi
+  if [[ "foxy" == "${opt_rosdistro}" ]]; then
+    package_names+=(
+      tf2_tools
     )
   fi
   # Convert bash array to string
@@ -126,7 +130,6 @@ if [ 0 -eq ${opt_skip_generate_interfaces} ]; then
     lifecycle_msgs
     logging_demo
     map_msgs
-    move_base_msgs
     nav_msgs
     pendulum_msgs
     rcl_interfaces
@@ -145,6 +148,11 @@ if [ 0 -eq ${opt_skip_generate_interfaces} ]; then
     unique_identifier_msgs
     visualization_msgs
   )
+  if [[ "galactic" != "${opt_rosdistro}" ]]; then
+    interface_packages+=(
+      move_base_msgs
+    )
+  fi
   # Convert bash array to string
   generate_interface_docs_packages="${generate_interface_docs_packages[@]} ${interface_packages[@]}"
 fi
@@ -193,7 +201,10 @@ sorted_packages=$(colcon list --names-only -t --packages-select ${package_names}
 cp ${script_dir}/Makefile .
 
 # Build the docs
-make install release_name=${opt_rosdistro} package_names="${sorted_packages}"
+if [[ "galactic" == "${opt_rosdistro}" ]]; then
+  opt_skip_distro_html="skip_distro_html=true"
+fi
+make install release_name=${opt_rosdistro} package_names="${sorted_packages}" ${opt_skip_distro_html}
 
 #API is not ready in Dashing to generate interfaces
 if [[ "dashing" == "${opt_rosdistro}" ]]; then
